@@ -38,3 +38,8 @@ await check('fictional purchase receipts remain private','/rest/v1/ct_simulated_
 await check('market settings remain private','/rest/v1/ct_market_settings?select=id',{},r=>[401,403].includes(r.status));
 await check('market moderation requires admin session','/rest/v1/rpc/ct_admin_market_data',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('fictional checkout requires a session','/rest/v1/rpc/ct_buy_diamonds_simulated',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000095',p_quantity:1,p_expected_version:1,p_expected_total_cents:941,p_demo_method:'demo_card'})},r=>[401,403].includes(r.status));
+await check('direct trades remain private','/rest/v1/ct_direct_trades?select=id',{},r=>[401,403].includes(r.status));
+await check('direct reservations remain private','/rest/v1/ct_direct_assets?select=asset_id',{},r=>[401,403].includes(r.status));
+await check('trade invitations require authentication','/rest/v1/rpc/ct_trade_command',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000097',p_action:'invite',p_values:{username:'NoSuchPlayer'}})},r=>[401,403].includes(r.status));
+await check('trade inbox requires authentication','/rest/v1/rpc/ct_trade_inbox',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('sealed inventory requires authentication','/rest/v1/rpc/ct_sealed_inventory',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));

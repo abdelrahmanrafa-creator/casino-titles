@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {useQuery} from '@tanstack/react-query';
-import {Link} from 'react-router-dom';
+import {Link,useSearchParams} from 'react-router-dom';
 import {Diamond,ArrowLeftRight,Box,RefreshCw,ShieldCheck} from 'lucide-react';
 import {rpc,credits,rarityNames,type Title} from '../lib/api';
 import {DiamondStore,type StoreSettings} from './DiamondStore';
@@ -12,7 +12,8 @@ type Listing={id:number;seller_id:string;seller:string;asset_kind:'title'|'chest
 type SealedShop={id:number;name:string;rarity:number;price:number;version:number;weights:number[]};
 type Market={diamonds:number;credits_per_diamond:number;listings:Listing[];mine:Listing[];assets:Asset[];sealed_shop:SealedShop[];history:{id:number;seller_id:string;counterparty:string;diamonds:number;offered_name:string;created_at:string}[];transactions:{id:number;amount:number;reason:string;balance_after:number}[]};
 export function Market({userId,catalog,command,busy}:{userId:string;catalog:Title[];command:Command;busy:boolean}){
- const [tab,setTab]=useState('browse'),[search,setSearch]=useState(''),[query,setQuery]=useState(''),[before,setBefore]=useState<number|null>(null),[assetId,setAssetId]=useState(''),[price,setPrice]=useState(1),[wantedKind,setWantedKind]=useState(''),[wantedId,setWantedId]=useState(''),[target,setTarget]=useState(''),[message,setMessage]=useState(''),[payment,setPayment]=useState('');
+ const [params]=useSearchParams();
+ const [tab,setTab]=useState(params.has('asset')?'sell':params.get('tab')==='sealed'?'sealed':'browse'),[search,setSearch]=useState(''),[query,setQuery]=useState(''),[before,setBefore]=useState<number|null>(null),[assetId,setAssetId]=useState(params.get('asset')??''),[price,setPrice]=useState(1),[wantedKind,setWantedKind]=useState(''),[wantedId,setWantedId]=useState(''),[target,setTarget]=useState(''),[message,setMessage]=useState(''),[payment,setPayment]=useState('');
  const {data:store}=useQuery({queryKey:['diamond-store',userId],queryFn:()=>rpc<StoreSettings>('ct_diamond_store'),staleTime:30000,refetchOnWindowFocus:false});
  const [confirm,setConfirm]=useState<{kind:'trade';listing:Listing}|{kind:'sealed';chest:SealedShop}|{kind:'open';asset:Asset}|null>(null);
  const {data:m,error,isPending,refetch,isFetching}=useQuery({queryKey:['market',userId,query,before],queryFn:()=>rpc<Market>('ct_market_snapshot',{p_search:query,p_before:before}),staleTime:30000,refetchOnWindowFocus:false});

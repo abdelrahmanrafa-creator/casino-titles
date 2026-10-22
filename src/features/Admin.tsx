@@ -42,9 +42,9 @@ export function Admin({userId,command,busy,catalog}:{userId:string;command:Comma
   {tab==='players'&&<AdminPlayers userId={userId} catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
   {tab==='chests'&&<AdminChests {...props}/>}{tab==='offers'&&<AdminOffers {...props}/>}
   {tab==='titles'&&<AdminTitles catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
-  {tab==='promos'&&<AdminPromos userId={userId} catalog={catalog} command={command} busy={busy} reason={reason}/>}
+  {tab==='promos'&&<AdminPromos chests={data.chests} userId={userId} catalog={catalog} command={command} busy={busy} reason={reason}/>}
   {tab==='events'&&<AdminEvents events={data.events} catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
-  {tab==='games'&&<><AdminGameControls controls={data.controls} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminRules key={JSON.stringify(data.rules)} rules={data.rules} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminQuests quests={data.quests} command={command} busy={busy} reason={reason} onSaved={refresh}/></>}
+  {tab==='games'&&<><AdminGameControls controls={data.controls} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminRules key={JSON.stringify(data.rules)} rules={data.rules} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminQuests chests={data.chests} quests={data.quests} command={command} busy={busy} reason={reason} onSaved={refresh}/></>}
   {tab==='rarities'&&<AdminRarities key={JSON.stringify(data.rarities)} initialColors={data.rarities.map(r=>r.color)} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
   {tab==='security'&&<AdminSecurity userId={userId} data={data} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
   {tab==='audit'&&<AuditLog userId={userId}/>}

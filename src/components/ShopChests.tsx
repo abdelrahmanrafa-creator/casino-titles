@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import type {CSSProperties} from 'react';
 import {ChevronRight,CalendarDays,Tag} from 'lucide-react';
 import {rarityNames,colors,type Chest} from '../lib/api';
@@ -15,5 +16,6 @@ export function ShopChests({chests,onOpen}:{chests:Chest[];onOpen:(chest:Chest)=
   {chest.remaining_stock!==null&&chest.remaining_stock!==undefined&&<small className="stock-note">{chest.remaining_stock} coffre(s) restant(s)</small>}
   <button className="text-btn odds-btn" onClick={()=>onOpen(chest)}>Voir les probabilités <ChevronRight size={13}/></button>
   <button className="btn chest-buy" disabled={chest.available===false} onClick={()=>onOpen(chest)}>{chest.available===false?'Indisponible actuellement':<>Découvrir ce coffre <span>Ouvrir ↗</span></>}</button>
+  {(chest.category??'standard')==='standard'&&chest.remaining_stock==null&&<Link className="text-btn" to="/market?tab=sealed">Acheter pour conserver ↗</Link>}
  </article>)}</div>;
 }
