@@ -34,6 +34,6 @@ test('public title counts use unique active owners; people search exposes only p
  await db.query("INSERT INTO ct_player_titles(user_id,title_id,source) VALUES($1,'ct-2-001','test'),($2,'ct-2-001','test')",[uid(1),uid(2)]);
  let stats=await rpc(1,'ct_title_statistics');assert.equal(stats.find(t=>t.title_id==='ct-2-001').owners,2);
  await db.query("UPDATE ct_player_titles SET revoked_at=now() WHERE user_id=$1 AND title_id='ct-2-001'",[uid(2)]);stats=await rpc(1,'ct_title_statistics');assert.equal(stats.find(t=>t.title_id==='ct-2-001').owners,1);
- const username=(await db.query('SELECT username FROM ct_profiles WHERE id=$1',[uid(1)])).rows[0].username;const people=await rpc(2,'ct_find_players',[username]);assert.ok(people.some(p=>p.id===uid(1)));assert.deepEqual(Object.keys(people[0]).sort(),['avatar','equipped_title','id','unique_titles','username']);assert.deepEqual(await rpc(1,'ct_find_players',['%']),[]);
+ const username=(await db.query('SELECT username FROM ct_profiles WHERE id=$1',[uid(1)])).rows[0].username;const people=await rpc(2,'ct_find_players',[username]);assert.ok(people.some(p=>p.id===uid(1)));assert.deepEqual(Object.keys(people[0]).sort(),['avatar','equipped_title','id','is_bot','unique_titles','username']);assert.deepEqual(await rpc(1,'ct_find_players',['%']),[]);
  const collection=await rpc(2,'ct_public_collection',[uid(1)]);assert.equal(collection.find(t=>t.id==='ct-2-001').copies,2);assert.ok(!JSON.stringify(collection).includes('user_id'));
 });

@@ -19,7 +19,7 @@ Chaque modification exige une justification. Les prix, dates, stocks, soldes et 
 
 ## Vérification
 
-74 tests automatisés réussis, compilation TypeScript/Vite et seize contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
+84 tests automatisés réussis, compilation TypeScript/Vite et dix-neuf contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
 
 Les sauvegardes et les limites du multijoueur sont documentées dans `BACKUPS.md` et `README.md`. Aucun encaissement ni retrait d’argent réel n’est intégré.
 
@@ -28,3 +28,11 @@ Dans Codes promo, choisir Nouveau code, définir le texte du code, son nom, les 
 
 ## Économie & coffre-fort
 Ouvrir cet onglet pour suivre la circulation des crédits et vérifier la ligne Comptabilité équilibrée. Le journal affiche pour chaque mouvement le montant du coffre-fort et le montant opposé côté joueur. Une prime de bienvenue produit −5 000 au coffre-fort et +5 000 au joueur ; un coffre acheté 500 produit +500 et −500. Les dates et catégories permettent de filtrer le journal ; les graphiques et totaux de période restent indépendants du filtre de catégorie. Les crédits engagés aux tables sont affichés à part et ne sont pas disponibles pour le serveur. Le suivi reprend aussi les opérations antérieures à son activation.
+
+## Bots
+1. Ouvrir Bots → Créer un lot. Choisir 1 à 25 comptes, le style de noms et l’avatar. Vérifier ou remplacer les pseudos affichés.
+2. Répartir le nombre de bots par meilleure rareté ; la somme doit correspondre au lot. Exemple pour dix bots : deux Communs, trois Rares, deux Épiques, un Légendaire, un Rainbow et un Xtrem. Le nombre de titres de la meilleure rareté est réglable séparément. Aucun Cosmique n’est autorisé.
+3. Fixer les fourchettes de titres uniques, de soldes, de coffres simulés et de parties, ainsi que le taux de victoire. Une sélection facultative précise les titres autorisés. Chaque rareté doit disposer d’assez de titres pour la fourchette demandée.
+4. Ajouter une justification en haut du panneau et cliquer Créer et figer. La liste permet ensuite de renommer, ajuster le solde, masquer des classements ou archiver un bot. Les titres peuvent être attribués/révoqués dans Joueurs, jusqu’à Xtrem.
+
+Les comptes restent figés sans activité automatique. Les historiques générés sont étiquetés simulés et les profils portent le badge Bot. Archiver ne restitue pas automatiquement le solde : le régler à zéro pour le rendre au coffre-fort. Le journal économique distingue financement, coffres, mises, gains et ajustements des bots. Créer plusieurs lots pour dépasser vingt-cinq bots, avec un maximum de cinq mille profils simulés.

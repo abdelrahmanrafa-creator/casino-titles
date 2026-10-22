@@ -50,7 +50,7 @@ test('deleting an unused account returns its remaining balance and retains treas
  await db.query('DELETE FROM auth.users WHERE id=$1',[uid(3)]);const after=await economy();balanced(after);assert.equal(after.treasury_gross,before.treasury_gross+balance);assert.ok(after.entries.some(e=>e.reason==='account_closed'&&e.amount===balance));assert.ok(after.entries.some(e=>e.reason==='welcome'&&e.user_id===uid(3)&&e.wallet_transaction_id===null));
 });
 test('installing treasury over existing history backfills once without changing player balances',async()=>{
- const legacy=await createTitlesDatabase(undefined,migrations.filter(f=>!f.includes('190000_treasury')));try{
+ const legacy=await createTitlesDatabase(undefined,migrations.filter(f=>f<'20261022190000_treasury_privacy.sql'));try{
  await legacy.exec(await readFile(new URL('../supabase/migrations/20261022190000_treasury_privacy.sql',import.meta.url),'utf8'));await legacy.query('INSERT INTO ct_admins(user_id) VALUES($1)',[uid(1)]);
  const e=(await asPlayer(legacy,1,'SELECT ct_admin_economy() result')).rows[0].result;balanced(e);assert.equal(e.player_balances,10000);assert.equal(e.entries.length,2);assert.equal(e.treasury_gross,99990000);
  }finally{await legacy.close();}

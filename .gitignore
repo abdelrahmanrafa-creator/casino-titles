@@ -7,3 +7,4 @@ artifacts/
 *.tsbuildinfo
 .admin-*.local.*
 .openai/*.local.*
+supabase/.temp/

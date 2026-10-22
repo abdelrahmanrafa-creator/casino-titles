@@ -1,0 +1,20 @@
+export type BotNameStyle='realistic'|'word'|'letters3'|'digits3'|'mixed3'|'gamer';
+export const rareWords=['Aether','Vesper','Zephyr','Solace','Sable','Wraith','Lucent','Serein','Umbra','Ethereal','Halcyon','Nocturne','Elysian','Sonder','Lacuna','Aureate','Petrichor','Fathom','Liminal','Obsidian','Sylvan','Riven','Ember','Feral','Briar','Hollow','Reverie','Seraph','Wisp','Vellum','Cinder','Arcane','Quill','Axiom','Cipher','Dusk','Nacre','Onyx','Rune','Vale','Warden','Vigil','Haven','Fable','Glade','Gossamer','Haze','Ivory','Kestrel','Lark','Lithe','Morrow','Nimbus','Omen','Opal','Paragon','Quasar','Quiver','Rapture','Rook','Saffron','Shiver','Silhouette','Silver','Siren','Solstice','Sparrow','Stillness','Tempest','Thistle','Thorne','Torrent','Trance','Twilight','Velvet','Verdant','Violet','Wander','Whisper','Willow','Winter','Yonder','Zenith','Afterglow','Alabaster','Alchemy','Amaranth','Anemone','Anthem','Ardent','Ashen','Astral','Aurora','Beryl','Bliss','Brume','Cadence','Caldera','Callow','Cerulean','Chasm','Chime','Chroma','Cobalt','Coral','Crimson','Crux','Dapple','Dawn','Dewdrop','Diorama','Drift','Echo','Effigy','Elegy','Enigma','Equinox','Esker','Evermore','Fauna','Fjord','Flint','Flora','Flux','Frost','Gale','Garnet','Gleam','Glyph','Grail','Granite','Harbor','Hearth','Helix','Heron','Hush','Indigo','Islet','Jasper','Jovial','Juniper','Kindle','Lagoon','Laurel','Lilac','Lore','Lumen','Lunar','Lyric','Marble','Meadow','Mirage','Mistral','Monarch','Moss','Murmur','Myrtle','Nebula','Nettle','Nimble','Nova','Oasis','Ochre','Oracle','Orbit','Osprey','Overture','Palisade','Pearl','Phantom','Pinnacle','Plume','Prism','Quartz','Quiescent','Rain','Raven','Ravine','Relic','Resonance','Ripple','Sapphire','Scarlet','Sequoia','Shale','Shroud','Silken','Slate','Snowfall','Sonnet','Spectre','Spire','Spruce','Starlight','Styx','Summit','Talon','Tangle','Tarn','Threnody','Tide','Timber','Topaz','Umber','Undertow','Vagrant','Valiant','Vapor','Verve','Vestige','Viridian','Void','Waning','Westerly','Wilder','Wistful','Woven','Wren','Yearning'];
+const firstNames=['Mason','Elliot','Nolan','Aiden','Owen','Logan','Luca','Theo','Miles','Caleb','Ethan','Jasper','Finn','Noah','Rowan','Asher','Levi','Dylan','Oscar','Felix','Hugo','Ezra','Arlo','Kai','Ronan','Adam','Liam','Isaac','Cole','Jude','Silas','Evan','Reid','Blake','Shane','Ellis','Damon','Lewis','Rhys','Hayden','Arden','Riley','Avery','Morgan','Quinn','Casey','Taylor','Robin','Reese','Skyler'];
+function random(n:number){if(!Number.isSafeInteger(n)||n<1)throw Error('Invalid random range');const limit=Math.floor(4294967296/n)*n;let value:number;do{value=crypto.getRandomValues(new Uint32Array(1))[0];}while(value>=limit);return value%n;}
+function pick<T>(values:readonly T[]){return values[random(values.length)];}
+export function generateBotNames(count:number,style:BotNameStyle,existing:string[]=[]):string[]{
+ if(!Number.isInteger(count)||count<1||count>25)throw Error('Choisissez 1 à 25 pseudos.');
+ const taken=new Set(existing.map(n=>n.toLowerCase())),result:string[]=[];
+ for(let tries=0;result.length<count&&tries<5000;tries++){
+  let name='';
+  if(style==='word')name=pick(rareWords);
+  else if(style==='digits3')name=String(random(1000)).padStart(3,'0');
+  else if(style==='letters3')name=Array.from({length:3},()=>String.fromCharCode(97+random(26))).join('');
+  else if(style==='mixed3'){name=Array.from({length:3},()=>pick('abcdefghijklmnopqrstuvwxyz0123456789'.split(''))).join('');if(!/[a-z]/.test(name)||!/[0-9]/.test(name))continue;}
+  else if(style==='realistic'){const first=pick(firstNames);name=pick([first,first+String(random(100)),first+'_'+pick(['x','gg','tv']),first+pick(['R','N','K','W'])]);}
+  else name=pick(['Nyro','Kyro','Vexo','Ryn','Aero','Nix','Zeno','Vyn','Kairo','Lex','Vaze','Raze','Kova','Zyra','Fynn','Nero','Viro','Riko'])+pick(['','_','x','gg',String(10+random(90))]);
+  if(!taken.has(name.toLowerCase())){taken.add(name.toLowerCase());result.push(name);}
+ }
+ if(result.length!==count)throw Error('Pas assez de pseudos libres dans ce style. Changez de style ou réduisez le lot.');return result;
+}
