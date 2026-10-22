@@ -65,3 +65,15 @@ test('robot avatars are normalized for generated bots and profile edits without 
  await asPlayer(db,2,"UPDATE ct_profiles SET avatar='🤖' WHERE id=auth.uid()");assert.equal((await db.query('SELECT avatar FROM ct_profiles WHERE id=$1',[uid(2)])).rows[0].avatar,'🎲');
  await asPlayer(db,2,"UPDATE ct_profiles SET avatar='🦊' WHERE id=auth.uid()");assert.equal((await db.query('SELECT avatar FROM ct_profiles WHERE id=$1',[uid(2)])).rows[0].avatar,'🦊');
 });
+test('win ranges vary per bot, preserve legacy fixed-rate requests, and reject invalid bounds atomically',async()=>{
+ for(const bounds of [{win_percent_min:70,win_percent_max:30},{win_percent_min:-1,win_percent_max:50},{win_percent_min:0,win_percent_max:101},{win_percent_min:35}])await assert.rejects(create({...config,names:['InvalidRangeQA'],rarity_counts:[1,0,0,0,0,0,0,0],...bounds}),/Fourchette/);
+ const varied=await create({...config,names:Array.from({length:15},(_,i)=>'RangeQA'+i),rarity_counts:[15,0,0,0,0,0,0,0],games_min:30,games_max:30,win_percent_min:35,win_percent_max:68});
+ const wins=[];for(const b of varied.bots){const p=await rpc(2,'ct_public_profile_details',[b.id]);assert.equal(p.statistics.games,30);assert.ok(p.statistics.wins>=10&&p.statistics.wins<=20);wins.push(p.statistics.wins);assert.equal(p.balance,12000);}
+ assert.ok(new Set(wins).size>1);assert.equal((await economy()).difference,0);
+});
+test('existing simulated results can vary with balanced correction entries while balances and real rounds remain untouched',async()=>{
+ const b=batch.bots[0],before=await economy(),balance=(await rpc(2,'ct_public_profile_details',[b.id])).balance;
+ await assert.rejects(rpc(2,'ct_vary_bot_results',[b.id,20,80]),/permission denied/);await assert.rejects(db.query('SELECT ct_vary_bot_results($1,20,80)',[uid(2)]),/Bot required/);
+ for(const rate of [20,80]){await db.query('SELECT ct_vary_bot_results($1,$2,$2)',[b.id,rate]);const p=await rpc(2,'ct_public_profile_details',[b.id]);assert.equal(p.statistics.wins,rate/10);assert.equal(p.balance,balance);const after=await economy();assert.equal(after.treasury_gross,before.treasury_gross);assert.equal(after.difference,0);assert.equal(after.ledger_difference,0);assert.equal(after.unmirrored,0);}
+ const rounds=(await db.query('SELECT choice,result,payout,bet FROM ct_game_rounds WHERE user_id=$1',[b.id])).rows;for(const r of rounds){assert.equal(r.result.payout,r.payout);assert.equal(r.result.side===r.choice.side,r.payout>r.bet);}
+});
