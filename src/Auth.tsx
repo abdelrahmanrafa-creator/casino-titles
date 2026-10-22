@@ -29,7 +29,7 @@ export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplet
    <button className="btn primary" disabled={busy}>{busy?'Connexion au cercle…':authenticated?'Créer mon profil':mode==='guest'?'Jouer en invité':mode==='signup'?'Créer mon compte':mode==='reset'?'Recevoir le lien':'Se connecter'} <span>↗</span></button>
   </form>
   {!authenticated&&<div className="auth-links"><button className="text-btn" onClick={()=>setMode('guest')}>Entrer en invité · juste un pseudo</button><button className="text-btn" onClick={()=>setMode(mode==='login'?'signup':'login')}>{mode==='login'?'Créer un compte':'Déjà membre ? Connexion'}</button><button className="text-btn" onClick={()=>setMode('reset')}>Mot de passe oublié</button></div>}
-  {!authenticated&&mode==='guest'&&<p className="legal">Votre progression est sauvegardée dans ce navigateur. Après déconnexion ou effacement de ses données, l’accès peut être perdu. Un admin peut associer votre compte à une adresse e-mail pour le récupérer.</p>}
+  {!authenticated&&mode==='guest'&&<p className="legal">Votre progression est sauvegardée dans ce navigateur. Après déconnexion ou effacement de ses données, l’accès peut être perdu. Vous pouvez ajouter votre e-mail et un mot de passe dans Paramètres pour garder un accès durable.</p>}
   {message&&<p role="status" className="notice">{message}</p>}
   {authenticated&&<button className="text-btn" onClick={()=>{void supabase.auth.signOut();}}>Se déconnecter</button>}
   <p className="legal">Crédits virtuels uniquement. Aucun achat, dépôt, retrait ou gain en argent réel.</p>

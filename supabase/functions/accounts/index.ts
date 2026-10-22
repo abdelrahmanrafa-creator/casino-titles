@@ -23,6 +23,31 @@ Deno.serve(async(req:Request)=>{
   const token=req.headers.get('Authorization')?.replace(/^Bearer /,'');if(!token)return reply({error:'Connexion requise',definitive:true},401);
   const auth=await db.auth.getUser(token);if(auth.error||!auth.data.user)return reply({error:'Connexion requise',definitive:true},401);actor=auth.data.user.id;
   const client=createClient(url,anon,{global:{headers:{Authorization:'Bearer '+token}},auth:{persistSession:false,autoRefreshToken:false}});
+  if(['conversion_status','convert_email','conversion_resend','convert_password'].includes(body.action)){
+   const self=auth.data.user,isGuest=self.app_metadata?.ct_guest===true,placeholder=(self.email??'').endsWith('@guest.casino.invalid');
+   if(body.action==='conversion_status')return reply({guest:isGuest,email:placeholder?null:self.email,email_ready:!placeholder&&!!self.email_confirmed_at,pending:isGuest&&!placeholder&&!self.email_confirmed_at,account_id:actor});
+   if(!isGuest)throw Error('Ce compte est déjà un compte permanent.');
+   if(body.action==='convert_email'){
+    if(!placeholder&&self.email_confirmed_at)throw Error('Adresse déjà confirmée. Choisissez votre mot de passe.');
+    const email=String(body.email??'').trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||email.endsWith('@guest.casino.invalid'))throw Error('Adresse e-mail invalide');
+    const prepared=await db.rpc('ct_prepare_guest_conversion',{p_user:actor});if(prepared.error)throw prepared.error;
+    const changed=await db.auth.admin.updateUserById(actor,{email,email_confirm:false});
+    if(changed.error){const current=await db.auth.admin.getUserById(actor);if(current.data.user?.email?.endsWith('@guest.casino.invalid'))await db.auth.admin.updateUserById(actor,{email_confirm:true});throw changed.error;}
+    const sent=await publicClient().auth.resend({type:'signup',email,options:{emailRedirectTo:'https://casino-titles-cercle.sassyjay19.chatgpt.site/settings'}});if(sent.error)throw sent.error;
+    return reply({ok:true,pending:true,account_id:actor,message:'Confirmez votre adresse avec le lien reçu, puis choisissez votre mot de passe dans les paramètres.'});
+   }
+   if(body.action==='conversion_resend'){
+    if(placeholder||self.email_confirmed_at)throw Error('Aucune adresse en attente de confirmation.');
+    const sent=await publicClient().auth.resend({type:'signup',email:self.email!,options:{emailRedirectTo:'https://casino-titles-cercle.sassyjay19.chatgpt.site/settings'}});if(sent.error)throw sent.error;
+    return reply({ok:true,message:'Un nouveau lien de confirmation a été envoyé.'});
+   }
+   if(placeholder||!self.email_confirmed_at)throw Error('Confirmez votre adresse e-mail avant de choisir votre mot de passe.');
+   const password=String(body.password??'');if(password.length<8||password.length>128)throw Error('Choisissez un mot de passe de 8 à 128 caractères.');
+   const updated=await fetch(url+'/auth/v1/user',{method:'PUT',headers:{apikey:anon,Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({password})});
+   if(!updated.ok){const error=await updated.json();if(error.code!=='same_password')throw Error(error.msg??error.message??'Le mot de passe n’a pas pu être enregistré.');}
+   const completed=await db.auth.admin.updateUserById(actor,{app_metadata:{...self.app_metadata,ct_guest:false}});if(completed.error)throw completed.error;
+   return reply({ok:true,account_id:actor,message:'Compte permanent activé. Vos crédits, titres, coffres et carte d’accès sont conservés.'});
+  }
   const permitted=await client.rpc('ct_is_admin');if(permitted.error||permitted.data!==true)return reply({error:'Administrator required',definitive:true},403);
   const target=String(body.user_id??''),action=body.action,values=body.values??{};operation=String(body.operation_id??'');if(!/^[0-9a-f-]{36}$/i.test(operation)||!['email','reset'].includes(action))throw Error('Requête de compte invalide');
   const begun=await client.rpc('ct_account_job',{p_operation_id:operation,p_user_id:target,p_action:action,p_values:values,p_reason:body.reason});if(begun.error)throw begun.error;
