@@ -1,0 +1,9 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../supabase/migrations/',import.meta.url);
+const collection=await readFile(new URL('20261022030000_titles_collection.sql',root),'utf8'),admin=await readFile(new URL('20261022080000_titles_administration.sql',root),'utf8');
+function extract(source,name){const text=source.match(new RegExp(`CREATE (?:OR REPLACE )?FUNCTION public\\.${name}\\([\\s\\S]*?\\$\\$;`))?.[0];if(!text)throw Error(name);return text.replace(/^CREATE (?:OR REPLACE )?FUNCTION/,'CREATE OR REPLACE FUNCTION');}
+const profile=extract(collection,'ct_public_profile').replace('WHERE user_id=p.id))','WHERE user_id=p.id AND revoked_at IS NULL))');
+const quests=extract(admin,'ct_quest_progress').replace('FROM public.ct_player_titles WHERE user_id=p_uid)','FROM public.ct_player_titles WHERE user_id=p_uid AND revoked_at IS NULL)');
+const ranking=extract(admin,'ct_rankings').replace('WHERE user_id=p.id AND acquired_at>=v_since)','WHERE user_id=p.id AND revoked_at IS NULL AND acquired_at>=v_since)').replace('WHERE i.user_id=p.id AND t.rarity=8','WHERE i.user_id=p.id AND i.revoked_at IS NULL AND t.rarity=8');
+await writeFile(new URL('20261022120000_titles_integrity.sql',root),`-- Regenerate with scripts/active-titles.mjs.\nBEGIN;\nALTER TABLE public.ct_wallet_transactions ALTER COLUMN balance_after SET NOT NULL;\nALTER TABLE public.ct_wallet_transactions ALTER COLUMN wallet_version SET NOT NULL;\nALTER TABLE public.ct_wallet_transactions ADD CONSTRAINT ct_ledger_valid_balance CHECK(balance_after BETWEEN 0 AND 9000000000000 AND wallet_version>=0);\nALTER TABLE public.ct_wallet_transactions ADD CONSTRAINT ct_ledger_one_version UNIQUE(user_id,wallet_version);\n${profile}\n${quests}\n${ranking}\nCOMMIT;\n`);
+console.log('Active ownership and ledger integrity migration generated.');
