@@ -31,10 +31,10 @@ Les migrations de ce dossier ont été appliquées au Supabase connecté et la f
 
 Dans Supabase Auth, conserver la confirmation d’e-mail et autoriser l’origine déployée ainsi que http://127.0.0.1:5180 dans les URL de redirection. Le connecteur disponible ne permet pas de modifier ces paramètres Auth. Un e-mail de confirmation doit être testé de bout en bout avant une ouverture générale. Le flux de récupération utilise `/settings`.
 
-Le premier administrateur doit être attribué explicitement par un opérateur de confiance dans `ct_admins` avec l’UUID du compte Auth confirmé. Aucun rôle historique n’est importé et aucun premier inscrit ne devient administrateur automatiquement. La console est `/admin`.
+La console est `/admin`, sans lien dans la navigation publique. Son accès exige un compte confirmé, un rôle administrateur et un déverrouillage par code secret lié à la session Auth. L’activation initiale unique se fait avec le code généré dans `.admin-access.local.txt`, exclu de Git et de la publication. Aucun premier inscrit ne devient administrateur sans ce code. Voir `ADMIN_GUIDE.md`.
 
 ## Validation et limites de recette
-43 tests automatiques passent : paiements, permissions, restauration physique locale, coffres, combinaisons poker, pots secondaires, cartes privées, règles du Blackjack/Baccarat, missions, événements, révocation, paramètres et changements de prix/probabilités/règles entre affichage et confirmation. PGlite sérialise les transactions ; les tests locaux ne prouvent pas seuls le comportement de connexions PostgreSQL concurrentes.
+55 tests automatiques passent : paiements, permissions, restauration physique locale, coffres, combinaisons poker, pots secondaires, cartes privées, règles du Blackjack/Baccarat, missions, événements, révocation, paramètres, offres, stocks, sessions administrateur, rotation du code et affichage du prix barré. PGlite sérialise les transactions ; les tests locaux ne prouvent pas seuls le comportement de connexions PostgreSQL concurrentes.
 
 Une recette supplémentaire sur le Supabase hébergé a utilisé une identité synthétique sans adresse e-mail ni mot de passe, supprimée après les tests : deux demandes quotidiennes concurrentes ont versé une seule récompense ; douze ouvertures concurrentes avec 5 750 crédits ont produit exactement onze titres, onze historiques et un solde de 250. Les douze assertions de `supabase/verify.sql` passent sur l’hébergement.
 

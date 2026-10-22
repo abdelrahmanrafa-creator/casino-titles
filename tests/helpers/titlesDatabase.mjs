@@ -15,10 +15,11 @@ export async function createTitlesDatabase(directory, extra=[]){
  return db;
 }
 // Transaction-scoped role and identity; serialized by PGlite. No global session switch races.
-export async function asPlayer(db,n,sql,params=[]){
+export async function asPlayer(db,n,sql,params=[],session=n){
  return db.transaction(async tx=>{
   await tx.exec('SET LOCAL ROLE authenticated');
   await tx.query("SELECT set_config('request.jwt.claim.sub',$1,true)",[uid(n)]);
+  await tx.query("SELECT set_config('request.jwt.claims',$1,true)",[JSON.stringify({sub:uid(n),session_id:uid(session)})]);
   return tx.query(sql,params);
  });
 }

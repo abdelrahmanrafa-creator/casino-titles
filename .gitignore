@@ -3,5 +3,7 @@ dist/
 .env*
 !.env.example
 backups/
+artifacts/
 *.tsbuildinfo
+.admin-*.local.*
 .openai/*.local.*

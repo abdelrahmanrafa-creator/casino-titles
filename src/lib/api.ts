@@ -19,7 +19,7 @@ export async function tableRequest<T>(body:Record<string,unknown>):Promise<T>{
  return data;
 }
 export interface Title {id:string;name:string;rarity:number;description:string;effect:string;acquisition:string;shop_price:number|null;available:boolean;exclusive:boolean}
-export interface Chest {id:number;name:string;price:number;weights:number[];active:boolean;version:number}
+export interface Chest {id:number;name:string;price:number;weights:number[];active:boolean;version:number;rarity:number;category:'standard'|'event';description:string;starts_at:string|null;ends_at:string|null;base_price?:number;current_price?:number;discount_percent?:number;offer_id?:string|null;offer_name?:string|null;offer_ends_at?:string|null;remaining_stock?:number|null;available?:boolean}
 export interface Owned {id:string;title_id:string;source:string;acquired_at:string}
 export interface Wallet {balance:number;version:number}
 export interface Receipt {id:string;amount:number;reason:string;balance_after:number;created_at:string;wallet_version:number}

@@ -8,6 +8,9 @@ async function check(label,path,options,verify){const response=await fetch(url+p
 await check('catalog online','/rest/v1/ct_titles?select=id',{},(r,b)=>r.ok&&Array.isArray(b)&&b.length>=320);
 await check('wallet inaccessible anonymously','/rest/v1/ct_wallets?select=balance',{},r=>[401,403].includes(r.status));
 await check('private room state inaccessible anonymously','/rest/v1/ct_rooms?select=id',{},r=>[401,403].includes(r.status));
+await check('administrator secrets inaccessible anonymously','/rest/v1/ct_admin_security?select=id',{},r=>[401,403].includes(r.status));
+await check('admin unlock unavailable without authentication','/rest/v1/rpc/ct_admin_unlock',{method:'POST',body:JSON.stringify({p_code:'not-a-real-admin-code-test-only'})},r=>[401,403].includes(r.status));
+await check('live shop quotes available','/rest/v1/rpc/ct_shop_chests',{method:'POST',body:'{}'},(r,b)=>r.ok&&Array.isArray(b)&&b.length>=8&&b.every(c=>c.current_price>=0&&c.base_price>=c.current_price));
 await check('credit helper inaccessible anonymously','/rest/v1/rpc/ct_post_credit',{method:'POST',body:JSON.stringify({p_uid:'00000000-0000-0000-0000-000000000001',p_delta:1,p_reason:'test',p_key:'test'})},r=>[401,403].includes(r.status));
 await check('table function rejects unauthenticated requests','/functions/v1/ct-tables',{method:'POST',body:JSON.stringify({command:'list'})},r=>r.status===401);
 await check('email authentication available','/auth/v1/settings',{},(r,b)=>r.ok&&b.external?.email===true);
