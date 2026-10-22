@@ -7,7 +7,7 @@ const migrations=(await readdir(new URL('../supabase/migrations/',import.meta.ur
 const db=await createTitlesDatabase(undefined,migrations);await db.exec("INSERT INTO ct_demo_cards(user_id,tier_id) SELECT id,'basic' FROM ct_profiles");after(()=>db.close());
 const rpc=async(n,name,args=[])=>(await asPlayer(db,n,`SELECT ${name}(${args.map((_,i)=>'$'+(i+1)).join(',')}) result`,args)).rows[0].result;
 const act=(n,action,values={},op=randomUUID())=>rpc(n,'ct_trade_command',[op,action,values]);
-const market=(n,action,values={},op=randomUUID())=>rpc(n,'ct_market_command',[op,action,values]);
+const market=(n,action,values={},op=randomUUID())=>action==='buy_sealed'?rpc(n,'ct_buy_chest',[op,values.chest_id,values.version,values.price,null]):rpc(n,'ct_market_command',[op,action,values]);
 const room=(n,id)=>rpc(n,'ct_trade_room',[id]);
 await db.query('INSERT INTO ct_admins(user_id) VALUES($1)',[uid(1)]);
 await db.query('INSERT INTO auth.users VALUES($1,now())',[uid(3)]);await rpc(3,'ct_initialize_profile',['Charlie']);await db.query("INSERT INTO ct_demo_cards(user_id,tier_id) VALUES($1,'basic')",[uid(3)]);

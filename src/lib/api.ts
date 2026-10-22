@@ -28,3 +28,9 @@ export interface Award {title:Title;player_title_id:string;opening_id?:string;ba
 export const rarityNames=['COMMUN','RARE','ÉPIQUE','LÉGENDAIRE','MYTHIQUE','RAINBOW','XTREM','COSMIQUE'];
 export const colors=['#a1a1aa','#60a5fa','#b47aff','#f5b85a','#3ce0cc','#f0abfc','#ffca36','#b6a1ff'];
 export const credits=(n:number)=>new Intl.NumberFormat('fr-FR').format(n);
+
+export async function accountRequest<T>(body:Record<string,unknown>):Promise<T>{
+ const {data:{session}}=await supabase.auth.getSession();let response:Response;
+ try{response=await fetch(import.meta.env.VITE_SUPABASE_URL+'/functions/v1/ct-accounts',{method:'POST',headers:{apikey:import.meta.env.VITE_SUPABASE_ANON_KEY,Authorization:'Bearer '+(session?.access_token??import.meta.env.VITE_SUPABASE_ANON_KEY),'Content-Type':'application/json'},body:JSON.stringify(body)});}catch{throw new RpcFailure('Connexion interrompue. Réessayez la même opération.',false);}
+ const data=await response.json();if(!response.ok)throw new RpcFailure(data.error??'Opération indisponible',data.definitive===true);return data as T;
+}
