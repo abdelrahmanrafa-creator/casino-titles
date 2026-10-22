@@ -19,6 +19,6 @@ Chaque modification exige une justification. Les prix, dates, stocks, soldes et 
 
 ## Vérification
 
-55 tests automatisés réussis, compilation TypeScript/Vite et neuf contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
+57 tests automatisés réussis, compilation TypeScript/Vite et neuf contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
 
 Les sauvegardes et les limites du multijoueur sont documentées dans `BACKUPS.md` et `README.md`. Aucun encaissement ni retrait d’argent réel n’est intégré.
