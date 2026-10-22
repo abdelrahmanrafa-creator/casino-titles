@@ -65,7 +65,7 @@ test('bot name generation respects exact short-name styles, uniqueness and reser
 const {AdminBots}=await import(pathToFileURL(join(temporary,'AdminBots.mjs')).href);
 test('bot control room offers editable name preview, exact rarity quotas, frozen balances and no Cosmic option',async()=>{
  const client=new QueryClient({defaultOptions:{queries:{retry:false}}});client.setQueryData(['admin-data','qa-preview','bots','',0],{bots:[],total:0,found:0,active:0,balances:0});
- const chests=[{id:1,name:'Classique',price:500,version:1,active:true,category:'standard'}];const html=renderToStaticMarkup(createElement(QueryClientProvider,{client},createElement(MemoryRouter,null,createElement(AdminBots,{userId:'qa-preview',catalog:[],chests,command:async()=>null,busy:false,reason:'Recette de création',onSaved:async()=>{}}))));
+ const chests=[{id:1,name:'Classique',price:500,version:1,active:true,category:'standard'}];const html=renderToStaticMarkup(createElement(QueryClientProvider,{client},createElement(MemoryRouter,null,createElement(AdminBots,{userId:'qa-preview',catalog:[],chests,command:async()=>null,busy:false,reason:'Recette de création',onReasonChange:()=>{},onSaved:async()=>{}}))));
  assert.match(html,/Créer et figer/);assert.match(html,/Pseudo du bot 10/);assert.match(html,/Exactement 3 lettres/);assert.match(html,/Exactement 3 chiffres/);assert.match(html,/Nombre de bots XTREM/);assert.doesNotMatch(html,/Nombre de bots COSMIQUE/);assert.match(html,/Solde minimum/);assert.match(html,/Pourcentage de victoires/);
  const css=(await readdir(join(root,'dist','assets'))).find(n=>n.endsWith('.css'));await writeFile(join(root,'artifacts','bots-qa.html'),'<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QA visuelle — gestion des bots</title><link rel="stylesheet" href="/dist/assets/'+css+'"><body><p style="padding:15px;color:#bca6dd;font-size:12px">Aperçu de recette — aucun bot réel créé, aucune modification du coffre-fort.</p><main class="main-content">'+html+'</main></body></html>');
 });
@@ -89,4 +89,11 @@ test('profile gate asks for a username only after a successful missing-profile l
  const failed=render({error:new Error('permission denied'),profile:undefined});assert.match(failed,/Réessayer/);assert.doesNotMatch(failed,/CHOISIR_PSEUDO/);
  const existing=render({profile:{id:'member',username:'Alice',avatar:'🎲',created_at:'2026-10-22'}});assert.match(existing,/ESPACE_EXISTANT/);assert.doesNotMatch(existing,/CHOISIR_PSEUDO/);
  const backgroundFailure=render({profile:{id:'member'},error:new Error('offline')});assert.match(backgroundFailure,/ESPACE_EXISTANT/);
+});
+
+test('bot creation explains a disabled button and enables valid settings with a justification',()=>{
+ const render=(reason,chests=[{id:1,name:'Classique',price:500,version:1,active:true,category:'standard'}])=>{const client=new QueryClient({defaultOptions:{queries:{retry:false}}});client.setQueryData(['admin-data','qa-preview','bots','',0],{bots:[],total:0,found:0,active:0,balances:0});return renderToStaticMarkup(createElement(QueryClientProvider,{client},createElement(MemoryRouter,null,createElement(AdminBots,{userId:'qa-preview',catalog:[],chests,command:async()=>null,busy:false,reason,onReasonChange:()=>{},onSaved:async()=>{}}))));};
+ const blocked=render('');assert.match(blocked,/Justification de la création/);assert.match(blocked,/Renseignez une justification/);assert.match(blocked,/aria-describedby="bot-launch-blockers" disabled=""/);
+ const ready=render('Création de nouveaux joueurs');assert.doesNotMatch(ready,/id="bot-launch-blockers"/);assert.doesNotMatch(ready,/disabled=""[^>]*>Créer et figer/);
+ const noChest=render('Création de nouveaux joueurs',[]);assert.match(noChest,/Sélectionnez un coffre standard disponible/);
 });
