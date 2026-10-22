@@ -32,7 +32,7 @@ export default function App(){
  const [shopTab,setShopTab]=useState('titles');
  const userRef=useRef(uid);userRef.current=uid;
  const {data:profile,refetch:refreshProfile,isPending:profileLoading}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
-  const {data,error}=await supabase.from('ct_profiles').select('*').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
+  const {data,error}=await supabase.from('ct_profiles').select('id,username,avatar,created_at').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
  }});
  const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:5000,staleTime:0});
  const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],queryFn:async()=>{
@@ -57,7 +57,7 @@ export default function App(){
    op=pendingCommand(target,name,args);setPending(op);
    const result=name==='tables'?await tableRequest<Record<string,unknown>>({...args,operation_id:op.id}):await rpc<Record<string,unknown>>(name,{p_operation_id:op.id,...args});
    clearPending(target);if(userRef.current!==target)return null;
-   setPending(null);await Promise.all([queryClient.invalidateQueries({queryKey:['player',target]}),queryClient.invalidateQueries({queryKey:['games',target]}),queryClient.invalidateQueries({queryKey:['quests',target]}),queryClient.invalidateQueries({queryKey:['tables',target]}),queryClient.invalidateQueries({queryKey:['events-claimed',target]}),queryClient.invalidateQueries({queryKey:['achievements',target]}),queryClient.invalidateQueries({queryKey:['chests']}),queryClient.invalidateQueries({queryKey:['arcade',target]}),queryClient.invalidateQueries({queryKey:['title-statistics']}),queryClient.invalidateQueries({queryKey:['public-collection']})]);
+   setPending(null);await Promise.all([queryClient.invalidateQueries({queryKey:['player',target]}),queryClient.invalidateQueries({queryKey:['games',target]}),queryClient.invalidateQueries({queryKey:['quests',target]}),queryClient.invalidateQueries({queryKey:['tables',target]}),queryClient.invalidateQueries({queryKey:['events-claimed',target]}),queryClient.invalidateQueries({queryKey:['achievements',target]}),queryClient.invalidateQueries({queryKey:['chests']}),queryClient.invalidateQueries({queryKey:['arcade',target]}),queryClient.invalidateQueries({queryKey:['title-statistics']}),queryClient.invalidateQueries({queryKey:['public-collection']}),queryClient.invalidateQueries({queryKey:['public-profile-details']})]);
    if(result.title&&name!=='ct_redeem_promo')setAward(result as unknown as Award);
    return result;
   }catch(error){

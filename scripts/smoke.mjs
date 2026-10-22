@@ -23,4 +23,7 @@ await check('economy dashboard denies anonymous callers','/rest/v1/rpc/ct_admin_
 await check('ranking visibility requires authentication','/rest/v1/rpc/ct_set_leaderboard_visibility',{method:'POST',body:JSON.stringify({p_hidden:true})},r=>[401,403].includes(r.status));
 await check('bot configuration remains private','/rest/v1/ct_bots?select=user_id',{},r=>[401,403].includes(r.status));
 await check('bot generation denies anonymous callers','/rest/v1/rpc/ct_admin_create_bots',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000098',p_values:{},p_reason:'Unauthenticated smoke check'})},r=>[401,403].includes(r.status));
-await check('public rankings identify bots','/rest/v1/rpc/ct_rankings',{method:'POST',body:JSON.stringify({p_metric:'credits',p_period:'all'})},(r,b)=>r.ok&&Array.isArray(b)&&b.every(p=>typeof p.is_bot==='boolean'));
+await check('public rankings keep simulation metadata private','/rest/v1/rpc/ct_rankings',{method:'POST',body:JSON.stringify({p_metric:'credits',p_period:'all'})},(r,b)=>r.ok&&Array.isArray(b)&&b.every(p=>!Object.hasOwn(p,'is_bot')));
+
+await check('profile simulation flag inaccessible','/rest/v1/ct_profiles?select=is_bot',{},r=>[401,403].includes(r.status));
+await check('public profile details available','/rest/v1/rpc/ct_public_profile_details',{method:'POST',body:JSON.stringify({p_user_id:'00000000-0000-0000-0000-000000000099'})},(r,b)=>r.ok&&b===null);

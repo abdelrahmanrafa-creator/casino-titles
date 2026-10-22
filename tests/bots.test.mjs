@@ -33,18 +33,18 @@ test('bot identities cannot earn credits, authenticate as humans, become admin, 
  assert.equal((await db.query('SELECT count(*)::int n FROM ct_rooms')).rows[0].n,0);
  const before=(await economy()).treasury_gross;await assert.rejects(create(config),/déjà utilisé/);assert.equal((await economy()).treasury_gross,before);
 });
-test('public projections label bots, count their holders, and never disclose human wallet balances',async()=>{
- const id=batch.bots[0].id,p=await rpc(2,'ct_public_profile',[id]);assert.equal(p.is_bot,true);assert.equal(p.bot_balance,12000);assert.equal(p.chests,4);assert.equal(p.games,10);assert.equal(p.wins,6);
- const human=await rpc(2,'ct_public_profile',[uid(1)]);assert.equal(human.is_bot,false);assert.equal(human.bot_balance,null);
- assert.equal((await rpc(2,'ct_find_players',['VesperQA']))[0].is_bot,true);assert.ok((await rpc(2,'ct_rankings',['credits','all'])).some(p=>p.id===id&&p.is_bot));
- const titles=await rpc(2,'ct_public_collection',[id]),counts=await rpc(2,'ct_title_statistics');assert.ok(titles.length===8);for(const t of titles)assert.ok(counts.find(c=>c.title_id===t.id).bots>=1);
+test('public projections keep simulation metadata private while counting all holders',async()=>{
+ const id=batch.bots[0].id,p=await rpc(2,'ct_public_profile',[id]);assert.equal(p.is_bot,undefined);assert.equal(p.bot_balance,undefined);assert.equal(p.chests,4);assert.equal(p.games,10);assert.equal(p.wins,6);
+ const human=await rpc(2,'ct_public_profile',[uid(1)]);assert.equal(human.is_bot,undefined);assert.equal(human.bot_balance,undefined);
+ assert.equal((await rpc(2,'ct_find_players',['VesperQA']))[0].is_bot,undefined);assert.ok((await rpc(2,'ct_rankings',['credits','all'])).some(p=>p.id===id&&!Object.hasOwn(p,'is_bot')));
+ const titles=await rpc(2,'ct_public_collection',[id]),counts=await rpc(2,'ct_title_statistics');assert.ok(titles.length===8);assert.equal(titles[0].population,5);assert.ok(!Object.hasOwn(titles[0],'bots'));for(const t of titles)assert.ok(counts.find(c=>c.title_id===t.id).owners>=1);
 });
 test('bot editing is versioned, balances stay double-entered, archive hides profiles and restoration preserves stats',async()=>{
  let b=(await rpc(1,'ct_admin_bots',['VesperQA',0])).bots[0],before=await economy();const op=randomUUID(),values={username:'VesperEditedQA',avatar:'🦊',balance:15000,expected_balance:b.balance,active:false,hidden:true,version:b.version};
  await rpc(1,'ct_admin_update_bot',[op,b.id,values,'Modification du bot de test']);await rpc(1,'ct_admin_update_bot',[op,b.id,values,'Modification du bot de test']);
  assert.equal((await economy()).treasury_gross,before.treasury_gross-3000);assert.equal(await rpc(2,'ct_public_profile',[b.id]),null);assert.deepEqual(await rpc(2,'ct_find_players',['VesperEditedQA']),[]);assert.ok(!(await rpc(2,'ct_rankings',['credits','all'])).some(p=>p.id===b.id));
  await assert.rejects(rpc(1,'ct_admin_update_bot',[randomUUID(),b.id,values,'Ancienne fiche du bot']),/modifié/);
- b=(await rpc(1,'ct_admin_bots',['VesperEditedQA',0])).bots[0];await rpc(1,'ct_admin_update_bot',[randomUUID(),b.id,{...values,active:true,hidden:false,version:b.version,expected_balance:b.balance},'Réactivation du bot de test']);const p=await rpc(2,'ct_public_profile',[b.id]);assert.equal(p.chests,4);assert.equal(p.bot_balance,15000);assert.equal(p.wins,6);assert.equal((await economy()).difference,0);
+ b=(await rpc(1,'ct_admin_bots',['VesperEditedQA',0])).bots[0];await rpc(1,'ct_admin_update_bot',[randomUUID(),b.id,{...values,active:true,hidden:false,version:b.version,expected_balance:b.balance},'Réactivation du bot de test']);const p=await rpc(2,'ct_public_profile',[b.id]);assert.equal(p.chests,4);assert.equal((await rpc(2,'ct_public_profile_details',[b.id])).balance,15000);assert.equal(p.wins,6);assert.equal((await economy()).difference,0);
 });
 test('real profile creation, Auth cascade deletion and ranking privacy remain intact',async()=>{
  await db.query('INSERT INTO auth.users VALUES($1,now())',[uid(3)]);await rpc(3,'ct_initialize_profile',['HumanAfterBotsQA']);const p=(await db.query('SELECT auth_user_id,is_bot FROM ct_profiles WHERE id=$1',[uid(3)])).rows[0];assert.equal(p.auth_user_id,uid(3));assert.equal(p.is_bot,false);
@@ -52,8 +52,8 @@ test('real profile creation, Auth cascade deletion and ranking privacy remain in
  await assert.rejects(asPlayer(db,2,'SELECT * FROM ct_bots'),/permission denied/);await assert.rejects(asPlayer(db,2,'UPDATE ct_profiles SET is_bot=true WHERE id=auth.uid()'),/permission denied/);
 });
 test('empty collections, zero balances and exact top-rarity pools generate valid frozen accounts',async()=>{
- const before=await economy();const empty=await create({...config,names:['EmptyBotQA'],rarity_counts:[1,0,0,0,0,0,0,0],balance_min:0,balance_max:0,games_min:0,games_max:0});const p=await rpc(2,'ct_public_profile',[empty.bots[0].id]);assert.equal(p.unique_titles,0);assert.equal(p.chests,0);assert.equal(p.games,0);assert.equal(p.bot_balance,0);
- const rare=await create({...config,names:['RareEdgeQA'],rarity_counts:[0,0,0,0,0,0,0,1],balance_min:0,balance_max:0,titles_min:1,titles_max:1,chests_min:3,chests_max:3,games_min:3,games_max:3,win_percent:100,title_pool:['ct-7-001']});const r=await rpc(2,'ct_public_profile',[rare.bots[0].id]);assert.equal(r.unique_titles,1);assert.equal(r.wins,3);assert.equal(r.bot_balance,0);assert.equal((await economy()).treasury_gross,before.treasury_gross);
+ const before=await economy();const empty=await create({...config,names:['EmptyBotQA'],rarity_counts:[1,0,0,0,0,0,0,0],balance_min:0,balance_max:0,games_min:0,games_max:0});const p=await rpc(2,'ct_public_profile',[empty.bots[0].id]);assert.equal(p.unique_titles,0);assert.equal(p.chests,0);assert.equal(p.games,0);assert.equal(p.bot_balance,undefined);
+ const rare=await create({...config,names:['RareEdgeQA'],rarity_counts:[0,0,0,0,0,0,0,1],balance_min:0,balance_max:0,titles_min:1,titles_max:1,chests_min:3,chests_max:3,games_min:3,games_max:3,win_percent:100,title_pool:['ct-7-001']});const r=await rpc(2,'ct_public_profile',[rare.bots[0].id]);assert.equal(r.unique_titles,1);assert.equal(r.wins,3);assert.equal(r.bot_balance,undefined);assert.equal((await economy()).treasury_gross,before.treasury_gross);
  await assert.rejects(db.query("UPDATE ct_titles SET rarity=8 WHERE id='ct-7-001'"),/Cosmic/);assert.equal((await economy()).difference,0);
 });
 test('private projection helpers and bots configuration are not directly accessible to ordinary users',async()=>{
