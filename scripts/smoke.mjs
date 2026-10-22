@@ -29,3 +29,8 @@ await check('profile simulation flag inaccessible','/rest/v1/ct_profiles?select=
 await check('public profile details available','/rest/v1/rpc/ct_public_profile_details',{method:'POST',body:JSON.stringify({p_user_id:'00000000-0000-0000-0000-000000000099'})},(r,b)=>r.ok&&b===null);
 await check('compact bot summaries remain private','/rest/v1/ct_bot_summaries?select=user_id',{},r=>[401,403].includes(r.status));
 await check('bot storage monitor requires admin','/rest/v1/rpc/ct_admin_bot_storage',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('market requires a player session','/rest/v1/rpc/ct_market_snapshot',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('diamond wallet remains private','/rest/v1/ct_diamond_wallets?select=balance',{},r=>[401,403].includes(r.status));
+await check('diamond credit helper remains private','/rest/v1/rpc/ct_post_diamond',{method:'POST',body:JSON.stringify({p_uid:'00000000-0000-0000-0000-000000000099',p_delta:1,p_reason:'test',p_key:'test'})},r=>[401,403].includes(r.status));
+await check('anonymous market conversion is rejected','/rest/v1/rpc/ct_market_command',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000097',p_action:'convert',p_values:{diamonds:1}})},r=>[401,403].includes(r.status));
+await check('sealed inventories remain private','/rest/v1/ct_sealed_chests?select=id',{},r=>[401,403].includes(r.status));

@@ -3,7 +3,7 @@ import type {Session} from '@supabase/supabase-js';
 import {useQuery,useQueryClient} from '@tanstack/react-query';
 import {Link,NavLink,Route,Routes} from 'react-router-dom';
 import {AnimatePresence,motion,useReducedMotion} from 'framer-motion';
-import {ArrowUpRight,Box,Check,ChevronRight,Coins,Crown,Gift,Grid2X2,Layers,LogOut,Search,Settings,ShieldCheck,Sparkles,Trophy,UserRound,Wallet,X} from 'lucide-react';
+import {ArrowUpRight,Diamond,Box,Check,ChevronRight,Coins,Crown,Gift,Grid2X2,Layers,LogOut,Search,Settings,ShieldCheck,Sparkles,Trophy,UserRound,Wallet,X} from 'lucide-react';
 import {supabase,rpc,tableRequest,RpcFailure,credits,rarityNames,colors,type Snapshot,type Title,type Chest,type Award} from './lib/api';
 import {pendingCommand,clearPending,readPending,type Pending} from './lib/pending';
 import {TitleEffect} from './components/TitleEffect';
@@ -12,6 +12,7 @@ import {ShopChests} from './components/ShopChests';
 import {PriceTag} from './components/PriceTag';
 import {Collection} from './features/Collection';
 import {People} from './features/People';
+const Market=lazy(()=>import('./features/Market').then(m=>({default:m.Market})));
 const Rewards=lazy(()=>import('./features/Rewards').then(m=>({default:m.Rewards}))); 
 import {Auth} from './Auth';
 import {ProfileGate,type Profile} from './components/ProfileGate';
@@ -22,7 +23,7 @@ const Tables=lazy(()=>import('./features/Tables').then(m=>({default:m.Tables})))
 const Rankings=lazy(()=>import('./features/Rankings').then(m=>({default:m.Rankings})));
 const PublicProfile=lazy(()=>import('./features/Rankings').then(m=>({default:m.PublicProfile})));
 const Admin=lazy(()=>import('./features/Admin').then(m=>({default:m.Admin})));
-const nav=[['/','Accueil',Grid2X2],['/casino','Casino',Layers],['/rewards','Crédits gratuits',Gift],['/chests','Coffres',Box],['/shop','Boutique',Sparkles],['/inventory','Inventaire',Wallet],['/collection','Collection',Crown],['/rankings','Classements',Trophy],['/profile','Profil',UserRound],['/settings','Paramètres',Settings]] as const;
+const nav=[['/','Accueil',Grid2X2],['/casino','Casino',Layers],['/rewards','Crédits gratuits',Gift],['/market','Marché noir',Diamond],['/chests','Coffres',Box],['/shop','Boutique',Sparkles],['/inventory','Inventaire',Wallet],['/collection','Collection',Crown],['/rankings','Classements',Trophy],['/profile','Profil',UserRound],['/settings','Paramètres',Settings]] as const;
 
 export default function App(){
  const queryClient=useQueryClient();const [session,setSession]=useState<Session|null>(null),[authReady,setAuthReady]=useState(false);
@@ -34,6 +35,7 @@ export default function App(){
  const {data:profile,refetch:refreshProfile,isPending:profileLoading,error:profileError}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_profiles').select('id,username,avatar,created_at').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
  }});
+ const {data:diamonds}=useQuery({queryKey:['diamonds',uid],enabled:!!profile,queryFn:()=>rpc<{balance:number}>('ct_diamond_balance'),staleTime:60000,refetchInterval:120000});
  const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:60000,staleTime:0});
  const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],staleTime:300000,refetchOnWindowFocus:false,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_titles').select('*').order('rarity').order('id');if(error)throw error;return data as Title[];
@@ -57,7 +59,7 @@ export default function App(){
    op=pendingCommand(target,name,args);setPending(op);
    const result=name==='tables'?await tableRequest<Record<string,unknown>>({...args,operation_id:op.id}):await rpc<Record<string,unknown>>(name,{p_operation_id:op.id,...args});
    clearPending(target);if(userRef.current!==target)return null;
-   setPending(null);await Promise.all([queryClient.invalidateQueries({queryKey:['player',target]}),queryClient.invalidateQueries({queryKey:['games',target]}),queryClient.invalidateQueries({queryKey:['quests',target]}),queryClient.invalidateQueries({queryKey:['tables',target]}),queryClient.invalidateQueries({queryKey:['events-claimed',target]}),queryClient.invalidateQueries({queryKey:['achievements',target]}),queryClient.invalidateQueries({queryKey:['chests']}),queryClient.invalidateQueries({queryKey:['arcade',target]}),queryClient.invalidateQueries({queryKey:['title-statistics']}),queryClient.invalidateQueries({queryKey:['public-collection']}),queryClient.invalidateQueries({queryKey:['public-profile-details']})]);
+   setPending(null);await Promise.all([queryClient.invalidateQueries({queryKey:['player',target]}),queryClient.invalidateQueries({queryKey:['games',target]}),queryClient.invalidateQueries({queryKey:['quests',target]}),queryClient.invalidateQueries({queryKey:['tables',target]}),queryClient.invalidateQueries({queryKey:['events-claimed',target]}),queryClient.invalidateQueries({queryKey:['achievements',target]}),queryClient.invalidateQueries({queryKey:['chests']}),queryClient.invalidateQueries({queryKey:['arcade',target]}),queryClient.invalidateQueries({queryKey:['title-statistics']}),queryClient.invalidateQueries({queryKey:['public-collection']}),queryClient.invalidateQueries({queryKey:['public-profile-details']}),queryClient.invalidateQueries({queryKey:['market',target]}),queryClient.invalidateQueries({queryKey:['diamonds']})]);
    if(result.title&&name!=='ct_redeem_promo')setAward(result as unknown as Award);
    return result;
   }catch(error){
@@ -80,7 +82,7 @@ export default function App(){
   </aside>
   <div className="main-shell"><header className="topbar"><div className="mobile-brand">C<span>✦</span></div><div className="status-dot"/><span className="topbar-tag">LE CERCLE DES COLLECTIONNEURS</span><div className="topbar-right">
    {profile&&adminAccess?.is_admin===true&&<Link to="/admin" className="btn secondary compact admin-shortcut"><ShieldCheck size={16}/><span>Administration</span></Link>}
-   <div className="balance"><span className="coin-icon">C</span><div><small>VOTRE SOLDE</small><strong>{state?credits(state.wallet.balance):'—'} <span>Crédits</span></strong></div></div>
+   {profile&&<Link to="/market" className="topbar-diamonds" aria-label="Mon portefeuille de diamants"><Diamond size={17}/><strong>{credits(diamonds?.balance??0)}</strong></Link>}<div className="balance"><span className="coin-icon">C</span><div><small>VOTRE SOLDE</small><strong>{state?credits(state.wallet.balance):'—'} <span>Crédits</span></strong></div></div>
    {profile?<Link to="/profile" className="profile-chip"><span className="avatar">{profile.avatar}</span><div><strong>{profile.username}</strong>{equipped?<TitleEffect title={equipped}/>:<small>Collectionneur débutant</small>}</div></Link>:<button className="btn primary compact" onClick={()=>setAuthOpen(true)}>Rejoindre le cercle <ArrowUpRight size={15}/></button>}
   </div></header>
   <main className="main-content">
@@ -98,6 +100,7 @@ export default function App(){
      <div className="featured-chests">{chests.filter(c=>[1,4,6,8].includes(c.id)).map(c=><button className="featured-chest panel" key={c.id} onClick={()=>setOdds(c)} style={{'--accent':colors[c.rarity-1]} as CSSProperties}><ChestArt rarity={c.rarity}/><div><small>{rarityNames[c.rarity-1]}</small><h3>{c.name}</h3><PriceTag compact base={c.base_price??c.price} current={c.current_price??c.price}/></div><ArrowUpRight size={18}/></button>)}</div>
      <section className="panel home-rewards-banner"><Gift size={30}/><div><p className="eyebrow">PLUSIEURS FAÇONS DE GAGNER</p><h2>Vos prochains crédits commencent ici.</h2><p>Clicker évolutif, cadeau gratuit, missions, événements et codes promo.</p></div><Link className="btn primary" to="/rewards">Gagner des crédits <ArrowUpRight size={16}/></Link></section><People compact/><div className="home-bottom"><section className="daily-panel panel"><div className="gift-icon"><Gift size={25}/></div><div><p className="eyebrow">VOTRE RENDEZ-VOUS QUOTIDIEN</p><h3>Un nouveau jour. 750 crédits.</h3><p className="muted">Revenez chaque jour, poursuivez votre collection.</p></div><button className="btn secondary" disabled={busy||state?.daily_claimed} onClick={()=>void command('ct_claim_daily')}>{state?.daily_claimed?<><Check size={16}/> Récupérée</>:<>Récupérer <ArrowUpRight size={16}/></>}</button></section><Link to="/collection" className="collection-tease panel"><Crown size={25}/><div><h3>Votre légende prend forme.</h3><p>{owned.size} / {catalog.length} titres découverts</p><div className="progress"><i style={{width:`${owned.size/Math.max(1,catalog.length)*100}%`}}/></div></div><ChevronRight size={18}/></Link></div>
     </>}/>
+    <Route path="/market" element={gate(<Market userId={uid??''} catalog={catalog} command={command} busy={busy}/>)}/>
     <Route path="/rewards" element={gate(<Rewards userId={uid??''} command={command} busy={busy} catalog={catalog} dailyClaimed={state?.daily_claimed??false}/>)}/>
     <Route path="/chests" element={<>{heading('LES PORTES DU PRESTIGE','Choisissez votre univers.','Les probabilités exactes sont affichées avant chaque ouverture. Les doublons sont conservés.')}{chestGrid}</>}/>
     <Route path="/collection" element={<>{heading('L’ALBUM DU CERCLE',`${catalog.length} façons de se distinguer.`,`${owned.size} titres découverts · ${(owned.size/320*100).toFixed(1)} % de votre collection.`)}{collection()}</>}/>
