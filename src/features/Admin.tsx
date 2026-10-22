@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {Link} from 'react-router-dom';
 import {useQuery,useQueryClient} from '@tanstack/react-query';
-import {BarChart3,Users,Box,Tag,Crown,CalendarDays,Spade,Palette,ShieldCheck,ScrollText,LockKeyhole,Unlock,ArrowUpRight,Eye,EyeOff,RefreshCw,Copy,Check} from 'lucide-react';
+import {BarChart3,Users,Box,Tag,Gift,Crown,CalendarDays,Spade,Palette,ShieldCheck,ScrollText,LockKeyhole,Unlock,ArrowUpRight,Eye,EyeOff,RefreshCw,Copy,Check} from 'lucide-react';
 import {rpc,credits,type Title} from '../lib/api';
 import type {Command} from './Games';
 import type {Dashboard} from './admin/types';
@@ -9,8 +9,9 @@ import {AdminChests,AdminOffers} from './admin/AdminShop';
 import {AdminPlayers} from './admin/AdminPlayers';
 import {AdminTitles,AdminEvents,AdminRules,AdminRarities} from './admin/AdminCatalog';
 import {AdminGameControls,AdminQuests} from './admin/AdminControls';
+import {AdminPromos} from './admin/AdminPromos';
 interface Access {unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}
-const tabs=[['overview','Vue d’ensemble',BarChart3],['players','Joueurs',Users],['chests','Coffres',Box],['offers','Offres & réductions',Tag],['titles','Titres',Crown],['events','Événements',CalendarDays],['games','Règles de jeu',Spade],['rarities','Raretés',Palette],['security','Sécurité',ShieldCheck],['audit','Journal d’audit',ScrollText]] as const;
+const tabs=[['overview','Vue d’ensemble',BarChart3],['players','Joueurs',Users],['chests','Coffres',Box],['offers','Offres & réductions',Tag],['titles','Titres',Crown],['events','Événements',CalendarDays],['promos','Codes promo',Gift],['games','Règles de jeu',Spade],['rarities','Raretés',Palette],['security','Sécurité',ShieldCheck],['audit','Journal d’audit',ScrollText]] as const;
 export function Admin({userId,command,busy,catalog}:{userId:string;command:Command;busy:boolean;catalog:Title[]}){
  const client=useQueryClient(),[tab,setTab]=useState('overview'),[reason,setReason]=useState(''),[code,setCode]=useState(''),[showCode,setShowCode]=useState(false),[unlocking,setUnlocking]=useState(false),[message,setMessage]=useState('');
  const {data:access,error:accessError,refetch:refreshAccess}=useQuery({queryKey:['admin-access',userId],queryFn:()=>rpc<Access>('ct_admin_access'),refetchInterval:5000,staleTime:0});
@@ -33,6 +34,7 @@ export function Admin({userId,command,busy,catalog}:{userId:string;command:Comma
   {tab==='players'&&<AdminPlayers userId={userId} catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
   {tab==='chests'&&<AdminChests {...props}/>}{tab==='offers'&&<AdminOffers {...props}/>}
   {tab==='titles'&&<AdminTitles catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
+  {tab==='promos'&&<AdminPromos userId={userId} catalog={catalog} command={command} busy={busy} reason={reason}/>}
   {tab==='events'&&<AdminEvents events={data.events} catalog={catalog} command={command} busy={busy} reason={reason} onSaved={refresh}/>}
   {tab==='games'&&<><AdminGameControls controls={data.controls} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminRules key={JSON.stringify(data.rules)} rules={data.rules} command={command} busy={busy} reason={reason} onSaved={refresh}/><AdminQuests quests={data.quests} command={command} busy={busy} reason={reason} onSaved={refresh}/></>}
   {tab==='rarities'&&<AdminRarities key={JSON.stringify(data.rarities)} initialColors={data.rarities.map(r=>r.color)} command={command} busy={busy} reason={reason} onSaved={refresh}/>}

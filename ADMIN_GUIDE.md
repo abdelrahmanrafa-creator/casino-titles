@@ -19,6 +19,9 @@ Chaque modification exige une justification. Les prix, dates, stocks, soldes et 
 
 ## Vérification
 
-57 tests automatisés réussis, compilation TypeScript/Vite et neuf contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
+64 tests automatisés réussis, compilation TypeScript/Vite et treize contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
 
 Les sauvegardes et les limites du multijoueur sont documentées dans `BACKUPS.md` et `README.md`. Aucun encaissement ni retrait d’argent réel n’est intégré.
+
+## Codes promotionnels
+Dans Codes promo, choisir Nouveau code, définir le texte du code, son nom, les crédits et/ou un titre offert, les dates, le plafond global éventuel et son activation. Ajouter une justification en haut du panneau puis enregistrer. Partager ensuite le code choisi avec les joueurs : ils le saisissent dans Crédits gratuits. Une utilisation par compte. Pour arrêter une campagne, sélectionner son code puis décocher Code actif et enregistrer. Une modification conserve les utilisations déjà effectuées.
