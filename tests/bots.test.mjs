@@ -60,3 +60,8 @@ test('private projection helpers and bots configuration are not directly accessi
  await assert.rejects(rpc(2,'ct_admin_bots',['',0]),/Administrator/);await assert.rejects(rpc(2,'ct_rankings_before_bots',['credits','all']),/permission denied/);await assert.rejects(rpc(2,'ct_admin_economy_before_bots',[30,null,'']),/permission denied/);
  const b=(await rpc(1,'ct_admin_bots',['RareEdgeQA',0])).bots[0];await db.query("SELECT ct_post_credit($1,50,'bot_balance_adjustment',$2)",[b.id,randomUUID()]);await assert.rejects(rpc(1,'ct_admin_update_bot',[randomUUID(),b.id,{username:b.username,balance:20,expected_balance:0,version:b.version,active:true,hidden:false},'Modification obsolète du solde']),/modifié/);assert.equal((await economy()).difference,0);
 });
+test('robot avatars are normalized for generated bots and profile edits without affecting other avatars',async()=>{
+ assert.equal((await db.query("SELECT count(*)::int n FROM ct_profiles WHERE position('🤖' IN avatar)>0")).rows[0].n,0);
+ await asPlayer(db,2,"UPDATE ct_profiles SET avatar='🤖' WHERE id=auth.uid()");assert.equal((await db.query('SELECT avatar FROM ct_profiles WHERE id=$1',[uid(2)])).rows[0].avatar,'🎲');
+ await asPlayer(db,2,"UPDATE ct_profiles SET avatar='🦊' WHERE id=auth.uid()");assert.equal((await db.query('SELECT avatar FROM ct_profiles WHERE id=$1',[uid(2)])).rows[0].avatar,'🦊');
+});
