@@ -2,7 +2,7 @@
 
 Ouvrir `/admin` sur le nouveau site, se connecter à son compte confirmé puis entrer le code contenu dans le fichier local privé `.admin-access.local.txt`. Le premier déverrouillage attribue le rôle à ce compte et ferme définitivement l’activation initiale. Ce fichier ne fait partie ni de Git ni du site publié.
 
-Les prochains administrateurs doivent recevoir explicitement le rôle depuis Sécurité et connaître le code. Une adresse discrète seule ne protège rien : toutes les opérations vérifient les droits côté serveur. Le code n’est jamais enregistré dans le navigateur, les reçus ou les journaux. Cinq échecs déclenchent un blocage de dix minutes. Le déverrouillage expire après trente minutes et dépend de la session Auth. La rotation du code invalide les autres déverrouillages.
+Les prochains administrateurs reçoivent explicitement le rôle depuis Sécurité. Tout compte connecté ayant ce rôle accède directement au panneau sans code supplémentaire, y compris après reconnexion. Le code reste réservé à l’activation initiale unique. Le retrait du rôle ou une suspension bloque les opérations côté serveur. Aucun code n’est mémorisé dans le navigateur. Les anciennes sessions de déverrouillage ne conditionnent plus les permissions. La rotation du code ne retire aucun rôle.
 
 ## Fonctions
 

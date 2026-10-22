@@ -26,15 +26,15 @@ test('admin remains locked; invalid attempts persist and five attempts cause a t
  assert.equal((await rpc(1,'ct_admin_access')).is_admin,true);
  assert.equal((await db.query('SELECT count(*)::int n FROM ct_admins')).rows[0].n,1);
 });
-test('code alone cannot add a second admin; session-bound unlock and expiry protect every RPC',async()=>{
+test('account role grants access across sessions without code and expired unlocks do not restrict it',async()=>{
  assert.equal((await unlock(2)).ok,false);
  await rpc(1,'ct_admin_role',[randomUUID(),uid(2),true,'Accès délégué pour le test']);
  assert.equal((await rpc(2,'ct_admin_access')).is_admin,true);
  assert.equal((await unlock(2)).ok,true);
- assert.equal(await rpc(1,'ct_is_admin',[],99),false);
- await assert.rejects(rpc(1,'ct_admin_overview',[''],99),/Administrator/);
+ assert.equal(await rpc(1,'ct_is_admin',[],99),true);
+ assert.ok(await rpc(1,'ct_admin_overview',[''],99));
  await db.query('UPDATE ct_admin_sessions SET expires_at=now()-interval \'1 second\' WHERE user_id=$1',[uid(1)]);
- await assert.rejects(rpc(1,'ct_admin_dashboard'),/unlock required/);
+ assert.ok(await rpc(1,'ct_admin_dashboard'));
  assert.equal((await rpc(1,'ct_admin_access')).is_admin,true);
  assert.equal((await unlock(1)).ok,true);
  await assert.rejects(asPlayer(db,1,'SELECT * FROM ct_admin_security'),/permission denied/);
@@ -94,12 +94,17 @@ test('audit pagination returns a searched projection without code material',asyn
  const rows=await rpc(1,'ct_admin_audit',[null,null,'save_offer']);assert.ok(rows.length>0);assert.ok(rows.every(a=>a.action==='save_offer'&&a.admin_name));
  assert.ok(!JSON.stringify(rows).includes(code));
 });
-test('secret rotation revokes other sessions, old code fails, no plaintext reaches audit or receipts',async()=>{
+test('secret rotation preserves account roles, old code fails, no plaintext reaches audit or receipts',async()=>{
  await rpc(1,'ct_admin_rotate_code',[randomUUID(),nextCode,'Rotation de sécurité du test']);
- assert.equal(await rpc(1,'ct_is_admin'),true);assert.equal(await rpc(2,'ct_is_admin'),false);
+ assert.equal(await rpc(1,'ct_is_admin'),true);assert.equal(await rpc(2,'ct_is_admin'),true);
  assert.equal((await unlock(2)).ok,false);assert.equal((await rpc(2,'ct_admin_unlock',[nextCode])).ok,true);
  const logs=(await db.query('SELECT coalesce(jsonb_agg(to_jsonb(a))::text,\'\') text FROM ct_admin_audit_logs a')).rows[0].text;
  const receipts=(await db.query('SELECT coalesce(jsonb_agg(to_jsonb(o))::text,\'\') text FROM ct_operations o')).rows[0].text;
  assert.ok(!logs.includes(nextCode)&&!receipts.includes(nextCode));
- await rpc(1,'ct_admin_lock');assert.equal(await rpc(1,'ct_is_admin'),false);
+ await rpc(1,'ct_admin_lock');assert.equal(await rpc(1,'ct_is_admin'),true);
+ await rpc(1,'ct_admin_role',[randomUUID(),uid(2),false,'Révocation du rôle de test']);
+ assert.equal((await rpc(2,'ct_admin_access')).unlocked,false);await assert.rejects(rpc(2,'ct_admin_dashboard'),/unlock required/);
+ await db.query('INSERT INTO ct_suspensions(user_id,reason) VALUES($1,$2)',[uid(1),'Suspension pour test de sécurité']);
+ assert.equal(await rpc(1,'ct_is_admin'),false);await assert.rejects(rpc(1,'ct_admin_dashboard'),/unlock required/);
 });
+

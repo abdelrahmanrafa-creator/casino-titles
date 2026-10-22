@@ -31,7 +31,7 @@ Les migrations de ce dossier ont été appliquées au Supabase connecté et la f
 
 Dans Supabase Auth, conserver la confirmation d’e-mail et autoriser l’origine déployée ainsi que http://127.0.0.1:5180 dans les URL de redirection. Le connecteur disponible ne permet pas de modifier ces paramètres Auth. Un e-mail de confirmation doit être testé de bout en bout avant une ouverture générale. Le flux de récupération utilise `/settings`.
 
-La console est `/admin`, sans lien dans la navigation publique. Son accès exige un compte confirmé, un rôle administrateur et un déverrouillage par code secret lié à la session Auth. L’activation initiale unique se fait avec le code généré dans `.admin-access.local.txt`, exclu de Git et de la publication. Aucun premier inscrit ne devient administrateur sans ce code. Voir `ADMIN_GUIDE.md`.
+La console est `/admin`, sans lien dans la navigation publique. Son accès exige un compte confirmé, un rôle administrateur attribué côté serveur. Une fois activé, le compte connecté accède au panneau sans ressaisir le code. L’activation initiale unique se fait avec le code généré dans `.admin-access.local.txt`, exclu de Git et de la publication. Aucun premier inscrit ne devient administrateur sans ce code. Voir `ADMIN_GUIDE.md`.
 
 ## Validation et limites de recette
 57 tests automatiques passent : paiements, permissions, restauration physique locale, coffres, combinaisons poker, pots secondaires, cartes privées, règles du Blackjack/Baccarat, missions, événements, révocation, paramètres, offres, stocks, sessions administrateur, rotation du code et affichage du prix barré. PGlite sérialise les transactions ; les tests locaux ne prouvent pas seuls le comportement de connexions PostgreSQL concurrentes.
