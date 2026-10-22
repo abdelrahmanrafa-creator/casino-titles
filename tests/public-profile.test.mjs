@@ -26,3 +26,9 @@ test('simulation fields and internal projections are inaccessible to ordinary vi
  await assert.rejects(asPlayer(db,2,'SELECT is_bot FROM ct_profiles'),/permission denied/);
  for(const query of ["SELECT ct_public_profile_internal($1)","SELECT ct_find_players_internal('Ali')","SELECT ct_rankings_internal('credits','all')"]){await assert.rejects(asPlayer(db,2,query,query.includes('$1')?[uid(1)]:[]),/permission denied/);}
 });
+test('existing members keep their profile and wallet when onboarding is retried under restricted column permissions',async()=>{
+ const result=await asPlayer(db,1,"SELECT (ct_initialize_profile('AnotherName')).id id");assert.equal(result.rows[0].id,uid(1));
+ const profile=await asPlayer(db,1,'SELECT id,username,avatar,created_at FROM ct_profiles WHERE id=auth.uid()');assert.equal(profile.rows[0].username,'Alice');
+ assert.equal((await rpc('ct_public_profile_details')).balance,5000);
+ await assert.rejects(asPlayer(db,1,'SELECT * FROM ct_profiles WHERE id=auth.uid()'),/permission denied/);
+});

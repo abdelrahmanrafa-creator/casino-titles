@@ -14,6 +14,7 @@ import {Collection} from './features/Collection';
 import {People} from './features/People';
 const Rewards=lazy(()=>import('./features/Rewards').then(m=>({default:m.Rewards}))); 
 import {Auth} from './Auth';
+import {ProfileGate,type Profile} from './components/ProfileGate';
 import {Quests} from './features/Quests';
 import {Events,Achievements} from './features/Events';
 const Games=lazy(()=>import('./features/Games').then(m=>({default:m.Games})));
@@ -21,7 +22,6 @@ const Tables=lazy(()=>import('./features/Tables').then(m=>({default:m.Tables})))
 const Rankings=lazy(()=>import('./features/Rankings').then(m=>({default:m.Rankings})));
 const PublicProfile=lazy(()=>import('./features/Rankings').then(m=>({default:m.PublicProfile})));
 const Admin=lazy(()=>import('./features/Admin').then(m=>({default:m.Admin})));
-interface Profile {id:string;username:string;avatar:string;created_at:string}
 const nav=[['/','Accueil',Grid2X2],['/casino','Casino',Layers],['/rewards','Crédits gratuits',Gift],['/chests','Coffres',Box],['/shop','Boutique',Sparkles],['/inventory','Inventaire',Wallet],['/collection','Collection',Crown],['/rankings','Classements',Trophy],['/profile','Profil',UserRound],['/settings','Paramètres',Settings]] as const;
 
 export default function App(){
@@ -31,7 +31,7 @@ export default function App(){
  const [authOpen,setAuthOpen]=useState(false);const reduced=useReducedMotion();const uid=session?.user.id;
  const [shopTab,setShopTab]=useState('titles');
  const userRef=useRef(uid);userRef.current=uid;
- const {data:profile,refetch:refreshProfile,isPending:profileLoading}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
+ const {data:profile,refetch:refreshProfile,isPending:profileLoading,error:profileError}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_profiles').select('id,username,avatar,created_at').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
  }});
  const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:5000,staleTime:0});
@@ -68,11 +68,11 @@ export default function App(){
  async function equip(id:string|null){try{await rpc('ct_equip_title',{p_player_title_id:id});await refreshState();setNotice(id?'Titre équipé.':'Titre retiré.');}catch(error){setNotice((error as Error).message);}}
  const equippedInstance=state?.inventory.find(i=>i.id===state.equipped_id),equipped=catalog.find(t=>t.id===equippedInstance?.title_id);
  const owned=new Set(state?.inventory.map(i=>i.title_id));
- const access=!!profile;
+ const completeProfile=(created:Profile)=>{if(created.id!==userRef.current)return;queryClient.setQueryData(['profile',created.id],created);setAuthOpen(false);};
  const heading=(eyebrow:string,title:string,description:string)=><div className="page-heading"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p className="muted">{description}</p></div>;
  const chestGrid=<ShopChests chests={chests} onOpen={setOdds}/>;
  function collection(inventory=false){return <Collection catalog={catalog} state={state} inventory={inventory} onEquip={equip}/>;}
- const gate=(content:React.ReactNode)=>access?content:<Auth authenticated={!!session} onComplete={()=>{void refreshProfile();}}/>;
+ const gate=(content:React.ReactNode)=><ProfileGate ready={authReady} authenticated={!!session} loading={profileLoading} error={profileError} profile={profile} onRetry={()=>{void refreshProfile();}} onboarding={<Auth authenticated={!!session} onComplete={completeProfile}/>}>{content}</ProfileGate>;
  return <div className="app-shell">
   <aside className="sidebar"><Link to="/" className="brand"><span className="brand-mark">C<span>✦</span></span><div>CASINO<span>& TITLES</span></div></Link>
    <p className="nav-label">VOTRE ESPACE</p><nav>{nav.map(([path,label,Icon])=><NavLink end={path==='/'} key={path} to={path}><Icon size={19}/>{label}{path==='/chests'&&<small>{chests.length}</small>}</NavLink>)}</nav>
@@ -114,7 +114,7 @@ export default function App(){
    <footer className="footer"><span>© {new Date().getFullYear()} Casino & Titles</span><span>Le prestige se collectionne. Le jeu reste virtuel.</span><span><ShieldCheck size={13}/> Aucun argent réel</span></footer>
   </main></div>
   <nav className="mobile-nav">{nav.map(([path,label,Icon])=><NavLink end={path==='/'} to={path} key={path}><Icon size={19}/><span>{label}</span></NavLink>)}</nav>
-  <AnimatePresence>{(authOpen||(session&&authReady&&!profileLoading&&!profile))&&<motion.div className="modal-backdrop" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}><div className="modal auth-modal" role="dialog" aria-modal="true" aria-label="Rejoindre le cercle"><button className="close-btn" aria-label="Fermer" onClick={()=>setAuthOpen(false)}><X/></button><Auth authenticated={!!session} onComplete={()=>{void refreshProfile();setAuthOpen(false);}}/></div></motion.div>}</AnimatePresence>
+  <AnimatePresence>{(authOpen||(session&&authReady&&!profileLoading&&!profileError&&profile===null))&&<motion.div className="modal-backdrop" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}><div className="modal auth-modal" role="dialog" aria-modal="true" aria-label="Rejoindre le cercle"><button className="close-btn" aria-label="Fermer" onClick={()=>setAuthOpen(false)}><X/></button>{gate(<p>Votre profil est prêt.</p>)}</div></motion.div>}</AnimatePresence>
   {odds&&<div className="modal-backdrop"><section className="modal panel" role="dialog" aria-modal="true" aria-labelledby="odds-title"><button className="close-btn" aria-label="Fermer" onClick={()=>setOdds(null)}><X/></button><h2 id="odds-title">Coffre {odds.name}</h2><p className="muted">Un titre tiré au sort, ajouté immédiatement à votre inventaire.</p><PriceTag base={odds.base_price??odds.price} current={odds.current_price??odds.price}/><div className="odds-table">{rarityNames.map((name,i)=><div key={name}><span style={{color:colors[i]}}>{name}</span><strong>{(odds.weights[i]/100).toLocaleString('fr-FR')} %</strong></div>)}</div><p className="legal">Chaque titre éligible d’une même rareté a la même chance. Les doublons sont conservés. Si l’offre change ou expire, le serveur vous demande de confirmer le nouveau prix.</p><button className="btn primary" disabled={busy||odds.available===false} onClick={()=>{const {id,version}=odds;setOdds(null);void command('ct_open_chest',{p_chest_id:id,p_expected_version:version,p_expected_price:odds.current_price??odds.price,p_expected_offer_id:odds.offer_id??null});}}>Ouvrir · {credits(odds.current_price??odds.price)} crédits <ArrowUpRight size={16}/></button></section></div>}
   {award&&<div className="modal-backdrop reveal-backdrop"><section className={`modal reveal ${revealed?'is-revealed':''}`} role="dialog" aria-modal="true" aria-label="Votre titre obtenu" style={{'--accent':colors[award.title.rarity-1]} as CSSProperties}><div className="reveal-particles" aria-hidden="true">{Array.from({length:16},(_,i)=><i key={i} style={{'--i':i} as CSSProperties}/>)}</div><ChestArt rarity={award.title.rarity} open={revealed}/>{revealed?<><p className="eyebrow">{rarityNames[award.title.rarity-1]} · VOTRE NOUVELLE SIGNATURE</p><TitleEffect title={award.title} large/><p className="muted">{award.title.description}</p><div className="reveal-buttons"><button className="btn primary" onClick={()=>{void equip(award.player_title_id);setAward(null);}}>Équiper ce titre</button><button className="btn secondary" onClick={()=>setAward(null)}>Continuer</button></div></>:<><p className="eyebrow">LE CERCLE RÉVÈLE SES SECRETS…</p><button className="text-btn" onClick={()=>setRevealed(true)}>Passer l’animation</button></>}</section></div>}
  </div>;

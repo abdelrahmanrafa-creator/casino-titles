@@ -1,11 +1,12 @@
 import {useState,type FormEvent} from 'react';
 import {supabase,rpc} from './lib/api';
-export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplete:()=>void}){
+import type {Profile} from './components/ProfileGate';
+export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplete:(profile:Profile)=>void|Promise<void>}){
  const [mode,setMode]=useState<'login'|'signup'|'reset'>('signup');
  const [email,setEmail]=useState(''),[password,setPassword]=useState(''),[username,setUsername]=useState('');
  const [busy,setBusy]=useState(false),[message,setMessage]=useState('');
  async function submit(e:FormEvent){e.preventDefault();setBusy(true);setMessage('');try{
-  if(authenticated){await rpc('ct_initialize_profile',{p_username:username});onComplete();}
+  if(authenticated){const profile=await rpc<Profile>('ct_initialize_profile',{p_username:username.trim()});if(!profile?.id||!profile.username)throw new Error('Le profil n’a pas pu être confirmé. Réessayez.');await onComplete(profile);}
   else if(mode==='reset'){
    const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:`${location.origin}/settings`});if(error)throw error;
    setMessage('Si ce compte existe, un lien de récupération a été envoyé.');
