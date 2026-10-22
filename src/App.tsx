@@ -10,6 +10,7 @@ import {TitleEffect} from './components/TitleEffect';
 import {ChestArt} from './components/ChestArt';
 import {ShopChests} from './components/ShopChests';
 import {PriceTag} from './components/PriceTag';
+import {Collection} from './features/Collection';
 import {Auth} from './Auth';
 import {Quests} from './features/Quests';
 import {Events,Achievements} from './features/Events';
@@ -114,19 +115,6 @@ export default function App(){
  </div>;
 }
 
-function Collection({catalog,state,inventory,onEquip}:{catalog:Title[];state?:Snapshot;inventory:boolean;onEquip:(id:string|null)=>Promise<void>}){
- const [search,setSearch]=useState(''),[rarity,setRarity]=useState(0),[sort,setSort]=useState('rarity');
- const owned=new Set(state?.inventory.map(i=>i.title_id));
- const list=(inventory?(state?.inventory??[]).map(i=>({title:catalog.find(t=>t.id===i.title_id),instance:i})):catalog.map(title=>({title,instance:undefined})))
- .filter((item):item is typeof item&{title:Title}=>!!item.title)
- .filter(({title})=>(!rarity||title.rarity===rarity)&&title.name.toLocaleLowerCase('fr').includes(search.toLocaleLowerCase('fr')))
- .sort((a,b)=>sort==='date'?(b.instance?.acquired_at??'').localeCompare(a.instance?.acquired_at??''):b.title.rarity-a.title.rarity||a.title.name.localeCompare(b.title.name));
- return <><div className="collection-progress">{rarityNames.map((name,i)=>{const total=catalog.filter(t=>t.rarity===i+1).length,count=catalog.filter(t=>t.rarity===i+1&&owned.has(t.id)).length;return <div key={name}><small style={{color:colors[i]}}>{name}</small><strong>{count}<span>/{total}</span></strong><div className="progress"><i style={{width:`${total?count/total*100:0}%`,background:colors[i]}}/></div></div>;})}</div>
-  <div className="filters"><label className="search"><Search size={17}/><input aria-label="Rechercher un titre" placeholder="Rechercher une signature…" value={search} onChange={e=>setSearch(e.target.value)}/></label><select aria-label="Rareté" value={rarity} onChange={e=>setRarity(Number(e.target.value))}><option value={0}>Toutes les raretés</option>{rarityNames.map((r,i)=><option key={r} value={i+1}>{r}</option>)}</select><select aria-label="Trier" value={sort} onChange={e=>setSort(e.target.value)}><option value="rarity">Rareté</option><option value="date">Date d’obtention</option></select></div>
-  {inventory&&state?.equipped_id&&<button className="text-btn" onClick={()=>void onEquip(null)}>Retirer le titre équipé</button>}
-  <div className="title-grid">{list.map(({title,instance})=><article className={`panel title-card ${!inventory&&!owned.has(title.id)?'undiscovered':''}`} key={instance?.id??title.id}><div className="title-card-top"><span className="rarity-label" style={{color:colors[title.rarity-1]}}>{rarityNames[title.rarity-1]}</span>{owned.has(title.id)&&<Check size={15}/>}</div><TitleEffect title={title}/><p>{title.description}</p><small>{title.acquisition}</small>{instance&&<><small>{new Date(instance.acquired_at).toLocaleDateString('fr-FR')} · {instance.source}</small><small>{state?.inventory.filter(i=>i.title_id===title.id).length} exemplaire(s)</small><button className="btn secondary" onClick={()=>void onEquip(instance.id)} disabled={state?.equipped_id===instance.id}>{state?.equipped_id===instance.id?'Équipé':'Équiper'}</button></>}</article>)}</div>{!list.length&&<div className="empty-state panel"><Crown/><h3>Votre collection commence ici.</h3><p>Ouvrez un coffre ou découvrez la boutique.</p><Link to="/chests" className="btn secondary">Découvrir les coffres</Link></div>}
- </>;
-}
 function History({state}:{state?:Snapshot}){return <section className="panel history"><h2>Journal des crédits</h2><p className="muted">50 dernières opérations · Enregistrées automatiquement</p><div className="history-scroll"><table><thead><tr><th>Opération</th><th>Date</th><th>Montant</th><th>Solde après</th></tr></thead><tbody>{state?.transactions.map(t=><tr key={t.id}><td>{{welcome:'Bienvenue',daily:'Récompense quotidienne',chest:'Ouverture de coffre',purchase:'Achat de titre',quest:'Mission',wager:'Mise',payout:'Gain'}[t.reason]??t.reason}</td><td>{new Date(t.created_at).toLocaleString('fr-FR')}</td><td className={t.amount>0?'positive':''}>{t.amount>0?'+':''}{credits(t.amount)}</td><td>{credits(t.balance_after)}</td></tr>)}</tbody></table></div></section>;}
 function SettingsPanel({userId,onMessage,onProfileSave}:{userId:string;onMessage:(message:string)=>void;onProfileSave:()=>void}){
  const [password,setPassword]=useState(''),[saving,setSaving]=useState(false);
