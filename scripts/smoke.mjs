@@ -34,3 +34,7 @@ await check('diamond wallet remains private','/rest/v1/ct_diamond_wallets?select
 await check('diamond credit helper remains private','/rest/v1/rpc/ct_post_diamond',{method:'POST',body:JSON.stringify({p_uid:'00000000-0000-0000-0000-000000000099',p_delta:1,p_reason:'test',p_key:'test'})},r=>[401,403].includes(r.status));
 await check('anonymous market conversion is rejected','/rest/v1/rpc/ct_market_command',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000097',p_action:'convert',p_values:{diamonds:1}})},r=>[401,403].includes(r.status));
 await check('sealed inventories remain private','/rest/v1/ct_sealed_chests?select=id',{},r=>[401,403].includes(r.status));
+await check('fictional purchase receipts remain private','/rest/v1/ct_simulated_diamond_purchases?select=id',{},r=>[401,403].includes(r.status));
+await check('market settings remain private','/rest/v1/ct_market_settings?select=id',{},r=>[401,403].includes(r.status));
+await check('market moderation requires admin session','/rest/v1/rpc/ct_admin_market_data',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('fictional checkout requires a session','/rest/v1/rpc/ct_buy_diamonds_simulated',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000095',p_quantity:1,p_expected_version:1,p_expected_total_cents:941,p_demo_method:'demo_card'})},r=>[401,403].includes(r.status));

@@ -5,6 +5,7 @@ const act=(n,action,values={},op=randomUUID())=>rpc(n,'ct_market_command',[op,ac
 await db.query('INSERT INTO ct_admins(user_id) VALUES($1)',[uid(1)]);await db.query('INSERT INTO auth.users VALUES($1,now())',[uid(3)]);await rpc(3,'ct_initialize_profile',['Charlie']);
 const t1=(await db.query("INSERT INTO ct_player_titles(user_id,title_id,source) VALUES($1,'ct-1-001','test') RETURNING id",[uid(1)])).rows[0].id;
 const t2=(await db.query("INSERT INTO ct_player_titles(user_id,title_id,source) VALUES($1,'ct-2-001','test') RETURNING id",[uid(1)])).rows[0].id;
+await db.exec('UPDATE ct_market_settings SET credit_conversion_enabled=true');
 let chest,sealed,listing;
 test('diamond conversion is exact, idempotent, treasury backed and cannot mint through direct writes',async()=>{
  const op=randomUUID(),r=await act(1,'convert',{diamonds:2},op);assert.deepEqual(await act(1,'convert',{diamonds:2},op),r);assert.equal((await snapshot(1)).diamonds,2);assert.equal((await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(1)])).rows[0].balance,3000);

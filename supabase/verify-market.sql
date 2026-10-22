@@ -1,5 +1,6 @@
 -- Transactional verification on the live schema; every temporary change is rolled back.
 BEGIN;
+UPDATE public.ct_market_settings SET credit_conversion_enabled=true;
 DO $$
 DECLARE a uuid;b uuid;v_title uuid;l bigint;r jsonb;c public.ct_chest_types;v_sealed uuid;v_key text:=gen_random_uuid()::text;
 BEGIN

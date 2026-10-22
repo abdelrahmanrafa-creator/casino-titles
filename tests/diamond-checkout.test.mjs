@@ -1,0 +1,35 @@
+import {test,after} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {readdir} from 'node:fs/promises';import {createTitlesDatabase,asPlayer,uid} from './helpers/titlesDatabase.mjs';
+const migrations=(await readdir(new URL('../supabase/migrations/',import.meta.url))).filter(f=>f.endsWith('.sql')&&!f.includes('010000_titles_identity')&&!f.includes('020000_titles_economy')).sort();const db=await createTitlesDatabase(undefined,migrations);after(()=>db.close());await db.query('INSERT INTO ct_admins(user_id) VALUES($1)',[uid(1)]);
+const rpc=async(n,name,args=[])=>(await asPlayer(db,n,`SELECT ${name}(${args.map((_,i)=>'$'+(i+1)).join(',')}) result`,args)).rows[0].result;
+const data=()=>rpc(1,'ct_admin_market_data',['',null]);const store=()=>rpc(2,'ct_diamond_store');const buy=async(q=3,op=randomUUID(),override={})=>{const s=await store();return rpc(2,'ct_buy_diamonds_simulated',[op,q,override.version??s.version,override.cents??Math.round(q*Number(s.eur_per_diamond)*100),override.method??'demo_card']);};
+const update=async(values)=>{const d=await data();return rpc(1,'ct_admin_market_update',[randomUUID(),'settings',{...d.settings,...values},'Réglages de recette du marché']);};
+test('default store disables old conversion and quotes exact fictional euro prices',async()=>{
+ const s=await store();assert.equal(s.simulated,true);assert.equal(s.eur_per_diamond,'9.414427287924');await assert.rejects(rpc(2,'ct_market_command',[randomUUID(),'convert',{diamonds:1}]),/désactivée/);const before=(await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(2)])).rows[0].balance;
+ const op=randomUUID(),r=await buy(3,op);assert.equal(r.total_cents,2824);assert.equal(r.simulated,true);assert.equal((await buy(3,op)).total_cents,2824);assert.equal((await rpc(2,'ct_diamond_balance')).balance,3);assert.equal((await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(2)])).rows[0].balance,before);assert.equal((await db.query('SELECT count(*)::int n FROM ct_simulated_diamond_purchases')).rows[0].n,1);assert.equal((await data()).revenue.real_revenue_cents,0);
+});
+test('purchase refuses forged totals, stale versions and non-demo payment methods without saving card data',async()=>{
+ await assert.rejects(buy(3,randomUUID(),{cents:1}),/tarif/);await assert.rejects(buy(3,randomUUID(),{version:0}),/tarif/);await assert.rejects(buy(3,randomUUID(),{method:'real_card'}),/démonstration/);for(const q of [0,-1,10001])await assert.rejects(buy(q));assert.equal((await db.query('SELECT count(*)::int n FROM ct_simulated_diamond_purchases')).rows[0].n,1);
+ const columns=(await db.query("SELECT column_name FROM information_schema.columns WHERE table_name='ct_simulated_diamond_purchases'")).rows.map(x=>x.column_name);assert.ok(!columns.some(c=>/card_number|cvv|expiry|pan/.test(c)));
+});
+test('admin prices require versioned updates, use historical totals for revenue and block non-admin writes',async()=>{
+ const old=(await data()).settings;await update({eur_per_diamond:'10.005000000000'});await assert.rejects(rpc(1,'ct_admin_market_update',[randomUUID(),'settings',old,'Modification périmée']),/modifiés/);await assert.rejects(rpc(2,'ct_admin_market_update',[randomUUID(),'settings',old,'Accès non autorisé']),/Administrator/);const r=await buy(3);assert.equal(r.total_cents,3002);const d=await data();assert.equal(d.revenue.total_cents,5826);assert.equal(d.revenue.diamonds_sold,6);assert.equal(d.purchases[0].unit_eur,10.005);
+});
+test('per-purchase, per-player daily and global euro caps are enforced server-side',async()=>{
+ await update({max_purchase_cents:1000});await assert.rejects(buy(2),/Plafond/);await update({max_purchase_cents:50000,daily_user_cents:6000});await assert.rejects(buy(1),/Plafond/);await update({daily_user_cents:100000,total_cap_cents:6000});await assert.rejects(buy(1),/Plafond/);await update({total_cap_cents:null});
+});
+test('pause/freeze and market suspension cannot be bypassed by direct RPC, while committed receipts still replay',async()=>{
+ await update({purchases_enabled:false});await assert.rejects(buy(1),/suspendus/);await update({purchases_enabled:true,wallets_frozen:true});await assert.rejects(buy(1),/suspendus/);await assert.rejects(rpc(2,'ct_market_command',[randomUUID(),'accept',{listing_id:123}]),/figés/);await update({wallets_frozen:false,market_enabled:false});await assert.rejects(rpc(2,'ct_market_command',[randomUUID(),'list',{}]),/suspendu/);await update({market_enabled:true});
+});
+test('credit conversion rate is configurable, remains opt-in and rejects unconfirmed new prices',async()=>{
+ await update({credit_conversion_enabled:true,credits_per_diamond:2000});assert.equal((await rpc(2,'ct_diamond_balance')).credits_per_diamond,2000);await assert.rejects(rpc(2,'ct_market_command',[randomUUID(),'convert',{diamonds:1}]),/taux/);await rpc(2,'ct_market_command',[randomUUID(),'convert',{diamonds:1,expected_credits_per_diamond:2000}]);await update({credit_conversion_enabled:false});
+});
+test('admin removes other players listings with an audit trail, releasing their reserved asset',async()=>{
+ const id=(await db.query("INSERT INTO ct_player_titles(user_id,title_id,source) VALUES($1,'ct-1-001','test') RETURNING id",[uid(2)])).rows[0].id;const l=(await rpc(2,'ct_market_command',[randomUUID(),'list',{asset_kind:'title',asset_id:id,price:1}])).listing_id;
+ await assert.rejects(rpc(2,'ct_admin_market_update',[randomUUID(),'remove_listing',{listing_id:l},'Retrait non autorisé']),/Administrator/);await rpc(1,'ct_admin_market_update',[randomUUID(),'remove_listing',{listing_id:l},'Modération de l’annonce de recette']);const market=await rpc(2,'ct_market_snapshot',['',null]);assert.equal(market.assets.find(a=>a.id===id).reserved,false);assert.equal(market.mine.find(a=>a.id===l).status,'cancelled');assert.ok((await db.query("SELECT count(*)::int n FROM ct_admin_audit_logs WHERE action='market_remove_listing'")).rows[0].n>0);
+});
+test('settings and fictional purchase receipts remain inaccessible to ordinary SQL clients',async()=>{
+ for(const table of ['ct_market_settings','ct_simulated_diamond_purchases'])await assert.rejects(asPlayer(db,2,'SELECT * FROM '+table),/permission denied/);await assert.rejects(rpc(2,'ct_admin_market_data',['',null]),/Administrator/);await assert.rejects(rpc(2,'ct_market_command_before_store',[randomUUID(),'convert',{diamonds:1}]),/permission denied/);
+});
+test('concurrent fictional purchases cannot exceed the configured global euro cap',async()=>{
+ const before=(await data()).revenue.total_cents;await update({max_purchase_cents:50000,daily_user_cents:100000,total_cap_cents:before+1001});const results=await Promise.allSettled([buy(1),buy(1)]);assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.equal((await data()).revenue.total_cents,before+1001);await update({total_cap_cents:null});
+});
