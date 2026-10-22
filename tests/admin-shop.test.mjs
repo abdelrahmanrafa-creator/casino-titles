@@ -15,6 +15,7 @@ const saveOffer=(values,op=randomUUID())=>rpc(1,'ct_admin_save_offer',[op,values
 const open=(n,q,op=randomUUID())=>rpc(n,'ct_open_chest',[op,q.id,q.version,q.current_price,q.offer_id]);
 const dates={starts_at:new Date(Date.now()-3600000).toISOString(),ends_at:new Date(Date.now()+3600000).toISOString()};
 test('admin remains locked; invalid attempts persist and five attempts cause a timed block',async()=>{
+ assert.equal((await rpc(1,'ct_admin_access')).is_admin,false);
  assert.equal(await rpc(1,'ct_is_admin'),false);
  await assert.rejects(rpc(1,'ct_admin_dashboard'),/unlock required/);
  for(let i=0;i<5;i++)assert.equal((await rpc(1,'ct_admin_unlock',['wrong-code-long-enough-but-incorrect'])).ok,false);
@@ -22,16 +23,19 @@ test('admin remains locked; invalid attempts persist and five attempts cause a t
  assert.equal((await unlock(1)).ok,false);
  await db.query('UPDATE ct_admin_attempts SET blocked_until=now()-interval \'1 second\',window_start=now()-interval \'11 minutes\' WHERE user_id=$1',[uid(1)]);
  assert.equal((await unlock(1)).ok,true);assert.equal(await rpc(1,'ct_is_admin'),true);
+ assert.equal((await rpc(1,'ct_admin_access')).is_admin,true);
  assert.equal((await db.query('SELECT count(*)::int n FROM ct_admins')).rows[0].n,1);
 });
 test('code alone cannot add a second admin; session-bound unlock and expiry protect every RPC',async()=>{
  assert.equal((await unlock(2)).ok,false);
  await rpc(1,'ct_admin_role',[randomUUID(),uid(2),true,'Accès délégué pour le test']);
+ assert.equal((await rpc(2,'ct_admin_access')).is_admin,true);
  assert.equal((await unlock(2)).ok,true);
  assert.equal(await rpc(1,'ct_is_admin',[],99),false);
  await assert.rejects(rpc(1,'ct_admin_overview',[''],99),/Administrator/);
  await db.query('UPDATE ct_admin_sessions SET expires_at=now()-interval \'1 second\' WHERE user_id=$1',[uid(1)]);
  await assert.rejects(rpc(1,'ct_admin_dashboard'),/unlock required/);
+ assert.equal((await rpc(1,'ct_admin_access')).is_admin,true);
  assert.equal((await unlock(1)).ok,true);
  await assert.rejects(asPlayer(db,1,'SELECT * FROM ct_admin_security'),/permission denied/);
 });

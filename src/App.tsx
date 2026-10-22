@@ -32,6 +32,7 @@ export default function App(){
  const {data:profile,refetch:refreshProfile,isPending:profileLoading}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_profiles').select('*').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
  }});
+ const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:5000,staleTime:0});
  const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],queryFn:async()=>{
   const {data,error}=await supabase.from('ct_titles').select('*').order('rarity').order('id');if(error)throw error;return data as Title[];
  }});
@@ -76,6 +77,7 @@ export default function App(){
    <div className="sidebar-bottom"><ShieldCheck size={18}/><div>Le plaisir du jeu.<span>100 % crédits virtuels.</span></div></div>
   </aside>
   <div className="main-shell"><header className="topbar"><div className="mobile-brand">C<span>✦</span></div><div className="status-dot"/><span className="topbar-tag">LE CERCLE DES COLLECTIONNEURS</span><div className="topbar-right">
+   {profile&&adminAccess?.is_admin===true&&<Link to="/admin" className="btn secondary compact admin-shortcut"><ShieldCheck size={16}/><span>Administration</span></Link>}
    <div className="balance"><span className="coin-icon">C</span><div><small>VOTRE SOLDE</small><strong>{state?credits(state.wallet.balance):'—'} <span>Crédits</span></strong></div></div>
    {profile?<Link to="/profile" className="profile-chip"><span className="avatar">{profile.avatar}</span><div><strong>{profile.username}</strong>{equipped?<TitleEffect title={equipped}/>:<small>Collectionneur débutant</small>}</div></Link>:<button className="btn primary compact" onClick={()=>setAuthOpen(true)}>Rejoindre le cercle <ArrowUpRight size={15}/></button>}
   </div></header>
