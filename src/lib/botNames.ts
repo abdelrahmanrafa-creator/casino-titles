@@ -4,7 +4,7 @@ const firstNames=['Mason','Elliot','Nolan','Aiden','Owen','Logan','Luca','Theo',
 function random(n:number){if(!Number.isSafeInteger(n)||n<1)throw Error('Invalid random range');const limit=Math.floor(4294967296/n)*n;let value:number;do{value=crypto.getRandomValues(new Uint32Array(1))[0];}while(value>=limit);return value%n;}
 function pick<T>(values:readonly T[]){return values[random(values.length)];}
 export function generateBotNames(count:number,style:BotNameStyle,existing:string[]=[]):string[]{
- if(!Number.isInteger(count)||count<1||count>25)throw Error('Choisissez 1 à 25 pseudos.');
+ if(!Number.isInteger(count)||count<1||count>250)throw Error('Choisissez 1 à 250 pseudos.');
  const taken=new Set(existing.map(n=>n.toLowerCase())),result:string[]=[];
  for(let tries=0;result.length<count&&tries<5000;tries++){
   let name='';

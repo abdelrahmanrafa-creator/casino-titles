@@ -9,7 +9,7 @@ export function collectionIdentity(title:Title,owned:boolean){const hidden=title
 
 export function Collection({catalog,state,inventory,onEquip}:{catalog:Title[];state?:Snapshot;inventory:boolean;onEquip:(id:string|null)=>Promise<void>}){
  const [search,setSearch]=useState(''),[rarity,setRarity]=useState(0),[status,setStatus]=useState('all'),[sort,setSort]=useState('rarity'),[page,setPage]=useState(1),[selected,setSelected]=useState<Title|null>(null);
- const {data:statistics=[]}=useQuery({queryKey:['title-statistics'],queryFn:()=>rpc<{title_id:string;owners:number;bots?:number}[]>('ct_title_statistics'),refetchInterval:60000});
+ const {data:statistics=[]}=useQuery({queryKey:['title-statistics'],queryFn:()=>rpc<{title_id:string;owners:number;bots?:number}[]>('ct_title_statistics'),refetchInterval:120000});
  const ownerCounts=new Map(statistics.map(s=>[s.title_id,s.owners]));
  const instances=state?.inventory??[],owned=new Set(instances.map(i=>i.title_id)),discovered=catalog.filter(t=>owned.has(t.id)).length,total=catalog.length,percent=total?Math.round(discovered/total*100):0;
  const list=catalog.filter(t=>{const has=owned.has(t.id),identity=collectionIdentity(t,has);return (!inventory||has)&&(!rarity||t.rarity===rarity)&&(status==='all'||(status==='owned'?has:!has))&&identity.name.toLocaleLowerCase('fr').includes(search.toLocaleLowerCase('fr'));}).sort((a,b)=>sort==='name'?collectionIdentity(a,owned.has(a.id)).name.localeCompare(collectionIdentity(b,owned.has(b.id)).name):sort==='recent'?(instances.filter(i=>i.title_id===b.id).at(-1)?.acquired_at??'').localeCompare(instances.filter(i=>i.title_id===a.id).at(-1)?.acquired_at??''):b.rarity-a.rarity||a.id.localeCompare(b.id));

@@ -34,11 +34,11 @@ export default function App(){
  const {data:profile,refetch:refreshProfile,isPending:profileLoading,error:profileError}=useQuery({queryKey:['profile',uid],enabled:!!uid,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_profiles').select('id,username,avatar,created_at').eq('id',uid!).maybeSingle();if(error)throw error;return data as Profile|null;
  }});
- const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:5000,staleTime:0});
- const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],queryFn:async()=>{
+ const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:60000,staleTime:0});
+ const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],staleTime:300000,refetchOnWindowFocus:false,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_titles').select('*').order('rarity').order('id');if(error)throw error;return data as Title[];
  }});
- const {data:chests=[]}=useQuery({queryKey:['chests',uid],queryFn:()=>rpc<Chest[]>('ct_shop_chests'),refetchInterval:15000});
+ const {data:chests=[]}=useQuery({queryKey:['chests',uid],queryFn:()=>rpc<Chest[]>('ct_shop_chests'),refetchInterval:60000});
  const {data:rarities=[]}=useQuery({queryKey:['rarities'],queryFn:async()=>{const {data,error}=await supabase.from('ct_rarities').select('id,color');if(error)throw error;return data as {id:number;color:string}[];}});
  useEffect(()=>{for(const r of rarities)if(/^#[0-9a-f]{6}$/i.test(r.color))document.documentElement.style.setProperty(`--rarity-${r.id}`,r.color);},[rarities]);
  const {data:state,error:stateError,refetch:refreshState}=useQuery({queryKey:['player',uid],enabled:!!profile,queryFn:()=>rpc<Snapshot>('ct_player_snapshot'),refetchInterval:30000});

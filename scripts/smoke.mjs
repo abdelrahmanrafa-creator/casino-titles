@@ -27,3 +27,5 @@ await check('public rankings keep simulation metadata private','/rest/v1/rpc/ct_
 
 await check('profile simulation flag inaccessible','/rest/v1/ct_profiles?select=is_bot',{},r=>[401,403].includes(r.status));
 await check('public profile details available','/rest/v1/rpc/ct_public_profile_details',{method:'POST',body:JSON.stringify({p_user_id:'00000000-0000-0000-0000-000000000099'})},(r,b)=>r.ok&&b===null);
+await check('compact bot summaries remain private','/rest/v1/ct_bot_summaries?select=user_id',{},r=>[401,403].includes(r.status));
+await check('bot storage monitor requires admin','/rest/v1/rpc/ct_admin_bot_storage',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));

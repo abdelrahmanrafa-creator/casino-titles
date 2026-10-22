@@ -77,3 +77,23 @@ test('existing simulated results can vary with balanced correction entries while
  for(const rate of [20,80]){await db.query('SELECT ct_vary_bot_results($1,$2,$2)',[b.id,rate]);const p=await rpc(2,'ct_public_profile_details',[b.id]);assert.equal(p.statistics.wins,rate/10);assert.equal(p.balance,balance);const after=await economy();assert.equal(after.treasury_gross,before.treasury_gross);assert.equal(after.difference,0);assert.equal(after.ledger_difference,0);assert.equal(after.unmirrored,0);}
  const rounds=(await db.query('SELECT choice,result,payout,bet FROM ct_game_rounds WHERE user_id=$1',[b.id])).rows;for(const r of rounds){assert.equal(r.result.payout,r.payout);assert.equal(r.result.side===r.choice.side,r.payout>r.bet);}
 });
+let compactBatch;
+test('compact batches exceed 25 bots with a single statistics row and bounded accounting per bot',async()=>{
+ const before=await economy(),operation=randomUUID();const values={...config,compact:true,names:Array.from({length:30},(_,i)=>'CompactQA'+i),rarity_counts:[0,30,0,0,0,0,0,0],games_min:200,games_max:200,chests_min:100,chests_max:100,win_percent_min:60,win_percent_max:60};
+ compactBatch=await create(values,operation);assert.equal(compactBatch.count,30);assert.deepEqual(await create(values,operation),compactBatch);
+ for(const b of compactBatch.bots){const p=await rpc(2,'ct_public_profile_details',[b.id]);assert.equal(p.statistics.games,200);assert.equal(p.statistics.wins,120);assert.equal(p.statistics.losses,80);assert.equal(p.statistics.wagered,20000);assert.equal(p.statistics.returned,24000);assert.equal(p.chests,100);assert.equal(p.chest_spending,50000);assert.equal(p.title_copies,108);assert.equal(p.balance,12000);
+ const counts=(await db.query('SELECT (SELECT count(*) FROM ct_game_rounds WHERE user_id=$1)::int rounds,(SELECT count(*) FROM ct_chest_openings WHERE user_id=$1)::int chests,(SELECT count(*) FROM ct_wallet_transactions WHERE user_id=$1)::int ledger,(SELECT count(*) FROM ct_player_titles WHERE user_id=$1)::int inventory',[b.id])).rows[0];assert.deepEqual(counts,{rounds:0,chests:0,ledger:5,inventory:8});
+ const collection=await rpc(2,'ct_public_collection',[b.id]);assert.equal(collection.reduce((n,t)=>n+t.copies,0),108);assert.ok(collection.every(t=>t.global_copies>=t.copies));}
+ const after=await economy();assert.equal(after.bot_balances,before.bot_balances+360000);assert.equal(after.difference,0);assert.equal(after.ledger_difference,0);assert.equal(after.unmirrored,0);
+ const rankings=await rpc(2,'ct_rankings',['wins','all']);assert.ok(rankings.some(p=>p.id===compactBatch.bots[0].id&&p.score===120));const chests=await rpc(2,'ct_rankings',['chests','week']);assert.ok(chests.some(p=>p.id===compactBatch.bots[0].id&&p.score===100));
+ const list=await rpc(1,'ct_admin_bots',['CompactQA',0]);assert.equal(list.found,30);assert.ok(list.bots.every(b=>b.games===200&&b.wins===120&&b.chests===100));
+});
+test('compact metadata and usage are admin-only; counters do not allow bot gameplay or bypass batch bounds',async()=>{
+ await assert.rejects(rpc(2,'ct_admin_bot_storage'),/Administrator/);await assert.rejects(asPlayer(db,2,'SELECT * FROM ct_bot_summaries'),/permission denied/);const storage=await rpc(1,'ct_admin_bot_storage');assert.equal(storage.compact_bots,30);assert.equal(storage.batch_limit,250);assert.equal(storage.creation_guard_bytes,350000000);
+ await assert.rejects(create({...config,compact:true,names:Array.from({length:251},(_,i)=>'TooManyQA'+i),rarity_counts:[251,0,0,0,0,0,0,0]}),/250/);
+});
+test('250 compact bots fit the bounded batch and a failed outer transaction leaves no partial accounts',async()=>{
+ const before=(await db.query('SELECT count(*)::int n FROM ct_bots')).rows[0].n;const marker=new Error('rollback-load-test');const started=performance.now();let rows;
+ await assert.rejects(db.transaction(async tx=>{await tx.exec('SET LOCAL ROLE authenticated');await tx.query("SELECT set_config('request.jwt.claim.sub',$1,true)",[uid(1)]);const values={...config,compact:true,names:Array.from({length:250},(_,i)=>'LoadCompactQA'+i),rarity_counts:[0,250,0,0,0,0,0,0],titles_min:20,titles_max:20,games_min:200,games_max:200,chests_min:100,chests_max:100};const r=(await tx.query('SELECT ct_admin_create_bots($1,$2,$3) result',[randomUUID(),values,'Recette de charge locale avec rollback'])).rows[0].result;assert.equal(r.count,250);rows=r.bots.length;throw marker;}),error=>error===marker);
+ assert.equal(rows,250);assert.equal((await db.query('SELECT count(*)::int n FROM ct_bots')).rows[0].n,before);console.log('Compact batch local benchmark: '+Math.round(performance.now()-started)+' ms for 250 bots, 5000 unique inventory rows, 75000 simulated events, rolled back');
+});
