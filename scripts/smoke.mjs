@@ -18,3 +18,6 @@ await check('public title owner counts available','/rest/v1/rpc/ct_title_statist
 await check('player search rejects wildcard enumeration','/rest/v1/rpc/ct_find_players',{method:'POST',body:JSON.stringify({p_search:'%'})},(r,b)=>r.ok&&Array.isArray(b)&&b.length===0);
 await check('clicker cannot pay anonymous callers','/rest/v1/rpc/ct_clicker_action',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000099',p_action:'click',p_clicks:1,p_expected_level:0})},r=>[401,403].includes(r.status));
 await check('promo definitions remain private','/rest/v1/ct_promos?select=code',{},r=>[401,403].includes(r.status));
+await check('treasury history remains private','/rest/v1/ct_treasury_entries?select=id',{},r=>[401,403].includes(r.status));
+await check('economy dashboard denies anonymous callers','/rest/v1/rpc/ct_admin_economy',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('ranking visibility requires authentication','/rest/v1/rpc/ct_set_leaderboard_visibility',{method:'POST',body:JSON.stringify({p_hidden:true})},r=>[401,403].includes(r.status));

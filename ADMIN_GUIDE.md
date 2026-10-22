@@ -19,9 +19,12 @@ Chaque modification exige une justification. Les prix, dates, stocks, soldes et 
 
 ## Vérification
 
-64 tests automatisés réussis, compilation TypeScript/Vite et treize contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
+74 tests automatisés réussis, compilation TypeScript/Vite et seize contrôles réseau. L’aperçu du panneau a été contrôlé visuellement avec des données de test identifiées. Le parcours complet avec le véritable compte du propriétaire reste à effectuer lors de son activation initiale ; les tests ne consomment pas cette activation.
 
 Les sauvegardes et les limites du multijoueur sont documentées dans `BACKUPS.md` et `README.md`. Aucun encaissement ni retrait d’argent réel n’est intégré.
 
 ## Codes promotionnels
 Dans Codes promo, choisir Nouveau code, définir le texte du code, son nom, les crédits et/ou un titre offert, les dates, le plafond global éventuel et son activation. Ajouter une justification en haut du panneau puis enregistrer. Partager ensuite le code choisi avec les joueurs : ils le saisissent dans Crédits gratuits. Une utilisation par compte. Pour arrêter une campagne, sélectionner son code puis décocher Code actif et enregistrer. Une modification conserve les utilisations déjà effectuées.
+
+## Économie & coffre-fort
+Ouvrir cet onglet pour suivre la circulation des crédits et vérifier la ligne Comptabilité équilibrée. Le journal affiche pour chaque mouvement le montant du coffre-fort et le montant opposé côté joueur. Une prime de bienvenue produit −5 000 au coffre-fort et +5 000 au joueur ; un coffre acheté 500 produit +500 et −500. Les dates et catégories permettent de filtrer le journal ; les graphiques et totaux de période restent indépendants du filtre de catégorie. Les crédits engagés aux tables sont affichés à part et ne sont pas disponibles pour le serveur. Le suivi reprend aussi les opérations antérieures à son activation.
