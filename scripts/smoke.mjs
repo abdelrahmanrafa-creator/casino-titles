@@ -43,3 +43,7 @@ await check('direct reservations remain private','/rest/v1/ct_direct_assets?sele
 await check('trade invitations require authentication','/rest/v1/rpc/ct_trade_command',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000097',p_action:'invite',p_values:{username:'NoSuchPlayer'}})},r=>[401,403].includes(r.status));
 await check('trade inbox requires authentication','/rest/v1/rpc/ct_trade_inbox',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('sealed inventory requires authentication','/rest/v1/rpc/ct_sealed_inventory',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('circle cards remain private','/rest/v1/ct_demo_cards?select=user_id',{},r=>[401,403].includes(r.status));
+await check('circle tier definitions remain protected','/rest/v1/ct_demo_card_tiers?select=id',{},r=>[401,403].includes(r.status));
+await check('paid circle entry requires authentication','/rest/v1/rpc/ct_join_circle',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000096'})},r=>[401,403].includes(r.status));
+await check('card attribution requires administrator authentication','/rest/v1/rpc/ct_admin_card_update',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000095',p_action:'assign',p_values:{username:'NoSuchPlayer',tier_id:'cosmic'},p_reason:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
