@@ -68,3 +68,9 @@ await check('private market channel rejects anonymous readers','/rest/v1/rpc/ct_
 await check('conversion permission requires authentication','/rest/v1/rpc/ct_conversion_access',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('market news table stays private','/rest/v1/ct_market_news?select=id',{},r=>[401,403].includes(r.status));
 await check('news publication requires authentication','/rest/v1/rpc/ct_admin_market_news',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000087',p_values:{title:'Smoke',body:'No write',kind:'news'},p_reason:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
+
+for(const table of ['ct_wholesale_offers','ct_wholesale_assets','ct_wholesale_trades','ct_support_tickets','ct_support_messages'])await check(table+' remains private','/rest/v1/'+table+'?select=*',{},r=>[401,403].includes(r.status));
+await check('wholesale inbox requires authentication','/rest/v1/rpc/ct_wholesale_snapshot',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('support inbox requires authentication','/rest/v1/rpc/ct_support_inbox',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('support discussion requires authentication','/rest/v1/rpc/ct_support_thread',{method:'POST',body:JSON.stringify({p_ticket:1})},r=>[401,403].includes(r.status));
+await check('volume shop quote is exact','/rest/v1/rpc/ct_bulk_chest_quote',{method:'POST',body:JSON.stringify({p_chest_id:1,p_quantity:100})},(r,b)=>r.ok&&b.quantity===100&&b.total<=b.gross_total&&b.discount_percent<=5);
