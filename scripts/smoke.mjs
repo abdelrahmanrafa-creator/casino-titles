@@ -74,3 +74,7 @@ await check('wholesale inbox requires authentication','/rest/v1/rpc/ct_wholesale
 await check('support inbox requires authentication','/rest/v1/rpc/ct_support_inbox',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('support discussion requires authentication','/rest/v1/rpc/ct_support_thread',{method:'POST',body:JSON.stringify({p_ticket:1})},r=>[401,403].includes(r.status));
 await check('volume shop quote is exact','/rest/v1/rpc/ct_bulk_chest_quote',{method:'POST',body:JSON.stringify({p_chest_id:1,p_quantity:100})},(r,b)=>r.ok&&b.quantity===100&&b.total<=b.gross_total&&b.discount_percent<=5);
+
+await check('card reset state stays private','/rest/v1/ct_card_usage_resets?select=*',{},r=>[401,403].includes(r.status));
+await check('private card detail helper is not exposed','/rest/v1/rpc/ct_card_details',{method:'POST',body:JSON.stringify({p_user:'00000000-0000-0000-0000-000000000099'})},r=>[401,403].includes(r.status));
+await check('private card customization validator is not exposed','/rest/v1/rpc/ct_validate_card_custom',{method:'POST',body:JSON.stringify({p_custom:{title:'Smoke'},p_tier:'basic'})},r=>[401,403].includes(r.status));
