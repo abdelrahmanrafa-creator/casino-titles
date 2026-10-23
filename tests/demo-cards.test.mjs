@@ -21,7 +21,7 @@ test('card rate rounds once, exact minimum/maximum apply and historical quotes e
  const old=await rpc(2,'ct_diamond_store');await tier('basic',{eur_per_diamond:'2.505',min_purchase_cents:752,max_purchase_cents:752,daily_cents:1504,lifetime_cents:2256});await assert.rejects(buy(2,3,randomUUID(),{version:old.version}),/tarif/);await assert.rejects(buy(2,1),/montant minimum/);const op=randomUUID(),r=await buy(2,3,op);assert.equal(r.total_cents,752);assert.equal(r.card_tier,'basic');assert.deepEqual(await buy(2,3,op),r);await assert.rejects(buy(2,4),/Plafond/);await buy(2,3);await assert.rejects(buy(2,3),/Plafond/);
  const p=(await db.query('SELECT card_tier,card_version FROM ct_simulated_diamond_purchases ORDER BY created_at LIMIT 1')).rows[0];assert.equal(p.card_tier,'basic');assert.ok(p.card_version>1);
 });
-test('lifetime caps retain all previous expenditure across upgrades, revocation and reassignment',async()=>{
+test('weekly caps retain current-week expenditure across upgrades, revocation and reassignment',async()=>{
  await tier('premium',{eur_per_diamond:'1',daily_cents:100000,lifetime_cents:1550});await assign(2,'premium');assert.equal((await rpc(2,'ct_diamond_store')).spent_total_cents,1504);await assert.rejects(buy(2,1),/Plafond/);
  const old=(await access(2)).card;await admin('revoke',{username:'Bob',version:old.version});await assign(2,'premium');await assert.rejects(admin('assign',{username:'Bob',version:old.version,tier_id:'cosmic'}),/modifiée/);await assert.rejects(buy(2,1),/Plafond/);await tier('premium',{lifetime_cents:null});await buy(2,1);assert.equal((await rpc(2,'ct_diamond_store')).spent_total_cents,1604);
 });

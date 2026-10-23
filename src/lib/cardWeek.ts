@@ -1,0 +1,1 @@
+export function cardWeekEnd(value?:string){return value?new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',dateStyle:'full',timeStyle:'short'}).format(new Date(value))+' (heure de Paris)':'Chaque lundi à 00:00 (heure de Paris)';}
