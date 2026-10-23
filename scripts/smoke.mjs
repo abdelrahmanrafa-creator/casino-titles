@@ -4,6 +4,9 @@ try{for(const line of (await readFile(new URL('../.env.local',import.meta.url),'
 const url=config.VITE_SUPABASE_URL,key=config.VITE_SUPABASE_ANON_KEY;
 if(!url||!key)throw Error('Public Supabase configuration required');
 const headers={apikey:key,'Content-Type':'application/json'};
+await check('grouped market source helper remains private','/rest/v1/rpc/ct_market_chest_sources',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('grouped market requires authentication','/rest/v1/rpc/ct_market_chest_groups',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('grouped market quotes require authentication','/rest/v1/rpc/ct_market_chest_group_quote',{method:'POST',body:JSON.stringify({p_group:'smoke',p_quantity:1})},r=>[401,403].includes(r.status));
 async function check(label,path,options,verify){const response=await fetch(url+path,{headers,...options});const body=await response.json();if(!verify(response,body))throw Error(`${label}: unexpected HTTP ${response.status}`);console.log(`PASS ${label} (HTTP ${response.status})`);}
 await check('catalog online','/rest/v1/ct_titles?select=id',{},(r,b)=>r.ok&&Array.isArray(b)&&b.length>=320);
 await check('wallet inaccessible anonymously','/rest/v1/ct_wallets?select=balance',{},r=>[401,403].includes(r.status));
