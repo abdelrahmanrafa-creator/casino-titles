@@ -60,3 +60,5 @@ await check('guest conversion rejects anonymous access','/functions/v1/ct-accoun
 await check('admission review requires authentication','/rest/v1/rpc/ct_admin_admissions',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('application requires authentication','/rest/v1/rpc/ct_circle_apply',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000091',p_message:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
 await check('access code requires authentication','/rest/v1/rpc/ct_circle_redeem',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000090',p_code:'NO-REAL-CODE'})},r=>[401,403].includes(r.status));
+
+await check('bulk chest purchase requires authentication','/rest/v1/rpc/ct_buy_chests',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000089',p_quantity:10,p_chest_id:1,p_expected_version:1,p_expected_price:500,p_expected_offer_id:null})},r=>[401,403].includes(r.status));
