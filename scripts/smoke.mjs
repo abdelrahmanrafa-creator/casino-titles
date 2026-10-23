@@ -64,3 +64,7 @@ await check('access code requires authentication','/rest/v1/rpc/ct_circle_redeem
 await check('bulk chest purchase requires authentication','/rest/v1/rpc/ct_buy_chests',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000089',p_quantity:10,p_chest_id:1,p_expected_version:1,p_expected_price:500,p_expected_offer_id:null})},r=>[401,403].includes(r.status));
 
 await check('custom promo chest grant remains private','/rest/v1/rpc/ct_grant_promo_chests',{method:'POST',body:JSON.stringify({p_user:'00000000-0000-0000-0000-000000000099',p_chest:1,p_count:1,p_operation:'00000000-0000-0000-0000-000000000088'})},r=>[401,403].includes(r.status));
+await check('private market channel rejects anonymous readers','/rest/v1/rpc/ct_market_news',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('conversion permission requires authentication','/rest/v1/rpc/ct_conversion_access',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('market news table stays private','/rest/v1/ct_market_news?select=id',{},r=>[401,403].includes(r.status));
+await check('news publication requires authentication','/rest/v1/rpc/ct_admin_market_news',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000087',p_values:{title:'Smoke',body:'No write',kind:'news'},p_reason:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
