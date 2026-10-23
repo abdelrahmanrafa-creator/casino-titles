@@ -1,0 +1,26 @@
+# English server messages are translated into French in fr.json; English entries stay canonical here.
+GET|GET
+POST|POST
+OPTIONS|OPTIONS
+Content-Type|Content-Type
+Access-Control-Allow-Headers|Access-Control-Allow-Headers
+Access-Control-Allow-Methods|Access-Control-Allow-Methods
+Access-Control-Allow-Origin|Access-Control-Allow-Origin
+Authorization|Authorization
+authorization, x-client-info, apikey, content-type|authorization, x-client-info, apikey, content-type
+Bearer|Bearer
+Bearer {0}|Bearer {0}
+Cache-Control|Cache-Control
+Escape|Escape
+Europe/Paris|Europe/Paris
+POST, OPTIONS|POST, OPTIONS
+SHA-256|SHA-256
+state->>phase|state->>phase
+@guest.casino.invalid|@guest.casino.invalid
+%@guest.casino.invalid|%@guest.casino.invalid
+%credits > 0%|%credits > 0%
+%reward > 0%|%reward > 0%
+a7q, 4vn, z2p|a7q, 4vn, z2p
+Nyro, Kairox, Vexo42|Nyro, Kairox, Vexo42
+qyn, vze, rax|qyn, vze, rax
+Vesper, Serein, Halcyon|Vesper, Serein, Halcyon

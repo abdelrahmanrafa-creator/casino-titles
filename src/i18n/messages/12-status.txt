@@ -1,0 +1,49 @@
+blackjack|Blackjack
+coinflip|Coin flip
+roulette|Roulette
+baccarat|Baccarat
+slots|Slots
+poker|Poker
+chromatic|Chromatic
+win|Win
+loss|Loss
+draw|Draw
+pile|Heads
+face|Tails
+PILE|HEADS
+FACE|TAILS
+PREFLOP|PREFLOP
+FLOP|FLOP
+TURN|TURN
+RIVER|RIVER
+SHOWDOWN|SHOWDOWN
+FINISHED|FINISHED
+WAITING|WAITING
+à|to
+sur|of
+et|and
+ou|or
+par|per
+de|of
+pour|for
+Paiement simulé|Simulated payment
+Veuillez remplir ce champ.|Please fill in this field.
+Veuillez saisir une adresse e-mail valide.|Please enter a valid email address.
+Veuillez respecter le format demandé.|Please use the requested format.
+La valeur est trop petite.|The value is too small.
+La valeur est trop grande.|The value is too large.
+Le texte est trop court.|The text is too short.
+Le texte est trop long.|The text is too long.
+Veuillez choisir une valeur valide.|Please choose a valid value.
+L’opération a échoué. Veuillez réessayer.|The operation failed. Please try again.
+Password should be at least {0} characters.|Password must contain at least {0} characters.
+New password should be different from the old password.|Your new password must differ from your current password.
+For security purposes, you can only request this after {0} seconds.|For security, please wait {0} seconds before trying again.
+Email rate limit exceeded|Too many email requests. Please try again later.
+Invalid email|Invalid email address
+Unable to validate email address: invalid format|Invalid email address format
+Token has expired or is invalid|This link has expired or is invalid.
+Auth session missing!|Your session is missing. Please sign in again.
+Signup requires a valid password|Please enter a valid password to sign up.
+Fourchette de victoires invalide (0 à 100 %)|Invalid win-rate range (0 to 100%)
+Crédits retournés|Credits returned

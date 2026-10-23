@@ -1,0 +1,344 @@
+Novice du crépuscule|Novice of Twilight
+COMMUN — Une signature pour chaque nouvelle aventure.|COMMON — A signature for every new adventure.
+Novice de minuit|Novice of Midnight
+COMMUN — Un emblème forgé au fil des rencontres.|COMMON — An emblem forged through encounters.
+Novice des faubourgs|Novice of the Outskirts
+COMMUN — Une présence que le cercle n’oublie pas.|COMMON — A presence the Circle never forgets.
+Novice des premières cartes|Novice of the First Cards
+Novice du hasard|Novice of Chance
+Novice de la ruelle|Novice of the Alley
+Novice du comptoir|Novice of the Counter
+Novice des brumes|Novice of the Mists
+Novice du cercle|Novice of the Circle
+Novice de la dernière main|Novice of the Final Hand
+Voyageur du crépuscule|Traveller of Twilight
+Voyageur de minuit|Traveller of Midnight
+Voyageur des faubourgs|Traveller of the Outskirts
+Voyageur des premières cartes|Traveller of the First Cards
+Voyageur du hasard|Traveller of Chance
+Voyageur de la ruelle|Traveller of the Alley
+Voyageur du comptoir|Traveller of the Counter
+Voyageur des brumes|Traveller of the Mists
+Voyageur du cercle|Traveller of the Circle
+Voyageur de la dernière main|Traveller of the Final Hand
+Veilleur du crépuscule|Watcher of Twilight
+Veilleur de minuit|Watcher of Midnight
+Veilleur des faubourgs|Watcher of the Outskirts
+Veilleur des premières cartes|Watcher of the First Cards
+Veilleur du hasard|Watcher of Chance
+Veilleur de la ruelle|Watcher of the Alley
+Veilleur du comptoir|Watcher of the Counter
+Veilleur des brumes|Watcher of the Mists
+Veilleur du cercle|Watcher of the Circle
+Veilleur de la dernière main|Watcher of the Final Hand
+Messager du crépuscule|Messenger of Twilight
+Messager de minuit|Messenger of Midnight
+Messager des faubourgs|Messenger of the Outskirts
+Messager des premières cartes|Messenger of the First Cards
+Messager du hasard|Messenger of Chance
+Messager de la ruelle|Messenger of the Alley
+Messager du comptoir|Messenger of the Counter
+Messager des brumes|Messenger of the Mists
+Messager du cercle|Messenger of the Circle
+Messager de la dernière main|Messenger of the Final Hand
+Éclaireur du crépuscule|Scout of Twilight
+Éclaireur de minuit|Scout of Midnight
+Éclaireur des faubourgs|Scout of the Outskirts
+Éclaireur des premières cartes|Scout of the First Cards
+Éclaireur du hasard|Scout of Chance
+Éclaireur de la ruelle|Scout of the Alley
+Éclaireur du comptoir|Scout of the Counter
+Éclaireur des brumes|Scout of the Mists
+Éclaireur du cercle|Scout of the Circle
+Éclaireur de la dernière main|Scout of the Final Hand
+Rêveur du crépuscule|Dreamer of Twilight
+Rêveur de minuit|Dreamer of Midnight
+Rêveur des faubourgs|Dreamer of the Outskirts
+Rêveur des premières cartes|Dreamer of the First Cards
+Rêveur du hasard|Dreamer of Chance
+Rêveur de la ruelle|Dreamer of the Alley
+Rêveur du comptoir|Dreamer of the Counter
+Rêveur des brumes|Dreamer of the Mists
+Rêveur du cercle|Dreamer of the Circle
+Rêveur de la dernière main|Dreamer of the Final Hand
+Joueur du crépuscule|Player of Twilight
+Joueur de minuit|Player of Midnight
+Joueur des faubourgs|Player of the Outskirts
+Joueur des premières cartes|Player of the First Cards
+Joueur du hasard|Player of Chance
+Joueur de la ruelle|Player of the Alley
+Joueur du comptoir|Player of the Counter
+Joueur des brumes|Player of the Mists
+Joueur du cercle|Player of the Circle
+Joueur de la dernière main|Player of the Final Hand
+As de saphir|Ace of Sapphire
+RARE — Une signature pour chaque nouvelle aventure.|RARE — A signature for every new adventure.
+As du vent bleu|Ace of the Blue Wind
+RARE — Un emblème forgé au fil des rencontres.|RARE — An emblem forged through encounters.
+As des marées|Ace of the Tides
+RARE — Une présence que le cercle n’oublie pas.|RARE — A presence the Circle never forgets.
+As du givre|Ace of Frost
+As des sept clés|Ace of the Seven Keys
+As du nord|Ace of the North
+As du palais azur|Ace of the Azure Palace
+As des eaux profondes|Ace of the Deep Waters
+As du ciel clair|Ace of Clear Skies
+As de la chance|Ace of Fortune
+Gardien de saphir|Guardian of Sapphire
+Gardien du vent bleu|Guardian of the Blue Wind
+Gardien des marées|Guardian of the Tides
+Gardien du givre|Guardian of Frost
+Gardien des sept clés|Guardian of the Seven Keys
+Gardien du nord|Guardian of the North
+Gardien du palais azur|Guardian of the Azure Palace
+Gardien des eaux profondes|Guardian of the Deep Waters
+Gardien du ciel clair|Guardian of Clear Skies
+Gardien de la chance|Guardian of Fortune
+Dompteur de saphir|Tamer of Sapphire
+Dompteur du vent bleu|Tamer of the Blue Wind
+Dompteur des marées|Tamer of the Tides
+Dompteur du givre|Tamer of Frost
+Dompteur des sept clés|Tamer of the Seven Keys
+Dompteur du nord|Tamer of the North
+Dompteur du palais azur|Tamer of the Azure Palace
+Dompteur des eaux profondes|Tamer of the Deep Waters
+Dompteur du ciel clair|Tamer of Clear Skies
+Dompteur de la chance|Tamer of Fortune
+Capitaine de saphir|Captain of Sapphire
+Capitaine du vent bleu|Captain of the Blue Wind
+Capitaine des marées|Captain of the Tides
+Capitaine du givre|Captain of Frost
+Capitaine des sept clés|Captain of the Seven Keys
+Capitaine du nord|Captain of the North
+Capitaine du palais azur|Captain of the Azure Palace
+Capitaine des eaux profondes|Captain of the Deep Waters
+Capitaine du ciel clair|Captain of Clear Skies
+Capitaine de la chance|Captain of Fortune
+Oracle de saphir|Oracle of Sapphire
+Oracle du vent bleu|Oracle of the Blue Wind
+Oracle des marées|Oracle of the Tides
+Oracle du givre|Oracle of Frost
+Oracle des sept clés|Oracle of the Seven Keys
+Oracle du nord|Oracle of the North
+Oracle du palais azur|Oracle of the Azure Palace
+Oracle des eaux profondes|Oracle of the Deep Waters
+Oracle du ciel clair|Oracle of Clear Skies
+Oracle de la chance|Oracle of Fortune
+Émissaire de saphir|Emissary of Sapphire
+Émissaire du vent bleu|Emissary of the Blue Wind
+Émissaire des marées|Emissary of the Tides
+Émissaire du givre|Emissary of Frost
+Émissaire des sept clés|Emissary of the Seven Keys
+Émissaire du nord|Emissary of the North
+Émissaire du palais azur|Emissary of the Azure Palace
+Émissaire des eaux profondes|Emissary of the Deep Waters
+Émissaire du ciel clair|Emissary of Clear Skies
+Émissaire de la chance|Emissary of Fortune
+Monarque des ombres|Monarch of the Shadows
+ÉPIQUE — Une signature pour chaque nouvelle aventure.|EPIC — A signature for every new adventure.
+Monarque du miroir violet|Monarch of the Violet Mirror
+ÉPIQUE — Un emblème forgé au fil des rencontres.|EPIC — An emblem forged through encounters.
+Monarque de la nuit pourpre|Monarch of the Crimson Night
+ÉPIQUE — Une présence que le cercle n’oublie pas.|EPIC — A presence the Circle never forgets.
+Monarque des songes|Monarch of Dreams
+Monarque du bal masqué|Monarch of the Masquerade
+Monarque du dernier éclair|Monarch of the Last Lightning
+Monarque des secrets|Monarch of Secrets
+Monarque de la lune noire|Monarch of the Black Moon
+Monarque des murmures|Monarch of Whispers
+Monarque du velours|Monarch of Velvet
+Chasseur des ombres|Hunter of the Shadows
+Chasseur du miroir violet|Hunter of the Violet Mirror
+Chasseur de la nuit pourpre|Hunter of the Crimson Night
+Chasseur des songes|Hunter of Dreams
+Chasseur du bal masqué|Hunter of the Masquerade
+Chasseur du dernier éclair|Hunter of the Last Lightning
+Chasseur des secrets|Hunter of Secrets
+Chasseur de la lune noire|Hunter of the Black Moon
+Chasseur des murmures|Hunter of Whispers
+Chasseur du velours|Hunter of Velvet
+Illusionniste des ombres|Illusionist of the Shadows
+Illusionniste du miroir violet|Illusionist of the Violet Mirror
+Illusionniste de la nuit pourpre|Illusionist of the Crimson Night
+Illusionniste des songes|Illusionist of Dreams
+Illusionniste du bal masqué|Illusionist of the Masquerade
+Illusionniste du dernier éclair|Illusionist of the Last Lightning
+Illusionniste des secrets|Illusionist of Secrets
+Illusionniste de la lune noire|Illusionist of the Black Moon
+Illusionniste des murmures|Illusionist of Whispers
+Illusionniste du velours|Illusionist of Velvet
+Souverain des ombres|Sovereign of the Shadows
+Souverain du miroir violet|Sovereign of the Violet Mirror
+Souverain de la nuit pourpre|Sovereign of the Crimson Night
+Souverain des songes|Sovereign of Dreams
+Souverain du bal masqué|Sovereign of the Masquerade
+Souverain du dernier éclair|Sovereign of the Last Lightning
+Souverain des secrets|Sovereign of Secrets
+Souverain de la lune noire|Sovereign of the Black Moon
+Souverain des murmures|Sovereign of Whispers
+Souverain du velours|Sovereign of Velvet
+Sentinelle des ombres|Sentinel of the Shadows
+Sentinelle du miroir violet|Sentinel of the Violet Mirror
+Sentinelle de la nuit pourpre|Sentinel of the Crimson Night
+Sentinelle des songes|Sentinel of Dreams
+Sentinelle du bal masqué|Sentinel of the Masquerade
+Sentinelle du dernier éclair|Sentinel of the Last Lightning
+Sentinelle des secrets|Sentinel of Secrets
+Sentinelle de la lune noire|Sentinel of the Black Moon
+Sentinelle des murmures|Sentinel of Whispers
+Sentinelle du velours|Sentinel of Velvet
+Empereur du trône doré|Emperor of the Golden Throne
+LÉGENDAIRE — Une signature pour chaque nouvelle aventure.|LEGENDARY — A signature for every new adventure.
+Empereur de la couronne solaire|Emperor of the Solar Crown
+LÉGENDAIRE — Un emblème forgé au fil des rencontres.|LEGENDARY — An emblem forged through encounters.
+Empereur des flammes anciennes|Emperor of Ancient Flames
+LÉGENDAIRE — Une présence que le cercle n’oublie pas.|LEGENDARY — A presence the Circle never forgets.
+Empereur du serment royal|Emperor of the Royal Oath
+Empereur des cités d’or|Emperor of the Golden Cities
+Empereur de la grande victoire|Emperor of the Great Victory
+Empereur du palais éternel|Emperor of the Eternal Palace
+Empereur des braises|Emperor of Embers
+Empereur du destin|Emperor of Destiny
+Phénix du trône doré|Phoenix of the Golden Throne
+Phénix de la couronne solaire|Phoenix of the Solar Crown
+Phénix des flammes anciennes|Phoenix of Ancient Flames
+Phénix du serment royal|Phoenix of the Royal Oath
+Phénix des cités d’or|Phoenix of the Golden Cities
+Phénix de la grande victoire|Phoenix of the Great Victory
+Phénix du palais éternel|Phoenix of the Eternal Palace
+Phénix des braises|Phoenix of Embers
+Phénix du destin|Phoenix of Destiny
+Héritier du trône doré|Heir of the Golden Throne
+Héritier de la couronne solaire|Heir of the Solar Crown
+Héritier des flammes anciennes|Heir of Ancient Flames
+Héritier du serment royal|Heir of the Royal Oath
+Héritier des cités d’or|Heir of the Golden Cities
+Héritier de la grande victoire|Heir of the Great Victory
+Héritier du palais éternel|Heir of the Eternal Palace
+Héritier des braises|Heir of Embers
+Héritier du destin|Heir of Destiny
+Lion du trône doré|Lion of the Golden Throne
+Lion de la couronne solaire|Lion of the Solar Crown
+Lion des flammes anciennes|Lion of Ancient Flames
+Lion du serment royal|Lion of the Royal Oath
+Lion des cités d’or|Lion of the Golden Cities
+Lion de la grande victoire|Lion of the Great Victory
+Lion du palais éternel|Lion of the Eternal Palace
+Lion des braises|Lion of Embers
+Lion du destin|Lion of Destiny
+Maître du trône doré|Master of the Golden Throne
+Maître de la couronne solaire|Master of the Solar Crown
+Maître des flammes anciennes|Master of Ancient Flames
+Maître du serment royal|Master of the Royal Oath
+Maître des cités d’or|Master of the Golden Cities
+Maître de la grande victoire|Master of the Great Victory
+Maître du palais éternel|Master of the Eternal Palace
+Maître des braises|Master of Embers
+Maître du destin|Master of Destiny
+Esprit du cristal vivant|Spirit of the Living Crystal
+MYTHIQUE — Une signature pour chaque nouvelle aventure.|MYTHIC — A signature for every new adventure.
+Esprit des abysses turquoise|Spirit of the Turquoise Abyss
+MYTHIQUE — Un emblème forgé au fil des rencontres.|MYTHIC — An emblem forged through encounters.
+Esprit de la source sacrée|Spirit of the Sacred Spring
+MYTHIQUE — Une présence que le cercle n’oublie pas.|MYTHIC — A presence the Circle never forgets.
+Esprit du temple englouti|Spirit of the Sunken Temple
+Esprit des aurores|Spirit of the Auroras
+Esprit des océans oubliés|Spirit of Forgotten Oceans
+Esprit de la lumière douce|Spirit of Gentle Light
+Spectre du cristal vivant|Spectre of the Living Crystal
+Spectre des abysses turquoise|Spectre of the Turquoise Abyss
+Spectre de la source sacrée|Spectre of the Sacred Spring
+Spectre du temple englouti|Spectre of the Sunken Temple
+Spectre des aurores|Spectre of the Auroras
+Spectre des océans oubliés|Spectre of Forgotten Oceans
+Spectre de la lumière douce|Spectre of Gentle Light
+Protecteur du cristal vivant|Protector of the Living Crystal
+Protecteur des abysses turquoise|Protector of the Turquoise Abyss
+Protecteur de la source sacrée|Protector of the Sacred Spring
+Protecteur du temple englouti|Protector of the Sunken Temple
+Protecteur des aurores|Protector of the Auroras
+Protecteur des océans oubliés|Protector of Forgotten Oceans
+Protecteur de la lumière douce|Protector of Gentle Light
+Avatar du cristal vivant|Avatar of the Living Crystal
+Avatar des abysses turquoise|Avatar of the Turquoise Abyss
+Avatar de la source sacrée|Avatar of the Sacred Spring
+Avatar du temple englouti|Avatar of the Sunken Temple
+Avatar des aurores|Avatar of the Auroras
+Avatar des océans oubliés|Avatar of Forgotten Oceans
+Avatar de la lumière douce|Avatar of Gentle Light
+Ancêtre du cristal vivant|Ancestor of the Living Crystal
+Ancêtre des abysses turquoise|Ancestor of the Turquoise Abyss
+Ancêtre de la source sacrée|Ancestor of the Sacred Spring
+Ancêtre du temple englouti|Ancestor of the Sunken Temple
+Ancêtre des aurores|Ancestor of the Auroras
+Ancêtre des océans oubliés|Ancestor of Forgotten Oceans
+Ancêtre de la lumière douce|Ancestor of Gentle Light
+Virtuose du prisme infini|Virtuoso of the Infinite Prism
+RAINBOW — Une signature pour chaque nouvelle aventure.|RAINBOW — A signature for every new adventure.
+Virtuose des sept horizons|Virtuoso of the Seven Horizons
+RAINBOW — Un emblème forgé au fil des rencontres.|RAINBOW — An emblem forged through encounters.
+Virtuose du spectre vivant|Virtuoso of the Living Spectrum
+RAINBOW — Une présence que le cercle n’oublie pas.|RAINBOW — A presence the Circle never forgets.
+Virtuose des couleurs libres|Virtuoso of Unbound Colours
+Virtuose de l’arc céleste|Virtuoso of the Celestial Arc
+Alchimiste du prisme infini|Alchemist of the Infinite Prism
+Alchimiste des sept horizons|Alchemist of the Seven Horizons
+Alchimiste du spectre vivant|Alchemist of the Living Spectrum
+Alchimiste des couleurs libres|Alchemist of Unbound Colours
+Alchimiste de l’arc céleste|Alchemist of the Celestial Arc
+Architecte du prisme infini|Architect of the Infinite Prism
+Architecte des sept horizons|Architect of the Seven Horizons
+Architecte du spectre vivant|Architect of the Living Spectrum
+Architecte des couleurs libres|Architect of Unbound Colours
+Architecte de l’arc céleste|Architect of the Celestial Arc
+Prodige du prisme infini|Prodigy of the Infinite Prism
+Prodige des sept horizons|Prodigy of the Seven Horizons
+Prodige du spectre vivant|Prodigy of the Living Spectrum
+Prodige des couleurs libres|Prodigy of Unbound Colours
+Prodige de l’arc céleste|Prodigy of the Celestial Arc
+Prodigieux du prisme infini|Wunderkind of the Infinite Prism
+Prodigieux des sept horizons|Wunderkind of the Seven Horizons
+Prodigieux du spectre vivant|Wunderkind of the Living Spectrum
+Prodigieux des couleurs libres|Wunderkind of Unbound Colours
+Prodigieux de l’arc céleste|Wunderkind of the Celestial Arc
+Roi du nectar solaire|King of Solar Nectar
+XTREM — Une signature pour chaque nouvelle aventure.|EXTREME — A signature for every new adventure.
+Roi de la ruche éternelle|King of the Eternal Hive
+XTREM — Un emblème forgé au fil des rencontres.|EXTREME — An emblem forged through encounters.
+Roi du miel incandescent|King of Glowing Honey
+XTREM — Une présence que le cercle n’oublie pas.|EXTREME — A presence the Circle never forgets.
+Roi de l’ambre liquide|King of Liquid Amber
+Roi des gouttes d’or|King of Golden Drops
+Titan du nectar solaire|Titan of Solar Nectar
+Titan de la ruche éternelle|Titan of the Eternal Hive
+Titan du miel incandescent|Titan of Glowing Honey
+Titan de l’ambre liquide|Titan of Liquid Amber
+Titan des gouttes d’or|Titan of Golden Drops
+Seigneur du nectar solaire|Lord of Solar Nectar
+Seigneur de la ruche éternelle|Lord of the Eternal Hive
+Seigneur du miel incandescent|Lord of Glowing Honey
+Seigneur de l’ambre liquide|Lord of Liquid Amber
+Seigneur des gouttes d’or|Lord of Golden Drops
+Champion du nectar solaire|Champion of Solar Nectar
+Champion de la ruche éternelle|Champion of the Eternal Hive
+Champion du miel incandescent|Champion of Glowing Honey
+Champion de l’ambre liquide|Champion of Liquid Amber
+Champion des gouttes d’or|Champion of Golden Drops
+Démiurge des galaxies perdues|Demiurge of Lost Galaxies
+COSMIQUE — Une signature pour chaque nouvelle aventure.|COSMIC — A signature for every new adventure.
+Démiurge du vide stellaire|Demiurge of the Stellar Void
+COSMIQUE — Un emblème forgé au fil des rencontres.|COSMIC — An emblem forged through encounters.
+Démiurge de la nébuleuse originelle|Demiurge of the Primordial Nebula
+COSMIQUE — Une présence que le cercle n’oublie pas.|COSMIC — A presence the Circle never forgets.
+Démiurge du dernier univers|Demiurge of the Last Universe
+Démiurge des constellations infinies|Demiurge of Infinite Constellations
+Nomade des galaxies perdues|Nomad of Lost Galaxies
+Nomade du vide stellaire|Nomad of the Stellar Void
+Nomade de la nébuleuse originelle|Nomad of the Primordial Nebula
+Nomade du dernier univers|Nomad of the Last Universe
+Nomade des constellations infinies|Nomad of Infinite Constellations
+Éternel des galaxies perdues|Eternal of Lost Galaxies
+Éternel du vide stellaire|Eternal of the Stellar Void
+Éternel de la nébuleuse originelle|Eternal of the Primordial Nebula
+Éternel du dernier univers|Eternal of the Last Universe
+Éternel des constellations infinies|Eternal of Infinite Constellations

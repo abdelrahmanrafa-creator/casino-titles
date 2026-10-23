@@ -1,0 +1,288 @@
+, mise comprise.|, including your stake.
+. As séparés : une carte chacun, sans bonus de blackjack. Les règles sont fixées au début de votre manche. Vous pouvez la reprendre après déconnexion.|. Split aces receive one card each, without a blackjack bonus. Rules are fixed when your round starts. You can resume it after reconnecting.
+. Cette semaine :|. This week:
+. Chaque lundi à 00:00, heure de Paris.|. Every Monday at 00:00, Paris time.
+. Doubler : une seule carte, mise doublée. Séparer deux cartes de même rang : jusqu’à|. Double: one additional card and twice the stake. Split a matching pair into up to
+. Historique :|. History:
+. Le total est calculé avec le taux exact, puis arrondi une seule fois au centime.|. The total uses the exact rate and is rounded once to the nearest cent.
+. Ouvrez le lien reçu, puis revenez ici pour choisir votre mot de passe. Gardez votre session invité ouverte pendant cette étape.|. Open the link you receive, then return here to choose your password. Keep your guest session open throughout this step.
+. Votre progression reste liée à ce compte.|. Your progress stays linked to this account.
+· Abandon|· Fold
+· Cette semaine :|· This week:
+· Écart du journal :|· Ledger difference:
+· En cours|· In progress
+· expiration|· expires
+· historique|· history
+· Inactif|· Inactive
+· Les crédits sont déjà enregistrés dans les portefeuilles.|· These credits are already recorded in the wallets.
+· Les pseudos sont modifiables avant création. Un pseudo déjà pris sera refusé, sans créer de lot partiel.|· Usernames can be edited before creation. An occupied username rejects the entire batch.
+· Masquée|· Hidden
+· Maximum|· Maximum
+· obligatoire pour une offre gratuite|· required for a free offer
+· Opérations sans contrepartie :|· Unbalanced operations:
+· Personnalisé / événement|· Custom / event
+· plafond par transaction :|· transaction cap:
+· plafond quotidien :|· daily cap:
+· Pour {0}|· For {0}
+· Privée|· Private
+· prix de base|· original price
+· Résultat net :|· Net result:
+· simulé cette semaine|· simulated this week
+· Sorties|· Outflows
+· Standard|· Standard
+· Survolez une journée pour le détail.|· Hover over a day for details.
+· Suspendue|· Suspended
+· TOTAL|· TOTAL
+· VOTRE NOUVELLE SIGNATURE|· YOUR NEW SIGNATURE
+· vous|· you
+(heure de Paris)|(Paris time)
+(UTC). Déjà simulé aujourd’hui :|(UTC). Already simulated today:
+{0} : délai dépassé.|{0}: time expired.
+{0} bots créés et figés. Leur comptabilité est enregistrée dans le coffre-fort.|{0} bots created and frozen. Their accounting is recorded in the vault.
+{0} cartes|{0} cards
+{0} coffre(s) acheté(s) au marché pour {1} diamants. Retrouvez-les dans votre Inventaire.|{0} chest(s) bought on the market for {1} diamonds. Find them in your Inventory.
+{0} coffre(s) acheté(s). Retrouvez-les dans votre Inventaire.|{0} chest(s) purchased. Find them in your Inventory.
+{0} crédits|{0} credits
+{0} crédits · mise {1}|{0} credits · stake {1}
+{0} détenteur(s)|{0} holder(s)
+{0} diamants ajoutés · transaction fictive de {1}. Aucun débit réel.|{0} diamonds added · simulated transaction of {1}. No real charge.
+{0} façons de se distinguer.|{0} ways to stand out.
+{0} pioche et passe.|{0} draws and skips their turn.
+{0} pose une carte.|{0} plays a card.
+{0} présence(s) actuelle(s) dans les 10 classements Top 50.|{0} current appearance(s) across the 10 Top 50 leaderboards.
+{0} quitte la table.|{0} leaves the table.
+{0} rejoint la table.|{0} joins the table.
+{0} remporte la partie.|{0} wins the game.
+{0} titres découverts · {1} % de votre collection.|{0} titles discovered · {1}% of your collection.
+{0} UTC · Entrées {1} · Sorties {2}|{0} UTC · Inflows {1} · Outflows {2}
+{0}{1} coffre(s) {2}|{0}{1} chest(s) {2}
+& TITLES|& TITLES
+% sur le stock concerné|% on the applicable stock
+← Achats, mises et améliorations|← Purchases, bets and upgrades
+← Mes demandes|← My requests
++{0} crédits encaissés !|+{0} credits collected!
++750 crédits · Récupérer|+750 credits · Claim
+× la mise retournée). Victoire ordinaire : 2× ; égalité : mise rendue. Le croupier|× your stake returned). Regular win: 2×; draw: stake refunded. The dealer
+✦ Équipé|✦ Equipped
+💎 / coffre|💎 / chest
+💎 / coffre · total|💎 / chest · total
+€ fictifs par diamant.|simulated euros per diamond.
+01 · DES NOMS QUI VOUS RESSEMBLENT|01 · NAMES THAT FIT YOUR STYLE
+02 · UNE COLLECTION MAÎTRISÉE|02 · A CURATED COLLECTION
+03 · LES CRÉDITS|03 · CREDITS
+04 · LES OUVERTURES SIMULÉES|04 · SIMULATED OPENINGS
+05 · LES PARTIES ET LES VICTOIRES|05 · GAMES AND WINS
+1 coffre|1 chest
+1 day|1 day
+1 diamant =|1 diamond =
+1 diamant ≈|1 diamond ≈
+1 minute|1 minute
+1 week|1 week
+1. Confirmer votre adresse e-mail|1. Confirm your email address
+10 et figures valent 0, les as valent 1. Banque retourne 1,95×, Égalité 9×. Une égalité rembourse Joueur et Banque.|Tens and face cards are worth 0; aces are worth 1. Banker returns 1.95× and Tie returns 9×. A tie refunds Player and Banker bets.
+10 minutes|10 minutes
+100 % crédits virtuels.|100% virtual credits.
+100 % virtuel|100% virtual
+100 à 500 crédits offerts.|100 to 500 free credits.
+100 derniers codes. Les codes standards sont réservés aux joueurs sans carte. Un code personnalisé peut remplacer une carte active ; une suspension doit être levée par un admin.|Latest 100 codes. Standard codes are for players without a card. A custom code can replace an active card; only an admin can lift a suspension.
+100 maximum|100 maximum
+15 minutes|15 minutes
+2 à 8 joueurs. Chaque salon joue une manche, puis restitue les jetons restants et gains aux portefeuilles. Poker : blinds 10/20, sans commission ; relance totale, pots secondaires et partages calculés par le serveur. Un all-in inférieur à une relance complète ne rouvre pas la relance aux joueurs qui ont déjà agi. Délai de 45 secondes : check si possible, sinon abandon. Chromatic : sept cartes, même couleur ou symbole ; ⊘ passe, ⇄ inverse, +2 fait piocher et passer, ✦ change la couleur. Piocher termine le tour. Le premier sans carte remporte les entrées. Un abandon en cours laisse la mise dans le pot. Les tours expirés sont avancés côté serveur lors de la synchronisation ou de la reconnexion.|2 to 8 players. Each room plays one round, then returns remaining chips and winnings to wallets. Poker: 10/20 blinds, no rake; the server calculates total raises, side pots and split pots. A short all-in does not reopen raising for players who have already acted. After 45 seconds: check if possible, otherwise fold. Chromatic: seven cards; match the colour or symbol. ⊘ skips, ⇄ reverses, +2 makes the next player draw and skip, and ✦ changes the colour. Drawing ends your turn. The first player to empty their hand wins the entry stakes. Leaving during a game keeps your stake in the pot. Expired turns advance on the server when the room synchronises or reconnects.
+2 days|2 days
+2. Choisir votre mot de passe|2. Choose your password
+20 annonces actives maximum|Maximum 20 active listings
+20 offres de gros actives maximum|Maximum 20 active stock offers
+21, et tout peut changer.|21, and everything can change.
+3 caractères mixtes|3 mixed characters
+30 minutes|30 minutes
+30 résultats affichés. Précisez le pseudo pour affiner la recherche.|Showing 30 results. Enter more of the username to narrow your search.
+30 résultats maximum. Précisez le pseudo pour retrouver un joueur.|Up to 30 results. Enter more of the username to find a player.
+5 000 crédits offerts à la création de votre profil.|5,000 free credits when you create your profile.
+5 lignes · 3 horizontales + 2 diagonales|5 paylines · 3 horizontal + 2 diagonal
+5 minutes|5 minutes
+5 tickets ouverts maximum|Maximum 5 open tickets
+5 tickets ouverts maximum. Votre demande reste privée entre vous et les administrateurs.|Up to 5 open tickets. Your request stays private between you and the administrators.
+50 dernières opérations · Enregistrées automatiquement|Latest 50 operations · Recorded automatically
+50 dernières parties solo|Latest 50 solo games
+50 dernières transactions|Latest 50 transactions
+50 mouvements par page. Une entrée correspond au débit d’un joueur ; une sortie correspond à un crédit reçu. Les primes déjà versées ont été reprises depuis l’historique.|50 entries per page. An inflow corresponds to a player's debit; an outflow corresponds to credits received by a player. Previously paid bonuses have been imported from the history.
+7 days|7 days
+750 crédits chaque jour à partir de minuit UTC.|750 credits every day, resetting at midnight UTC.
+8 caractères minimum|At least 8 characters
+À chaque coffre, son univers.|A world inside every chest.
+À découvrir|Undiscovered
+À DÉCOUVRIR|UNDISCOVERED
+À découvrir dans les coffres et événements.|Discover through chests and events.
+À l’unité|Single item
+À partir de|Starting from
+À toutes les tables|At every table
+À VOTRE IMAGE|MAKE IT YOURS
+À votre tour : passer sans miser, suivre, relancer ou se coucher.|On your turn: check, call, raise or fold.
+À vous de jouer|Your turn to play
+Abandonner la partie|Leave the game
+Absent de ce coffre|Not available in this chest
+Acceptées|Accepted
+Accepter|Accept
+Accepter de nouvelles|Accept new ones
+Accepter et attribuer la carte|Accept and grant the card
+Accès au compte|Account access
+Accès au marché avec cette carte|Market access with this card
+ACCÈS AUX TABLES|TABLE ACCESS
+Accès lié au compte connecté · aucun code à ressaisir|Access linked to your signed-in account · no code to re-enter
+Accès obtenu par code.|Access granted by code.
+ACCÈS PAR COMPTE|ACCOUNT ACCESS
+Accès refusé.|Access denied.
+Accès refusé. Vérifiez vos identifiants d’administration.|Access denied. Check your administrator credentials.
+Accès réservé au cercle fermé : carte active requise|Circle members only: an active card is required
+Accompagner un joueur|Help a player
+Achat au marché|Market purchase
+Achat de coffre|Chest purchase
+Achat de coffre scellé|Unopened chest purchase
+Achat de titre|Title purchase
+Achat effectué : les coffres sont dans votre inventaire.|Purchase complete: the chests are in your inventory.
+Achat en cours…|Purchasing…
+Achat fictif · aucun débit réel|Simulated purchase · no real charge
+Achat fictif de diamants|Simulated diamond purchase
+achat(s) fictif(s) · volume des échanges entre joueurs :|simulated purchase(s) · player trading volume:
+Achats fictifs autorisés|Simulated purchases enabled
+Achats fictifs de diamants|Simulated diamond purchases
+Achats par joueur|Purchases per player
+Achats suspendus|Purchases suspended
+Acheter {0} · {1} crédits|Buy {0} · {1} credits
+Acheter des diamants|Buy diamonds
+Acheter le coffre|Buy the chest
+Acheter un coffre ↗|Buy a chest ↗
+Achetez vos coffres dans la rubrique Coffres|Buy your chests in the Chests section
+Achetez vos coffres et gardez-les dans votre inventaire. Ouvrez-les plus tard ou vendez-les avec une carte d’accès au marché.|Buy chests and keep them in your inventory. Open them later, or sell them if you have a market access card.
+Actif · figé|Active · frozen
+Action clicker inconnue|Unknown clicker action
+Action impossible dans cet état|This action is unavailable in the current state
+Action inconnue|Unknown action
+Activation initiale : le premier compte qui prouve le code devient administrateur. Cette possibilité se ferme immédiatement après l’activation.|Initial setup: the first account to verify the code becomes an administrator. This option closes immediately after activation.
+Activation initiale par preuve du code secret|Initial activation using the secret code
+Activation initiale protégée · 5 tentatives · blocage de 10 min|Protected initial activation · 5 attempts · 10-minute lockout
+Activé|Enabled
+Active round not found|Active round not found
+Activée|Enabled
+Activer|Enable
+Activer l’événement|Enable the event
+Activer la campagne aux dates définies|Enable the campaign on the specified dates
+Activer ma carte avec un code|Activate my card with a code
+Activer mon compte permanent|Activate my permanent account
+Activer une carte personnalisée avec un code|Activate a custom card with a code
+Actualisation toutes les 2 min|Refreshes every 2 minutes
+Actualiser les demandes|Refresh requests
+Actualiser les stocks|Refresh stock
+Actualité|News
+ACTUALITÉ|NEWS
+Actualités & annonces.|News & announcements.
+Actualités du cercle|Circle news
+Administrateurs autorisés|Authorised administrators
+Administrator unlock required|Administrator access required
+Adresse confirmée :|Confirmed address:
+Adresse déjà confirmée. Choisissez votre mot de passe.|Address already confirmed. Choose your password.
+Adresse e-mail invalide|Invalid email address
+Adresse e-mail modifiée.|Email address updated.
+Adresse en attente :|Pending address:
+Affichage des coffres|Chest display
+Afficher|Show
+Afficher ce coffre dans la boutique|Show this chest in the shop
+Afficher le code|Show the code
+Afficher les candidatures|Show applications
+Ajouter un palier|Add a tier
+Ajoutez au moins un objet ou des diamants|Add at least one item or some diamonds
+Ajoutez la justification commune en haut du panneau.|Add the shared reason at the top of the panel.
+Ajoutez une justification commune de 8 caractères minimum.|Add a shared reason of at least 8 characters.
+Ajoutez une justification commune.|Add a shared reason.
+Ajustement administrateur|Administrator adjustment
+Ajustement des crédits|Credit adjustment
+Ajustement du solde de bot|Bot balance adjustment
+Alignez trois symboles identiques.|Match three identical symbols.
+Already seated|Already seated
+Ambre|Amber
+Amélioration du clicker|Clicker upgrade
+Amélioration indisponible|Upgrade unavailable
+Améliorer · {0} crédits|Upgrade · {0} credits
+Animation|Animation
+Animation de la gamme|Card tier animation
+Animation inconnue|Unknown animation
+Annonce annulée. Votre objet est disponible.|Listing cancelled. Your item is available.
+Annonce déjà traitée|Listing already processed
+Annonce déjà traitée ou indisponible|Listing already processed or unavailable
+Annonce modifiée. Actualisez.|Listing changed. Please refresh.
+Annonce publiée. Votre objet est réservé pour 7 jours.|Listing published. Your item is reserved for 7 days.
+Annonce retirée du marché. L’objet est à nouveau disponible pour son propriétaire.|Listing removed from the market. The item is available to its owner again.
+Annonce visible|Visible announcement
+Annonces plus anciennes|Older announcements
+annonces publiées au prix unitaire choisi. Vos coffres sont réservés.|listings published at the selected unit price. Your chests are reserved.
+Annuler et libérer le stock|Cancel and release the stock
+Annuler l’échange|Cancel the trade
+Annuler mes annonces|Cancel my listings
+Annulez l’annonce avant d’ouvrir ce coffre|Cancel the listing before opening this chest
+APERÇU DE L’AFFICHAGE RÉEL|LIVE DISPLAY PREVIEW
+Appliquer|Apply
+Approchez-vous de 21 sans le dépasser.|Get as close to 21 as possible without going over.
+Après promotion :|After promotion:
+Archivé|Archived
+Archiver conserve les titres, les statistiques, le solde et l’historique. Pour restituer ses crédits au coffre-fort, mettez d’abord son solde à zéro. L’attribution et la révocation de titres restent disponibles dans Joueurs ; les titres Cosmiques sont refusés pour les bots.|Archiving preserves titles, statistics, balance and history. To return its credits to the vault, first set its balance to zero. Titles can still be granted or revoked in Players; bots cannot receive Cosmic titles.
+Associez d’abord une adresse e-mail au compte invité.|First link an email address to the guest account.
+At least two players required|At least two players required
+Attribuer|Grant
+Attribuer le titre|Grant the title
+Attribuer une signature|Grant a signature
+Attribuer, remplacer ou suspendre une carte.|Grant, replace or suspend a card.
+Attribuez ou retirez des diamants à un joueur. Les soldes négatifs sont refusés et chaque action est auditée.|Add or remove a player's diamonds. Negative balances are rejected and every action is audited.
+Attribution administrateur|Administrator grant
+Attribution modifiée. Actualisez.|Card assignment changed. Please refresh.
+Au tour de {0}|{0}'s turn
+Aucun achat simulé.|No simulated purchases.
+Aucun argent réel|No real money
+Aucun bot dans cette sélection.|No bots in this selection.
+Aucun coffre|No chest
+Aucun coffre en réserve. Achetez-en à la boutique ou gagnez-en avec les quêtes.|No chests in storage. Buy some in the shop or earn them through quests.
+Aucun joueur trouvé pour «|No player found for “
+Aucun joueur trouvé.|No player found.
+Aucun mouvement pour cette sélection.|No transactions for this selection.
+Aucun objet|No item
+Aucun salon en attente. Créez le vôtre pour accueillir d’autres joueurs.|No waiting rooms. Create one to welcome other players.
+Aucun stock de coffres pour cette recherche.|No chest stock matches this search.
+Aucun ticket dans cette catégorie.|No tickets in this category.
+Aucun titre|No title
+Aucun titre dans cette sélection.|No titles in this selection.
+Aucun titre équipé|No title equipped
+Aucun titre ne correspond à ces filtres.|No titles match these filters.
+Aucune adresse en attente de confirmation.|No email address awaiting confirmation.
+Aucune annonce pour le moment.|No listings yet.
+Aucune annonce.|No listings.
+Aucune attribution automatique. L’accès se fait sur candidature ou par code d’accès. Une attribution administrateur ne débite aucun crédit. Les limites quotidiennes et hebdomadaires suivent le joueur : changer de carte ne remet pas les dépenses de la semaine à zéro.|Cards are not granted automatically. Access requires an application or access code. Administrator grants cost no credits. Daily and weekly limits follow the player: changing cards does not reset this week's spending.
+Aucune candidature dans cette catégorie.|No applications in this category.
+Aucune carte|No card
+Aucune carte attribuée|No card assigned
+Aucune carte jouable ? Piochez, puis le tour passe.|No playable card? Draw, then your turn ends.
+Aucune défaite|No losses
+Aucune demande en attente.|No pending requests.
+Aucune ligne gagnante cette fois.|No winning paylines this time.
+Aucune offre de gros disponible.|No stock offers available.
+Aucune réduction active pour votre compte actuellement. Retrouvez tous les coffres dans leur onglet.|No active discounts for your account right now. Find all chests in the Chests tab.
+Aucune signature révélée ne correspond.|No revealed signatures match.
+Aujourd’hui :|Today:
+Aujourd’hui · UTC|Today · UTC
+Aujourd’hui seulement|Today only
+Aurore|Aurora
+Authenticated profile and session required|An authenticated profile and session are required
+Autorisation invalide|Invalid authorisation
+autorisé|allowed
+Autoriser crédits → diamants pour cette carte|Allow credits → diamonds for this card
+Autoriser de doubler après une séparation|Allow doubling after a split
+Autoriser la conversion crédits → diamants|Allow credit-to-diamond conversion
+Autoriser le compte|Allow this account
+Autoriser les achats fictifs de diamants|Allow simulated diamond purchases
+Autoriser les annonces et échanges du marché|Allow market listings and trades
+Autoriser les titres exclusifs dans ce coffre événementiel|Allow exclusive titles in this event chest
+Autoriser pour cette carte|Allow for this card
+Autre demande|Other request
+Autres coffres|More chests
+Avant promotion :|Before promotion:
+Avatar|Avatar
+Avatar enregistré.|Avatar saved.
+Avec|With

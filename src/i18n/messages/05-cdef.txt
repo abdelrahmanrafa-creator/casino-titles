@@ -1,0 +1,273 @@
+Avec une ligne de trois diamants, vous recevez|With a line of three diamonds, you receive
+Azur|Azure
+Baccarat|Baccarat
+Bandeau supérieur|Top banner
+Confirmez votre adresse e-mail avant de choisir votre mot de passe.|Confirm your email address before choosing your password.
+Confirmez votre adresse e-mail pour rejoindre le cercle.|Confirm your email address to join the Circle.
+Connecté avec|Signed in with
+Connexion au cercle…|Joining the Circle…
+Connexion aux données indisponible.|Data connection unavailable.
+Connexion interrompue. Réessayez la même opération.|Connection interrupted. Retry the same operation.
+Connexion interrompue. Reprenez la même opération.|Connection interrupted. Resume the same operation.
+Connexion invité indisponible. Réessayez.|Guest sign-in unavailable. Please try again.
+Connexion requise|Sign-in required
+Connexion requise.|Sign-in required.
+Conservez exactement le même compte : vos crédits, titres, coffres, diamants et carte d’accès restent en place.|Keep the same account: your credits, titles, chests, diamonds and access card stay intact.
+Conservez le nouveau code avant de l’appliquer. Il ne sera pas récupérable depuis la base.|Save the new code before applying it. It cannot be recovered from the database.
+Conservez le nouveau code dans votre gestionnaire de mots de passe avant de l’appliquer. La rotation ne retire aucun rôle administrateur. Pour révoquer un accès, retirez le rôle du compte.|Save the new code in your password manager before applying it. Rotating the code does not remove administrator roles. To revoke access, remove the account's role.
+CONSOLE PRIVÉE|PRIVATE CONSOLE
+Contacter un administrateur|Contact an administrator
+Contenu d’un coffre indisponible. Aucun coffre ouvert.|A chest's contents are unavailable. No chests were opened.
+Contenu du coffre indisponible|Chest contents unavailable
+Conversion de crédits|Credit conversion
+Conversion effectuée. Vos diamants sont disponibles.|Conversion complete. Your diamonds are available.
+Conversion en diamants|Convert to diamonds
+Conversion incluse|Conversion included
+Conversion temporairement indisponible : carte inactive, marché suspendu ou diamants figés.|Conversion temporarily unavailable: inactive card, paused market or frozen diamonds.
+Convertir mes crédits|Convert my credits
+Copie indisponible. Affichez le code pour le conserver.|Copying unavailable. Show the code to save it.
+Copiez le code avant de l’enregistrer : seul son empreinte sera conservée.|Copy the code before saving: only its hash will be stored.
+Correction des résultats simulés|Simulated result correction
+Corriger les statistiques du joueur|Correct player statistics
+Corrigez les fourchettes minimum / maximum et le nombre de titres de meilleure rareté.|Correct the minimum/maximum ranges and the number of highest-rarity titles.
+Cosmic : aucune limite|Cosmic: unlimited
+Cosmic : montants libres jusqu’à 90 milliards d’euros fictifs. Ses plafonds par transaction et par jour remplacent les plafonds standards ; le gel, les suspensions et le plafond global restent applicables.|Cosmic: flexible amounts up to 90 billion simulated euros. Its transaction and daily caps replace standard caps; freezes, suspensions and the global cap still apply.
+Cosmic : sans limite|Cosmic: unlimited
+Cosmiques|Cosmic
+Couleur {0}|Colour {0}
+COULEUR ACTIVE ·|ACTIVE COLOUR ·
+Couleur enregistrée.|Colour saved.
+Couleur hexadécimale requise|A hexadecimal colour is required
+Couleur pour un prisme|Prism colour
+Couleurs et animation|Colours and animation
+CRÉATION & ÉDITION|CREATE & EDIT
+Création suspendue : seuil prudent de 350 Mo atteint dans la base|Creation paused: the database has reached the conservative 350 MB threshold
+crédits ·|credits ·
+CRÉDITS ·|CREDITS ·
+crédits · Jusqu’au|credits · Until
+crédits / clic|credits / click
+Crédits → diamants|Credits → diamonds
+crédits détenus|credits held
+Crédits détenus|Credits held
+crédits détenus par des bots figés.|credits held by frozen bots.
+Crédits en attente|Pending credits
+Crédits en circulation|Credits in circulation
+Crédits en compte|Account credits
+Crédits hebdomadaires : variation nette du portefeuille sur la semaine, récompenses et dépenses comprises.|Weekly credits: net wallet change over the week, including rewards and spending.
+Crédits offerts|Free credits
+crédits pour|credits for
+Crédits pour 1 diamant|Credits per diamond
+crédits retournés|credits returned
+Crédits reversés|Credits paid out
+crédits virtuels|virtual credits
+Crédits virtuels|Virtual credits
+CRÉDITS VIRTUELS UNIQUEMENT|VIRTUAL CREDITS ONLY
+Crédits virtuels uniquement. Aucun achat, dépôt, retrait ou gain en argent réel.|Virtual credits only. No real-money purchases, deposits, withdrawals or winnings.
+crédits virtuels.|virtual credits.
+CRÉDITS, TITRES ET COFFRES|CREDITS, TITLES AND CHESTS
+Crédits, titres, historique et suspension|Credits, titles, history and suspension
+crédits. Coffre-fort disponible + réservations des tables + portefeuilles = ce capital. Les mises multijoueurs restent dues aux joueurs jusqu’au règlement. Les portefeuilles comprennent|credits. Available vault + table reservations + wallets = these funds. Multiplayer stakes remain owed to players until settlement. Wallets include
+crédits. Les gains restent versés ; ce suivi virtuel ne bloque pas les règlements.|credits. Winnings are still paid; this virtual accounting does not block settlements.
+Créer ·|Create ·
+Créer et figer|Create and freeze
+Créer le code d’accès|Create access code
+Créer mon compte|Create my account
+Créer mon profil|Create my profile
+Créer un code donnant une carte|Create a code granting a card
+Créer un événement.|Create an event.
+Créer un lot|Create a batch
+Créer un titre.|Create a title.
+Créer une autre annonce|Create another listing
+Créer une mission.|Create a quest.
+Créer une récompense|Create a reward
+Créer une réduction|Create a discount
+Créez un code à partager avec vos joueurs.|Create a code to share with your players.
+Créez votre première offre. Aucune réduction fictive n’est affichée aux joueurs.|Create your first offer. Players are never shown fake discounts.
+Créez votre profil et recevez un coffre scellé.|Create your profile and receive an unopened chest.
+Créez votre profil. Aucune mise nécessaire.|Create your profile. No bet required.
+Créez votre table.|Create your table.
+Croupier|Dealer
+Cumulable : promotion d’abord, remise de quantité ensuite|Stackable: promotion first, volume discount second
+Curiosité récompensée|Curiosity Rewarded
+D’où viennent les mouvements ?|Where do transactions come from?
+De 2 à 1 000 coffres identiques par offre. Les quantités augmentent et les prix diminuent à chaque palier. Ajustez les seuils à votre stock avant de publier.|2 to 1,000 identical chests per offer. Quantities increase and prices decrease at each tier. Adjust thresholds to your stock before publishing.
+DE JOUEUR À JOUEUR|PLAYER TO PLAYER
+DE L’ALBUM RÉVÉLÉ|OF THE REVEALED ALBUM
+De petits gestes. De belles découvertes.|Small actions. Great discoveries.
+Débloqué le {0}|Unlocked on {0}
+Début|Start
+Début · heure locale|Start · local time
+Deck exhausted|The deck is empty
+Découvert|Discovered
+DÉCOUVERT|DISCOVERED
+Découvertes|Discoveries
+Découverts|Discovered
+Découvrir aussi les jeux du casino ↗|Discover casino games too ↗
+Découvrir les coffres|Discover chests
+Découvrir les six cartes ↓|Discover the six cards ↓
+Découvrir trois jeux différents.|Discover three different games.
+Défaut|Default
+Déjà acheté|Already purchased
+Déjà membre ? Connexion|Already a member? Sign in
+Déjà récupéré|Already claimed
+Demandes plus anciennes|Older requests
+Démarrer la partie|Start the game
+DEMO •••• ••••|DEMO •••• ••••
+Dépensent et reçoivent les crédits|Spend and receive credits
+Dépenses en coffres|Chest spending
+Dernières acquisitions|Recent acquisitions
+Dernières annonces|Latest listings
+Derniers achats fictifs.|Latest simulated purchases.
+derniers jours UTC|latest UTC days
+Derniers tickets|Latest tickets
+Dès|From
+Dès 10 : −2 %|10 or more: −2%
+Dès 100 : −5 %|100 or more: −5%
+Dès 50 : −3 %|50 or more: −3%
+Des coffres, des signatures et des rendez-vous exclusifs. Prix et disponibilités vérifiés par le serveur.|Chests, signatures and exclusive events. Prices and availability are verified by the server.
+des comptes|of accounts
+Des comptes sans connexion, identifiés comme bots. Leurs titres et compteurs simulés sont enregistrés en mode compact ; leur solde reste fixe jusqu’à une modification administrateur. Aucun titre Cosmique.|Accounts without sign-in, identified as bots. Their simulated titles and counters use compact storage; balances remain fixed until changed by an administrator. No Cosmic titles.
+DES CRÉDITS PAR LA PROGRESSION|CREDITS THROUGH PROGRESS
+Des offres programmées, un vrai prix barré et des coffres événementiels. Les stocks et les limites sont contrôlés à chaque ouverture.|Scheduled offers, genuine crossed-out prices and event chests. Stock and limits are checked for every opening.
+Des résultats réglés et figés.|Settled and frozen results.
+désactivé|disabled
+Désactivé|Disabled
+Désactivée|Disabled
+Désactiver|Disable
+Destinataire facultatif|Optional recipient
+Destinataire indisponible|Recipient unavailable
+Détails|Details
+détenteur(s) /|holder(s) /
+Deux cartes privées, cinq cartes communes. Composez la meilleure main de cinq cartes ou faites abandonner vos adversaires.|Two private cards, five community cards. Build the best five-card hand or make your opponents fold.
+Déverrouiller la console|Unlock the console
+diamants ?|diamonds?
+diamants ·|diamonds ·
+Diamants à ajouter ou retirer|Diamonds to add or remove
+Diamants à recevoir|Diamonds to receive
+Diamants demandés par objet|Diamonds requested per item
+Diamants disponibles insuffisants|Not enough available diamonds
+Diamants distribués par simulation|Diamonds distributed by simulation
+Diamants insuffisants.|Not enough diamonds.
+Diamants proposés ·|Offered diamonds ·
+Diamants réservés dans un échange direct|Diamonds reserved for a direct trade
+diamants. Ce volume n’est pas une recette en euros.|diamonds. This volume is not euro revenue.
+différent(s). Tous les exemplaires sont dans votre collection.|unique. Every copy is in your collection.
+Diffusion de {0}|Displaying {0}
+Discussion #|Conversation #
+Discussion complète : ouvrez un nouveau ticket|Conversation full: open a new ticket
+Discussion mise à jour.|Conversation updated.
+Disponible|Available
+Disponible le|Available on
+Distribuer|Deal
+Distribuer les mains|Deal the hands
+Distribution…|Dealing…
+Dix histoires de jeu|Ten Gaming Stories
+Dix objets maximum par offre|Up to ten items per offer
+Dix parties, un coffre|Ten Games, One Chest
+DOSSIER JOUEUR|PLAYER RECORD
+Double after split disabled|Doubling after a split is disabled
+Double requires two cards|Doubling requires two cards
+Doubler|Double
+Douzaine|Dozen
+E-mail du joueur|Player email
+Écart à examiner|Difference to investigate
+Écart des soldes :|Balance difference:
+Échange annulé ou expiré. Vos objets sont disponibles.|Trade cancelled or expired. Your items are available.
+Échange conclu. Les objets et diamants ont été transférés ensemble.|Trade completed. Items and diamonds were transferred together.
+Échange conclu. Votre inventaire et vos diamants sont à jour.|Trade completed. Your inventory and diamonds are up to date.
+Échange introuvable|Trade not found
+Échange ouvert|Trade opened
+Échange terminé ou expiré|Trade finished or expired
+Échanges entre joueurs|Player trades
+Échanges suspendus|Trades suspended
+Échanges temporairement suspendus ou figés|Trades temporarily suspended or frozen
+Économie :|Savings:
+Économie & coffre-fort|Economy & vault
+ÉDITION DE DÉMONSTRATION|DEMONSTRATION EDITION
+Électrique|Electric
+En attente d’un admin|Waiting for an admin
+En progression|In progress
+Encaisser|Collect
+Encaissez vos clics avant une amélioration.|Collect your clicks before upgrading.
+English|English
+Enregistrer l’annonce|Save announcement
+Enregistrer l’autorisation de conversion|Save conversion permission
+Enregistrer l’avatar|Save avatar
+Enregistrer l’événement|Save event
+Enregistrer l’offre|Save offer
+Enregistrer la carte personnelle|Save personal card
+Enregistrer la mission|Save quest
+Enregistrer le code|Save code
+Enregistrer le coffre|Save chest
+Enregistrer le titre|Save title
+Enregistrer les modifications|Save changes
+Enregistrer les réglages|Save settings
+Enregistrer les règles|Save rules
+Enregistrer les statistiques|Save statistics
+Entre 1 et 20 clics par collecte|Between 1 and 20 clicks per collection
+Entrée de table réservée|Reserved table entry
+Entrée en crédits|Buy-in in credits
+Entrée payante supprimée : envoyez une candidature ou utilisez un code d’accès.|Paid entry removed: submit an application or use an access code.
+entrées|entries
+Entrées|Inflows
+Entrées coffre-fort|Vault inflows
+Entrées dans le coffre-fort|Vault inflows
+Entrées et sorties du coffre-fort sur {0} jours UTC|Vault inflows and outflows over {0} UTC days
+Entrées invité temporairement limitées. Réessayez plus tard.|Guest sign-ins are temporarily limited. Try again later.
+Entrer en invité · juste un pseudo|Join as a guest · just a username
+Entrez avec un pseudo.|Enter with a username.
+Entrez dans le cercle fermé.|Enter the private Circle.
+Entrez dans le cercle. Découvrez des titres animés, ouvrez des coffres et faites de chaque partie une nouvelle histoire.|Enter the Circle. Discover animated titles, open chests and turn every game into a new story.
+Envoyer la réponse|Send reply
+Envoyer le lien de confirmation|Send confirmation link
+Envoyer ma candidature|Submit my application
+Envoyer mon ticket|Submit my ticket
+Envoyer un lien de réinitialisation du mot de passe|Send a password reset link
+Équiper|Equip
+Équiper ce titre|Equip this title
+Équipez votre titre préféré et retrouvez chaque exemplaire obtenu.|Equip your favourite title and find every copy you have earned.
+Escrow conservation violation|Reserved funds do not balance
+et {0} coffre(s) dans votre inventaire|and {0} chest(s) in your inventory
+et un titre offert|and a free title
+ÉTAT DU CERCLE|CIRCLE STATUS
+Étoiles|Stars
+Événement|Event
+ÉVÉNEMENT|EVENT
+Événement d’ouverture du cercle|Circle Opening Event
+Événement enregistré. Une récompense par compte.|Event saved. One reward per account.
+Événement terminé|Event ended
+Événements|Events
+Event requirement not met|Event requirements not met
+Event unavailable|Event unavailable
+Ex. A1B2C3D4E5F6|E.g. A1B2C3D4E5F6
+ex. autumn-sovereign|e.g. autumn-sovereign
+Ex. Campagne d’automne validée pour le week-end|E.g. Autumn campaign approved for the weekend
+Ex. Création de nouveaux joueurs|E.g. Creating new players
+Ex. Nébuleuse d’automne|E.g. Autumn Nebula
+Ex. Week-end du cercle|E.g. Circle Weekend
+Exactement 3 chiffres|Exactly 3 digits
+Exactement 3 lettres|Exactly 3 letters
+Exclusif|Exclusive
+Exclusif · événements et coffres explicitement autorisés|Exclusive · only explicitly authorised events and chests
+Exemplaire|Copy
+Exemplaire à échanger :|Copy to trade:
+Exemplaire en double|Duplicate copy
+exemplaire(s) dans ce compte|copy/copies in this account
+exemplaire(s) en circulation|copy/copies in circulation
+exemplaires ·|copies ·
+Exemplaires possédés|Copies owned
+Exemple : 100 crédits misés = 20 par ligne. Une ligne de trois diamants retourne 600 crédits.|Example: a 100-credit stake = 20 per line. A line of three diamonds returns 600 credits.
+EXEMPLE AVEC|EXAMPLE WITH
+Expiration future requise|An expiry date in the future is required
+Expire le|Expires on
+Expliquez la situation, le pseudo concerné et les références d’une annonce ou d’un échange si besoin. Retrouvez les réponses ici. Ne communiquez jamais votre mot de passe.|Explain the situation, the relevant username and any listing or trade references. Find replies here. Never share your password.
+Expliquez votre situation|Explain your situation
+Explorer les coffres|Explore chests
+Face · ✦|Tails · ✦
+Faites briller la pièce.|Make the coin shine.
+Faites vivre la collection.|Bring the collection to life.
+Faites votre choix|Make your choice
+Fermer ce ticket|Close this ticket
+Fermer la fiche|Close profile
+Fermer les échanges|Close trades
+Fermés|Closed

@@ -4,6 +4,8 @@ try{for(const line of (await readFile(new URL('../.env.local',import.meta.url),'
 const url=config.VITE_SUPABASE_URL,key=config.VITE_SUPABASE_ANON_KEY;
 if(!url||!key)throw Error('Public Supabase configuration required');
 const headers={apikey:key,'Content-Type':'application/json'};
+await check('language preference requires authentication','/rest/v1/rpc/ct_language',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('language changes require authentication','/rest/v1/rpc/ct_set_language',{method:'POST',body:JSON.stringify({p_language:'en'})},r=>[401,403].includes(r.status));
 await check('bulk inventory opening denies anonymous callers','/rest/v1/rpc/ct_open_sealed_batch',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000096',p_asset_ids:[]})},r=>[401,403].includes(r.status));
 await check('grouped market source helper remains private','/rest/v1/rpc/ct_market_chest_sources',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('grouped market requires authentication','/rest/v1/rpc/ct_market_chest_groups',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));

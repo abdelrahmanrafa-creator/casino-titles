@@ -1,3 +1,4 @@
+import {locale} from '../i18n/store';
 import type {CSSProperties} from 'react';
 import {ChevronRight,CalendarDays,Tag} from 'lucide-react';
 import {rarityNames,colors,type Chest} from '../lib/api';
@@ -9,9 +10,9 @@ export function ShopChests({chests,onOpen}:{chests:Chest[];onOpen:(chest:Chest)=
   <ChestArt rarity={chest.rarity??1}/><h3>{chest.name}</h3><p className="muted">{chest.description}</p>
   {chest.offer_id&&<p className="chest-offer-name"><Tag size={12}/>{chest.offer_name}</p>}
   <PriceTag base={chest.base_price??chest.price} current={chest.current_price??chest.price}/>
-  {chest.offer_ends_at&&<small className="stock-note">Offre jusqu’au {new Date(chest.offer_ends_at).toLocaleString('fr-FR')}</small>}
-  {chest.ends_at&&<small className="stock-note">Coffre jusqu’au {new Date(chest.ends_at).toLocaleString('fr-FR')}</small>}
-  {chest.starts_at&&new Date(chest.starts_at).getTime()>Date.now()&&<small className="stock-note">Disponible le {new Date(chest.starts_at).toLocaleString('fr-FR')}</small>}
+  {chest.offer_ends_at&&<small className="stock-note">Offre jusqu’au {new Date(chest.offer_ends_at).toLocaleString(locale())}</small>}
+  {chest.ends_at&&<small className="stock-note">Coffre jusqu’au {new Date(chest.ends_at).toLocaleString(locale())}</small>}
+  {chest.starts_at&&new Date(chest.starts_at).getTime()>Date.now()&&<small className="stock-note">Disponible le {new Date(chest.starts_at).toLocaleString(locale())}</small>}
   {chest.remaining_stock!==null&&chest.remaining_stock!==undefined&&<small className="stock-note">{chest.remaining_stock} coffre(s) restant(s)</small>}
   <button className="text-btn odds-btn" onClick={()=>onOpen(chest)}>Voir les probabilités <ChevronRight size={13}/></button>
   <button className="btn chest-buy" disabled={chest.available===false} onClick={()=>onOpen(chest)}>{chest.available===false?'Indisponible actuellement':<>Acheter le coffre <span>Inventaire ↗</span></>}</button>

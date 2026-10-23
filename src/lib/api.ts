@@ -1,9 +1,16 @@
+import {getLanguage} from '../i18n/store';
+import {sourceSearch} from '../i18n/search';
+import {locale} from '../i18n/store';
 import {createClient} from '@supabase/supabase-js';
 export const supabase=createClient(import.meta.env.VITE_SUPABASE_URL,import.meta.env.VITE_SUPABASE_ANON_KEY);
 export class RpcFailure extends Error {
  constructor(message:string,public definitive:boolean){super(message);}
 }
 export async function rpc<T>(name:string,args:Record<string,unknown>={}):Promise<T>{
+ if(getLanguage()==='en'&&['ct_market_snapshot','ct_market_chest_groups'].includes(name)&&typeof args.p_search==='string'){const alias=sourceSearch(args.p_search);if(alias!==args.p_search){const [first,second]=await Promise.all([rawRpc<Record<string,unknown>|Record<string,unknown>[]>(name,args),rawRpc<Record<string,unknown>|Record<string,unknown>[]>(name,{...args,p_search:alias})]);if(Array.isArray(first)&&Array.isArray(second)){const groups=[...new Map([...first,...second].map(g=>[g.group_key,g])).values()].sort((a,b)=>String(a.group_key).localeCompare(String(b.group_key))).slice(0,50);return groups as T;}if(!Array.isArray(first)&&!Array.isArray(second)){const listings=[...new Map([...(first.listings as {id:number}[]),...(second.listings as {id:number}[])].map(l=>[l.id,l])).values()].sort((a,b)=>b.id-a.id).slice(0,50);return {...first,listings} as T;}}}
+ return rawRpc<T>(name,args);
+}
+async function rawRpc<T>(name:string,args:Record<string,unknown>):Promise<T>{
  const {data,error}=await supabase.rpc(name,args);
  if(error)throw new RpcFailure(error.message,Boolean(error.code)&&!error.code.startsWith('08'));
  return data as T;
@@ -27,7 +34,7 @@ export interface Snapshot {wallet:Wallet;transactions:Receipt[];daily_claimed:bo
 export interface Award {title:Title;player_title_id:string;opening_id?:string;balance:number;chest_id?:number}
 export const rarityNames=['COMMUN','RARE','ÉPIQUE','LÉGENDAIRE','MYTHIQUE','RAINBOW','XTREM','COSMIQUE'];
 export const colors=['#a1a1aa','#60a5fa','#b47aff','#f5b85a','#3ce0cc','#f0abfc','#ffca36','#b6a1ff'];
-export const credits=(n:number)=>new Intl.NumberFormat('fr-FR').format(n);
+export const credits=(n:number)=>new Intl.NumberFormat(locale()).format(n);
 
 export async function accountRequest<T>(body:Record<string,unknown>):Promise<T>{
  const {data:{session}}=await supabase.auth.getSession();let response:Response;

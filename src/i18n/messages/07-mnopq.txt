@@ -1,0 +1,297 @@
+Main terminée. Les pots sont distribués sans commission.|Hand finished. Pots are paid without commission.
+Mains maximum après séparation|Maximum hands after splitting
+mains, coût d’une mise supplémentaire. Double après séparation :|hands, costing an additional stake. Double after split:
+Manque · 1 à 18|Low · 1 to 18
+Marché indisponible|Market unavailable
+Masqué des classements|Hidden from leaderboards
+Masquer|Hide
+Masquer ces bots des classements|Hide these bots from leaderboards
+Masquer le code|Hide code
+Masquer les cartes|Hide cards
+Masquer mon compte des classements|Hide my account from leaderboards
+Maximum par achat|Maximum per purchase
+Maximum par transaction · €|Maximum per transaction · €
+Maximum six plafonds quotidiens|No more than six daily caps
+MEMBRE • 0088|MEMBER • 0088
+Membre depuis le|Member since
+Mes achats et ventes en gros|My stock purchases and sales
+Mes annonces|My listings
+Mes offres de gros|My stock offers
+Mes offres et achats|My offers and purchases
+Mes tickets|My tickets
+Message au joueur|Message to player
+Messages plus anciens|Older messages
+Mesure du stockage indisponible. Le contrôle serveur reste actif.|Storage measurement unavailable. Server checks remain active.
+Mesurer le stockage|Measure storage
+Method not allowed|Method not allowed
+Minimum :|Minimum:
+Minimum par achat|Minimum per purchase
+Minimum par transaction · €|Minimum per transaction · €
+Minimum supérieur au maximum|Minimum is greater than maximum
+Mise :|Stake:
+Mise de chaque partie|Stake per game
+Mise en crédits|Stake in credits
+Mise simulée de bot|Simulated bot stake
+Mise solo|Solo game stake
+Mises simulées · total|Simulated stakes · total
+Misez : les cartes sont tirées automatiquement.|Place your bet: cards are drawn automatically.
+Missing settlement seat|A seat is missing from settlement
+Mission|Quest
+Mission enregistrée. Les récompenses déjà reçues ne sont jamais reversées.|Quest saved. Previously received rewards are never paid again.
+Mission inactive|Quest inactive
+Missions, découvertes de jeux, titres uniques et événements : progressez à votre rythme.|Quests, new games, unique titles and events: progress at your own pace.
+Mo|MB
+Mode compact · jusqu’à 250 bots par lot|Compact mode · up to 250 bots per batch
+Mode d’obtention|How to obtain
+Modérer les annonces.|Moderate listings.
+Modification enregistrée et auditée.|Change saved and audited.
+Modification enregistrée.|Change saved.
+Modifier / masquer|Edit / hide
+Modifier l’annonce|Edit announcement
+Modifier l’e-mail|Change email
+Modifier l’événement.|Edit event.
+Modifier la campagne.|Edit campaign.
+Modifier la mission.|Edit quest.
+MODIFIER LE BOT ·|EDIT BOT ·
+Modifier le code|Edit code
+Modifier le pseudo|Change username
+Modifier le titre.|Edit title.
+Mon portefeuille de diamants|My diamond wallet
+Montant|Amount
+Montant fictif total|Total simulated amount
+Montant invalide|Invalid amount
+Montant ou justification invalide|Invalid amount or reason
+Montant personnalisé hors limites|Custom amount outside allowed limits
+Montant trop élevé|Amount too high
+Montants en euros fictifs. Le minimum et le maximum peuvent être identiques pour imposer un montant exact. Un taux vide reprend le taux global ; la Cosmic utilise ses propres plafonds par transaction et par jour.|Amounts are in simulated euros. Set the same minimum and maximum to require an exact amount. An empty rate uses the global rate; Cosmic uses its own transaction and daily caps.
+Mot de passe mis à jour.|Password updated.
+Mot de passe oublié|Forgot password
+MOTEUR DE BLACKJACK|BLACKJACK ENGINE
+Mouvement|Transaction
+Niveau maximum|Maximum level
+Niveaux de rareté|Rarity levels
+No available title for rarity %|No available title for rarity %
+No drawable cards|No cards available to draw
+No next player|No next player
+No title available for rarity|No title available for this rarity
+Noir|Black
+Nom affiché de la carte|Displayed card name
+Nom de l’offre|Offer name
+Nom de la campagne|Campaign name
+Nom interne du code|Internal code name
+Nom révélé|Revealed name
+Nombre de bots|Number of bots
+Nombre de bots {0}|Number of bots {0}
+Nombre de coffres|Number of chests
+Nombre de coffres à ouvrir|Number of chests to open
+Nombre de coffres à publier|Number of chests to list
+Nombre de diamants|Number of diamonds
+Nombre maximum d’utilisations|Maximum uses
+Nombre total d’offres · vide = illimité|Total offers · blank = unlimited
+Nombre total d’utilisations|Total uses
+Not seated|You are not seated
+Not your turn|It is not your turn
+Nouveau code|New code
+Nouveau code · au moins 24 caractères|New code · at least 24 characters
+Nouveau code copié. Conservez-le en lieu sûr.|New code copied. Keep it in a safe place.
+Nouveau mot de passe|New password
+Nouveau prix en crédits|New price in credits
+Numéro|Number
+Numéro {0}|Number {0}
+Numéro exact|Exact number
+Objectif {0} clics|Target: {0} clicks
+Objectif de clics non atteint|Click target not reached
+Objectif quotidien atteint. Revenez après minuit UTC.|Daily target reached. Return after midnight UTC.
+Objet à proposer|Item to offer
+Objet déjà réservé|Item already reserved
+Objet demandé|Requested item
+Objet demandé invalide|Invalid requested item
+Objet indisponible ou non possédé|Item unavailable or not owned
+Objet ou vendeur|Item or seller
+Objet ou vendeur…|Item or seller…
+Objet réservé · transfert atomique · aucun argent réel|Reserved item · atomic transfer · no real money
+Objet réservé dans un échange direct|Item reserved for a direct trade
+Obtenez votre premier titre.|Obtain your first title.
+Obtenu|Obtained
+Offer not found for chest|Offer not found for this chest
+Offre|Offer
+Offre annulée : les coffres restants sont libérés.|Offer cancelled: remaining chests are released.
+Offre de gros publiée. Les coffres sont réservés.|Stock offer published. The chests are reserved.
+Offre enregistrée. Son affichage suit automatiquement ses dates et son stock.|Offer saved. Its visibility automatically follows its dates and stock.
+Offre introuvable|Offer not found
+Offre jusqu’au|Offer until
+Offre modifiée. Vérifiez le nouveau total|Offer changed. Check the new total
+OFFRE N°|OFFER NO.
+Offre ou prix modifié. Actualisez la boutique avant de confirmer.|Offer or price changed. Refresh the shop before confirming.
+Offre ou quantité indisponible|Offer or quantity unavailable
+Offre privée|Private offer
+Offres & réductions|Offers & discounts
+Offres de gros|Stock offers
+Offres plus anciennes|Older offers
+Offres récentes|Recent offers
+Offres spéciales|Special offers
+Opération|Operation
+Opération de compte invalide|Invalid account operation
+Operation has different payload|This operation has different parameters
+Operation ID required|An operation ID is required
+Operation ID reused with different payload|This operation ID was reused with different parameters
+Opération indisponible|Operation unavailable
+Opération non validée. Actualisez et relisez l’offre. Le détail est affiché dans la notification du site.|Operation not confirmed. Refresh and review the offer. Details are shown in the site notification.
+Opération, cible, justification…|Operation, target, reason…
+Opérations|Operations
+Option inconnue : %|Unknown option: %
+Orbite|Orbit
+Origine|Origin
+ou {0}|or {0}
+Ouverture d’une session d’administration|Administrator session opened
+Ouverture de coffre|Chest opening
+Ouverture du marché…|Opening the market…
+Ouverture en cours…|Opening…
+Ouvertures maximum|Maximum openings
+Ouvertures minimum|Minimum openings
+Ouvertures par joueur · vide = illimité|Openings per player · blank = unlimited
+Ouvrez trois coffres.|Open three chests.
+Ouvrez un coffre.|Open a chest.
+Ouvrir {0}|Open {0}
+Ouvrir ce coffre|Open this chest
+Ouvrir des coffres|Open chests
+Ouvrir mon cadeau gratuit|Open my free gift
+OUVRIR QUAND VOUS VOULEZ|OPEN WHENEVER YOU WANT
+Ouvrir un ticket|Open a ticket
+Ouvrir vingt-cinq coffres.|Open twenty-five chests.
+Owned title not found|Owned title not found
+Page|Page
+Page suivante|Next page
+Pages de la collection|Collection pages
+Paiement du blackjack naturel|Natural blackjack payout
+Pair|Even
+Pair required, maximum four hands|A pair is required, with at most four hands
+Paliers croissants en quantité, prix décroissants, dans le stock proposé|Tiers must increase in quantity, decrease in price and fit the offered stock
+Par case|Individual slots
+Par coffre · 100 % au total|Per chest · 100% total
+Par jour :|Per day:
+Pariez sur la main la plus proche de 9.|Bet on the hand closest to 9.
+Partie terminée|Game finished
+Partie terminée.|Game finished.
+Parties / victoires|Games / wins
+Parties Coinflip explicitement simulées. Chaque bot reçoit son propre taux tiré au hasard dans la fourchette (35 à 68 % par défaut). Le nombre de victoires est arrondi selon son nombre de parties, puis réparti aléatoirement dans sa série. Pour imposer un taux fixe, saisissez le même minimum et maximum. Les totaux des mises et des gains sont comptabilisés en quelques écritures. Aucune partie ne continue après création.|Explicitly simulated Coin Flip games. Each bot gets its own random win rate within the range (35–68% by default). Wins are rounded to its game count and randomly distributed through its series. Set equal minimum and maximum values for a fixed rate. Total stakes and winnings use a few ledger entries. No games continue after creation.
+Parties maximum|Maximum games
+Parties minimum|Minimum games
+Parties solo|Solo games
+Parties terminées|Completed games
+Pas assez de titres dans la rareté maximale % pour ce lot|Not enough titles of maximum rarity % for this batch
+Pas assez de titres éligibles dans la sélection|Not enough eligible titles in this selection
+Passe · 19 à 36|High · 19 to 36
+Passer|Skip
+Passer · Check|Check
+Passer l’animation|Skip animation
+Période|Period
+Période de l’économie|Economy period
+Permanent|All time
+Personnalisation invalide|Invalid customisation
+Personnaliser la carte et gérer les plafonds de|Customise the card and manage limits for
+Pertes cumulées|Total losses
+Pièce améliorée ! Vos prochains clics rapportent davantage.|Coin upgraded! Your next clicks earn more.
+Pile · C|Heads · C
+Pile ou face, 50 % de probabilité chacun. Bon choix : 2× votre mise retournée ; sinon 0. Aucun avantage maison.|Heads or tails, each with a 50% chance. Correct choice: 2× your stake returned; otherwise 0. No house edge.
+Pilotez le cercle. Chaque changement est vérifié, enregistré et audité.|Manage the Circle. Every change is verified, recorded and audited.
+Pioche deux|Draw two
+Piocher et passer|Draw and skip
+Plafond de simulation en euros atteint|Simulated euro cap reached
+Plafond de simulation ou montant minimum de la carte atteint|Simulation cap or card minimum amount reached
+Plafond en euros fictifs par achat|Simulated euro cap per purchase
+Plafond global des recettes simulées · euros fictifs|Global simulated revenue cap · simulated euros
+Plafond quotidien|Daily cap
+Plafond quotidien · €|Daily cap · €
+Plafond quotidien par joueur · euros fictifs|Daily cap per player · simulated euros
+Plafonds et conditions propres à cette carte|Limits and conditions specific to this card
+Player not found|Player not found
+Player unavailable|Player unavailable
+Plus gros gain net|Largest net win
+Plus grosse mise|Largest bet
+Plus grosse mise ou gain incohérent|Largest bet or winnings are inconsistent
+PLUS QU’UNE VICTOIRE. UNE SIGNATURE.|MORE THAN A WIN. A SIGNATURE.
+Plus récents|Most recent
+PLUSIEURS COFFRES, UN MEILLEUR PRIX|MORE CHESTS, A BETTER PRICE
+PLUSIEURS FAÇONS DE GAGNER|MORE WAYS TO EARN
+Poker Texas Hold’em|Texas Hold'em Poker
+Portefeuille diamant mis à jour et action enregistrée.|Diamond wallet updated and action recorded.
+Portefeuilles des joueurs|Player wallets
+Posez une carte de même couleur ou de même symbole.|Play a card with the same colour or symbol.
+Positions actuelles, permanentes et hebdomadaires. Les anciennes apparitions ne sont pas comptabilisées.|Current all-time and weekly positions. Past appearances are not counted.
+Posséder cinq titres différents.|Own five different titles.
+Posséder vingt-cinq titres différents.|Own twenty-five different titles.
+POT ·|POT ·
+Pot has no eligible player|No player is eligible for this pot
+Pour activer la création :|To enable creation:
+Pour un échange sans diamants, choisissez un objet demandé et mettez le prix à 0.|For a trade without diamonds, choose a requested item and set the price to 0.
+Précédente|Previous
+Première page|First page
+Première page des coffres|First chest page
+Premium, Gold, Platine, Diamond et Cosmic sont attribuées par un administrateur. La carte Cosmic dispose de ses propres plafonds par transaction et par jour. Le gel et le plafond global du serveur restent applicables. Aucune carte bancaire réelle.|Premium, Gold, Platinum, Diamond and Cosmic are granted by an administrator. Cosmic has its own transaction and daily caps. Server freezes and the global cap still apply. No real bank cards.
+Prenez votre place.|Take your place.
+Préparez votre lot.|Prepare your batch.
+Présentez votre candidature en 10 à 1000 caractères|Write your application in 10 to 1,000 characters
+Présentez-vous et expliquez pourquoi vous souhaitez rejoindre le cercle…|Introduce yourself and explain why you want to join the Circle…
+Prêt à ouvrir|Ready to open
+prêt(s) à ouvrir ·|ready to open ·
+Prête|Ready
+Prime de bienvenue|Welcome bonus
+Prisme|Prism
+Privacy choice required|A privacy choice is required
+Prix barré, pourcentage, calendrier et stock|Crossed-out price, percentage, schedule and stock
+Prix de base {0} crédits|Original price: {0} credits
+Prix de base réel|Genuine original price
+Prix dégressifs disponibles selon la quantité|Volume discounts available
+Prix du coffre modifié. Actualisez le marché.|Chest price changed. Refresh the market.
+Prix en boutique · vide = aucun achat direct|Shop price · blank = no direct purchase
+Prix en diamants invalide|Invalid diamond price
+Prix exact d’un diamant en euros fictifs|Exact price per diamond in simulated euros
+Prix habituel par coffre · 💎|Regular price per chest · 💎
+Prix invalide|Invalid price
+Prix ou offre modifié. Actualisez les coffres.|Price or offer changed. Refresh the chests.
+Prix par coffre|Price per chest
+Prix par coffre · 💎|Price per chest · 💎
+Probabilité {0}|Probability {0}
+Probabilités de rareté|Rarity odds
+Probabilités par rareté|Odds by rarity
+Probabilities must total exactly 100 percent|Probabilities must add up to exactly 100%
+Problème technique|Technical issue
+Profil créé|Profile created
+PROFIL DU CERCLE|CIRCLE PROFILE
+Profil indisponible|Profile unavailable
+Profile required|A profile is required
+Progression {0}|Progress {0}
+Progression mesurée|Measured progress
+Progression totale de la collection|Total collection progress
+Proposer mon stock avec des prix dégressifs|Offer my stock with volume discounts
+Proposer un stock|List stock
+Pseudo du bot {0}|Bot username {0}
+Pseudo du bot…|Bot username…
+Pseudo du destinataire|Recipient username
+Pseudo du joueur|Player username
+Pseudo du joueur…|Player username…
+Pseudo exact|Exact username
+Pseudo exact du joueur|Player's exact username
+Pseudo exact pour une offre privée|Exact username for a private offer
+Pseudo invalide|Invalid username
+Pseudo ou requête invité invalide|Invalid username or guest request
+Pseudo…|Username…
+Pseudos de jeu|Gaming usernames
+Pseudos invalides ou présents plusieurs fois|Invalid or duplicate usernames
+Pseudos réalistes|Realistic usernames
+Publier dans le canal|Publish to the channel
+Publier la mission|Publish quest
+Publier ma proposition|Publish my offer
+Publier mon offre|Publish my listing
+Publier mon offre de gros|Publish my stock offer
+Publier une annonce|Publish an announcement
+Publiez vos modifications|Publish your changes
+Pulsation|Pulse
+Punto Banco sur huit jeux de cartes. As : 1, figures et 10 : 0, total modulo 10. Les troisièmes cartes suivent automatiquement le tableau standard. Player : 2×. Banker : 1,95×, commission 5 % comprise. Tie : 9×. Une égalité rend les mises Player et Banker. Les multiples de 20 permettent un paiement entier exact.|Punto Banco with eight decks. Aces: 1; face cards and tens: 0; totals use the last digit. Third cards follow the standard drawing table automatically. Player: 2×. Banker: 1.95×, including 5% commission. Tie: 9×. A tie refunds Player and Banker bets. Multiples of 20 ensure exact whole-credit payouts.
+Quantité à acheter|Quantity to buy
+Quantité indisponible : stock, offre ou limite par joueur atteinte. Aucun coffre acheté.|Quantity unavailable: stock, offer or per-player limit reached. No chests were purchased.
+Que s’est-il passé ? À quel moment ? Quel coffre, annonce ou échange est concerné ?|What happened? When? Which chest, listing or trade is involved?
+Quest already claimed|Quest already claimed
+Quest not completed|Quest not completed
+Quitter et récupérer mon entrée|Leave and recover my buy-in

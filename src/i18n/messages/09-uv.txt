@@ -1,0 +1,197 @@
+Un accès à part. Une carte Basique, un marché de titres et de coffres, des échanges en diamants.|Exclusive access. A Basic card, a title and chest market, and trades in diamonds.
+Un album qui prend vie|An Album Comes to Life
+Un as vaut 1 ou 11. Blackjack naturel : gain|An ace is worth 1 or 11. Natural blackjack: payout
+Un cadeau gratuit par jour, tiré par le serveur. Aucun achat requis.|One free gift each day, drawn by the server. No purchase required.
+Un champ vide reprend les conditions de la gamme. Les limites spéciales par jour et transaction remplacent les plafonds standards pour ce joueur. Le gel et le plafond global restent applicables. Hors Cosmic, la semaine ne dépasse jamais six plafonds quotidiens.|An empty field uses the card tier's defaults. Special daily and transaction limits replace standard caps for this player. Freezes and the global cap still apply. Except Cosmic, the weekly limit never exceeds six daily caps.
+Un choix. Deux destins.|One choice. Two destinies.
+Un code de carte personnalisée peut remplacer votre carte active. Vos objets, diamants, achats et compteurs sont conservés.|A custom card code can replace your active card. Your items, diamonds, purchases and counters are preserved.
+Un code, une surprise|One code, one surprise
+Un coffre est déjà ouvert ou ne vous appartient pas. Aucun coffre ouvert.|A chest is already open or does not belong to you. No chests were opened.
+Un coffre est indisponible ou réservé|A chest is unavailable or reserved
+Un coffre est réservé à une vente ou un échange. Aucun coffre ouvert.|A chest is reserved for a sale or trade. No chests were opened.
+Un coffre scellé en échange|An unopened chest in return
+Un coffre sélectionné est déjà réservé|A selected chest is already reserved
+Un compte administrateur connecté accède directement à cette console. Le code sert uniquement à activer le tout premier administrateur.|A signed-in administrator can access this console directly. The code is only used to activate the very first administrator.
+Un échange est déjà en cours avec ce joueur|A trade with this player is already in progress
+Un historique de coffres.|A history of chests.
+Un joueur, tout son parcours.|One player, their entire journey.
+Un montant négatif retire des crédits. Le solde ne peut jamais passer sous zéro.|A negative amount removes credits. The balance can never fall below zero.
+Un mot anglais rare|A rare English word
+Un nouveau coffre.|A new chest.
+Un nouveau jour. 750 crédits.|A new day. 750 credits.
+Un nouveau lien de confirmation a été envoyé.|A new confirmation link has been sent.
+Un participant est suspendu|A participant is suspended
+Un pseudo est déjà utilisé. Modifiez votre liste avant de créer le lot.|A username is already taken. Edit your list before creating the batch.
+UN RENDEZ-VOUS DU CERCLE|A CIRCLE EVENT
+Un secret à conserver|A Secret to Keep
+Un titre en échange|A title in return
+Un titre par coffre, avec les chances enregistrées à son achat. Les doublons sont conservés. Aucun crédit supplémentaire.|One title per chest, using the odds recorded when purchased. Duplicates are kept. No extra credits charged.
+Un titre. Une nouvelle signature.|One title. A new signature.
+Une annonce par coffre au même prix unitaire. Maximum 20 annonces actives au total. Le lot est publié en entier ou aucune annonce n’est créée.|One listing per chest at the same unit price. Up to 20 active listings in total. The whole batch is published or no listings are created.
+Une candidature est déjà en attente ou a été envoyée aujourd’hui|An application is already pending or was sent today
+Une candidature par jour. Un admin choisira la carte attribuée.|One application per day. An admin will choose which card to grant.
+Une carte active du cercle fermé est nécessaire.|An active Circle card is required.
+Une carte active du cercle fermé est requise|An active Circle card is required
+Une collection d’exception.|An extraordinary collection.
+Une collection qui récompense|A collection that rewards
+Une course colorée : soyez le premier à poser vos sept cartes pour remporter les entrées.|A colourful race: be the first to play all seven cards to win the buy-ins.
+UNE ÉQUIPE À VOTRE ÉCOUTE|A TEAM HERE TO HELP
+Une fiche par vendeur et coffre au même prix. Ouvrez une fiche pour choisir votre quantité.|One card per seller and matching chest price. Open a card to choose your quantity.
+Une justification commune est requise.|A shared reason is required.
+Une ligne de statistiques par bot ; les exemplaires sont regroupés par titre. Plafond de 50 000 bots, avec arrêt préventif des créations au-delà de 350 Mo de base.|One statistics row per bot; copies are grouped by title. Maximum 50,000 bots, with creation paused pre-emptively above 350 MB of database storage.
+Une mise perdante retourne 0 crédit.|A losing bet returns 0 credits.
+Une nouvelle proposition.|A new offer.
+UNE NOUVELLE SIGNATURE|A NEW SIGNATURE
+Une offre qui se remarque.|An offer that stands out.
+Une opération attend confirmation.|An operation is awaiting confirmation.
+Une opération attend sa confirmation. Reprenez-la avant de continuer.|An operation is awaiting confirmation. Resume it before continuing.
+Une opération est déjà en cours sur ce compte|An operation is already in progress on this account
+Une opération est en cours. Patientez avant de lancer le lot.|An operation is in progress. Wait before starting the batch.
+UNE OUVERTURE, MILLE POSSIBILITÉS|ONE OPENING, ENDLESS POSSIBILITIES
+Une page de votre histoire.|A page of your story.
+Une pause bloque les nouvelles mises et les nouvelles entrées en salon. Les parties déjà commencées peuvent se terminer, et les reçus restent consultables.|Pausing blocks new bets and room entries. Games already in progress can finish, and receipts remain accessible.
+UNE PIÈCE PLUS PUISSANTE|A MORE POWERFUL COIN
+Une prochaine fois.|Maybe next time.
+Une rencontre, un échange.|Meet. Trade. Discover.
+Une signature à collectionner.|A signature to collect.
+Une signature à soi|A Signature of Your Own
+Une signature secrète. Obtenez ce titre pour révéler son identité.|A secret signature. Obtain this title to reveal its identity.
+Une utilisation par compte. Les récompenses déjà distribuées sont conservées lors d’une modification. Les codes ne sont pas visibles dans le catalogue public.|One use per account. Previously distributed rewards are preserved when editing. Codes are not visible in the public catalogue.
+Une victoire Joueur retourne|A Player win returns
+Une victoire ordinaire retourne|A regular win returns
+Une victoire sur rouge ou noir retourne|A win on red or black returns
+Univers visuel|Visual theme
+Univers visuel, titres exclusifs et probabilités|Visual theme, exclusive titles and odds
+Unknown catalog command|Unknown catalogue command
+Unknown Chromatic action|Unknown Chromatic action
+Unknown game|Unknown game
+Unknown instant game|Unknown instant game
+Unknown poker action|Unknown poker action
+Unknown quest|Unknown quest
+Unknown table command|Unknown table command
+Unknown table game|Unknown table game
+Unsettled pot|Unsettled pot
+Unsupported administrative command|Unsupported administrator command
+utilisations ·|uses ·
+Utiliser tout le catalogue autorisé|Use the full allowed catalogue
+Utiliser tout le catalogue éligible|Use the full eligible catalogue
+utilisés dans la base ·|used in the database ·
+Utilisez ⊘, ⇄, +2 et le prisme ✦ pour changer le rythme.|Use ⊘, ⇄, +2 and the ✦ prism to change the pace.
+UUID d’un compte à autoriser|UUID of an account to authorise
+Vagues|Waves
+Valeur vide : %|Empty value: %
+Variation des résultats simulés demandée par le propriétaire|Simulated result variation requested by the owner
+Vendeur :|Seller:
+Vendeur indisponible|Seller unavailable
+Vendre & échanger|Sell & trade
+Vendre ou échanger|Sell or trade
+Vendu à|Sold to
+Vendu par|Sold by
+Vente au marché|Market sale
+Vente contre des diamants uniquement|Sale for diamonds only
+vente(s) · Fin|sale(s) · Ends
+Ventes en gros.|Stock sales.
+Vérification de l’accès…|Checking access…
+Vérification de votre carte…|Checking your card…
+Vérification du compte…|Checking account…
+Vérification du prix du lot…|Checking batch price…
+Vérification…|Checking…
+Verified email required|A verified email address is required
+Vérifier l’achat|Review purchase
+Vérifier mon achat|Review my purchase
+Vérifiez les pseudos : 3 à 24 caractères, sans doublon.|Check usernames: 3 to 24 characters, without duplicates.
+Vérifiez votre choix et votre mise.|Check your choice and stake.
+Verse les primes, cadeaux et gains|Pays bonuses, gifts and winnings
+Victoire|Win
+Victoires · maximum (%)|Wins · maximum (%)
+Victoires · minimum (%)|Wins · minimum (%)
+Victoires aux cartes|Card game wins
+Victoires solo|Solo wins
+Vide = pas de plafond global|Blank = no global cap
+Visibility required|A visibility setting is required
+Voir ↗|View ↗
+Voir l’échange|View trade
+Voir la collection|View collection
+Voir la fiche ↗|View details ↗
+Voir le profil ↗|View profile ↗
+Voir le stock et les prix|View stock and prices
+Voir le taux exact|View exact rate
+Voir les chances de rareté|View rarity odds
+Voir les probabilités|View odds
+Voir mes missions ↓|View my quests ↓
+Voir mon profil public ↗|View my public profile ↗
+Vos annonces.|Your listings.
+Vos campagnes|Your campaigns
+Vos coffres.|Your chests.
+VOS DIAMANTS|YOUR DIAMONDS
+Vos diamants, en quelques instants.|Your diamonds, in moments.
+Vos échanges conclus.|Your completed trades.
+Vos exemplaires|Your copies
+Vos joueurs simulés.|Your simulated players.
+Vos missions.|Your quests.
+Vos mouvements de diamants.|Your diamond transactions.
+VOS PALIERS À COLLECTIONNER|YOUR MILESTONES TO COLLECT
+Vos prochains crédits commencent ici.|Your next credits start here.
+VOS SIGNATURES|YOUR SIGNATURES
+Vos tables en cours|Your current tables
+VOS TABLES PRIVÉES|YOUR PRIVATE TABLES
+Votre accès est suspendu. Un administrateur peut réactiver ou remplacer votre carte.|Your access is suspended. An administrator can reactivate or replace your card.
+Votre annonce|Your listing
+VOTRE ATELIER DE CRÉDITS|YOUR CREDIT WORKSHOP
+VOTRE BOUTIQUE, VOTRE RYTHME|YOUR SHOP, YOUR PACE
+Votre candidature|Your application
+Votre candidature attend la décision d’un administrateur.|Your application is awaiting an administrator's decision.
+Votre carte {0} vous ouvre les échanges entre joueurs.|Your {0} card unlocks player trading.
+Votre carte est activée. Bienvenue dans le cercle !|Your card is active. Welcome to the Circle!
+Votre carte est suspendue ou inactive. Contactez un administrateur.|Your card is suspended or inactive. Contact an administrator.
+Votre carte ne permet pas cette conversion. Un admin peut l’activer pour votre carte ou l’inclure dans votre code d’invitation.|Your card does not allow this conversion. An admin can enable it for your card or include it in your invitation code.
+Votre catalogue.|Your catalogue.
+Votre code d’invitation|Your invitation code
+Votre code secret|Your secret code
+Votre collection et votre progression sont enregistrées sur votre compte.|Your collection and progress are saved to your account.
+Votre compte apparaît à nouveau dans les classements.|Your account appears on the leaderboards again.
+Votre compte est conservé. Réessayez pour retrouver votre profil.|Your account is preserved. Try again to access your profile.
+Votre compte est maintenant masqué de tous les classements.|Your account is now hidden from all leaderboards.
+Votre compte permanent|Your permanent account
+Votre e-mail|Your email
+VOTRE ESPACE|YOUR SPACE
+Votre inventaire attend sa première découverte.|Your inventory awaits its first discovery.
+Votre légende prend forme.|Your legend takes shape.
+Votre message doit contenir 1 à 4000 caractères|Your message must contain 1 to 4,000 characters
+Votre nouvelle signature|Your new signature
+Votre offre|Your offer
+VOTRE PARCOURS|YOUR JOURNEY
+VOTRE PLACE DANS LE CERCLE|YOUR PLACE IN THE CIRCLE
+Votre place dans les classements|Your leaderboard visibility
+Votre premier échange attend sa rencontre.|Your first trade awaits.
+Votre première signature|Your First Signature
+VOTRE PROCHAINE DÉCOUVERTE|YOUR NEXT DISCOVERY
+VOTRE PROCHAINE GRANDE DÉCOUVERTE|YOUR NEXT GREAT DISCOVERY
+VOTRE PROCHAINE OPÉRATION|YOUR NEXT OPERATION
+Votre profil est prêt.|Your profile is ready.
+Votre profil n’a pas pu être chargé.|Your profile could not be loaded.
+Votre profil.|Your profile.
+Votre progression est sauvegardée dans ce navigateur. Après déconnexion ou effacement de ses données, l’accès peut être perdu. Vous pouvez ajouter votre e-mail et un mot de passe dans Paramètres pour garder un accès durable.|Your progress is saved in this browser. Signing out or clearing browser data may lose access. Add an email address and password in Settings for lasting access.
+Votre proposition|Your offer
+Votre pseudo|Your username
+VOTRE RÉCOLTE|YOUR REWARDS
+Votre rendez-vous quotidien|Your daily reward
+VOTRE RENDEZ-VOUS QUOTIDIEN|YOUR DAILY REWARD
+Votre réponse|Your reply
+Votre signature.|Your signature.
+VOTRE SOLDE|YOUR BALANCE
+Votre titre obtenu|Your earned title
+VOTRE VESTIAIRE|YOUR COLLECTION
+VOTRE-CODE|YOUR-CODE
+Vous avez déjà une carte. Contactez un administrateur.|You already have a card. Contact an administrator.
+Vous avez déjà une carte. Seul un code de carte personnalisée peut la remplacer.|You already have a card. Only a custom card code can replace it.
+Vous avez un code d’accès ?|Have an access code?
+Vous invite à échanger|Invites you to trade
+Vous ne possédez pas cet objet disponible.|You do not own an available copy of this item.
+Vous ne pouvez pas accepter cette annonce|You cannot accept this listing
+Vous ne pouvez pas acheter votre propre stock|You cannot buy your own stock
+Vous possédez déjà une carte. Contactez un administrateur si elle est suspendue.|You already have a card. Contact an administrator if it is suspended.
+Vous préférez jouer sans mise ?|Prefer to play without betting?
+Vous versez|You pay
+vous@exemple.fr|you@example.com
+Vue d’ensemble|Overview

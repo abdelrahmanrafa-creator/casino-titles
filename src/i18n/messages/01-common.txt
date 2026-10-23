@@ -1,0 +1,216 @@
+Accueil|Home
+Casino|Casino
+Crédits gratuits|Free credits
+Marché noir|Black market
+Coffres|Chests
+Boutique|Shop
+Inventaire|Inventory
+Collection|Collection
+Classements|Leaderboards
+Profil|Profile
+Paramètres|Settings
+Langue du jeu|Game language
+Choisissez la langue de toutes les pages, des jeux et du panel administrateur.|Choose the language for every page, game and administrator panel.
+Langue|Language
+Choisissez la langue|Choose your language
+Enregistrer|Save
+Enregistré|Saved
+Annuler|Cancel
+Fermer|Close
+Ouvrir|Open
+Acheter|Buy
+Vendre|Sell
+Supprimer|Delete
+Modifier|Edit
+Créer|Create
+Actualiser|Refresh
+Réessayer|Try again
+Confirmer|Confirm
+Continuer|Continue
+Rechercher|Search
+Suivant|Next
+Précédent|Previous
+Retour|Back
+Oui|Yes
+Non|No
+Aucun|None
+Tous|All
+Toutes|All
+Tout|All
+Votre compte|Your account
+Mon compte|My account
+Compte|Account
+Pseudo|Username
+Nom|Name
+Description|Description
+Mot de passe|Password
+E-mail|Email
+Adresse e-mail|Email address
+Connexion|Sign in
+Déconnexion|Sign out
+Se connecter|Sign in
+Se déconnecter|Sign out
+Créer un compte|Create an account
+Chargement…|Loading…
+Chargement du jeu…|Loading the game…
+Chargement|Loading
+Prix|Price
+Quantité|Quantity
+Total|Total
+Solde|Balance
+Crédits|Credits
+crédits|credits
+CRÉDITS|CREDITS
+Diamants|Diamonds
+diamants|diamonds
+Titre|Title
+Titres|Titles
+titres|titles
+Coffre|Chest
+coffres|chests
+coffre(s)|chest(s)
+diamant(s)|diamond(s)
+titre(s)|title(s)
+joueur(s)|player(s)
+disponible(s)|available
+réservé(s)|reserved
+COMMUN|COMMON
+RARE|RARE
+ÉPIQUE|EPIC
+LÉGENDAIRE|LEGENDARY
+MYTHIQUE|MYTHIC
+RAINBOW|RAINBOW
+XTREM|EXTREME
+COSMIQUE|COSMIC
+Commun|Common
+Rare|Rare
+Épique|Epic
+Légendaire|Legendary
+Mythique|Mythic
+Cosmique|Cosmic
+Classique|Classic
+Basique|Basic
+Premium|Premium
+Gold|Gold
+Platine|Platinum
+Diamond|Diamond
+Cosmic|Cosmic
+Rainbow|Rainbow
+XTREM|EXTREME
+Administrateur|Administrator
+Administration|Administration
+Panel admin|Admin panel
+Actif|Active
+Active|Active
+Inactif|Inactive
+Inactive|Inactive
+Suspendu|Suspended
+Suspendue|Suspended
+Masqué|Hidden
+Masquée|Hidden
+Visible|Visible
+Public|Public
+Privé|Private
+Privée|Private
+En cours|In progress
+Terminé|Finished
+Terminée|Finished
+Historique|History
+Statistiques|Statistics
+Joueurs|Players
+Joueur|Player
+Mise|Bet
+Mises|Bets
+Victoires|Wins
+Défaites|Losses
+Égalités|Draws
+Gagné|Won
+Perdu|Lost
+Égalité|Draw
+Récompenses|Rewards
+Récompense|Reward
+Date|Date
+Version|Version
+Source|Source
+Type|Type
+État|Status
+Statut|Status
+Action|Action
+Actions|Actions
+Minimum|Minimum
+Maximum|Maximum
+Illimité|Unlimited
+Sans limite|Unlimited
+Taux|Rate
+Plafond|Cap
+Limite|Limit
+Jour|Day
+Semaine|Week
+Aujourd’hui|Today
+Cette semaine|This week
+Tout le temps|All time
+Depuis le début|All time
+Par jour|Per day
+Par semaine|Per week
+Reçu|Received
+Reçue|Received
+Envoyé|Sent
+Ouvert|Open
+Fermé|Closed
+Nouvelle|New
+Nouveau|New
+Disponibilité|Availability
+Stock|Stock
+Nombre|Count
+Code|Code
+Codes|Codes
+Valider|Confirm
+Copier|Copy
+Copié|Copied
+Identifiant|ID
+Rareté|Rarity
+Niveau|Level
+Objectif|Target
+Membres|Members
+Règles|Rules
+Aide|Help
+Support|Support
+Autre|Other
+Message|Message
+Sujet|Subject
+Catégorie|Category
+Filtres|Filters
+Résumé|Summary
+Résultat|Result
+Résultats|Results
+Échanges|Trades
+Échange|Trade
+Vente|Sale
+Achat|Purchase
+Annulée|Cancelled
+Vendue|Sold
+Expirée|Expired
+Expiré|Expired
+Acceptée|Accepted
+Refusée|Declined
+En attente|Pending
+Jusqu’au|Until
+Pour|For
+Vous|You
+vous|you
+fictifs|simulated
+fictif|simulated
+simulés|simulated
+simulé|simulated
+credits|credits
+Authentication required|Authentication required
+Administrator required|Administrator required
+Account suspended|Account suspended
+Insufficient credits|Insufficient credits
+Choose French or English|Choose French or English
+Invalid login credentials|Invalid email or password
+Email not confirmed|Please confirm your email address
+User already registered|This email address is already registered
+Invalid Refresh Token: Refresh Token Not Found|Your session has expired. Please sign in again.
+Failed to fetch|Connection failed. Please try again.
+Network request failed|Connection failed. Please try again.

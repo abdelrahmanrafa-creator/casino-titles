@@ -1,3 +1,4 @@
+import {locale} from '../i18n/store';
 import {useEffect,useState} from 'react';
 import {useQuery} from '@tanstack/react-query';
 import {motion} from 'framer-motion';
@@ -14,7 +15,7 @@ interface Result {game:string;round_id:string;payout:number;bet:number;outcome?:
 interface Round {id:string;game:string;bet:number;payout:number;status:string;created_at:string;result:Result|null}
 const games=[['blackjack','Blackjack','21, et tout peut changer.','♠'],['coinflip','Coinflip','Un choix. Deux destins.','◉'],['roulette','Roulette','Le cercle du hasard.','◌'],['baccarat','Baccarat','L’élégance des cartes.','♦'],['slots','Slots','Trois rouleaux. Cinq lignes.','✦']] as const;
 const symbols=['🍒','🍋','🔔','💎','♛'];
-function cardName(card:number){const n=card%52;return {rank:['A','2','3','4','5','6','7','8','9','10','V','D','R'][n%13],suit:['♠','♥','♣','♦'][Math.floor(n/13)]};}
+function cardName(card:number){const n=card%52;return {rank:['A','2','3','4','5','6','7','8','9','10',locale().startsWith('en')?'J':'V',locale().startsWith('en')?'Q':'D',locale().startsWith('en')?'K':'R'][n%13],suit:['♠','♥','♣','♦'][Math.floor(n/13)]};}
 function Cards({cards,hidden=false}:{cards:number[];hidden?:boolean}){return <div className="playing-cards">{cards.map((c,i)=>{const {rank,suit}=cardName(c);return <motion.div className={`playing-card ${['♥','♦'].includes(suit)?'red-card':''}`} key={`${i}-${c}`} initial={{opacity:0,y:-15,rotate:-6}} animate={{opacity:1,y:0,rotate:0}} transition={{delay:i*.07}}><span>{rank}<small>{suit}</small></span><strong>{suit}</strong><span>{rank}</span></motion.div>;})}{hidden&&<div className="playing-card card-back">✦</div>}</div>;}
 export function Games({userId,command,busy}:{userId:string;command:Command;busy:boolean}){
  const [game,setGame]=useState<Game>('blackjack'),[bet,setBet]=useState(100),[side,setSide]=useState('pile'),[baccarat,setBaccarat]=useState('player');
@@ -57,6 +58,6 @@ export function Games({userId,command,busy}:{userId:string;command:Command;busy:
     game==='baccarat'?<p>Punto Banco sur huit jeux de cartes. As : 1, figures et 10 : 0, total modulo 10. Les troisièmes cartes suivent automatiquement le tableau standard. Player : 2×. Banker : 1,95×, commission 5 % comprise. Tie : 9×. Une égalité rend les mises Player et Banker. Les multiples de 20 permettent un paiement entier exact.</p>:
     <><p>Chaque case est indépendante. Probabilités : cerise 40 %, citron 30 %, cloche 18 %, diamant 10 %, couronne 2 %. La mise totale est partagée entre cinq lignes. Trois symboles identiques sur une ligne paient : cerise 3×, citron 5×, cloche 12×, diamant 30×, couronne 200× la mise de la ligne. Plusieurs lignes peuvent gagner.</p><p>Exemple : 100 crédits misés = 20 par ligne. Une ligne de trois diamants retourne 600 crédits.</p></>}
   </details>
-  <section className="panel history"><h2><History size={18}/> Historique des parties</h2><div className="history-scroll"><table><thead><tr><th>Jeu</th><th>Mise</th><th>Retour</th><th>Date</th></tr></thead><tbody>{history.map(r=><tr key={r.id}><td>{r.game} {r.status==='active'?'· En cours':''}</td><td>{credits(r.bet)}</td><td className={r.payout>r.bet?'positive':''}>{credits(r.payout)}</td><td>{new Date(r.created_at).toLocaleString('fr-FR')}</td></tr>)}</tbody></table></div></section>
+  <section className="panel history"><h2><History size={18}/> Historique des parties</h2><div className="history-scroll"><table><thead><tr><th>Jeu</th><th>Mise</th><th>Crédits retournés</th><th>Date</th></tr></thead><tbody>{history.map(r=><tr key={r.id}><td>{r.game} {r.status==='active'?'· En cours':''}</td><td>{credits(r.bet)}</td><td className={r.payout>r.bet?'positive':''}>{credits(r.payout)}</td><td>{new Date(r.created_at).toLocaleString(locale())}</td></tr>)}</tbody></table></div></section>
  </>;
 }

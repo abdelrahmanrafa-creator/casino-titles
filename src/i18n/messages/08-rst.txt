@@ -1,0 +1,276 @@
+Rainbow, Xtrem et Cosmiques se révèlent à l’obtention.|Rainbow, Extreme and Cosmic titles are revealed when obtained.
+Raise is below the minimum|Raise is below the minimum
+Raise must exceed current bet|Your raise must exceed the current bet
+Raising is not reopened|Raising has not been reopened
+Rareté décroissante|Highest rarity first
+Rareté des titres|Title rarity
+Raretés|Rarities
+Rarity not found|Rarity not found
+Ratio victoires / défaites|Win/loss ratio
+Réactiver|Reactivate
+Recettes réelles|Real revenue
+Recettes simulées|Simulated revenue
+Recevoir aussi un objet|Also receive an item
+Recevoir la récompense|Claim reward
+Recevoir le lien|Send me the link
+Recherche côté serveur et pages de 50 opérations. Chaque ligne conserve l’acteur, la cible, la justification et les changements.|Server-side search with 50 operations per page. Each entry records the actor, target, reason and changes.
+Recherche invalide|Invalid search
+Recherche trop longue|Search too long
+Recherche…|Searching…
+Rechercher dans les journaux|Search logs
+Rechercher dans les titres|Search titles
+Rechercher sur le marché|Search the market
+Rechercher un bot|Search bots
+Rechercher un joueur|Search players
+Rechercher un joueur par pseudo|Search players by username
+Rechercher un titre|Search titles
+Rechercher un titre…|Search titles…
+Récompense en crédits|Credit reward
+Récompense inconnue|Unknown reward
+Récompense quotidienne|Daily reward
+Récompense reçue|Reward received
+Récompense reçue : +{0} crédits !|Reward received: +{0} credits!
+Récompenses et gains →|Rewards and winnings →
+Reçu de|Received from
+Récupérée|Claimed
+Récupérer|Claim
+Récupérer la récompense|Claim reward
+Redonne de la capacité d’achat. Aucun diamant ni crédit n’est ajouté ou remboursé ; l’historique des achats et le plafond global ne sont pas effacés.|Restores purchasing capacity. No diamonds or credits are added or refunded; purchase history and the global cap are not cleared.
+Réduire les animations|Reduce animations
+Reflet lumineux|Shimmer
+Refusées|Declined
+Refuser|Decline
+Refuser la candidature|Decline application
+Réglages de chaque carte.|Settings for each card.
+Réglages enregistrés.|Settings saved.
+Réglages enregistrés. L’historique comptable est conservé.|Settings saved. Accounting history is preserved.
+Réglages incomplets|Incomplete settings
+Réglages modifiés. Actualisez le panel.|Settings changed. Refresh the panel.
+Règlement de table|Table settlement
+Règles de jeu|Game rules
+Règles des tables|Table rules
+Règles enregistrées. Les manches en cours gardent leurs règles initiales.|Rules saved. Current rounds keep their original rules.
+Règles et table des paiements|Rules and payout table
+Regroupés|Grouped
+Réinitialisation des limites hebdomadaires :|Weekly limits reset:
+Réinitialiser les compteurs d’achat|Reset purchase counters
+Réinitialiser les compteurs sélectionnés|Reset selected counters
+Rejoignez le cercle et recevez une signature exclusive de lancement. Aucune mise requise.|Join the Circle and receive an exclusive launch signature. No bet required.
+Rejoignez un salon avec son code d’invitation. L’entrée du salon sera débitée une seule fois.|Join a room using its invitation code. The buy-in is charged only once.
+Rejoignez une table avec une entrée en crédits.|Join a table with a credit buy-in.
+Rejoindre|Join
+Rejoindre le cercle|Join the Circle
+Rejoindre le cercle ↗|Join the Circle ↗
+Relance totale|Total raise
+Relancer à|Raise to
+RELIRE L’ÉCHANGE|REVIEW THE TRADE
+Remboursement de table|Table refund
+Remplacer / réactiver|Replace / reactivate
+Remplacer le code|Replace code
+Renouveler le code.|Renew code.
+Renseignez la justification commune (8 caractères minimum).|Enter the shared reason (at least 8 characters).
+Renseignez la justification commune du panel avant de répondre.|Enter the panel's shared reason before replying.
+Renseignez une justification d’au moins 8 caractères ci-dessous.|Enter a reason of at least 8 characters below.
+Renvoyer le lien|Resend link
+Répartissez exactement {0} bots entre les raretés ({1} actuellement).|Assign exactly {0} bots across the rarities (currently {1}).
+Répartition du stock au tarif de chaque annonce :|Stock breakdown using each listing's price:
+Réponse administrateur|Administrator reply
+Réponse reçue|Reply received
+Réponse serveur interrompue.|Server response interrupted.
+Reprendre l’opération|Resume operation
+Reprendre la table|Resume table
+Reprendre le modèle de la gamme|Restore the card tier's design
+Requête de compte invalide|Invalid account request
+Réservé à un échange|Reserved for a trade
+Réservé aux tables|Reserved for tables
+Réserve de titres & exclusivités|Title pool & exclusives
+Réserve personnalisée · Ctrl/Cmd pour plusieurs titres|Custom pool · Ctrl/Cmd to select multiple titles
+restant(s) ·|remaining ·
+reste sur tout 17|stands on all 17s
+Reste sur tout 17|Stands on all 17s
+Reste sur tout 17 · S17|Stand on all 17s · S17
+Rester|Stand
+Résultat net|Net result
+résultats · page|results · page
+Résultats et paiements calculés sur le serveur. Mises de 20 à 1 000 000 crédits, par multiples de 20.|Results and payouts are calculated on the server. Stakes range from 20 to 1,000,000 credits, in multiples of 20.
+Resume your current blackjack round|Resume your current Blackjack round
+Retiré|Removed
+Retirée|Removed
+Retirer|Remove
+Retirer cette offre de gros|Remove this stock offer
+Retirer l’accès|Remove access
+Retirer la carte|Remove card
+Retirer une annonce libère l’objet et conserve la trace dans le journal d’audit. Les échanges déjà conclus ne sont pas supprimés.|Removing a listing releases its item and records the action in the audit log. Completed trades are not deleted.
+Retour à mes coffres|Back to my chests
+Retour aux classements|Back to leaderboards
+Retrouver mes coffres ↗|Find my chests ↗
+Retrouvez un collectionneur.|Find a collector.
+Retrouvez votre accès.|Recover your access.
+Retrouvez votre cercle.|Find your Circle.
+Retrouvez votre chemin vers votre collection.|Find your way back to your collection.
+Revenez chaque jour, poursuivez votre collection.|Return daily and keep building your collection.
+Revenir à l’accueil|Back to home
+Revenir à la liste|Back to list
+Revenir au site|Back to the site
+Revenir aux dernières demandes|Back to latest requests
+Revenir aux derniers messages|Back to latest messages
+Revenir aux salons|Back to rooms
+Rôle attribué. Ce compte peut ouvrir le panneau sans code.|Role granted. This account can open the panel without a code.
+Room membership required|You must belong to this room
+Room not found|Room not found
+Rouge|Red
+Roulette|Roulette
+Roulette européenne à un zéro : 37 numéros équiprobables. Numéro exact : 36× la mise retournée. Rouge/noir, pair/impair, manque/passe : 2×. Douzaine/colonne : 3×. Le zéro perd toutes les mises de groupe.|Single-zero European roulette: 37 equally likely numbers. Straight-up number: 36× your stake returned. Red/black, even/odd, low/high: 2×. Dozen/column: 3×. All group bets lose on zero.
+Rouvrez le ticket avant de répondre|Reopen the ticket before replying
+Rouvrir ce ticket|Reopen this ticket
+Rubis|Ruby
+Rubriques d’administration|Administration sections
+S’applique à toutes les catégories, au classement permanent et à celui de la semaine. Votre profil et la recherche par pseudo restent accessibles. Vos crédits et votre progression sont conservés.|Applies to every category, on all-time and weekly leaderboards. Your profile and username search remain accessible. Your credits and progress are preserved.
+Sa proposition|Their offer
+Sale price must be lower than the real base price|The sale price must be lower than the genuine original price
+Salon privé|Private room
+SALON PRIVÉ|PRIVATE ROOM
+SALON PUBLIC|PUBLIC ROOM
+Salons publics|Public rooms
+Sans conversion|No conversion
+Sans limite hebdomadaire|No weekly limit
+Sans sélection : tous les titres disponibles jusqu’à Xtrem. Une sélection doit contenir assez de titres pour chaque rareté demandée.|No selection: all available titles up to Extreme. A selection must contain enough titles of each requested rarity.
+Sans sélection, tous les titres disponibles des raretés tirées sont éligibles. Chaque rareté à probabilité positive doit contenir au moins un titre disponible.|With no selection, all available titles of the drawn rarities are eligible. Every rarity with a non-zero probability must include at least one available title.
+Sans titre|No title
+scellé(s)|unopened
+Se coucher|Fold
+Sécurité|Security
+Sélection précise des titres autorisés|Exact selection of allowed titles
+Sélectionnez des coffres identiques disponibles|Select matching available chests
+Sélectionnez le côté de la pièce.|Select a side of the coin.
+Sélectionnez rouge, noir, un groupe ou un numéro.|Select red, black, a group or a number.
+Sélectionnez un coffre standard disponible.|Select an available standard chest.
+Sélectionnez un compte pour consulter son inventaire, ses transactions et ses parties.|Select an account to view its inventory, transactions and games.
+Séparer|Split
+Ses places au sommet.|Their places at the top.
+Seul le dernier chiffre du total compte.|Only the last digit of the total counts.
+Seul le vendeur peut annuler cette annonce|Only the seller can cancel this listing
+Seul le vendeur peut annuler ici. Utilisez la modération administrateur.|Only the seller can cancel here. Use administrator moderation.
+Seven distinct cards required|Seven distinct cards are required
+Shop price changed. Refresh before purchasing.|Shop price changed. Refresh before purchasing.
+Si ce compte existe, un lien de récupération a été envoyé.|If this account exists, a recovery link has been sent.
+Si votre côté gagne, vous recevez|If your side wins, you receive
+Signature secrète|Secret signature
+signature(s) ·|signature(s) ·
+Simulation invalide : carte de démonstration uniquement|Invalid simulation: demonstration cards only
+Simulation réussie : aucun débit bancaire réel|Simulation successful: no real bank charge
+Simulation uniquement · aucun débit bancaire réel.|Simulation only · no real bank charge.
+Simuler l’achat ·|Simulate purchase ·
+Six signatures. Un cercle.|Six signatures. One Circle.
+Slots|Slots
+Solde :|Balance:
+Solde après|Balance after
+Solde de compte supprimé|Deleted account balance
+Solde de diamants insuffisant|Not enough diamonds
+Solde final|Final balance
+Solde maximum|Maximum balance
+Solde minimum|Minimum balance
+Sorties coffre-fort|Vault outflows
+Sorties vers les joueurs|Outflows to players
+Statistique invalide : %|Invalid statistic: %
+Statistiques des parties solo terminées. Les mises incluent les doubles et les mains séparées au blackjack. Le résultat net correspond aux crédits reversés moins les mises ; les récompenses et achats de titres sont exclus.|Statistics for completed solo games. Stakes include Blackjack doubles and split hands. Net results are payouts minus stakes; rewards and title purchases are excluded.
+Statut invalide|Invalid status
+Stock à réserver|Stock to reserve
+Stock du coffre de récompense insuffisant|Not enough reward chests in stock
+Stock insuffisant ou offre indisponible|Not enough stock or offer unavailable
+Stock ou prix modifié. Vérifiez le nouveau total|Stock or price changed. Check the new total
+Stock réservé indisponible|Reserved stock unavailable
+Stock total · vide = illimité|Total stock · blank = unlimited
+Style de pseudo|Username style
+Suivante|Next
+Suivre {0}|Call {0}
+Suivre la gamme|Use card tier defaults
+Sujet requis : 3 à 120 caractères|Subject required: 3 to 120 characters
+Supprimer l’annonce|Delete announcement
+Sur|Out of
+Suspendre|Suspend
+Table already finished|Table already finished
+Table already started|Table already started
+Table full|Table full
+Table game paused or buy-in outside configured limits|Table game paused or buy-in outside configured limits
+Table indisponible.|Table unavailable.
+Table not playing|This table is not in a game
+Table operation failed|Table operation failed
+Taux :|Rate:
+Taux de la gamme|Card tier rate
+Taux de retour|Return rate
+Taux de victoire|Win rate
+Taux exact € / diamant|Exact rate € / diamond
+Taux global|Global rate
+Taux global du serveur|Global server rate
+Taux personnalisé invalide|Invalid custom rate
+Taux spécial · € fictifs / diamant|Special rate · simulated € / diamond
+Taux, plafonds et suspensions.|Rates, caps and suspensions.
+Terminer dix parties solo.|Complete ten solo games.
+Terminez dix parties solo.|Complete ten solo games.
+Terminez trois parties.|Complete three games.
+Texas Hold’em|Texas Hold'em
+Texte|Text
+Texte de carte : 1 à 64 caractères|Card text: 1 to 64 characters
+Texte inférieur|Bottom text
+Textes de la carte|Card text
+Ticket envoyé. Un administrateur pourra vous répondre ici.|Ticket submitted. An administrator can reply here.
+Ticket introuvable|Ticket not found
+Tickets & support|Tickets & support
+Tickets des joueurs|Player tickets
+Tickets plus anciens|Older tickets
+tire sur 17 souple|hits on soft 17
+Tire sur 17 souple|Hits on soft 17
+Tire sur 17 souple · H17|Hit on soft 17 · H17
+Tirer|Hit
+Tirer = recevoir une carte. Rester = terminer votre main. Doubler engage une seconde mise et donne une seule carte.|Hit = receive a card. Stand = finish your hand. Double = add a second stake and receive just one card.
+Tirez une carte ou restez. Un as vaut 1 ou 11.|Hit or stand. An ace is worth 1 or 11.
+Title already purchased|Title already purchased
+Title not found|Title not found
+Title not owned|You do not own this title
+Title unavailable in shop|Title unavailable in the shop
+Titre demandé introuvable|Requested title not found
+Titre enregistré et audité.|Title saved and audited.
+Titre équipé.|Title equipped.
+Titre offert|Free title
+Titre retiré.|Title removed.
+titre(s) gagné(s) ·|title(s) earned ·
+titres ·|titles ·
+Titres à collectionner|Titles to collect
+titres à découvrir|titles to discover
+Titres Cosmiques|Cosmic titles
+Titres de la meilleure rareté par bot|Highest-rarity titles per bot
+titres découverts|titles discovered
+titres uniques|unique titles
+Titres uniques|Unique titles
+titres uniques ·|unique titles ·
+Titres uniques · maximum|Unique titles · maximum
+Titres uniques · minimum|Unique titles · minimum
+titres uniques au maximum / 5 000 par lot. Historiques simulés résumés, sans ligne par partie ou coffre. Les dates enregistrées sont celles de la création, sans ancienneté inventée.|unique titles maximum / 5,000 per batch. Simulated histories use summaries, with no row per game or chest. Recorded dates are creation dates, with no fabricated account age.
+Titres uniques, coffres. Échangez entre joueurs, fixez votre prix en diamants.|Unique titles and chests. Trade with other players and set your price in diamonds.
+Too many operations. Retry in one minute.|Too many operations. Try again in one minute.
+Total misé|Total staked
+Total reversé|Total paid out
+Toujours figés|Always frozen
+Tourner les rouleaux|Spin the reels
+Tous les coffres|All chests
+Tous les mouvements|All transactions
+Tous les tickets|All tickets
+Tous les titres|All titles
+Tout commence ici.|It all starts here.
+Tout l’album|The whole album
+Tout miser · All-in|All-in
+Tout ouvrir|Open all
+Toute modification annule les deux confirmations. Relisez chaque objet avant de confirmer. Fin à|Any change cancels both confirmations. Review every item before confirming. Ends at
+Toutes les raretés|All rarities
+Transaction :|Transaction:
+Transformer mon compte invité|Upgrade my guest account
+Transformer mon compte invité.|Upgrade my guest account.
+Trier les coffres|Sort chests
+Trier les titres|Sort titles
+Trois rouleaux. Cinq lignes.|Three reels. Five paylines.
+Trop de connexions invité. Réessayez dans une heure.|Too many guest sign-ins. Try again in an hour.
+Trop de tentatives. Réessayez après dix minutes.|Too many attempts. Try again after ten minutes.
+Turn expired; refresh the table|Turn expired; refresh the table
+Type de mise|Bet type
+Type de mouvement|Transaction type

@@ -1,0 +1,259 @@
+Balance exceeds cap|Balance exceeds the limit
+Balance must stay nonnegative|Balance cannot be negative
+Banque|Banker
+Battez le total du croupier sans dépasser 21.|Beat the dealer's total without going over 21.
+Bet must be a multiple of 20, from 20 to 1000000|Your stake must be a multiple of 20, between 20 and 1,000,000
+Bientôt disponible|Coming soon
+Bienvenue|Welcome
+Bienvenue dans le cercle.|Welcome to the Circle.
+Blackjack|Blackjack
+Blackjack paused or stake outside configured limits|Blackjack is paused or your stake is outside the configured limits
+BLACKJACK PAYS|BLACKJACK PAYS
+Blackjack rules changed. Refresh before starting.|Blackjack rules changed. Refresh before starting.
+Bloquer pour cette carte|Block for this card
+Boîte de réception|Inbox
+Bon retour au club.|Welcome back to the club.
+Bot|Bot
+Bot accounts are frozen|Bot accounts are frozen
+Bot actif et profil visible|Active bot with a visible profile
+Bot archivé|Archived bot
+Bot mis à jour. Son solde et le coffre-fort sont réconciliés.|Bot updated. Its balance and the vault have been reconciled.
+Bot modifié. Actualisez sa fiche.|Bot changed. Refresh its profile.
+Bot not found|Bot not found
+Bot required|A bot account is required
+Bots|Bots
+bots ·|bots ·
+Bots actifs|Active bots
+Bots cannot join tables or become administrators|Bots cannot join tables or become administrators
+Bots cannot own Cosmic titles|Bots cannot own Cosmic titles
+bots compacts /|compact bots /
+Bots créés|Bots created
+bots répartis · Cosmique désactivé côté serveur|bots assigned · Cosmic disabled on the server
+BOUTIQUE DE DÉMONSTRATION|DEMONSTRATION SHOP
+Buy-in must be a multiple of 100 from 100 to 100000|The buy-in must be a multiple of 100, between 100 and 100,000
+C&T · CONTROL ROOM|C&T · CONTROL ROOM
+Cadeau reçu|Gift received
+Cadeaux et paliers|Gifts and milestones
+Calcul du prix et vérification du stock…|Calculating the price and checking stock…
+Call or fold required|You must call or fold
+Campagnes d’offres|Promotional campaigns
+Candidature acceptée.|Application accepted.
+Candidature déjà traitée. Actualisez.|Application already processed. Please refresh.
+Candidature refusée.{0}|Application declined.{0}
+Candidatures et codes d’accès|Applications and access codes
+Cannot remove your own administrator role|You cannot remove your own administrator role
+Capital de départ :|Starting funds:
+Capital total conservé|Total funds conserved
+Card must match color or rank|The card must match the colour or rank
+Card not owned|You do not own this card
+Carte|Card
+Carte à attribuer|Card to grant
+Carte active|Active card
+Carte active requise|An active card is required
+Carte attribuée|Card assigned
+Carte inactive ou inconnue|Card inactive or unknown
+Carte inconnue|Unknown card
+Carte modifiée. Actualisez.|Card changed. Please refresh.
+Carte personnalisée et plafonds inclus dans ce code|Custom card and limits included in this code
+Carte suspendue|Suspended card
+Cartes du cercle fermé|Circle membership cards
+Cartes et accès des joueurs.|Player cards and access.
+Casino & Titles|Casino & Titles
+Catalogue · sélection multiple|Catalogue · multiple selection
+Catalogue du coffre incomplet|Incomplete chest catalogue
+Catalogue incomplet pour ce coffre|The catalogue for this chest is incomplete
+Ce coffre ne peut pas être acheté scellé|This chest cannot be purchased unopened
+Ce collectionneur attend sa première signature.|This collector is waiting for their first signature.
+Ce compte est déjà un compte permanent.|This account is already permanent.
+Ce compte est introuvable ou indisponible.|This account is missing or unavailable.
+Ce compte n’a pas le rôle administrateur. Un administrateur peut vous autoriser depuis la rubrique Sécurité.|This account does not have the administrator role. An administrator can grant access in Security.
+Ce jeu est temporairement en pause. Les manches déjà engagées peuvent être terminées.|This game is temporarily paused. Rounds already in progress can still be completed.
+Ce joueur a masqué son compte des classements.|This player has hidden their account from the leaderboards.
+Ce joueur ne dispose pas d’une carte active du cercle|This player does not have an active Circle card
+Ce joueur possède déjà une carte|This player already has a card
+Ce motif sera conservé dans le journal administrateur.|This reason will be recorded in the administrator log.
+Ce pseudo est déjà utilisé. Choisissez-en un autre.|This username is already taken. Choose another one.
+Ce titre appartient à des coffres scellés : sa rareté et son existence sont réservées jusqu’à leur ouverture|This title belongs to unopened chests: its rarity and existence are protected until those chests are opened
+Ce titre est réservé à un échange|This title is reserved for a trade
+Ce titre est réservé au marché. Annulez son annonce avant de l’équiper.|This title is reserved on the market. Cancel its listing before equipping it.
+CERCLE FERMÉ|PRIVATE CIRCLE
+Ces changements s’appliquent uniquement aux prochaines manches. Les mises déjà engagées restent protégées.|These changes apply only to new rounds. Existing stakes remain protected.
+Ces valeurs corrigent le profil et les classements permanents. Les parties historiques, les portefeuilles et les récompenses de quêtes ne sont pas modifiés. Les nouvelles parties s’ajoutent ensuite à ces valeurs.|These values correct the profile and all-time leaderboards. Past games, wallets and quest rewards are unchanged. Future games are added to these values.
+Cette opération est en cours. Actualisez dans quelques instants.|This operation is in progress. Refresh in a moment.
+Cette option sera disponible après activation de la confidentialité sur le serveur.|This option will become available once leaderboard privacy is enabled on the server.
+Cette page n’existe pas.|This page does not exist.
+Cette semaine seulement|This week only
+Cette somme est le prélèvement net final sur le coffre-fort. Les budgets intermédiaires, dépenses et règlements apparaîtront dans son journal.|This is the final net withdrawal from the vault. Intermediate budgets, spending and settlements appear in its ledger.
+Changer le mot de passe|Change password
+Chapitres de rareté|Rarity chapters
+Chaque case est indépendante. Probabilités : cerise 40 %, citron 30 %, cloche 18 %, diamant 10 %, couronne 2 %. La mise totale est partagée entre cinq lignes. Trois symboles identiques sur une ligne paient : cerise 3×, citron 5×, cloche 12×, diamant 30×, couronne 200× la mise de la ligne. Plusieurs lignes peuvent gagner.|Each cell is independent. Probabilities: cherry 40%, lemon 30%, bell 18%, diamond 10%, crown 2%. Your total stake is split across five paylines. Three identical symbols on a line pay: cherry 3×, lemon 5×, bell 12×, diamond 30×, crown 200× that line's stake. Multiple lines can win.
+Chaque case indique combien de bots auront cette rareté comme meilleur titre. Le total doit correspondre au nombre de bots. Pour quelques Xtrem seulement, renseignez leur nombre dans la dernière case.|Each box specifies how many bots will have this rarity as their best title. The total must match the bot count. For just a few Extreme holders, enter their number in the last box.
+Chaque clic vous rapproche.|Every click gets you closer.
+Chaque côté a 50 % de chances. Un résultat précédent ne prédit jamais le suivant.|Each side has a 50% chance. Previous results never predict the next one.
+CHAQUE CRÉDIT A UNE CONTREPARTIE|EVERY CREDIT HAS A MATCHING ENTRY
+Chaque découverte compte.|Every discovery counts.
+CHAQUE ÉTAPE COMPTE|EVERY STEP COUNTS
+CHAQUE JOUR, UNE SURPRISE|A SURPRISE EVERY DAY
+Chaque lundi à 00:00 (heure de Paris)|Every Monday at 00:00 (Paris time)
+Chaque niveau ajoute 1 crédit par clic. Le prix double à chaque amélioration, jusqu’au niveau 10.|Each level adds 1 credit per click. The price doubles with each upgrade, up to level 10.
+Chaque partie a son histoire.|Every game has a story.
+Chaque titre éligible d’une même rareté a la même chance. Les doublons sont conservés. L’achat du lot est intégral : si le stock, le prix, votre solde ou votre quota ne permettent pas toute la quantité, aucun crédit n’est débité.|Every eligible title of the same rarity has an equal chance. Duplicates are kept. Batch purchases are all-or-nothing: if stock, price, balance or your quota prevents the full quantity, no credits are charged.
+Chargement de l’échange…|Loading trade…
+Chargement de la collection…|Loading collection…
+Chargement de la console sécurisée…|Loading the secure console…
+Chargement de la table…|Loading table…
+Chargement de votre espace…|Loading your space…
+Chargement de votre profil…|Loading your profile…
+Chargement des autorisations…|Loading permissions…
+Chargement des cartes…|Loading cards…
+Chargement des stocks…|Loading stock…
+Chargement des tarifs…|Loading prices…
+Chargement du profil…|Loading profile…
+Check = ne rien ajouter · Suivre = égaler la mise · All-in = engager tous ses jetons.|Check = add no chips · Call = match the bet · All-in = commit all your chips.
+Chercher un pseudo|Search for a username
+Chercher un titre révélé…|Search revealed titles…
+Chercher un titulaire de carte|Search cardholders
+Chercher une annonce administrateur|Search administrator announcements
+Chercheur de trésors|Treasure Hunter
+Cherchez un pseudo pour découvrir son profil, sa signature et les titres qu’il possède.|Search a username to discover their profile, signature and owned titles.
+Chest configuration changed. Refresh the probabilities before opening.|Chest configuration changed. Refresh the probabilities before opening.
+Chest modified by another administrator. Reload first.|Another administrator changed this chest. Reload first.
+Chest name required|A chest name is required
+Chest not found|Chest not found
+Chest unavailable|Chest unavailable
+Choisir ma signature|Choose my signature
+Choisir un coffre|Choose a chest
+Choisissez 1 à 10 000 diamants|Choose 1 to 10,000 diamonds
+Choisissez 1 à 100 coffres|Choose 1 to 100 chests
+Choisissez 1 à 1000 coffres|Choose 1 to 1,000 chests
+Choisissez 1 à 25 pseudos et une répartition exacte des raretés|Choose 1 to 25 usernames and an exact rarity distribution
+Choisissez 1 à 5 coffres|Choose 1 to 5 chests
+Choisissez 1 à 8 paliers|Choose 1 to 8 pricing tiers
+Choisissez ce que la bille doit désigner.|Choose where the ball should land.
+Choisissez de 1 à|Choose from 1 to
+Choisissez de 1 à 100 coffres différents|Choose 1 to 100 distinct chests
+Choisissez entre 1 et 100 coffres|Choose between 1 and 100 chests
+Choisissez entre 1 et 1000 coffres|Choose between 1 and 1,000 chests
+Choisissez entre 1 et 20 coffres disponibles|Choose between 1 and 20 available chests
+Choisissez Joueur, Banque ou Égalité.|Choose Player, Banker or Tie.
+Choisissez jusqu’à 250 pseudos en mode compact et une répartition exacte des raretés|Choose up to 250 usernames in compact mode and an exact rarity distribution
+Choisissez l’objet souhaité|Choose the item you want
+Choisissez pile ou face avant le lancer.|Choose heads or tails before the flip.
+Choisissez un exemplaire|Choose a copy
+Choisissez un mot de passe de 8 à 128 caractères.|Choose a password between 8 and 128 characters.
+Choisissez un pseudo unique pour votre profil.|Choose a unique username for your profile.
+Choisissez une couleur avant de poser un prisme. La couleur active est indiquée sur la table.|Choose a colour before playing a prism. The active colour is shown on the table.
+Choisissez une mise totale répartie sur 5 lignes.|Choose a total stake to split across 5 paylines.
+Choisissez votre côté.|Choose your side.
+Choisissez votre exemplaire|Choose your copy
+Choisissez votre mise et lancez.|Choose your stake and spin.
+Choisissez votre mise, puis distribuez les cartes.|Choose your stake, then deal the cards.
+CHOISISSEZ VOTRE QUANTITÉ|CHOOSE YOUR QUANTITY
+Choisissez votre univers.|Choose your world.
+Choose a color|Choose a colour
+Choose pile or face|Choose heads or tails
+Choose player, banker or tie|Choose Player, Banker or Tie
+Chromatic|Chromatic
+Chromatic · Défausse colorée|Chromatic · Colourful discard
+Chromatic commence. Faites correspondre la couleur ou le symbole.|Chromatic begins. Match the colour or symbol.
+Cible|Target
+Cinq échanges en attente maximum par joueur|Maximum five pending trades per player
+Cinq signatures, un secret|Five Signatures, One Secret
+Classement|Leaderboard
+Classements ↗|Leaderboards ↗
+Classements établis exclusivement à partir des opérations enregistrées sur le serveur. La semaine commence le lundi à 00 h UTC.|Leaderboards use only operations recorded on the server. The week starts on Monday at 00:00 UTC.
+Clicker évolutif, cadeau gratuit, missions, événements et codes promo.|An upgradeable clicker, free gifts, quests, events and promo codes.
+Clics à encaisser|Clicks to collect
+Clics encaissés|Collected clicks
+Clics enregistrés|Recorded clicks
+Clics trop rapides. Patientez quelques secondes.|Clicking too fast. Wait a few seconds.
+Cliquer pour gagner des crédits|Click to earn credits
+Cliquez, puis encaissez vos clics. Améliorez la pièce pour gagner davantage à chaque pression.|Click, then collect your clicks. Upgrade the coin to earn more with each click.
+Code : {0}|Code: {0}
+Code : 6 à 64 lettres, chiffres ou tirets|Code: 6 to 64 letters, digits or hyphens
+Code à transmettre|Code to share
+Code accepté : {0} · +{1} crédits{2}{3}.|Code accepted: {0} · +{1} credits{2}{3}.
+Code actif|Active code
+Code copié.|Code copied.
+Code d’administration|Administrator code
+Code d’invitation|Invitation code
+Code déjà utilisé sur ce compte|Code already used on this account
+Code enregistré. Partagez-le avec vos joueurs.|Code saved. Share it with your players.
+Code introuvable|Code not found
+Code invalide, expiré ou épuisé|Code invalid, expired or fully claimed
+Code invalide.|Invalid code.
+Code modifié depuis son affichage|Code changed since it was displayed
+Code of 24-200 characters and justification required|A code of 24–200 characters and a reason are required
+Code promo|Promo code
+Code remplacé. Les comptes autorisés conservent leur accès.|Code replaced. Authorised accounts keep their access.
+Codes promo|Promo codes
+Codes promotionnels|Promotional codes
+Codes récents|Recent codes
+Coffre acheté. Retrouvez-le dans votre Inventaire pour l’ouvrir ou le vendre.|Chest purchased. Find it in your Inventory to open or sell it.
+Coffre de récompense indisponible|Reward chest unavailable
+Coffre demandé introuvable|Requested chest not found
+Coffre enregistré. Sélectionnez sa fiche pour le modifier.|Chest saved. Select its card to edit it.
+Coffre événementiel|Event chest
+Coffre indisponible|Chest unavailable
+Coffre indisponible : dates, stock ou limite atteinte|Chest unavailable: date restriction, no stock or limit reached
+Coffre indisponible : dates, stock ou limite atteinte.|Chest unavailable: date restriction, no stock or limit reached.
+Coffre jusqu’au|Chest up to
+Coffre offert|Free chest
+Coffre simulé de bot|Simulated bot chest
+Coffre standard simulé|Simulated standard chest
+Coffre-fort|Vault
+Coffre-fort disponible|Available vault balance
+coffre(s) ·|chest(s) ·
+coffre(s) disponibles|chest(s) available
+coffre(s) disponibles · fin|chest(s) available · ends
+coffre(s) en stock|chest(s) in stock
+coffre(s) ouverts|chest(s) opened
+coffre(s) pour|chest(s) for
+coffre(s) pour votre inventaire|chest(s) for your inventory
+coffre(s) restant(s)|chest(s) remaining
+Coffres disponibles|Available chests
+Coffres et récompenses|Chests and rewards
+Coffres événementiels|Event chests
+Coffres ou boutique|Chests or shop
+Coffres ouverts|Chests opened
+Coffres simulés · total|Simulated chests · total
+Coffres uniques|Unique chests
+Coinflip|Coin flip
+Collection · Jeu · Prestige|Collection · Games · Prestige
+Collectionneur débutant|New Collector
+Collectionneur du cercle|Circle Collector
+Collectionnez|Collect
+Collectionnez cinq titres uniques.|Collect five unique titles.
+Colonne|Column
+COMMENT JOUER|HOW TO PLAY
+Composer votre offre · 10 objets maximum|Build your offer · up to 10 items
+Comptabilité équilibrée|Balanced accounting
+Comptage des détenteurs…|Counting holders…
+Compte administrateur connecté|Administrator account signed in
+Compte Auth introuvable|Authentication account not found
+Compte avec adresse e-mail.|Account with an email address.
+Compte et accès|Account and access
+Compte invité : associez une adresse pour permettre sa récupération.|Guest account: link an email address to enable account recovery.
+Compte invité requis|Guest account required
+Compte joueur actif requis|An active player account is required
+Compte permanent activé. Vos crédits, titres, coffres et carte d’accès sont conservés.|Permanent account activated. Your credits, titles, chests and access card are preserved.
+Compte supprimé|Deleted account
+Comptes (joueurs + bots)|Accounts (players + bots)
+Compteur à remettre à zéro|Counter to reset
+Compteur inconnu|Unknown counter
+Concurrent room update|The room was updated concurrently
+Concurrent room update, retry the same operation.|The room was updated concurrently. Retry the same operation.
+Condition|Condition
+Conditions de la gamme|Card tier conditions
+Configuration enregistrée.|Configuration saved.
+Configuration hors limites|Configuration outside allowed limits
+Configuration incomplète|Incomplete configuration
+Confirmé · en attente de l’autre joueur|Confirmed · waiting for the other player
+Confirmer cette offre|Confirm this offer
+Confirmer l’achat ·|Confirm purchase ·
+Confirmer l’achat du lot|Confirm batch purchase
+Confirmer l’échange|Confirm trade
+Confirmer la réinitialisation|Confirm reset
+Confirmer la remise à zéro pour|Confirm reset for
+Confirmer le mot de passe|Confirm password
+Confirmez votre adresse avec le lien reçu, puis choisissez votre mot de passe dans les paramètres.|Confirm your email using the link you receive, then choose your password in Settings.

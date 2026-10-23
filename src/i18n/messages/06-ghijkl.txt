@@ -1,0 +1,280 @@
+Fiche modifiée. Actualisez.|Profile changed. Please refresh.
+Figer les achats et les échanges de diamants|Freeze diamond purchases and trades
+Filtrer les titres|Filter titles
+Fin|End
+Fin · heure locale|End · local time
+Fin de la semaine et réinitialisation :|Week ends and limits reset:
+Financement des bots|Bot funding
+Five distinct cards required|Five distinct cards are required
+Fond principal|Primary background
+Fond secondaire|Secondary background
+Fourchette de victoires invalide (0 à 100 %%)|Invalid win-rate range (0 to 100%)
+Français|French
+Frozen balance mismatch|Frozen balance does not match
+Gagné !|You won!
+Gagner des crédits|Earn credits
+Gagnez au Blackjack ou au Baccarat.|Win at Blackjack or Baccarat.
+Gain|Winnings
+Gain simulé de bot|Simulated bot winnings
+Gain solo|Solo game winnings
+Gains nets cumulés|Total net winnings
+Gains simulés · total|Simulated winnings · total
+Game paused or stake outside configured limits|Game paused or stake outside configured limits
+GARDER VOTRE PLACE DANS LE CERCLE|KEEP YOUR PLACE IN THE CIRCLE
+Gardez la main sur les jeux.|Stay in control of the games.
+Gardez vos coffres, ouvrez-les plus tard ou proposez-les contre des diamants et des objets.|Keep your chests, open them later or offer them for diamonds and items.
+Générer un code aléatoire|Generate a random code
+Générer un code fort|Generate a strong code
+Générer une autre liste|Generate another list
+Gérer les bots|Manage bots
+Gérer les diamants.|Manage diamonds.
+Gestion du marché noir|Black market management
+Gestion du support|Support management
+Gratuit|Free
+Groupe|Group
+Habitué des tables|Table Regular
+Hand is not active|This hand is not active
+Hex color required|A hexadecimal colour is required
+Historique des parties|Game history
+Hors Cosmic : une limite hebdomadaire de six plafonds quotidiens au maximum. Cosmic : aucune limite hebdomadaire. Fin de la semaine et remise à zéro :|Except Cosmic: the weekly limit cannot exceed six daily caps. Cosmic: no weekly limit. Week ends and limits reset:
+HORS DU CERCLE|OUTSIDE THE CIRCLE
+Host must start a waiting table|The host must start a waiting table
+Huit raretés, huit signatures.|Eight rarities, eight signatures.
+ID unique|Unique ID
+Identité de compte incohérente.|Account identity mismatch.
+Identité et récupération du compte|Account identity and recovery
+IDENTITÉ VISUELLE|VISUAL IDENTITY
+Il s’agit de votre stock.|This is your stock.
+Imaginer un coffre événementiel|Design an event chest
+Immobile|Still
+Impair|Odd
+Inclure l’accès crédits → diamants dans la carte|Include credit-to-diamond conversion in the card
+Inclut les coffres personnalisés créés dans l’onglet Coffres. Les dates, stocks et limites par joueur du coffre restent applicables au moment où le code est utilisé.|Includes custom chests created in the Chests tab. The chest's dates, stock and per-player limits still apply when the code is redeemed.
+Indisponible actuellement|Currently unavailable
+Insufficient credits or wallet limit reached|Not enough credits or wallet limit reached
+Invalid adjustment|Invalid adjustment
+Invalid blackjack action|Invalid Blackjack action
+Invalid bot changes|Invalid bot changes
+Invalid catalog ID|Invalid catalogue ID
+Invalid chip amount|Invalid chip amount
+Invalid credit amount|Invalid credit amount
+Invalid deck count|Invalid deck count
+Invalid diamond amount|Invalid diamond amount
+Invalid filters|Invalid filters
+Invalid game|Invalid game
+Invalid quest|Invalid quest
+Invalid quota|Invalid quota
+Invalid random bound|Invalid random number bound
+Invalid ranking|Invalid leaderboard
+Invalid rarity draw|Invalid rarity draw
+Invalid rarity table|Invalid rarity table
+Invalid roulette choice|Invalid roulette choice
+Invalid roulette group|Invalid roulette group
+Invalid roulette number|Invalid roulette number
+Invalid slot grid|Invalid slot grid
+Invalid total raise|Invalid total raise
+Invalid win range|Invalid win-rate range
+Inventaire ·|Inventory ·
+Inventaire ↗|Inventory ↗
+Inversion|Reverse
+Invitation code required|An invitation code is required
+Invitation envoyée|Invitation sent
+Invitation not found|Invitation not found
+Invitations : 15 minutes. Échanges ouverts : 30 minutes. Cinq demandes maximum à la fois.|Invitations: 15 minutes. Open trades: 30 minutes. Up to five requests at a time.
+Inviter|Invite
+Invitez un joueur. Proposez des titres, des coffres et des diamants, puis confirmez tous les deux la même offre.|Invite a player. Offer titles, chests and diamonds, then both confirm the same offer.
+J’ai confirmé mon e-mail|I confirmed my email
+Jade|Jade
+Je confirme la dépense de mes crédits virtuels.|I confirm spending my virtual credits.
+Je confirme le remplacement de ma carte par celle du code fourni.|I confirm replacing my card with the card granted by this code.
+Je confirme un achat fictif, sans paiement ni débit réel.|I confirm a simulated purchase, with no real payment or charge.
+Jeu|Game
+Jeux différents|Different games
+Jouer en invité|Play as a guest
+Joueur indisponible pour cet échange|Player unavailable for this trade
+Joueur introuvable|Player not found
+Jouez à trois jeux différents.|Play three different games.
+Jouez au clicker, avancez dans les missions et récupérez vos cadeaux. Les récompenses ci-dessous ne demandent aucune mise.|Play the clicker, complete quests and collect gifts. The rewards below require no bet.
+Jouez le moment.|Play the moment.
+Jour et semaine|Day and week
+Journal d’audit|Audit log
+Journal d’audit.|Audit log.
+Journal des crédits|Credit ledger
+Journal du coffre-fort|Vault ledger
+jours · entrées de tables comprises|days · including table entries
+jours · primes, récompenses et règlements|days · bonuses, rewards and settlements
+Jusqu’à 12 décimales. Le total est arrondi au centime après multiplication.|Up to 12 decimal places. The total is rounded to the nearest cent after multiplication.
+Justification administrateur requise|An administrator reason is required
+Justification commune aux modifications|Shared reason for changes
+Justification de 8 caractères minimum requise|A reason of at least 8 characters is required
+Justification de la création|Reason for creation
+Justification required|A reason is required
+Justification required (8-1000 characters)|A reason of 8–1,000 characters is required
+Justification requise|A reason is required
+L’accès se fait sur candidature ou avec un code d’accès. Aucun crédit n’est prélevé.|Apply or use an access code to join. No credits are charged.
+L’adresse a changé. Actualisez la fiche du joueur.|The address changed. Refresh the player's profile.
+L’ALBUM DU CERCLE|THE CIRCLE ALBUM
+L’économie du cercle.|The Circle economy.
+L’élégance des cartes.|The elegance of cards.
+L’entrée payante est supprimée. Acceptez une candidature en choisissant sa carte, ou créez un code à transmettre au joueur. La justification administrateur ci-dessus est obligatoire.|Paid entry has been removed. Accept an application and choose its card, or create a code to give the player. The administrator reason above is required.
+L’EXCEPTION N’ATTEND QUE VOUS.|SOMETHING EXTRAORDINARY AWAITS YOU.
+l’exceptionnel.|the extraordinary.
+L’explorateur|The Explorer
+L’identité reste un secret.|Its identity remains a secret.
+L’inventaire.|The inventory.
+L’objet proposé ne correspond pas ou est déjà réservé|The offered item does not match or is already reserved
+L’œil du collectionneur|The Collector's Eye
+L’offre a changé. Relisez les objets avant de confirmer.|The offer changed. Review the items before confirming.
+L’ordre et les huit raretés restent fixes. Les couleurs peuvent évoluer.|The order and eight rarities stay fixed. Colours can change.
+L’ouverture du cercle|The Circle Opens
+La boutique.|The shop.
+La circulation au fil des jours.|Circulation over time.
+La conversion crédits → diamants n’est pas autorisée pour votre carte. Contactez un administrateur.|Your card does not allow credit-to-diamond conversion. Contact an administrator.
+La conversion de crédits est désactivée|Credit conversion is disabled
+La conversion de crédits est désactivée. Utilisez la boutique fictive de diamants.|Credit conversion is disabled. Use the simulated diamond shop.
+La conversion est désactivée sur le serveur.|Conversion is disabled on the server.
+La conversion exige aussi l’autorisation individuelle de la carte du joueur.|Conversion also requires individual permission on the player's card.
+La Cosmic n’a pas de limite hebdomadaire|Cosmic has no weekly limit
+La curiosité récompensée|Curiosity Rewarded
+La discussion a changé. Actualisez.|The conversation changed. Please refresh.
+La limite hebdomadaire doit être au plus six plafonds quotidiens|The weekly limit cannot exceed six daily caps
+La main heureuse|The Lucky Hand
+La meilleure rareté de chaque bot.|Each bot's highest rarity.
+La première page vous attend.|Your first page awaits.
+La progression est calculée à partir des données serveur. Désactiver une mission bloque les nouvelles réclamations sans effacer son historique.|Progress is calculated from server data. Disabling a quest blocks new claims without erasing its history.
+La protection d’administration doit être initialisée par l’opérateur du site.|The site operator must initialise administrator protection.
+La rareté d’un titre déjà créé reste fixe afin de préserver les collections.|An existing title's rarity stays fixed to preserve collections.
+LA SÉLECTION DU CERCLE|THE CIRCLE SELECTION
+LA TRACE DES DÉCISIONS|A RECORD OF DECISIONS
+Laissez vide pour proposer à tous les joueurs.|Leave blank to offer to all players.
+Lancer la bille|Spin the wheel
+Lancer la pièce|Flip the coin
+Lancez les trois rouleaux.|Spin all three reels.
+Le bon côté retourne deux fois votre mise.|The correct side returns twice your stake.
+LE CANAL PRIVÉ DU CERCLE|THE CIRCLE'S PRIVATE CHANNEL
+Le catalogue des coffres|The chest catalogue
+Le catalogue sélectionné ne couvre pas la rareté % et le nombre maximal de titres demandé|The selected catalogue does not cover rarity % and the maximum requested number of titles
+Le cercle attend ses premiers collectionneurs.|The Circle awaits its first collectors.
+LE CERCLE DES COLLECTIONNEURS|THE COLLECTORS' CIRCLE
+Le cercle du hasard.|The circle of chance.
+LE CERCLE FERMÉ|THE PRIVATE CIRCLE
+Le cercle fermé.|The private Circle.
+LE CERCLE RÉVÈLE SES SECRETS…|THE CIRCLE REVEALS ITS SECRETS…
+LE CERCLE VOUS ATTEND|THE CIRCLE AWAITS
+LE CLICKER DU CERCLE|THE CIRCLE CLICKER
+Le clicker et les cadeaux gratuits ↗|The clicker and free gifts ↗
+Le code est stocké sous forme d’empreinte salée. Il n’est ni inclus dans le site, ni conservé dans les reçus, ni sauvegardé dans le navigateur.|The code is stored as a salted hash. It is not included in the site, receipts or browser storage.
+le coffre|the chest
+Le coffre a changé. Actualisez la sélection.|The chest changed. Refresh your selection.
+Le coffre-fort|The vault
+Le coffre-fort affiche un déficit comptable de|The vault shows an accounting deficit of
+Le coffre-fort doit être activé sur la base du serveur. Les jeux et les soldes existants restent disponibles.|The vault must be enabled in the server database. Existing games and balances remain available.
+Le jeu en chiffres.|The game in numbers.
+LE JEU PREND UNE AUTRE DIMENSION|TAKE THE GAME TO ANOTHER LEVEL
+LE LABORATOIRE DU CERCLE|THE CIRCLE LABORATORY
+LE LIVRE DES SIGNATURES|THE BOOK OF SIGNATURES
+Le lot dépasse 5 000 titres uniques : réduisez le nombre de bots ou de titres.|The batch exceeds 5,000 unique titles: reduce the bot or title count.
+LE LOT EST PRÊT À ÊTRE RELU|THE BATCH IS READY FOR REVIEW
+Le marché|The market
+Le marché est suspendu|The market is suspended
+Le marché est suspendu ou figé|The market is suspended or frozen
+Le marché est suspendu par l’administration|The market is suspended by the administrators
+LE MARCHÉ NOIR · SUR INVITATION|THE BLACK MARKET · BY INVITATION
+Le marché noir et les échanges directs nécessitent une carte active. Vos objets et vos diamants sont conservés.|The black market and direct trades require an active card. Your items and diamonds are preserved.
+Le marché noir, sous contrôle.|The black market, under control.
+Le marché noir.|The black market.
+Le meilleur jeu remporte le pot. Vos jetons restants sont rendus.|The best hand wins the pot. Your remaining chips are returned.
+Le montant ne respecte pas le minimum ou les plafonds de votre carte. Ajustez la quantité.|This amount is outside your card's minimum or limits. Adjust the quantity.
+Le mot de passe n’a pas pu être enregistré.|The password could not be saved.
+Le niveau a changé. Actualisez le clicker.|The level changed. Refresh the clicker.
+Le nombre de parties et les ratios sont recalculés. Le résultat net et les gains/pertes corrigés sont déduits des totaux misé et reversé.|Game counts and ratios are recalculated. Corrected net results and winnings/losses are derived from total stakes and payouts.
+Le numéro tiré détermine le retour.|The drawn number determines the payout.
+Le plaisir du jeu.|The joy of playing.
+Le premier secret|The First Secret
+Le prestige se collectionne. Le jeu reste virtuel.|Collect prestige. Keep the game virtual.
+Le prix du lot a changé. Actualisez et confirmez le nouveau total.|The batch price changed. Refresh and confirm the new total.
+Le prix réduit doit être inférieur au vrai prix de base.|The sale price must be lower than the genuine original price.
+Le prix unitaire du palier s’applique à tous les coffres achetés ensemble. Les paliers ne se cumulent pas entre plusieurs achats.|The tier's unit price applies to all chests bought together. Separate purchases do not count towards a combined tier.
+Le profil n’a pas pu être confirmé. Réessayez.|The profile could not be verified. Please try again.
+Le rythme du cercle|The Rhythm of the Circle
+LE SECRET RESTE UN SECRET|A SECRET STAYS A SECRET
+Le serveur choisit un entier dans cette fourchette pour chaque bot. Les fonds viennent du coffre-fort ; l’excédent des budgets de simulation lui est restitué. Aucun crédit n’est créé hors comptabilité.|The server picks an integer within this range for each bot. Funds come from the vault; surplus simulation budgets are returned to it. No credits are created outside the ledger.
+Le solde final de vos bots.|Your bots' final balances.
+LE STOCK DU VENDEUR|THE SELLER'S STOCK
+Le suivi économique n’est pas encore disponible.|Economy tracking is not available yet.
+LE TABLEAU D’HONNEUR|THE HALL OF FAME
+Le tarif a changé. Actualisez et confirmez le nouveau total.|The price changed. Refresh and confirm the new total.
+Le taux crédits/diamant a changé. Confirmez le nouveau taux.|The credit-to-diamond rate changed. Confirm the new rate.
+Le titre sera déséquipé à sa mise en vente. Vous pouvez annuler une annonce tant qu’elle n’a pas été acceptée. Aucun frais de transaction.|The title is unequipped when listed. You can cancel a listing until it is accepted. No transaction fees.
+Le total des probabilités doit être exactement 100 %.|Probabilities must add up to exactly 100%.
+Le total est vérifié avant l’achat. Les coffres et les diamants sont transférés ensemble. Les paliers de chaque stock s’appliquent aux coffres achetés dans ce stock.|The total is verified before purchase. Chests and diamonds are transferred together. Each stock's tiers apply to chests purchased from that stock.
+Le vendeur ne dispose plus d’une carte active|The seller no longer has an active card
+Le zéro est vert : il fait perdre les mises de groupe. Un numéro exact retourne 36× ; une douzaine ou colonne retourne 3×.|Zero is green: group bets lose on zero. A straight-up number returns 36×; a dozen or column returns 3×.
+Lecture du coffre-fort et des mouvements…|Loading the vault and its transactions…
+Les 3 horizontales et 2 diagonales sont vérifiées.|All 3 horizontal and 2 diagonal paylines are checked.
+Les 5 Go de trafic mensuel sont distincts du stockage. Aucune activité automatique des bots. Consultez l’usage réel dans Supabase ; le site ne peut pas garantir un plafond de trafic selon le nombre de visiteurs.|The 5 GB monthly traffic allowance is separate from storage. Bots generate no automatic activity. Check actual usage in Supabase; the site cannot guarantee traffic usage for a given number of visitors.
+Les achats fictifs de diamants sont suspendus|Simulated diamond purchases are suspended
+Les achats fictifs sont suspendus ou leur plafond global est atteint.|Simulated purchases are suspended or their global cap has been reached.
+Les annonces ou échanges sont temporairement suspendus par l’administration.|Listings and trades are temporarily suspended by the administrators.
+Les autres titres seront de raretés inférieures. Pour un bot Commun, tous ses titres restent Communs. Les bots sans titre n’ouvrent aucun coffre. Les doublons de coffres s’ajoutent aux exemplaires, sans changer le nombre de titres uniques choisi.|Other titles will have lower rarities. A Common bot only receives Common titles. Bots with no titles open no chests. Chest duplicates add copies without changing the selected number of unique titles.
+Les blinds sont posées. Préflop.|Blinds posted. Preflop.
+LES CHANCES DE DÉCOUVERTE|DISCOVERY ODDS
+Les cinq premières signatures|The First Five Signatures
+Les clés du cercle.|The keys to the Circle.
+Les codes publiés par l’équipe peuvent offrir des crédits, des titres et des coffres scellés. Une utilisation par compte.|Codes published by the team can award credits, titles and unopened chests. One use per account.
+Les coffres du marché|Market chests
+Les coffres événementiels.|Event chests.
+Les coffres réservés à une annonce ou à un échange sont exclus. Si un coffre sélectionné n’est plus disponible, aucun coffre du lot ne sera ouvert. Maximum 100 par ouverture.|Chests reserved for listings or trades are excluded. If a selected chest becomes unavailable, none of the batch is opened. Up to 100 per opening.
+Les comptes autorisés ouvrent directement le panneau après connexion. Retirer le rôle bloque leurs prochaines opérations.|Authorised accounts open the panel directly after signing in. Removing the role blocks their next operations.
+Les crédits restent exclusivement virtuels. Le code, les cartes privées et les clés serveur ne sont jamais affichés dans les journaux.|Credits are entirely virtual. Codes, private cards and server keys are never displayed in logs.
+Les détenteurs sont des comptes distincts, tous comptes actifs compris. Le pourcentage se base sur tous ces comptes, même sans titre.|Holders are distinct accounts, including all active accounts. The percentage uses all these accounts, including those without titles.
+Les diamants proposés ne sont plus disponibles|The offered diamonds are no longer available
+Les diamants sont temporairement figés.|Diamonds are temporarily frozen.
+Les échanges de diamants sont figés|Diamond trades are frozen
+LES ÉCHANGES DU CERCLE|CIRCLE TRADES
+Les entrées dans le cercle sont suspendues|Circle admissions are suspended
+Les entrées sont réservées sur le serveur. Invitez au moins un autre joueur.|Buy-ins are reserved on the server. Invite at least one other player.
+Les euros ci-dessous sont fictifs. Aucune carte bancaire réelle n’est utilisée, aucune recette réelle n’est encaissée.|The euros below are simulated. No real bank card is used and no real revenue is collected.
+Les événements|Events
+Les joueurs|Players
+Les missions|Quests
+Les mots de passe ne correspondent pas.|Passwords do not match.
+Les mots de passe ne sont jamais affichés.|Passwords are never displayed.
+Les multiplicateurs s’appliquent à un cinquième de la mise. Plusieurs lignes peuvent gagner pendant le même tour.|Multipliers apply to one fifth of your stake. Multiple paylines can win in the same spin.
+Les nouvelles du serveur, événements et offres publiés par les administrateurs. Réservé au cercle fermé.|Server news, events and offers published by administrators. For Circle members only.
+Les objets et diamants publiés sont réservés jusqu’à la fin ou l’annulation de cet échange.|Offered items and diamonds are reserved until the trade completes or is cancelled.
+Les objets et les diamants sont transférés ensemble. Un échange conclu ne peut pas être annulé.|Items and diamonds are transferred together. Completed trades cannot be reversed.
+Les offres ne se cumulent pas. Si plusieurs sont éligibles, le prix le plus bas s’applique. Une offre épuisée, terminée ou limitée pour le joueur n’est plus proposée à ce prix.|Promotions do not stack with each other. If several apply, the lowest price is used. Sold-out, expired or player-limited offers are no longer available at that price.
+Les ouvertures sont résumées dans un compteur et leurs exemplaires regroupés par titre. Un transfert total est enregistré entre le bot et le coffre-fort, sans historique individuel ni consommation du stock public.|Openings use a summary counter and copies are grouped by title. One total transfer is recorded between the bot and the vault, without individual history or public stock consumption.
+Les paramètres.|Settings.
+Les personnes autorisées.|Authorised people.
+Les portes du cercle|The Circle's Doors
+LES PORTES DU PRESTIGE|THE GATES OF PRESTIGE
+Les probabilités exactes sont affichées avant chaque ouverture. Les doublons sont conservés.|Exact odds are displayed before every opening. Duplicates are kept.
+Les prochaines découvertes se préparent.|Your next discoveries are on their way.
+Les prochains coffres événementiels seront annoncés ici.|Upcoming event chests will be announced here.
+Les prochains rendez-vous du cercle seront annoncés ici.|Upcoming Circle events will be announced here.
+Les règles de la table.|Table rules.
+Les rendez-vous du cercle.|Circle events.
+Les secrets du cercle|The Circle's Secrets
+Les signatures|Signatures
+Les signatures de|Signatures of
+Les signatures du sommet.|The finest signatures.
+Les signatures secrètes ne peuvent pas être trouvées par leur nom.|Secret signatures cannot be searched by name.
+Les soldes ci-dessus restent les soldes actuels.|The balances above remain the current balances.
+Les succès.|Achievements.
+Les tables multijoueurs.|Multiplayer tables.
+LES VISAGES DU CERCLE|THE FACES OF THE CIRCLE
+Lever la suspension|Lift suspension
+Lien de réinitialisation envoyé au joueur.|Password reset link sent to the player.
+Ligne de code affichée|Displayed code line
+Lignes gagnantes : {0}|Winning paylines: {0}
+Limite de 5 000 bots atteinte|The 5,000-bot limit has been reached
+Limite de bots atteinte|Bot limit reached
+Limite hebdomadaire|Weekly limit
+Limite hebdomadaire par joueur :|Weekly limit per player:
+Limite hebdomadaire par joueur · €|Weekly limit per player · €
+Limite par joueur du coffre de récompense atteinte|Reward chest limit per player reached
+Limite quotidienne du clicker atteinte|Daily clicker limit reached
+Limitez le lot à 5 000 titres uniques au total|Limit the batch to 5,000 unique titles in total
+Lot trop volumineux. Réduisez le nombre de bots ou de simulations.|Batch too large. Reduce the number of bots or simulations.

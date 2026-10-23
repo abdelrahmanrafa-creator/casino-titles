@@ -1,3 +1,4 @@
+import {LanguageSettings} from './components/LanguageSettings';
 import {useRef,useState,type FormEvent} from 'react';
 import {supabase,rpc,accountRequest} from './lib/api';
 import type {Profile} from './components/ProfileGate';
@@ -19,7 +20,7 @@ export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplet
    setMessage('Confirmez votre adresse e-mail pour rejoindre le cercle.');setPassword('');
   }else{const {error}=await supabase.auth.signInWithPassword({email,password});if(error)throw error;setPassword('');}
  }catch(error){setMessage((error as Error).message);}finally{setBusy(false);}}
- return <section className="auth-panel panel"><p className="eyebrow">LE CERCLE VOUS ATTEND</p><h2>{authenticated?'Votre signature.':mode==='guest'?'Entrez avec un pseudo.':mode==='signup'?'Prenez votre place.':mode==='reset'?'Retrouvez votre accès.':'Bon retour au club.'}</h2>
+ return <section className="auth-panel panel"><LanguageSettings compact persist={false}/><p className="eyebrow">LE CERCLE VOUS ATTEND</p><h2>{authenticated?'Votre signature.':mode==='guest'?'Entrez avec un pseudo.':mode==='signup'?'Prenez votre place.':mode==='reset'?'Retrouvez votre accès.':'Bon retour au club.'}</h2>
   <p className="muted">{authenticated?'Choisissez un pseudo unique pour votre profil.':'5 000 crédits offerts à la création de votre profil.'}</p>
   <form onSubmit={submit}>
    {(authenticated||mode==='guest')?<label>Pseudo<input value={username} onChange={e=>setUsername(e.target.value)} required pattern="[a-zA-Z0-9_]{3,24}" placeholder="Votre pseudo" autoComplete="nickname"/><small>3–24 lettres, chiffres ou _</small></label>:<>
