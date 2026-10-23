@@ -45,7 +45,7 @@ await check('trade inbox requires authentication','/rest/v1/rpc/ct_trade_inbox',
 await check('sealed inventory requires authentication','/rest/v1/rpc/ct_sealed_inventory',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
 await check('circle cards remain private','/rest/v1/ct_demo_cards?select=user_id',{},r=>[401,403].includes(r.status));
 await check('circle tier definitions remain protected','/rest/v1/ct_demo_card_tiers?select=id',{},r=>[401,403].includes(r.status));
-await check('paid circle entry requires authentication','/rest/v1/rpc/ct_join_circle',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000096'})},r=>[401,403].includes(r.status));
+await check('retired circle entry requires authentication','/rest/v1/rpc/ct_join_circle',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000096'})},r=>[401,403].includes(r.status));
 await check('card attribution requires administrator authentication','/rest/v1/rpc/ct_admin_card_update',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000095',p_action:'assign',p_values:{username:'NoSuchPlayer',tier_id:'cosmic'},p_reason:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
 await check('account jobs remain private','/rest/v1/ct_account_jobs?select=operation_id',{},r=>[401,403].includes(r.status));
 await check('player corrections remain private','/rest/v1/ct_player_edits?select=user_id',{},r=>[401,403].includes(r.status));
@@ -53,3 +53,10 @@ await check('guest quota is service-only','/rest/v1/rpc/ct_guest_quota',{method:
 await check('new chest purchase requires authentication','/rest/v1/rpc/ct_buy_chest',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000094',p_chest_id:1,p_expected_version:1,p_expected_price:500,p_expected_offer_id:null})},r=>[401,403].includes(r.status));
 await check('player editor requires administrator authentication','/rest/v1/rpc/ct_admin_edit_player',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000093',p_user_id:'00000000-0000-0000-0000-000000000099',p_action:'profile',p_values:{version:0,username:'NoSuchPlayer'},p_reason:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
 await check('Auth administration edge rejects anonymous access','/functions/v1/ct-accounts',{method:'POST',body:JSON.stringify({action:'reset'})},r=>[401,403].includes(r.status));
+
+for(const table of ['ct_circle_applications','ct_circle_codes','ct_circle_claims'])await check(table+' remains private','/rest/v1/'+table+'?select=*',{},r=>[401,403].includes(r.status));
+await check('guest conversion preparation is service-only','/rest/v1/rpc/ct_prepare_guest_conversion',{method:'POST',body:JSON.stringify({p_user:'00000000-0000-0000-0000-000000000099'})},r=>[401,403].includes(r.status));
+await check('guest conversion rejects anonymous access','/functions/v1/ct-accounts',{method:'POST',body:JSON.stringify({action:'conversion_status'})},r=>[401,403].includes(r.status));
+await check('admission review requires authentication','/rest/v1/rpc/ct_admin_admissions',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('application requires authentication','/rest/v1/rpc/ct_circle_apply',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000091',p_message:'Anonymous smoke check'})},r=>[401,403].includes(r.status));
+await check('access code requires authentication','/rest/v1/rpc/ct_circle_redeem',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000090',p_code:'NO-REAL-CODE'})},r=>[401,403].includes(r.status));

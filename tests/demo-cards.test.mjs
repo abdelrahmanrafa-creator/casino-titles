@@ -6,12 +6,12 @@ async function assign(n,tier){const c=(await access(n)).card;return admin('assig
 async function tier(id,values){const t=(await access(1)).tiers.find(t=>t.id===id);return admin('tier',{...t,...values});}
 async function buy(n,q=1,op=randomUUID(),override={}){const s=await rpc(n,'ct_diamond_store');return rpc(n,'ct_buy_diamonds_simulated',[op,q,override.version??s.version,override.cents??Math.round(q*Number(s.eur_per_diamond)*100),'demo_card']);}
 test('six cards exist without automatic grants and all market mutations enforce active membership',async()=>{
- const a=await access(2);assert.equal(a.member,false);assert.equal(a.card,null);assert.equal(a.entry_price,150000);assert.deepEqual(a.tiers.map(t=>t.id),['basic','premium','gold','platinum','diamond','cosmic']);assert.equal((await rpc(2,'ct_diamond_store')).purchases_enabled,false);
+ const a=await access(2);assert.equal(a.member,false);assert.equal(a.card,null);assert.equal(a.entry_price,undefined);assert.deepEqual(a.tiers.map(t=>t.id),['basic','premium','gold','platinum','diamond','cosmic']);assert.equal((await rpc(2,'ct_diamond_store')).purchases_enabled,false);
  await assert.rejects(buy(2),/carte active/);await assert.rejects(rpc(2,'ct_market_command',[randomUUID(),'convert',{diamonds:1}]),/cercle fermé/);await assert.rejects(rpc(2,'ct_trade_command',[randomUUID(),'invite',{username:'Alice'}]),/cercle fermé/);assert.equal((await rpc(2,'ct_market_snapshot',['',null])).listings.length,0);
 });
-test('paid entry costs exactly 150000 credits, balances the treasury and is idempotent',async()=>{
- await assert.rejects(rpc(2,'ct_join_circle',[randomUUID()]),/Insufficient credits/);assert.equal((await access(2)).card,null);
- await db.query("SELECT ct_post_credit($1,145000,'admin_adjustment','card-test-funding')",[uid(2)]);const op=randomUUID(),r=await rpc(2,'ct_join_circle',[op]);assert.equal(r.price,150000);assert.deepEqual(await rpc(2,'ct_join_circle',[op]),r);assert.equal((await access(2)).card.tier_id,'basic');assert.equal((await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(2)])).rows[0].balance,0);await assert.rejects(rpc(2,'ct_join_circle',[randomUUID()]),/déjà/);
+test('paid entry is disabled without debit and admin can grant the basic card',async()=>{
+ const before=(await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(2)])).rows[0].balance;
+ await assert.rejects(rpc(2,'ct_join_circle',[randomUUID()]),/Entrée payante supprimée/);assert.equal((await access(2)).card,null);assert.equal((await db.query('SELECT balance FROM ct_wallets WHERE user_id=$1',[uid(2)])).rows[0].balance,before);await assign(2,'basic');
  const e=await rpc(1,'ct_admin_economy',[30,null,'']);assert.equal(e.difference,0);assert.equal(e.ledger_difference,0);
 });
 test('admin assigns every tier without charging credits and stale assignments cannot overwrite newer cards',async()=>{
