@@ -57,3 +57,9 @@ diamants pour ce lot entier.|diamonds for this entire bundle.
 Unknown action|Unknown action
 Vous payez|You pay
 Autre mouvement|Other transaction
+
+Offre simulée · vendeur fictif|Simulated offer · fictional seller
+Création demandée d’offres de démonstration|Requested creation of demonstration offers
+Vesper|Vesper
+Halcyon|Halcyon
+Ashen|Ashen

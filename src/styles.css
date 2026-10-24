@@ -50,3 +50,5 @@ html[data-reduced-motion=true] *,html[data-reduced-motion=true] *::before,html[d
 .language-picker{margin:12px 0}.language-picker select{padding:8px 12px;border:1px solid #ffffff22;border-radius:7px;background:#191320;font-size:12px;color:inherit}
 
 .credit-market{padding:clamp(18px,3vw,30px);margin-bottom:22px}.credit-offer{display:grid;gap:12px;padding:22px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(135deg,#cba45c0c,transparent)}.credit-offer-amount{display:flex;align-items:center;gap:10px;font-size:1.5rem;color:var(--gold)}.credit-offer-summary,.credit-offer-total{display:flex;flex-wrap:wrap;align-items:center;gap:18px}.credit-offer-summary span,.credit-offer-total strong{display:flex;gap:8px;align-items:center}.credit-offer-total{padding:18px;border-radius:12px;background:#cba45c0d}.credit-offer small{color:var(--muted)}
+
+.demo-market-badge{display:inline-flex;width:fit-content;padding:5px 10px;border-radius:8px;border:1px solid #8d76b53d;background:#8d76b512;color:#c7b5e4;font-size:.73rem;line-height:1.5}
