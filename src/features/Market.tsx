@@ -5,8 +5,8 @@ import {DiamondValue} from '../components/DiamondValue';
 import {WholesaleMarket} from './WholesaleMarket';
 import {MarketNews} from './MarketNews';
 import {CreditConversion} from './CreditConversion';
-import {useState} from 'react';
-import {useQuery} from '@tanstack/react-query';
+import {useEffect,useState} from 'react';
+import {useQuery,useQueryClient} from '@tanstack/react-query';
 import {Link,useSearchParams} from 'react-router-dom';
 import {Diamond,ArrowLeftRight,Box,RefreshCw,ShieldCheck} from 'lucide-react';
 import {rpc,credits,rarityNames,type Title} from '../lib/api';
@@ -21,11 +21,12 @@ type SealedShop={id:number;name:string;rarity:number;price:number;version:number
 type Market={diamonds:number;credits_per_diamond:number;listings:Listing[];mine:Listing[];assets:Asset[];sealed_shop:SealedShop[];history:{id:number;seller_id:string;counterparty:string;diamonds:number;offered_name:string;created_at:string}[];transactions:{id:number;amount:number;reason:string;balance_after:number}[]};
 export function Market(props:{userId:string;catalog:Title[];command:Command;busy:boolean}){const [params]=useSearchParams();return <CircleGate {...props} allowSealed={params.get('tab')==='mine'}><MarketContent {...props}/></CircleGate>;}
 function MarketContent({userId,catalog,command,busy}:{userId:string;catalog:Title[];command:Command;busy:boolean}){
- const [params]=useSearchParams();
+ const [params]=useSearchParams();const marketClient=useQueryClient();
  const [tab,setTab]=useState(params.has('asset')?'sell':['mine','browse','news','sell','diamonds','history','wholesale'].includes(params.get('tab')??'')?(params.get('tab')==='wholesale'?(params.get('view')==='sell'?'sell':'browse'):params.get('tab')!):'news'),[search,setSearch]=useState(''),[query,setQuery]=useState(''),[before,setBefore]=useState<number|null>(null),[assetId,setAssetId]=useState(params.get('asset')??''),[price,setPrice]=useState(1),[wantedKind,setWantedKind]=useState(''),[wantedId,setWantedId]=useState(''),[target,setTarget]=useState(''),[message,setMessage]=useState(''),[payment,setPayment]=useState(''),[quantity,setQuantity]=useState(1);
  const {data:store}=useQuery({queryKey:['diamond-store',userId],queryFn:()=>rpc<StoreSettings>('ct_diamond_store'),staleTime:30000,refetchOnWindowFocus:false});
  const [confirm,setConfirm]=useState<{kind:'trade';listing:Listing}|null>(null);
- const {data:m,error,isPending,refetch,isFetching}=useQuery({queryKey:['market',userId,query,before],queryFn:()=>rpc<Market>('ct_market_snapshot',{p_search:query,p_before:before}),staleTime:30000,refetchOnWindowFocus:false});
+ const {data:m,error,isPending,refetch,isFetching}=useQuery({queryKey:['market',userId,query,before],queryFn:()=>rpc<Market>('ct_market_snapshot',{p_search:query,p_before:before}),staleTime:15000,refetchInterval:15000,refetchOnWindowFocus:true});
+ useEffect(()=>{if(!m)return;const previous=marketClient.getQueryData<{balance:number}>(['diamonds',userId]);if(previous?.balance===m.diamonds)return;marketClient.setQueryData(['diamonds',userId],{balance:m.diamonds});if(previous)void marketClient.invalidateQueries({queryKey:['diamond-store',userId]});},[m?.diamonds,userId,marketClient]);
  async function act(action:string,values:Record<string,unknown>,success:string){const r=await command('ct_market_command',{p_action:action,p_values:values});if(r){setMessage(success);setConfirm(null);await refetch();}return r;}
  if(isPending)return <section className="panel empty-state" role="status">Ouverture du marché…</section>;
  if(error||!m)return <section className="panel empty-state"><h1>Marché indisponible</h1><p role="alert">{error?.message}</p><button className="btn secondary" onClick={()=>{void refetch();}}>Réessayer</button></section>;
