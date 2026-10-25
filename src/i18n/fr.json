@@ -211,5 +211,6 @@
   "Auth session missing!": "Votre session est absente. Veuillez vous reconnecter.",
   "Signup requires a valid password": "Veuillez saisir un mot de passe valide pour vous inscrire.",
   "Punto Banco sur huit jeux de cartes. As : 1, figures et 10 : 0, total modulo 10. Les troisièmes cartes suivent automatiquement le tableau standard. Player : 2×. Banker : 1,95×, commission 5 % comprise. Tie : 9×. Une égalité rend les mises Player et Banker. Les multiples de 20 permettent un paiement entier exact.": "Punto Banco sur huit jeux de cartes. As : 1, figures et 10 : 0, total modulo 10. Les troisièmes cartes suivent automatiquement les règles standards. Joueur : 2×. Banque : 1,95×, commission de 5 % comprise. Égalité : 9×. Une égalité rembourse les mises Joueur et Banque. Les multiples de 20 permettent un paiement entier exact.",
-  "Unknown action": "Action inconnue"
+  "Unknown action": "Action inconnue",
+  "24 hours": "24 heures"
 }

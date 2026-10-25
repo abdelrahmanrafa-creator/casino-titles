@@ -10,6 +10,7 @@ export async function createTitlesDatabase(directory, extra=[]){
  INSERT INTO auth.users VALUES('${uid(1)}',now()),('${uid(2)}',now());`);
  for(const filename of ['20261022010000_titles_identity.sql','20261022020000_titles_economy.sql',...extra])
   await db.exec(await readFile(new URL(`../../supabase/migrations/${filename}`,import.meta.url),'utf8'));
+ if(extra.some(f=>f.includes('market_fees_discovery_promotions')))await db.exec('UPDATE ct_market_finance SET fees_enabled=false');
  await db.exec(`SELECT set_config('request.jwt.claim.sub','${uid(1)}',false); SELECT ct_initialize_profile('Alice');
  SELECT set_config('request.jwt.claim.sub','${uid(2)}',false); SELECT ct_initialize_profile('Bob');`);
  return db;

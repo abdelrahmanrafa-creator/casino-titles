@@ -87,3 +87,9 @@ await check('private card customization validator is not exposed','/rest/v1/rpc/
 
 await check('Credit market is inaccessible anonymously','/rest/v1/rpc/ct_credit_market',{method:'POST',body:JSON.stringify({p_view:'browse'})},r=>[401,403].includes(r.status));
 await check('Credit sales cannot debit anonymous callers','/rest/v1/rpc/ct_credit_market_command',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000099',p_action:'create',p_values:{amount:1,price:1}})},r=>[401,403].includes(r.status));
+await check('market discovery requires a card session','/rest/v1/rpc/ct_market_browser',{method:'POST',body:'{}'},r=>[401,403].includes(r.status));
+await check('market fee quotes require authentication','/rest/v1/rpc/ct_market_payment',{method:'POST',body:JSON.stringify({p_subtotal:100})},r=>[401,403].includes(r.status));
+await check('promotion purchases deny anonymous callers','/rest/v1/rpc/ct_promote_market_offer',{method:'POST',body:JSON.stringify({p_operation_id:'00000000-0000-0000-0000-000000000099',p_kind:'listing',p_key:'1',p_placement:'home',p_expected_price:250})},r=>[401,403].includes(r.status));
+await check('server diamond revenue stays private','/rest/v1/ct_market_server_ledger?select=*',{},r=>[401,403].includes(r.status));
+await check('market finance settings stay private','/rest/v1/ct_market_finance?select=*',{},r=>[401,403].includes(r.status));
+await check('sponsored homepage feed is public and bounded','/rest/v1/rpc/ct_market_featured',{method:'POST',body:'{}'},(r,b)=>r.ok&&Array.isArray(b)&&b.length<=6);
