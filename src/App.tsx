@@ -1,3 +1,5 @@
+import {InboxShortcut} from './features/Inbox';
+const Inbox=lazy(()=>import('./features/Inbox').then(m=>({default:m.Inbox})));
 import {creditReasonLabel} from './lib/ledgerLabels';
 import {locale} from './i18n/store';
 import {LanguageSettings} from './components/LanguageSettings';
@@ -9,7 +11,7 @@ import type {Session} from '@supabase/supabase-js';
 import {useQuery,useQueryClient} from '@tanstack/react-query';
 import {Link,NavLink,Route,Routes} from 'react-router-dom';
 import {AnimatePresence,motion,useReducedMotion} from 'framer-motion';
-import {ArrowUpRight,Diamond,Box,Check,ChevronRight,Coins,Crown,Gift,Grid2X2,Layers,LogOut,Search,Settings,ShieldCheck,Sparkles,Trophy,UserRound,Wallet,X} from 'lucide-react';
+import {Mail,ArrowUpRight,Diamond,Box,Check,ChevronRight,Coins,Crown,Gift,Grid2X2,Layers,LogOut,Search,Settings,ShieldCheck,Sparkles,Trophy,UserRound,Wallet,X} from 'lucide-react';
 import {supabase,rpc,accountRequest,tableRequest,RpcFailure,credits,rarityNames,colors,type Snapshot,type Title,type Chest,type Award} from './lib/api';
 import {pendingCommand,clearPending,readPending,type Pending} from './lib/pending';
 import {TitleEffect} from './components/TitleEffect';
@@ -32,7 +34,7 @@ const Tables=lazy(()=>import('./features/Tables').then(m=>({default:m.Tables})))
 const Rankings=lazy(()=>import('./features/Rankings').then(m=>({default:m.Rankings})));
 const PublicProfile=lazy(()=>import('./features/Rankings').then(m=>({default:m.PublicProfile})));
 const Admin=lazy(()=>import('./features/Admin').then(m=>({default:m.Admin})));
-const nav=[['/','Accueil',Grid2X2],['/casino','Casino',Layers],['/rewards','Crédits gratuits',Gift],['/market','Marché noir',Diamond],['/chests','Coffres',Box],['/shop','Boutique',Sparkles],['/inventory','Inventaire',Wallet],['/collection','Collection',Crown],['/rankings','Classements',Trophy],['/profile','Profil',UserRound],['/settings','Paramètres',Settings]] as const;
+const nav=[['/','Accueil',Grid2X2],['/casino','Casino',Layers],['/rewards','Crédits gratuits',Gift],['/market','Marché noir',Diamond],['/chests','Coffres',Box],['/shop','Boutique',Sparkles],['/inventory','Inventaire',Wallet],['/collection','Collection',Crown],['/rankings','Classements',Trophy],['/inbox','Boîte de réception',Mail],['/profile','Profil',UserRound],['/settings','Paramètres',Settings]] as const;
 
 export default function App(){
  const queryClient=useQueryClient();const [session,setSession]=useState<Session|null>(null),[authReady,setAuthReady]=useState(false);
@@ -93,6 +95,7 @@ export default function App(){
    <div className="sidebar-bottom"><ShieldCheck size={18}/><div>Le plaisir du jeu.<span>100 % crédits virtuels.</span></div></div>
   </aside>
   <div className="main-shell"><header className="topbar"><div className="mobile-brand">C<span>✦</span></div><div className="status-dot"/><span className="topbar-tag">LE CERCLE DES COLLECTIONNEURS</span><div className="topbar-right">
+   {profile&&<InboxShortcut key={uid+'inbox'} userId={uid!}/>}
    {profile&&<DirectTrades key={uid} userId={uid!} command={command} busy={busy} notice={notice}/>}
    {profile&&adminAccess?.is_admin===true&&<Link to="/admin" className="btn secondary compact admin-shortcut"><ShieldCheck size={16}/><span>Administration</span></Link>}
    {profile&&<Link to="/market" className="topbar-diamonds" aria-label="Mon portefeuille de diamants"><Diamond size={17}/><strong>{credits(diamonds?.balance??0)}</strong></Link>}<div className="balance"><span className="coin-icon">C</span><div><small>VOTRE SOLDE</small><strong>{state?credits(state.wallet.balance):'—'} <span>Crédits</span></strong></div></div>
@@ -113,6 +116,7 @@ export default function App(){
      <div className="featured-chests">{chests.filter(c=>[1,4,6,8].includes(c.id)).map(c=><button className="featured-chest panel" key={c.id} onClick={()=>setOdds(c)} style={{'--accent':colors[c.rarity-1]} as CSSProperties}><ChestArt rarity={c.rarity}/><div><small>{rarityNames[c.rarity-1]}</small><h3>{c.name}</h3><PriceTag compact base={c.base_price??c.price} current={c.current_price??c.price}/></div><ArrowUpRight size={18}/></button>)}</div>
      <section className="panel home-rewards-banner"><Gift size={30}/><div><p className="eyebrow">PLUSIEURS FAÇONS DE GAGNER</p><h2>Vos prochains crédits commencent ici.</h2><p>Clicker évolutif, cadeau gratuit, missions, événements et codes promo.</p></div><Link className="btn primary" to="/rewards">Gagner des crédits <ArrowUpRight size={16}/></Link></section><People compact/><div className="home-bottom"><section className="daily-panel panel"><div className="gift-icon"><Gift size={25}/></div><div><p className="eyebrow">VOTRE RENDEZ-VOUS QUOTIDIEN</p><h3>Un nouveau jour. 750 crédits.</h3><p className="muted">Revenez chaque jour, poursuivez votre collection.</p></div><button className="btn secondary" disabled={busy||state?.daily_claimed} onClick={()=>void command('ct_claim_daily')}>{state?.daily_claimed?<><Check size={16}/> Récupérée</>:<>Récupérer <ArrowUpRight size={16}/></>}</button></section><Link to="/collection" className="collection-tease panel"><Crown size={25}/><div><h3>Votre légende prend forme.</h3><p>{owned.size} / {catalog.length} titres découverts</p><div className="progress"><i style={{width:`${owned.size/Math.max(1,catalog.length)*100}%`}}/></div></div><ChevronRight size={18}/></Link></div>
     </>}/>
+    <Route path="/inbox" element={gate(<Inbox userId={uid??''}/>)}/>
     <Route path="/market" element={gate(<Market userId={uid??''} catalog={catalog} command={command} busy={busy}/>)}/>
     <Route path="/rewards" element={gate(<Rewards userId={uid??''} command={command} busy={busy} catalog={catalog} dailyClaimed={state?.daily_claimed??false}/>)}/>
     <Route path="/chests" element={<>{heading('LES PORTES DU PRESTIGE','Choisissez votre univers.','Les probabilités exactes sont affichées avant chaque ouverture. Les doublons sont conservés.')}{chestGrid}</>}/>
