@@ -1,0 +1,60 @@
+A clean and clear shop layout.|A clean and clear shop layout.
+A nicely organized collection.|A nicely organized collection.
+A pleasant place to browse.|A pleasant place to browse.
+A strong selection for collectors.|A strong selection for collectors.
+a[href],button:not([disabled])|a[href],button:not([disabled])
+Arden|Arden
+Avery|Avery
+Avis d’achats vérifiés|Verified purchase reviews
+avis de démonstration|demo reviews
+Avis de démonstration|Demo reviews
+AVIS DE DÉMONSTRATION|DEMO REVIEWS
+Blake|Blake
+Casey|Casey
+Ces avis illustrent la boutique. Ils ne proviennent pas d’achats vérifiés.|These reviews illustrate the shop. They are not from verified purchases.
+Chargement des avis…|Loading reviews…
+Drew|Drew
+Easy to compare different offers.|Easy to compare different offers.
+Ellis|Ellis
+Emery|Emery
+Fermer le menu|Close menu
+Finley|Finley
+Great selection of titles.|Great selection of titles.
+Harper|Harper
+Hayden|Hayden
+I like the variety of rarities.|I like the variety of rarities.
+Initialisez d’abord les stocks des boutiques du jeu|Initialize the game shop stock first
+La vitrine du vendeur|The seller’s showcase
+Menu|Menu
+Menu principal|Main menu
+Morgan|Morgan
+Navigation principale|Main navigation
+Nombre de boutiques insuffisant|Not enough shops
+Ouvrir le menu principal|Open main menu
+Ouvrir mes commandes et reçus|Open my orders and receipts
+Pagination des avis|Review pagination
+Parker|Parker
+Plenty of interesting choices here.|Plenty of interesting choices here.
+Quinn|Quinn
+Reese|Reese
+Retrouvez vos achats, ventes, reçus PDF et réclamations des deux marchés.|Find your purchases, sales, PDF receipts and disputes from both markets.
+Riley|Riley
+Robin|Robin
+Rowan|Rowan
+Sage|Sage
+Skyler|Skyler
+Tab|Tab
+Taylor|Taylor
+The bundles are worth a look.|The bundles are worth a look.
+The chest selection looks excellent.|The chest selection looks excellent.
+The collection has a distinctive style.|The collection has a distinctive style.
+The item details are clear.|The item details are clear.
+The presentation is really good.|The presentation is really good.
+The prices look sensible.|The prices look sensible.
+The pricing is easy to understand.|The pricing is easy to understand.
+The quantity options are convenient.|The quantity options are convenient.
+The rare-title selection stands out.|The rare-title selection stands out.
+The shop is easy to browse.|The shop is easy to browse.
+The variety makes this shop interesting.|The variety makes this shop interesting.
+There are some appealing bundles.|There are some appealing bundles.
+VOTRE HISTORIQUE COMMERCIAL|YOUR TRADING HISTORY
