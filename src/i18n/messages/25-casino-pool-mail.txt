@@ -1,0 +1,96 @@
+2 minutes|2 minutes
+5 LIGNES · 200×|5 LINES · 200×
+Abandonner|Forfeit
+Abandonner donne la victoire à l’adversaire. L’entrée et le pari ne sont pas remboursés.|Forfeiting awards the win to your opponent. Your entry fee and wager will not be refunded.
+Accepter et payer|Accept and pay
+Achat confirmé : votre facture|Purchase confirmed: your receipt
+Activer le son|Enable sound
+Angle de visée|Aim angle
+Annuler l’invitation|Cancel invitation
+Au tour de votre adversaire|Your opponent’s turn
+Billard|Pool
+Billes en mouvement…|Balls in motion…
+BILLIARDS CLUB|BILLIARDS CLUB
+CASINO & TITLES|CASINO & TITLES
+Ce joueur a trop d’invitations en attente|This player has too many pending invitations
+Ce tour ne vous appartient pas ou la table a changé|It is not your turn, or the table has changed
+Chaque tour dure deux minutes. Après ce délai, l’adversaire peut réclamer la victoire. Après 200 tirs, la partie est nulle et seuls les paris sont remboursés. Les frais d’entrée restent au serveur. L’ordinateur joue sans pari.|Each turn lasts two minutes. After that, the opponent may claim a win on time. After 200 shots, the match is drawn and only wagers are refunded. The server keeps entry fees. Computer matches have no wagers.
+Comment jouer au billard|How to play pool
+Confirmer l’abandon|Confirm forfeit
+Continuer la partie|Continue playing
+Contre l’ordinateur|Play the computer
+Couper le son|Mute sound
+crédits d’entrée|entry credits
+crédits de pari · Pot :|wager credits · Pot:
+crédits.|credits.
+Direction|Direction
+Direction ou puissance invalide|Invalid direction or power
+Empochez une bille pour choisir votre groupe.|Pocket a ball to claim your group.
+Entrée : 10 000 · Pari :|Entry: 10,000 · Wager:
+Entrée : 10 000 crédits par joueur. Pari facultatif entre joueurs.|Entry: 10,000 credits per player. Optional wagers between players.
+Entrée et pari de billard|Pool entry and wager
+Entrez dans le salon.|Step into the lounge.
+Envoyer l’invitation|Send invitation
+Faute : la main passe à l’adversaire, qui peut replacer la bille blanche.|Foul: play passes to your opponent, who may reposition the cue ball.
+Fin du tour :|Turn ends:
+Gain au billard|Pool winnings
+Invitation indisponible|Invitation unavailable
+Invitation ou mise invalide|Invalid invitation or wager
+Invitations de billard|Pool invitations
+Inviter un joueur|Invite a player
+L’administration vous a offert ce titre. Il est disponible dans votre collection.|An administrator has gifted you this title. It is now in your collection.
+L’entrée revient au serveur. Le gagnant reçoit la totalité des paris. Une invitation n’est débitée que lorsqu’elle est acceptée.|The server receives the entry fee. The winner receives the full wager pot. An invitation is only charged when accepted.
+L’ordinateur|The computer
+L’ordinateur prépare son tir…|The computer is lining up a shot…
+La bille tourne…|The ball is spinning…
+La première bille touchée doit appartenir à votre groupe (ou être la noire si votre groupe est terminé). Sans bille empochée, une bille doit toucher une bande après le premier contact. Toucher la mauvaise bille, ne rien toucher ou empocher la blanche est une faute : l’adversaire peut replacer la blanche. Empocher la noire trop tôt ou avec une faute fait perdre. À la casse, la noire est remise sur la table. Cette version utilise des règles simplifiées, sans poche annoncée ni effets latéraux.|The first ball you hit must be from your group (or the 8-ball once your group is cleared). If no ball is pocketed, a ball must reach a cushion after first contact. Hitting the wrong ball, missing all balls or pocketing the cue ball is a foul: your opponent may reposition the cue ball. Pocketing the 8-ball too early or on a foul loses the game. On the break, a pocketed 8-ball is respotted. This version uses simplified rules, without called pockets or sidespin.
+LE CASINO DU CERCLE|THE CIRCLE CASINO
+LE CERCLE|THE CIRCLE
+Le délai du tour n’est pas écoulé|The turn timer has not expired
+LE SALON DU HUIT|THE EIGHT-BALL LOUNGE
+LUCKY CROWN|LUCKY CROWN
+Montant net reçu|Net amount received
+Nouvelle partie|New game
+Numéro de facture|Receipt number
+Ouvrir la facture complète|Open full receipt
+Pari de billard remboursé|Pool wager refunded
+Pari par joueur (facultatif)|Wager per player (optional)
+Partie de billard introuvable|Pool match not found
+Partie déjà terminée|Match already finished
+Partie en cours…|Game in progress…
+Partie nulle|Drawn game
+Payer 10 000 et jouer|Pay 10,000 and play
+Placer la bille blanche|Position the cue ball
+Placez la bille blanche dans une zone libre de la table|Place the cue ball in a clear area of the table
+Pot :|Pot:
+Puissance|Power
+Puissance du tir|Shot power
+Réclamer la victoire par délai|Claim a win on time
+Roulette européenne avec bille|European roulette wheel and ball
+Table de billard à six poches|Six-pocket pool table
+Table ouverte|Open table
+Terminez ou annulez votre partie de billard actuelle|Finish or cancel your current pool match
+Touchez un emplacement libre|Tap a clear spot
+Un des joueurs a déjà une partie en cours|One of the players already has an active match
+Un titre vous a été offert|You have received a title
+Une table. Votre précision.|One table. Your precision.
+Vente confirmée : votre facture|Sale confirmed: your receipt
+Visez sur la table, réglez la puissance avec la queue à droite, puis tirez. Un curseur de direction permet aussi de viser au clavier. Empochez les sept billes de votre groupe, puis la noire numéro 8 pour gagner. Une bille de votre groupe empochée sans faute vous permet de rejouer.|Aim on the table, set your power with the cue control on the right, then shoot. The direction slider also supports keyboard aiming. Pocket all seven balls in your group, then the black 8-ball to win. Pocketing one of your balls without a foul earns another turn.
+Visez. Dosez. Empochez.|Aim. Strike. Pocket.
+Voir ma collection|View my collection
+Vos billes : les pleines (1 à 7).|Your balls: solids (1–7).
+Vos billes : les rayées (9 à 15).|Your balls: stripes (9–15).
+Vos messages, récompenses et factures, au même endroit.|Your messages, rewards and receipts, all in one place.
+Votre achat a été validé et les objets ont été livrés.|Your purchase is complete and your items have been delivered.
+Votre adversaire a gagné.|Your opponent won.
+Votre vente a été finalisée et le paiement a été crédité.|Your sale is complete and your payment has been credited.
+Vous avez gagné !|You won!
+
+Tapis de mise|Betting layout
+
+Invitation de billard|Pool invitation
+vous invite à une partie de billard.|has invited you to a game of pool.
+Total à payer à l’acceptation :|Total due on acceptance:
+Voir l’invitation au casino|View invitation in the casino
+Comment jouer|How to play
+Coffre mythique|Mythic chest
