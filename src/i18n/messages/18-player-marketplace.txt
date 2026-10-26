@@ -1,0 +1,222 @@
+← Retour au marché des joueurs|← Back to the player marketplace
+100 annonces actives maximum|Maximum 100 active listings
+Achat au marché des joueurs|Player marketplace purchase
+Achat non confirmé. Vérifiez le nouveau prix et le stock.|Purchase not confirmed. Check the updated price and stock.
+Achat réussi !|Purchase successful!
+Achats|Purchases
+Achats et ventes|Purchases and sales
+Acheteur|Buyer
+Acheteur :|Buyer:
+Ajustement financier lié à la commande|Financial adjustment linked to the order
+Ajustements administratifs|Administrator adjustments
+ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY|ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY
+Annonce indisponible|Listing unavailable
+Annonces|Listings
+Annonces actives|Active listings
+Au · UTC|To · UTC
+Aucun avis pour ces critères.|No reviews match these criteria.
+Aucun avis pour le moment.|No reviews yet.
+Aucune annonce pour ces critères.|No listings match these criteria.
+Aucune boutique suspendue.|No suspended shops.
+Aucune commande pour ces critères.|No orders match these criteria.
+Aucune réclamation pour ces critères.|No claims match these criteria.
+Autre problème|Other issue
+Autres objets|More items
+avis|reviews
+Avis de l’acheteur|Buyer review
+Avis des acheteurs|Buyer reviews
+Avis introuvable|Review not found
+Avis invalide : note de 1 à 5 et 1 000 caractères maximum|Invalid review: rating from 1 to 5 and up to 1,000 characters
+Avis masqué|Hidden review
+Avis masqué par la modération|Review hidden by moderation
+Avis public|Public review
+Besoin d’aide ? Ouvrez un ticket avec votre numéro de commande.|Need help? Open a ticket with your order number.
+BM-|BM-
+Boutique :|Shop:
+BOUTIQUE DE JOUEUR|PLAYER SHOP
+Boutique introuvable|Shop not found
+Boutiques suspendues|Suspended shops
+Cet ajustement débite ou crédite le joueur sélectionné. Il ne transfère pas les objets et ne modifie pas les montants du reçu initial.|This adjustment debits or credits the selected player. It does not transfer items or change the amounts on the original receipt.
+Cette boutique est suspendue.|This shop is suspended.
+Cette commande possède déjà un avis|This order already has a review
+Chargement de vos objets…|Loading your items…
+Chargement des annonces…|Loading listings…
+Chargement des commandes…|Loading orders…
+Chargement du reçu…|Loading receipt…
+Choisir une page|Choose a page
+Choisissez 1 à 100 objets|Choose 1 to 100 items
+Choisissez des objets identiques pour ce lot|Choose identical items for this bundle
+Choisissez vos vrais objets. Ils seront réservés sur les deux marchés jusqu’à leur vente ou au retrait de l’annonce.|Choose your actual items. They will be reserved across both markets until sold or until the listing is withdrawn.
+Clôturée|Closed
+Clôturer la réclamation|Close claim
+Commande|Order
+Commande :|Order:
+Commande enregistrée.|Order saved.
+Commande introuvable|Order not found
+Commandes et reçus|Orders and receipts
+Commandes et reçus.|Orders and receipts.
+Commandes terminées|Completed orders
+Commission arrondie au crédit supérieur. Aucun avantage ne la réduit.|Commission is rounded up to the next credit. No perk reduces it.
+Commission déduite du vendeur|Commission deducted from seller
+Commission fixe · 10 %|Fixed commission · 10%
+Commission fixe de 10 %|Fixed 10% commission
+Commission fixe de 10 % · aucune carte requise|Fixed 10% commission · no card required
+Commission fixe de 10 % pour tous les joueurs. Les règles du Marché Noir restent indépendantes.|Fixed 10% commission for every player. Black Market rules remain independent.
+Commission fixe de 10 %, déduite du prix du vendeur. Aucun avantage ne la réduit.|Fixed 10% commission, deducted from the seller's price. No perk reduces it.
+Commissions collectées|Commission collected
+Confirmer et payer|Confirm and pay
+Confirmer l’ajustement|Confirm adjustment
+Confirmer la mise en vente|Confirm listing
+Confirmer le retrait|Confirm withdrawal
+Confirmer un achat en crédits|Confirm a credit purchase
+Consulter la commande et les preuves|View order and evidence
+Copie indisponible. Sélectionnez le numéro de commande.|Copy unavailable. Select the order number.
+Copier le numéro|Copy number
+Correction de commande|Order correction
+Correction invalide|Invalid correction
+crédits / objet|credits / item
+Crédits du casino|Casino credits
+Créer une annonce|Create a listing
+Créer une annonce en crédits.|Create a credit listing.
+currentColor|currentColor
+Date de la commande|Order date
+Détails de la commande|Order details
+Diamants du casino|Casino diamonds
+Du · UTC|From · UTC
+Échange direct|Direct trade
+Effectuer un ajustement financier|Make a financial adjustment
+ELCASINO|ELCASINO
+ELCASINO · REÇU VIRTUEL|ELCASINO · VIRTUAL RECEIPT
+En vente|For sale
+Enregistrer le prix|Save price
+Envoyer au support|Send to support
+Envoyer la réclamation|Submit claim
+Évaluer le vendeur|Rate seller
+exemplaire(s) ·|copy/copies ·
+Expliquez le problème|Explain the problem
+Explorer le marché|Explore marketplace
+Frais payés par l’acheteur|Fees paid by buyer
+Gestion du marché des joueurs.|Player marketplace management.
+Joueur concerné|Player concerned
+La justification commune sera visible dans l’historique des ajustements.|The shared reason will be visible in the adjustment history.
+LE COMMERCE ENTRE COLLECTIONNEURS|TRADING BETWEEN COLLECTORS
+LE MARCHÉ COMMUNAUTAIRE EN CRÉDITS|THE COMMUNITY CREDIT MARKETPLACE
+Le marché des joueurs.|The player marketplace.
+Le ticket sera lié à votre numéro de commande. Retrouvez les réponses dans les paramètres.|The ticket will be linked to your order number. Find replies in settings.
+Le vendeur reçoit|Seller receives
+Les deux marchés|Both markets
+Les objets proposés par les joueurs apparaîtront ici.|Items listed by players will appear here.
+Lot de coffres|Chest bundle
+Lot de crédits|Credit bundle
+Ma boutique|My shop
+Marché|Marketplace
+Marché des joueurs|Player marketplace
+Masquer l’avis|Hide review
+Mauvais objet|Wrong item
+Meilleures ventes|Best sellers
+Merci de faire vivre le commerce du cercle.|Thank you for trading in the circle.
+Merci pour votre achat !|Thank you for your purchase!
+Mettre en vente|Sell an item
+MK-|MK-
+Mode de paiement|Payment method
+Modération des avis|Review moderation
+Modifier le prix|Change price
+Montant signé|Signed amount
+Motif :|Reason:
+Motif de réclamation|Claim reason
+Net par objet :|Net per item:
+Note sur 5|Rating out of 5
+NotoSans|NotoSans
+NotoSans-Regular.ttf|NotoSans-Regular.ttf
+Nouveau prix par objet|New price per item
+Numéro copié|Number copied
+Numéro de commande ou pseudo…|Order number or username…
+Objet non reçu|Item not received
+Objets vendus|Sold items
+Ouvrir le ticket|Open ticket
+Ouvrir mon inventaire|Open my inventory
+Pagination du marché|Marketplace pagination
+Paiement en crédits uniquement. Vos objets sont transférés avec le paiement, et votre reçu est enregistré automatiquement.|Payment in credits only. Your items transfer with the payment, and your receipt is saved automatically.
+Plus anciennes|Oldest first
+Police du reçu indisponible|Receipt font unavailable
+Précisez le motif et votre réclamation|Provide a reason and describe your claim
+Préparation du PDF…|Preparing PDF…
+Preuves de la transaction|Transaction evidence
+Prix croissant|Price: low to high
+Prix décroissant|Price: high to low
+Prix en crédits invalide|Invalid credit price
+Prix maximum|Maximum price
+Prix minimum|Minimum price
+Prix par objet en crédits|Price per item in credits
+Prix payé par l’acheteur|Price paid by buyer
+Prix unitaire|Unit price
+Problème de paiement|Payment issue
+Pseudo, numéro de commande, commentaire…|Username, order number, comment…
+Publier mon avis|Publish my review
+Quantité à proposer|Quantity to list
+Réactiver la boutique|Reactivate shop
+Rechercher dans la gestion du marché|Search marketplace management
+Rechercher un objet ou un vendeur|Search for an item or seller
+Rechercher une commande|Search orders
+Réclamation clôturée|Claim closed
+Réclamation en cours|Claim in progress
+Réclamation introuvable|Claim not found
+Réclamation vendeur|Seller complaint
+Réclamations|Claims
+Réclamations liées|Linked claims
+Reçu d’achat virtuel|Virtual purchase receipt
+Reçu virtuel du casino|Virtual casino receipt
+Reçu virtuel du jeu, sans valeur fiscale et sans paiement réel.|Virtual game receipt, with no tax value or real payment.
+Reçus virtuels du jeu, sans valeur fiscale et sans paiement réel.|Virtual game receipts, with no tax value or real payment.
+Rétablir l’avis|Restore review
+Retirer l’annonce|Withdraw listing
+REVOKE ALL ON public.%I FROM PUBLIC,anon,authenticated|REVOKE ALL ON public.%I FROM PUBLIC,anon,authenticated
+Rubriques du marché communautaire|Community marketplace sections
+Seul l’acheteur peut évaluer cette vente|Only the buyer can review this sale
+Signalement de boutique|Shop report
+Signalement envoyé au support.|Report sent to support.
+Signaler la boutique|Report shop
+Signaler un problème|Report an issue
+Signaler un problème de commande|Report an order issue
+Statut de la commande|Order status
+Suspendre la boutique|Suspend shop
+Télécharger le reçu PDF|Download PDF receipt
+Ticket #|Ticket #
+Titre, coffre ou pseudo…|Title, chest or username…
+Total payé|Total paid
+Tous les objets|All items
+Tous les statuts|All statuses
+Tous vos achats et vos ventes des deux marchés. Des reçus virtuels conservés dans le temps.|All your purchases and sales across both markets. Virtual receipts kept over time.
+Toutes les commandes|All orders
+Trier les annonces|Sort listings
+Un seul avis par commande. Votre avis ne pourra pas être modifié après publication.|One review per order. Your review cannot be changed after publication.
+Une réclamation est requise avant correction|A claim is required before making a correction
+UNE TRANSACTION ENTRE JOUEURS|A TRANSACTION BETWEEN PLAYERS
+Vendeur|Seller
+Vendeurs|Sellers
+Vendeurs les mieux notés|Highest-rated sellers
+Vendu|Sold
+Vente au marché des joueurs|Player marketplace sale
+Ventes|Sales
+ventes réalisées|completed sales
+Vérifier l’ajustement|Review adjustment
+Vérifiez vos objets, votre prix et les frais avant de publier.|Review your items, price and fees before publishing.
+Voir et acheter|View and buy
+Voir le reçu|View receipt
+Volume en crédits|Credit volume
+Vos objets sont disponibles dans votre inventaire.|Your items are available in your inventory.
+Vos reçus apparaissent automatiquement après un achat ou une vente.|Your receipts appear automatically after a purchase or sale.
+Vos titres, vos coffres, vos prix. Échangez avec le cercle en crédits classiques.|Your titles, your chests, your prices. Trade with the circle using regular credits.
+VOS TRANSACTIONS, UNE SEULE ADRESSE|YOUR TRANSACTIONS, ONE DESTINATION
+Votre avis a été publié.|Your review has been published.
+Votre avis sur cette commande|Your review of this order
+Votre boutique est suspendue|Your shop is suspended
+Votre commentaire|Your comment
+VOTRE INVENTAIRE DEVIENT VOTRE VITRINE|YOUR INVENTORY BECOMES YOUR SHOP WINDOW
+Votre réclamation a été transmise au support.|Your claim has been sent to support.
+Vous ne pouvez pas acheter votre propre annonce|You cannot buy your own listing
+Vous ne pouvez pas suspendre votre propre boutique|You cannot suspend your own shop
+YYYY|YYYY
+
+Objet donné en échange|Item given in exchange
+Commande terminée|Completed

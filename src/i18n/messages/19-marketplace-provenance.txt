@@ -1,0 +1,98 @@
+. Chaque achat et transfert ajoute une trace à cet exemplaire.|. Every purchase and transfer adds a record to this copy.
+Ajouté pour|Added for
+Aucun diamant supplémentaire autorisé pour le moment.|No additional diamonds are allowed right now.
+Boutique du casino|Casino shop
+Calcul du maximum…|Calculating maximum…
+Catalogue incomplet|Incomplete catalogue
+Ce stock a déjà été initialisé. Aucun objet ajouté.|This stock has already been initialized. No items were added.
+Chargement de la provenance…|Loading provenance…
+Choisir un exemplaire|Choose a copy
+Coffre conservé dans l’inventaire|Chest kept in inventory
+Coffre introuvable|Chest not found
+Coffre ouvert|Opened chest
+Confirmer l’initialisation du stock|Confirm stock initialization
+Confirmez l’ajout de ce stock. Aucun achat, avis ou paiement passé ne sera généré.|Confirm adding this stock. No past purchases, reviews or payments will be generated.
+Copie indisponible. Sélectionnez la signature.|Copy unavailable. Select the signature.
+Copier la signature|Copy signature
+Création du coffre|Chest creation
+crédits par objet|credits per item
+Créé le|Created on
+Depuis|From
+Derniers mouvements|Latest movements
+diamant(s). Vérifiez puis confirmez l’achat.|diamond(s). Review and then confirm the purchase.
+Échange entre joueurs|Player trade
+Identifiant unique de l’exemplaire|Unique copy identifier
+Initialisation unique : 50 boutiques, 600 annonces de titres et 150 lots de coffres. Les objets sont réservés, les ventes réelles paient les vendeurs, et les stocks ne sont pas recréés après épuisement.|One-time initialization: 50 shops, 600 title listings and 150 chest bundles. Items are reserved, actual sales pay sellers, and stock is not recreated when sold out.
+Initialiser les vendeurs et leurs stocks|Initialize sellers and their stock
+INSERT|INSERT
+La signature du coffre.|The chest's signature.
+Les boutiques et leurs stocks ont été créés.|The shops and their stock have been created.
+Maximum autorisé|Maximum allowed
+Maximum calculé :|Calculated maximum:
+Mouvements plus anciens|Older movements
+objets · remise %|items · discount %
+Paliers croissants, remise de 1 à 5 % maximum|Increasing tiers, with a maximum discount of 1 to 5%
+Paliers de remise invalides|Invalid discount tiers
+Pas encore d’avis|No reviews yet
+Prix entre 96 % et 99 % du catalogue lorsqu’il existe ; estimation par rareté pour les titres sans prix officiel. Remises de quantité limitées à 3 % sur ces lots.|Prices are 96% to 99% of catalogue prices where available; rarity-based estimates for titles without official prices. Quantity discounts are capped at 3% on these bundles.
+Proposer de petites remises par quantité|Offer small quantity discounts
+Provenance enregistrée|Recorded provenance
+Remise de quantité : −|Quantity discount: −
+Remises croissantes, jusqu’à 5 % maximum.|Increasing discounts, up to a maximum of 5%.
+Remises par quantité|Quantity discounts
+Signature copiée.|Signature copied.
+Signature et provenance|Signature and provenance
+Signature et provenance du coffre|Chest signature and provenance
+Stock des vendeurs gérés par le jeu|Stock from game-managed sellers
+Transféré à|Transferred to
+UN EXEMPLAIRE, UNE HISTOIRE|ONE COPY, ONE STORY
+Voir la signature des exemplaires|View copy signatures
+
+Aerith|Aerith
+Aether|Aether
+Alaris|Alaris
+Astral|Astral
+Briar|Briar
+Cairn|Cairn
+Cinder|Cinder
+Cove|Cove
+Dusk|Dusk
+Echo|Echo
+Eldric|Eldric
+Eon|Eon
+Esker|Esker
+Fable|Fable
+Fennec|Fennec
+Flint|Flint
+Frost|Frost
+Haze|Haze
+Kairo|Kairo
+Kestrel|Kestrel
+Lucent|Lucent
+Lumen|Lumen
+Morrow|Morrow
+Nacre|Nacre
+Nox|Nox
+Nyx|Nyx
+Onyx|Onyx
+Oriel|Oriel
+Riven|Riven
+Rook|Rook
+Rune|Rune
+Sable|Sable
+Serein|Serein
+Silvan|Silvan
+Solace|Solace
+Sonder|Sonder
+Talon|Talon
+Thorne|Thorne
+Umber|Umber
+Vale|Vale
+Vanta|Vanta
+Vex|Vex
+Vireo|Vireo
+Viridian|Viridian
+Wisp|Wisp
+Wren|Wren
+Zephyr|Zephyr
+Marchés et commandes|Markets and orders
