@@ -1,4 +1,5 @@
 import './casino.css';
+import './pool-upgrade.css';
 import {RouletteWheel,Coin,SlotMachine,redNumbers} from './CasinoVisuals';
 import {Pool} from './Pool';
 import {locale} from '../i18n/store';
