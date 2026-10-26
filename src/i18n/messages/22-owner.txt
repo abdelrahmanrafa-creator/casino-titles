@@ -1,0 +1,38 @@
+Accès propriétaire requis|Owner access required
+ALTER TABLE public.%I DROP CONSTRAINT %I|ALTER TABLE public.%I DROP CONSTRAINT %I
+AUTORITÉ DU CERCLE|CIRCLE AUTHORITY
+BEGIN|BEGIN
+Ce compte conservera son rôle administrateur, avec les plafonds ordinaires.|This account will keep administrator access with the ordinary limits.
+Ce compte pourra gérer tout le jeu et nommer d’autres propriétaires.|This account will be able to manage the entire game and appoint other owners.
+Ce montant ou cette quantité nécessite le rôle propriétaire|This amount or quantity requires the owner role
+coffre(s) restant(s) sur|chest(s) remaining out of
+Compte joueur|Player account
+Compte propriétaire connecté|Signed in as owner
+Confirmer la nomination|Confirm appointment
+Console propriétaire.|Owner console.
+Déjà propriétaire|Already an owner
+Des coffres vous attendent.|Chests are waiting for you.
+Donner toutes les permissions ?|Grant all permissions?
+Le dernier propriétaire doit être conservé|The last owner cannot be removed
+Les grandes récompenses sont conservées sans créer tous les coffres à la fois. Ajoutez-les à votre inventaire par lots de 100 maximum.|Large rewards are saved without creating every chest at once. Add them to your inventory in batches of up to 100.
+Les plafonds métier sont levés pour vos crédits, codes promo, quêtes, événements et statistiques. Les soldes restent exacts et non négatifs ; les limites techniques de stockage et de traitement restent nécessaires. Les grandes récompenses en coffres sont distribuées par lots.|Administrative limits are lifted for your credits, promo codes, quests, events and statistics. Balances remain exact and non-negative; technical storage and processing limits still apply. Large chest rewards are delivered in batches.
+Les propriétaires|Owners
+Modifier le rôle propriétaire|Change owner role
+Nommer un propriétaire|Appoint an owner
+Propriétaires|Owners
+Quantité de coffres invalide|Invalid chest quantity
+Rechercher un compte pour le rôle propriétaire|Find an account to appoint as owner
+Récompense introuvable|Reward not found
+Retirer le rôle propriétaire|Remove owner role
+Retirer le rôle propriétaire ?|Remove owner role?
+Retirez le rôle propriétaire avant de suspendre ce compte|Remove the owner role before suspending this account
+Rôle propriétaire mis à jour et audité.|Owner role updated and audited.
+Seul un propriétaire peut modifier ce compte|Only an owner can modify this account
+Seul un propriétaire peut nommer un autre propriétaire. Le dernier propriétaire ne peut pas être retiré.|Only an owner can appoint another owner. The last owner cannot be removed.
+Toutes les permissions administratives, sans les plafonds de récompenses des administrateurs ordinaires.|All administrative permissions, without ordinary administrators’ reward limits.
+Un compte joueur connecté est requis|A real player account with sign-in access is required
+Vérifié par le serveur|Verified by the server
+VOS RÉCOMPENSES SONT CONSERVÉES|YOUR REWARDS ARE SAVED
+ELSE (1000000000?)( END)|ELSE (1000000000?)( END)
+(100000000)::bigint|(100000000)::bigint
+(1000000000)::bigint|(1000000000)::bigint
