@@ -1,0 +1,29 @@
+· L’adversaire peut replacer la bille blanche.|· Your opponent may reposition the cue ball.
+Aide à la visée|Aim assistance
+Aucun coup direct dégagé. Essayez une bande ou ajustez votre visée.|No clear direct shot. Try a cushion or adjust your aim.
+Aucune bande après le contact|No cushion reached after contact
+Aucune bille touchée|No ball hit
+Bille blanche empochée|Cue ball pocketed
+Bille en main : placez la blanche sur une zone libre, ou utilisez l’aide à la visée.|Ball in hand: place the cue ball in a clear spot, or use aim assistance.
+Contact conseillé : visez une bande après le choc.|Suggested contact: aim for a cushion after impact.
+Difficile|Hard
+Difficulté de l’ordinateur|Computer difficulty
+Facile|Easy
+Faute|Foul
+Mauvaise bille touchée en premier|Wrong ball hit first
+Mode simple|Simple mode
+Niveau de billard invalide|Invalid pool difficulty
+Normal|Normal
+Options avancées|Advanced options
+Pour découvrir et s’entraîner|Learn and practise
+Précision, placement et effets|Accuracy, positioning and spin
+Tir en cours…|Taking the shot…
+Tirer la bille|Shoot
+Touchez la table pour viser, puis utilisez la queue à droite pour la puissance.|Touch the table to aim, then use the cue on the right to set power.
+Un adversaire équilibré|A balanced opponent
+Un geste, un tir.|Aim. Shoot. Play.
+Validation du coup…|Confirming the shot…
+Visée préparée : ajustez si besoin, puis tirez.|Aim is ready: adjust if needed, then shoot.
+Visez · Réglez la puissance · Tirez|Aim · Set power · Shoot
+Reprendre le tour de l’ordinateur|Retry the computer’s turn
+Le tour de l’ordinateur n’a pas été confirmé. Vérifiez votre connexion puis réessayez.|The computer’s turn was not confirmed. Check your connection and try again.

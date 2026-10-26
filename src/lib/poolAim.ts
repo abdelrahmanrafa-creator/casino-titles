@@ -1,6 +1,13 @@
 export type PoolPoint={x:number;y:number};
 export type PoolBall=PoolPoint&{n:number;out:boolean};
 export type PoolSpin={x:number;y:number};
+export function poolAnimationProgress(time:number,start:number,duration:number){return Math.max(0,Math.min(1,(time-start)/Math.max(1,duration)));}
+export function poolSegmentClear(balls:PoolBall[],from:PoolPoint,to:PoolPoint,ignored:number[]){const dx=to.x-from.x,dy=to.y-from.y,len=Math.max(1,dx*dx+dy*dy);return !balls.some(b=>{if(b.out||ignored.includes(b.n))return false;const t=Math.max(0,Math.min(1,((b.x-from.x)*dx+(b.y-from.y)*dy)/len));return Math.hypot(b.x-from.x-t*dx,b.y-from.y-t*dy)<23;});}
+export function poolSuggestedShot(balls:PoolBall[],white:PoolPoint,group:number){
+ const own=balls.filter(b=>!b.out&&(group===1?b.n>=1&&b.n<=7:group===2?b.n>=9&&b.n<=15:b.n!==0&&b.n!==8));const targets=own.length?own:balls.filter(b=>b.n===8&&!b.out);let best:{angle:number;power:number;target:number;pot:boolean;rank:number}|null=null;
+ for(const b of targets){for(const [x,y] of [[0,0],[500,0],[1000,0],[0,500],[500,500],[1000,500]]){const dx=x-b.x,dy=y-b.y,len=Math.hypot(dx,dy);if(len<1)continue;const ghost={x:b.x-dx/len*22,y:b.y-dy/len*22},distance=Math.hypot(ghost.x-white.x,ghost.y-white.y);if(distance<1||ghost.x<12||ghost.x>988||ghost.y<12||ghost.y>488)continue;const cut=((b.x-ghost.x)*(ghost.x-white.x)+(b.y-ghost.y)*(ghost.y-white.y))/(22*distance);if(cut<.2||!poolSegmentClear(balls,white,ghost,[0,b.n])||!poolSegmentClear(balls,b,{x,y},[0,b.n]))continue;const rank=distance+len/cut+200*(1-cut);if(!best||rank<best.rank)best={angle:Math.atan2(ghost.y-white.y,ghost.x-white.x),power:Math.round(Math.min(100,Math.max(20,(distance+len/Math.max(.35,cut))/10+10))),target:b.n,pot:true,rank};}}
+ if(best)return best;const breaking=group===0&&targets.length===14&&Math.max(...targets.map(b=>b.x))-Math.min(...targets.map(b=>b.x))<130&&Math.max(...targets.map(b=>b.y))-Math.min(...targets.map(b=>b.y))<130;for(const b of targets){const distance=Math.hypot(b.x-white.x,b.y-white.y);if(distance<1)continue;const ghost={x:b.x-(b.x-white.x)/distance*22,y:b.y-(b.y-white.y)/distance*22};if(!poolSegmentClear(balls,white,ghost,[0,b.n]))continue;if(!best||distance<best.rank)best={angle:Math.atan2(b.y-white.y,b.x-white.x),power:breaking?100:55,target:b.n,pot:false,rank:distance};}return best;
+}
 export function normalizeAngle(angle:number){return Math.atan2(Math.sin(angle),Math.cos(angle));}
 export function clampSpin(x:number,y:number):PoolSpin{const length=Math.hypot(x,y),scale=length>1?1/length:1;return{x:x*scale,y:y*scale};}
 export function cuePositionFree(balls:PoolBall[],p:PoolPoint){return p.x>=25&&p.x<=975&&p.y>=25&&p.y<=475&&!balls.some(b=>b.n!==0&&!b.out&&Math.hypot(b.x-p.x,b.y-p.y)<23);}
@@ -21,3 +28,5 @@ export function poolAimGuide(balls:PoolBall[],white:PoolPoint,angle:number,spin:
  }
  return guide;
 }
+
+export function poolCuePlayable(balls:PoolBall[],point:PoolPoint,inHand:boolean){return !inHand||cuePositionFree(balls,point);}
