@@ -1,0 +1,33 @@
+Arrêter la distribution|Stop distribution
+Bots uniquement|Bots only
+Choisissez un nombre de destinataires positif|Choose a positive number of recipients
+Choisissez un titre et le nombre de destinataires. Le serveur tire des comptes distincts, puis remet un exemplaire à chacun par lots de 100 maximum.|Choose a title and the number of recipients. The server randomly selects distinct accounts, then grants one copy each in batches of up to 100.
+comptes devenus inéligibles ont été ignorés.|accounts that became ineligible were skipped.
+comptes éligibles|eligible accounts
+comptes éligibles.|eligible accounts.
+comptes seront tirés au sort parmi|accounts will be randomly selected from
+Confirmer la distribution|Confirm distribution
+Confirmer la distribution aléatoire|Confirm random distribution
+Confirmer le cadeau ?|Confirm this gift?
+Destinataires|Recipients
+destinataires traités|recipients processed
+Distribuer un titre au hasard.|Give a title to random accounts.
+Distribution en pause.|Distribution paused.
+Distribution introuvable|Distribution not found
+Distribution terminée. Les titres sont dans les inventaires.|Distribution complete. The titles are in the recipients’ inventories.
+Exclure les comptes qui possèdent déjà ce titre|Exclude accounts that already own this title
+Fermer la page interrompt les lots suivants. Vous pourrez reprendre la distribution. L’arrêt conserve les titres déjà remis.|Closing the page stops subsequent batches. You can resume the distribution. Stopping preserves titles already delivered.
+Joueurs et bots|Players and bots
+Joueurs uniquement|Players only
+Les comptes suspendus et les bots archivés sont exclus. Les bots ne reçoivent jamais de titre cosmique. Une même personne n’est sélectionnée qu’une fois par distribution. Les droits sont contrôlés par le serveur.|Suspended accounts and archived bots are excluded. Bots never receive Cosmic titles. Each account is selected only once per distribution. Permissions are checked by the server.
+Nom du titre…|Title name…
+Nombre de destinataires|Number of recipients
+Pas assez de destinataires éligibles pour cette sélection|Not enough eligible recipients for this selection
+Préparer la distribution|Prepare distribution
+Progression de la distribution|Distribution progress
+Rechercher le titre|Find a title
+Sélection de distribution invalide|Invalid distribution selection
+Titre à distribuer|Title to distribute
+titres remis ·|titles delivered ·
+UN CADEAU, UN TIRAGE AU SORT|A GIFT, A RANDOM DRAW
+Un exemplaire du titre par compte. Aucune modification des crédits.|One copy of the title per account. Credits are unchanged.

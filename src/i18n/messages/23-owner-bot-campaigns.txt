@@ -1,0 +1,82 @@
+\mBEGIN\M|\mBEGIN\M
+1 second|1 second
+Action du propriétaire|Owner action
+Action du propriétaire :|Owner action:
+Adam|Adam
+Aero|Aero
+Aiden|Aiden
+Arlo|Arlo
+Arrêtée|Stopped
+Arrêter la campagne|Stop campaign
+Asher|Asher
+Aucun plafond total de bots pour le propriétaire. Chaque requête crée au plus 25 bots compacts et 1 000 titres uniques, avec une pause entre les lots.|Owners have no total bot cap. Each request creates up to 25 compact bots and 1,000 unique titles, with a pause between batches.
+Aucun plafond total de bots pour le propriétaire. Les créations restent compactes et le contrôle de stockage reste actif.|Owners have no total bot cap. Creation remains compact and storage checks stay active.
+Caleb|Caleb
+Campagne en pause. Les bots déjà créés sont conservés.|Campaign paused. Previously created bots are preserved.
+Campagne introuvable ou action invalide|Campaign not found or invalid action
+Campagne propriétaire · création progressive|Owner campaign · gradual creation
+Campagne terminée. Tous les bots sont créés.|Campaign complete. All bots have been created.
+Cole|Cole
+CRÉATION PROGRESSIVE · PROPRIÉTAIRE|GRADUAL CREATION · OWNER
+Créer la campagne ·|Create campaign ·
+Damon|Damon
+Dylan|Dylan
+Elliot|Elliot
+En pause|Paused
+Ethan|Ethan
+Evan|Evan
+Ezra|Ezra
+Felix|Felix
+Finn|Finn
+Fynn|Fynn
+Hugo|Hugo
+Impossible de générer un pseudo libre|Unable to generate an available username
+Isaac|Isaac
+Jasper|Jasper
+Jude|Jude
+Kai|Kai
+Kova|Kova
+Kyro|Kyro
+La campagne utilise les réglages de simulation ci-dessous et les proportions de rareté. Les pseudos sont générés au fil des lots avec des suffixes numériques. Aucun formulaire géant ni historique par partie. Fermer cette page arrête le traitement ; vous pourrez reprendre la campagne sans doublons.|The campaign uses the simulation settings and rarity proportions below. Usernames are generated batch by batch with numeric suffixes. There is no giant form or per-game history. Closing this page stops processing; you can resume without duplicates.
+Le seuil prudent de 350 Mo reste vérifié avant chaque lot. En cas de stockage insuffisant ou de configuration indisponible, la campagne est mise en pause sans perdre sa progression.|The precautionary 350 MB threshold is checked before every batch. If storage or configuration becomes unavailable, the campaign pauses without losing progress.
+Levi|Levi
+Lewis|Lewis
+Lex|Lex
+Liam|Liam
+Logan|Logan
+Luca|Luca
+Mason|Mason
+Mettre en pause|Pause
+Miles|Miles
+Mode propriétaire · campagnes progressives|Owner mode · gradual campaigns
+Mots anglais avec suffixe|English words with a suffix
+Nero|Nero
+Nix|Nix
+Noah|Noah
+Nolan|Nolan
+Nombre total souhaité|Desired total
+Nyro|Nyro
+Oscar|Oscar
+Owen|Owen
+Prête à reprendre|Ready to resume
+Progression de la campagne de bots|Bot campaign progress
+Quantité et répartition de campagne invalides|Invalid campaign quantity or rarity allocation
+Racines de pseudos invalides|Invalid username roots
+Raze|Raze
+Reid|Reid
+Reprendre|Resume
+Rhys|Rhys
+Riko|Riko
+Ronan|Ronan
+Ryn|Ryn
+Shane|Shane
+Silas|Silas
+Style des pseudos|Username style
+Theo|Theo
+Un grand nombre, de petits lots.|Big numbers, small batches.
+Vaze|Vaze
+Vexo|Vexo
+Viro|Viro
+Vyn|Vyn
+Zeno|Zeno
+Zyra|Zyra
