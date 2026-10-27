@@ -13,10 +13,10 @@ export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplet
    if(!guestNonce.current){try{guestNonce.current=sessionStorage.getItem('ct:guest-attempt')??'';}catch{}if(!guestNonce.current)guestNonce.current=(crypto.randomUUID()+crypto.randomUUID()).replaceAll('-','');try{sessionStorage.setItem('ct:guest-attempt',guestNonce.current);}catch{}}
    const result=await accountRequest<{session:{access_token:string;refresh_token:string};profile:Profile}>({action:'guest',username:username.trim(),nonce:guestNonce.current});const {error}=await supabase.auth.setSession(result.session);if(error)throw error;try{sessionStorage.removeItem('ct:guest-attempt');}catch{}await onComplete(result.profile);
   }else if(mode==='reset'){
-   const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:`${location.origin}/settings`});if(error)throw error;
+   const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:`${(import.meta.env.MODE==='native'?'https://casino-titles-cercle.sassyjay19.chatgpt.site':location.origin)}/settings`});if(error)throw error;
    setMessage('Si ce compte existe, un lien de récupération a été envoyé.');
   }else if(mode==='signup'){
-   const {error}=await supabase.auth.signUp({email,password,options:{emailRedirectTo:location.origin}});if(error)throw error;
+   const {error}=await supabase.auth.signUp({email,password,options:{emailRedirectTo:(import.meta.env.MODE==='native'?'https://casino-titles-cercle.sassyjay19.chatgpt.site':location.origin)}});if(error)throw error;
    setMessage('Confirmez votre adresse e-mail pour rejoindre le cercle.');setPassword('');
   }else{const {error}=await supabase.auth.signInWithPassword({email,password});if(error)throw error;setPassword('');}
  }catch(error){setMessage((error as Error).message);}finally{setBusy(false);}}

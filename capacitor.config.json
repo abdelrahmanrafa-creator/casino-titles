@@ -1,0 +1,21 @@
+{
+  "appId": "com.casinotitles.app",
+  "appName": "Casino & Titles",
+  "webDir": "dist-native",
+  "backgroundColor": "#0d0b14",
+  "loggingBehavior": "none",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#0d0b14",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0d0b14"
+    },
+    "Keyboard": {
+      "resize": "body"
+    }
+  }
+}

@@ -8,3 +8,5 @@ try {document.documentElement.dataset.reducedMotion=String(localStorage.getItem(
 document.documentElement.lang=getLanguage();
 const client=new QueryClient({defaultOptions:{queries:{staleTime:15000,retry:1,refetchOnWindowFocus:true},mutations:{retry:false}}});
 createRoot(document.getElementById('root')!).render(<QueryClientProvider client={client}><BrowserRouter><App/></BrowserRouter></QueryClientProvider>);
+
+if(import.meta.env.MODE==='native')void import('./lib/native').then(m=>m.initializeNative());

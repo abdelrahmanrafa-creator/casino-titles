@@ -8,3 +8,16 @@ artifacts/
 .admin-*.local.*
 .openai/*.local.*
 supabase/.temp/
+
+dist-native/
+release/
+.native-tools/
+android/.gradle/
+android/local.properties
+android/**/build/
+ios/App/Pods/
+ios/DerivedData/
+*.keystore
+*.jks
+*.p12
+*.mobileprovision

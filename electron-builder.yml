@@ -1,0 +1,26 @@
+appId: com.casinotitles.app
+productName: Casino & Titles
+directories:
+  output: release/windows
+files:
+  - desktop/main.cjs
+  - dist-native/**/*
+  - assets/icon.png
+  - package.json
+  - "!node_modules/**/*"
+extraMetadata:
+  main: desktop/main.cjs
+asar: true
+npmRebuild: false
+win:
+  icon: assets/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: Casino-Titles-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true

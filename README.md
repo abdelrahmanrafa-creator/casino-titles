@@ -140,3 +140,7 @@ L’admin peut réinitialiser le compteur du jour, de la semaine ou les deux, ap
 Le solde de diamants affiche son équivalent fictif en euros sous le montant dans le marché et la boutique de diamants, au taux effectif de la carte. Le calcul et l’arrondi au centime utilisent des entiers de précision arbitraire côté navigateur, y compris pour les très grands soldes. Il s’agit d’une valorisation de démonstration, sans retrait en argent réel.
 
 Un membre disposant déjà d’une carte active peut utiliser un code personnalisé depuis Marché noir → Activer une carte personnalisée avec un code, après confirmation du remplacement. L’inventaire, les soldes, les achats et les points de départ des compteurs sont conservés. Un code standard ne remplace pas une carte existante et aucun code ne permet de contourner sa suspension.
+
+## Applications Windows, Android et iOS
+
+Le guide complet de compilation et d’installation est dans [docs/APPLICATIONS.md](docs/APPLICATIONS.md). Le site et les applications utilisent la même interface et le même Supabase.
