@@ -1,0 +1,13 @@
+Application et mises à jour|App and updates
+Installer la mise à jour|Install update
+La vérification est indisponible. Réessayez lorsque vous êtes connecté.|Updates cannot be checked right now. Try again when you are online.
+Le code n’a pas pu être utilisé. Vérifiez le code et ses conditions, ou réessayez.|The code could not be redeemed. Check the code and its conditions, or try again.
+Le téléchargement est automatique. La mise à jour sera installée à la fermeture de l’application, après le téléchargement. Terminez votre partie avant de quitter.|The download is automatic. The update will be installed when you close the app, once the download is complete. Finish your game before quitting.
+Les mises à jour sont vérifiées au démarrage.|Updates are checked when the app starts.
+Téléchargez le nouvel APK et confirmez son installation pour conserver votre compte sur cette application.|Download the new APK and confirm its installation to keep your account in this app.
+Une mise à jour est disponible.|An update is available.
+Vérification des mises à jour…|Checking for updates…
+Vérifier les mises à jour|Check for updates
+Version installée :|Installed version:
+Votre application est à jour.|Your app is up to date.
+Les mises à jour iPhone sont distribuées via Apple.|iPhone updates are distributed through Apple.

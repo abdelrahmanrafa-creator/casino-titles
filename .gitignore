@@ -21,3 +21,5 @@ ios/DerivedData/
 *.jks
 *.p12
 *.mobileprovision
+
+desktop/main.bundle.cjs

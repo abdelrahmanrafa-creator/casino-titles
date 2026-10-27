@@ -3,13 +3,13 @@ productName: Casino & Titles
 directories:
   output: release/windows
 files:
-  - desktop/main.cjs
+  - desktop/main.bundle.cjs
   - dist-native/**/*
   - assets/icon.png
   - package.json
   - "!node_modules/**/*"
 extraMetadata:
-  main: desktop/main.cjs
+  main: desktop/main.bundle.cjs
 asar: true
 npmRebuild: false
 win:
@@ -24,3 +24,9 @@ nsis:
   perMachine: false
   createDesktopShortcut: true
   createStartMenuShortcut: true
+
+publish:
+  - provider: github
+    owner: abdelrahmanrafa-creator
+    repo: casino-titles
+    releaseType: release

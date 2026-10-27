@@ -112,7 +112,7 @@ npm run app:windows
 npm run app:android
 ```
 
-Sur le Mac, refaire `npm run app:ios`. Le contenu serveur (soldes, annonces, titres attribués) se met à jour en ligne ; une modification du code de l’interface nécessite de reconstruire et redistribuer les applications. Il n’y a pas de mise à jour automatique silencieuse du binaire.
+Sur le Mac, refaire `npm run app:ios`. Le contenu serveur (soldes, annonces, titres attribués) se met à jour en ligne ; une modification du code de l’interface nécessite de reconstruire et redistribuer les applications. À partir de la version 0.4.0, Windows télécharge les nouvelles versions en arrière-plan et les installe à la fermeture de l’application. Android affiche une proposition de mise à jour avec installation confirmée par le système.
 
 Avant une diffusion suivante, augmenter `package.json` version, Android `versionCode`/`versionName` et iOS `CURRENT_PROJECT_VERSION`/`MARKETING_VERSION` dans Xcode. Garder les identifiants et clés de signature pour installer par-dessus l’ancienne version et conserver les sessions.
 
@@ -127,7 +127,7 @@ La publication du site conserve sa commande `npm run build` et son dossier `dist
 
 ## Vérifications effectuées sur ce PC
 
-- 333 tests réussis, dont les tests de roulement, de traduction des téléchargements et de protection des applications.
+- 341 tests fonctionnels réussis, plus les tests du mécanisme de mise à jour, dont les tests de roulement, de traduction des téléchargements et de protection des applications.
 - Compilation TypeScript, contrôle FR/EN et compilation web réussis.
 - Installateur NSIS Windows x64 produit ; lancement de l’interface locale, accueil et menu vérifiés dans Electron. Aucun compte de production modifié pour tester.
 - APK Android compilé avec succès, signature APK v2 vérifiée avec apksigner ; Android API 24 minimum / cible 36.
@@ -137,4 +137,8 @@ La publication du site conserve sa commande `npm run build` et son dossier `dist
 
 ## Publier les installateurs sur le site
 
-La page `/download` et le bloc de l’accueil utilisent les fichiers publics de la release GitHub `v0.4.0`. Les installateurs ne sont pas placés dans `dist` ni dans Supabase. Pour une prochaine version : augmenter les versions natives et les liens de `src/components/AppDownloads.tsx`, reconstruire les deux applications, régénérer `release/SHA256SUMS.txt`, committer et pousser la source testée, puis lancer `npm run app:publish` avec un accès GitHub d’édition sur ce dépôt (Git Credential Manager déjà connecté ou variable GITHUB_TOKEN). Le script crée une release brouillon, téléverse les fichiers et la publie seulement une fois tous les fichiers disponibles ; un fichier différent ne peut pas écraser une version distribuée. Publier ensuite le site avec les liens correspondants. Les mises à jour de l’interface nécessitent toujours de télécharger et installer le nouvel EXE/APK.
+La page `/download` et le bloc de l’accueil utilisent les fichiers publics de la release GitHub `v0.4.0`. Les installateurs ne sont pas placés dans `dist` ni dans Supabase. Pour une prochaine version : augmenter les versions natives et les liens de `src/components/AppDownloads.tsx`, reconstruire les deux applications, régénérer `release/SHA256SUMS.txt`, committer et pousser la source testée, puis lancer `npm run app:publish` avec un accès GitHub d’édition sur ce dépôt (Git Credential Manager déjà connecté ou variable GITHUB_TOKEN). Le script crée une release brouillon, téléverse les fichiers et la publie seulement une fois tous les fichiers disponibles ; un fichier différent ne peut pas écraser une version distribuée. Publier ensuite le site avec les liens correspondants. Publier aussi latest.yml et le fichier EXE.blockmap : le script app:publish le fait automatiquement. Ces métadonnées activent les mises à jour Windows. Android découvre le nouvel APK via la release GitHub publique.
+
+## Activation des mises à jour automatiques
+
+Installer une dernière fois la version 0.4.0 par-dessus 0.2.0 ou 0.3.0 : ces anciennes versions ne contiennent pas encore le mécanisme de mise à jour. Ensuite, Windows vérifie au démarrage puis toutes les six heures, télécharge les versions stables supérieures et installe à la fermeture. Aucun redémarrage forcé pendant une partie. Le programme vérifie les empreintes SHA-512 fournies par electron-updater ; les releases viennent exclusivement de ce dépôt GitHub. Android vérifie au démarrage et au retour dans l’application (au plus une vérification automatique toutes les six heures), propose le nouvel APK, puis Android demande l’autorisation d’installation. Aucun installateur ne supprime les données utilisateur. Les invités doivent toujours convertir leur compte avant de changer d’appareil ou de désinstaller. Le panneau Paramètres > Application et mises à jour permet une vérification manuelle. Une future mise à jour réellement installée ne peut être testée qu’avec une version supérieure publiée ; aucune fausse release n’est créée pour le test.
