@@ -1,18 +1,18 @@
 {
   "name": "casino-and-titles",
   "private": true,
-  "version": "0.4.1",
+  "version": "0.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5180",
-    "build": "npm run i18n:check && tsc --noEmit && vite build",
+    "build": "node scripts/record-update.mjs && npm run i18n:check && tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5180",
     "test": "node --test tests/*.test.mjs",
     "catalog:generate": "node scripts/catalog.mjs",
     "smoke": "node scripts/smoke.mjs",
     "i18n:build": "node scripts/i18n-build.mjs",
     "i18n:check": "node scripts/i18n-check.mjs",
-    "build:native": "npm run i18n:check && tsc --noEmit && vite build --mode native --outDir dist-native",
+    "build:native": "node scripts/record-update.mjs && npm run i18n:check && tsc --noEmit && vite build --mode native --outDir dist-native",
     "app:windows": "node scripts/native-build.mjs windows",
     "app:android": "node scripts/native-build.mjs android",
     "app:sync": "node scripts/native-build.mjs sync",
@@ -20,7 +20,8 @@
     "app:icons": "node scripts/native-icons.mjs && capacitor-assets generate --assetPath resources --iconBackgroundColor \"#0d0b14\" --splashBackgroundColor \"#0d0b14\" --android --ios",
     "app:ios": "bash scripts/build-ios.sh",
     "app:desktop": "npm run build:native && node scripts/bundle-desktop.mjs && node node_modules/electron/install.js && electron desktop/main.bundle.cjs",
-    "app:publish": "node scripts/publish-apps.mjs"
+    "app:publish": "node scripts/publish-apps.mjs",
+    "release:record": "node scripts/record-update.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",
@@ -41,7 +42,8 @@
     "lucide-react": "^1.61.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.18.4"
+    "react-router-dom": "^7.18.4",
+    "three": "0.186.1"
   },
   "devDependencies": {
     "@capacitor/assets": "3.0.5",
@@ -52,6 +54,7 @@
     "@types/node": "^20.12.12",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/three": "0.186.0",
     "@vitejs/plugin-react": "^5.0.0",
     "electron": "45.0.0",
     "electron-builder": "26.18.0",

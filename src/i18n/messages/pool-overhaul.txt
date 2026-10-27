@@ -1,0 +1,50 @@
+Aucune mise à jour ne correspond à votre recherche.|No updates match your search.
+Chaque nouvelle version du code est enregistrée automatiquement pendant la préparation du build. Les heures sont affichées dans votre fuseau horaire.|Each new code version is automatically recorded during build preparation. Times are shown in your time zone.
+CONSOLE DU CERCLE|CIRCLE CONTROL ROOM
+Dernière mise à jour|Latest update
+Double-cliquez ou touche Début pour centrer|Double-click or press Home to center
+Enregistrement du build|Build recorded
+Glissez le point sur la bille|Drag the point on the cue ball
+Glissez sur le côté pour annuler|Drag sideways to cancel
+Haut : coulé · Bas : rétro · Côtés : effet de bande|Top: follow · Bottom: draw · Sides: cushion spin
+HISTORIQUE DU SITE|SITE UPDATE HISTORY
+Implémentation détectée|Implementation detected
+Joueurs, codes, mises à jour…|Players, codes, updates…
+Mises à jour|Updates
+Mode léger 2D|Lightweight 2D mode
+Modifications et mises à jour.|Changes and updates.
+Point de frappe|Contact point
+Préparation de la table 3D…|Preparing the 3D table…
+Queue de tir|Cue stick
+Rechercher une mise à jour|Search updates
+Rechercher une rubrique|Search sections
+Relâchez pour tirer|Release to shoot
+Rendu 3D|3D rendering
+Table de billard 3D à six poches|3D pool table with six pockets
+Tir annulé|Shot cancelled
+Tirez puis relâchez|Pull back and release
+Version 0.5.0 · Connexion Internet nécessaire.|Version 0.5.0 · Internet connection required.
+Version ou modification…|Version or change…
+Vue du dessus|Overhead view
+Vue en perspective|Perspective view
+Choisissez la poche de la bille noire avant de tirer|Choose the eight ball pocket before shooting
+Annoncez la poche de la noire|Call the eight ball pocket
+Poche annoncée pour la bille noire|Called pocket for the eight ball
+Choisir une poche…|Choose a pocket…
+Haut gauche|Top left
+Haut centre|Top middle
+Haut droite|Top right
+Bas gauche|Bottom left
+Bas centre|Bottom middle
+Bas droite|Bottom right
+Casse irrégulière : quatre billes doivent toucher une bande sans empochage|Illegal break: four balls must hit a cushion if none is pocketed
+Bille noire dans une poche non annoncée|Eight ball pocketed in an uncalled pocket
+Dans les nouvelles parties, la poche de la noire doit être annoncée. À la casse, une bille doit être empochée ou quatre billes doivent toucher une bande. La table reste ouverte après la casse. Une casse irrégulière donne la bille en main à l’adversaire. Les parties déjà commencées gardent leurs règles initiales.|In new matches, you must call the eight ball pocket. On the break, pocket a ball or drive four balls to cushions. The table remains open after the break. An illegal break gives the opponent ball in hand. Matches already in progress retain their original rules.
+La première bille touchée doit appartenir à votre groupe (ou être la noire si votre groupe est terminé). Sans bille empochée, une bille doit toucher une bande après le premier contact. Toucher la mauvaise bille, ne rien toucher ou empocher la blanche est une faute : l’adversaire peut replacer la blanche. Empocher la noire trop tôt ou avec une faute fait perdre. À la casse, la noire est remise sur la table. Dans les nouvelles parties, la poche de la noire doit être annoncée. À la casse, une bille doit être empochée ou quatre billes doivent toucher une bande. La table reste ouverte après la casse. Une casse irrégulière donne la bille en main à l’adversaire. Les parties déjà commencées gardent leurs règles initiales.|The first ball contacted must belong to your group, or be the eight when your group is cleared. Without a pot, a ball must hit a cushion after first contact. Hitting the wrong ball, missing all balls or scratching is a foul: your opponent can place the cue ball. Pocketing the eight early or with a foul loses the game. The eight is respotted on the break. In new matches, call the eight ball pocket. On the break, pocket a ball or drive four balls to cushions. The table stays open after the break. An illegal break gives the opponent ball in hand. Matches already in progress keep their original rules.
+Volume du billard|Billiards volume
+PARTIE TERMINÉE|MATCH COMPLETE
+Victoire !|Victory!
+Votre adversaire remporte la partie|Your opponent wins the match
+Belle partie. À vous la prochaine table.|Well played. The next table is yours.
+Chaque partie prépare la suivante.|Every match prepares you for the next.
+Volume|Volume

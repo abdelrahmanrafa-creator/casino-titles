@@ -1,0 +1,16 @@
+{
+  "fr": [
+    "Refonte du billard : table 3D, commandes de queue et sélection visuelle des effets.",
+    "Moteur physique serveur à pas fixe, rotation des billes et collisions balayées.",
+    "Navigation administrateur réorganisée et historique automatique des mises à jour.",
+    "Règles du club : casse contrôlée, table ouverte et poche annoncée pour la noire, sans changer les parties en cours.",
+    "Caméra interpolée, sons selon l’intensité des contacts et repli 2D pour les appareils sans WebGL."
+  ],
+  "en": [
+    "Billiards overhaul: 3D table, cue pull-back controls and visual spin selector.",
+    "Fixed-step server physics, ball rotation and swept collisions.",
+    "Reorganized administrator navigation and automatic update history.",
+    "Club rules: validated breaks, open tables and called eight-ball pockets, while preserving ongoing matches.",
+    "Interpolated camera, collision-intensity audio and a 2D fallback for devices without WebGL."
+  ]
+}
