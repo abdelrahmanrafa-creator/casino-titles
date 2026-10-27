@@ -31,7 +31,7 @@ Sur Windows 10/11 64 bits :
 npm run app:windows
 ```
 
-Résultat : `release/windows/Casino-Titles-Setup-0.3.0.exe`. Double-cliquer, choisir le dossier et terminer l’assistant. Les raccourcis ouvrent directement le jeu. L’installation peut être faite sans compte administrateur. Désinstallation dans Paramètres Windows > Applications. Pour lancer sans installer : `release/windows/win-unpacked/Casino & Titles.exe`.
+Résultat : `release/windows/Casino-Titles-Setup-0.4.0.exe`. Double-cliquer, choisir le dossier et terminer l’assistant. Les raccourcis ouvrent directement le jeu. L’installation peut être faite sans compte administrateur. Désinstallation dans Paramètres Windows > Applications. Pour lancer sans installer : `release/windows/win-unpacked/Casino & Titles.exe`.
 
 Le fichier généré localement n’a pas de certificat de signature commerciale. Windows peut donc afficher SmartScreen. Pour une distribution publique signée, configurer le certificat Electron Builder via `CSC_LINK` et `CSC_KEY_PASSWORD`, hors du dépôt. Aucune signature n’est simulée.
 
@@ -137,4 +137,4 @@ La publication du site conserve sa commande `npm run build` et son dossier `dist
 
 ## Publier les installateurs sur le site
 
-La page `/download` et le bloc de l’accueil utilisent les fichiers publics de la release GitHub `v0.3.0`. Les installateurs ne sont pas placés dans `dist` ni dans Supabase. Pour une prochaine version : augmenter les versions natives et les liens de `src/components/AppDownloads.tsx`, reconstruire les deux applications, régénérer `release/SHA256SUMS.txt`, committer et pousser la source testée, puis lancer `npm run app:publish` avec un accès GitHub d’édition sur ce dépôt (Git Credential Manager déjà connecté ou variable GITHUB_TOKEN). Le script crée une release brouillon, téléverse les fichiers et la publie seulement une fois tous les fichiers disponibles ; un fichier différent ne peut pas écraser une version distribuée. Publier ensuite le site avec les liens correspondants. Les mises à jour de l’interface nécessitent toujours de télécharger et installer le nouvel EXE/APK.
+La page `/download` et le bloc de l’accueil utilisent les fichiers publics de la release GitHub `v0.4.0`. Les installateurs ne sont pas placés dans `dist` ni dans Supabase. Pour une prochaine version : augmenter les versions natives et les liens de `src/components/AppDownloads.tsx`, reconstruire les deux applications, régénérer `release/SHA256SUMS.txt`, committer et pousser la source testée, puis lancer `npm run app:publish` avec un accès GitHub d’édition sur ce dépôt (Git Credential Manager déjà connecté ou variable GITHUB_TOKEN). Le script crée une release brouillon, téléverse les fichiers et la publie seulement une fois tous les fichiers disponibles ; un fichier différent ne peut pas écraser une version distribuée. Publier ensuite le site avec les liens correspondants. Les mises à jour de l’interface nécessitent toujours de télécharger et installer le nouvel EXE/APK.

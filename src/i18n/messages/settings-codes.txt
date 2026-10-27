@@ -1,0 +1,40 @@
+16 chiffres, par groupes de quatre. Chaque code est unique.|16 digits in groups of four. Every code is unique.
+Achats, ventes et factures|Purchases, sales and receipts
+Activer une récompense|Redeem a reward
+Ajoutez un e-mail à votre compte invité.|Add an email address to your guest account.
+Ancien mot de passe|Current password
+Ancien mot de passe incorrect.|The current password is incorrect.
+Aucune utilisation sur cette page.|No redemptions on this page.
+Ce code a déjà été attribué|This code has already been assigned
+Choisissez 1 à 500 codes par lot|Choose 1 to 500 codes per batch
+Code accepté !|Code redeemed!
+Codes et récompenses|Codes and rewards
+Codes générés|Generated codes
+Coffres ajoutés à l’inventaire :|Chests added to your inventory:
+Confirmer le nouveau mot de passe|Confirm the new password
+Confirmez votre ancien mot de passe avant d’en choisir un nouveau.|Confirm your current password before choosing a new one.
+Copiez cette liste pour distribuer vos codes.|Copy this list to distribute your codes.
+Crédits reçus :|Credits received:
+Date et heure|Date and time
+Définir un nouveau mot de passe|Set a new password
+Entrez le code communiqué par l’équipe pour recevoir vos crédits, titres ou coffres.|Enter the code provided by the team to receive your credits, titles or chests.
+Génération indisponible, réessayez|Code generation is unavailable. Please try again
+Générer les codes|Generate codes
+Générer plusieurs codes aléatoires|Generate a batch of random codes
+Historique des utilisations|Redemption history
+Mes tickets et nouvelles demandes|Your tickets and new requests
+Modifier le mot de passe du joueur|Change the player’s password
+Mot de passe du joueur modifié.|The player’s password has been changed.
+Nombre de codes à générer|Number of codes to generate
+Nouveau ticket|New ticket
+Sécurité du compte|Account security
+Titre reçu :|Title received:
+Un lien de réinitialisation a été envoyé.|A password reset link has been sent.
+Utiliser le code|Redeem code
+Utiliser un code|Redeem a code
+Votre code|Your code
+Votre compte, vos préférences et votre assistance au même endroit.|Your account, preferences and support in one place.
+Vous utilisez un lien de récupération sécurisé. Choisissez un nouveau mot de passe.|You are using a secure recovery link. Choose a new password.
+0000-0000-0000-0000|0000-0000-0000-0000
+Affichage et avatar|Display and avatar
+Version 0.4.0 · Connexion Internet nécessaire.|Version 0.4.0 · Internet connection required.

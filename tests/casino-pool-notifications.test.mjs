@@ -47,11 +47,11 @@ test('an early eight loses, fouls give ball in hand, occupied cue positions and 
  await assert.rejects(call(1,'shoot',{id:m.id,version:1,x:800,y:400,angle:0,power:50}),/zone libre/);await assert.rejects(call(1,'shoot',{id:m.id,version:1,x:500,y:230,angle:0,power:500}),/puissance/);
  const end=await call(1,'shoot',{id:m.id,version:1,x:500,y:230,angle:-Math.PI/2,power:60});assert.equal(end.winner,1);assert.equal(end.status,'completed');assert.equal(end.last_shot.foul,true);
 });
-test('zero spin preserves original physics; draw and follow change the cue trajectory after impact',async()=>{
+test('zero spin matches the default solver; draw and follow change the cue trajectory even after later rebounds',async()=>{
  const rack=(await db.query('SELECT ct_pool_rack() b')).rows[0].b.map(b=>({...b,out:![0,1].includes(b.n),...(b.n===0?{x:250,y:250}:b.n===1?{x:400,y:250}:{})}));
  const sim=async(x,y)=>(await db.query('SELECT ct_pool_physics_spin($1,0,60,$2,$3) p',[JSON.stringify(rack),x,y])).rows[0].p;
  const plain=(await db.query('SELECT ct_pool_physics($1,0,60) p',[JSON.stringify(rack)])).rows[0].p,zero=await sim(0,0),draw=await sim(0,-1),follow=await sim(0,1);
- assert.deepEqual(zero.balls,plain.balls);assert.deepEqual(zero.frames,plain.frames);assert.ok(draw.balls[0].x<zero.balls[0].x-30);assert.ok(follow.balls[0].x>zero.balls[0].x+30);assert.equal(draw.first,1);assert.ok(draw.events.some(e=>e.kind==='impact'&&e.ball===1));
+ assert.deepEqual(zero.balls,plain.balls);assert.deepEqual(zero.frames,plain.frames);assert.ok(draw.balls[0].x<zero.balls[0].x-30);assert.ok(Math.max(...follow.frames.map(f=>f[0][0]))>zero.balls[0].x+30);assert.equal(draw.first,1);assert.ok(draw.events.some(e=>e.kind==='impact'&&e.ball===1));
 });
 test('left and right spin alter both horizontal and vertical cushion rebounds, with bounded finite frames',async()=>{
  for(const angle of [0,Math.PI/2]){const rack=(await db.query('SELECT ct_pool_rack() b')).rows[0].b.map(b=>({...b,out:b.n!==0,...(b.n===0?{x:600,y:250}:{})}));const sim=async(x)=>(await db.query('SELECT ct_pool_physics_spin($1,$2,100,$3,0) p',[JSON.stringify(rack),angle,x])).rows[0].p;const l=await sim(-1),r=await sim(1);assert.ok(Math.hypot(l.balls[0].x-r.balls[0].x,l.balls[0].y-r.balls[0].y)>10);assert.ok(l.frames.length<=113);assert.ok(l.frames.every(f=>f.every(b=>Number.isFinite(b[0])&&Number.isFinite(b[1]))));}

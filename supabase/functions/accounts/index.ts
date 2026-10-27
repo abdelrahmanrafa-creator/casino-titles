@@ -48,8 +48,17 @@ Deno.serve(async(req:Request)=>{
    const completed=await db.auth.admin.updateUserById(actor,{app_metadata:{...self.app_metadata,ct_guest:false}});if(completed.error)throw completed.error;
    return reply({ok:true,account_id:actor,message:'Compte permanent activé. Vos crédits, titres, coffres et carte d’accès sont conservés.'});
   }
+  if(body.action==='change_password'){
+   const self=auth.data.user;if(self.app_metadata?.ct_guest===true||!self.email)throw Error('Ajoutez un e-mail à votre compte invité.');
+   const current=String(body.current_password??''),password=String(body.password??'');if(!current||password.length<8||password.length>128)throw Error('Choisissez un mot de passe de 8 à 128 caractères.');
+   const verified=publicClient(),login=await verified.auth.signInWithPassword({email:self.email,password:current});if(login.error||login.data.user?.id!==actor)throw Error('Ancien mot de passe incorrect.');
+   const updated=await verified.auth.updateUser({password,current_password:current});if(updated.error)throw updated.error;
+   return reply({ok:true,message:'Mot de passe mis à jour.'});
+  }
   const permitted=await client.rpc('ct_is_admin');if(permitted.error||permitted.data!==true)return reply({error:'Administrator required',definitive:true},403);
-  const target=String(body.user_id??''),action=body.action,values=body.values??{};operation=String(body.operation_id??'');if(!/^[0-9a-f-]{36}$/i.test(operation)||!['email','reset'].includes(action))throw Error('Requête de compte invalide');
+  const target=String(body.user_id??''),action=body.action,values=body.values??{};operation=String(body.operation_id??'');if(!/^[0-9a-f-]{36}$/i.test(operation)||!['email','reset','password'].includes(action))throw Error('Requête de compte invalide');
+  const newPassword=action==='password'?String(body.password??''):'';
+  if(action==='password'){if(newPassword.length<8||newPassword.length>128)throw Error('Choisissez un mot de passe de 8 à 128 caractères.');for(const k of Object.keys(values))if(k!=='expected_email')delete values[k];values.password_digest=await hash(operation+key+newPassword);}
   const begun=await client.rpc('ct_account_job',{p_operation_id:operation,p_user_id:target,p_action:action,p_values:values,p_reason:body.reason});if(begun.error)throw begun.error;
   if(begun.data.replay){if(begun.data.result?.error)return reply(begun.data.result,400);if(begun.data.status==='completed')return reply(begun.data.result);return reply({error:'Cette opération est en cours. Actualisez dans quelques instants.',definitive:false},409);}
   claimed=true;const found=await db.auth.admin.getUserById(target);if(found.error||!found.data.user)throw Error('Compte Auth introuvable');const user=found.data.user,guest=user.app_metadata?.ct_guest===true,currentEmail=guest?null:user.email;
@@ -57,7 +66,8 @@ Deno.serve(async(req:Request)=>{
   if(action==='email'){
    const email=String(values.email??'').trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||email.endsWith('@guest.casino.invalid'))throw Error('Adresse e-mail invalide');
    const updated=await db.auth.admin.updateUserById(target,{email,email_confirm:true,app_metadata:{...user.app_metadata,ct_guest:false}});if(updated.error)throw updated.error;
+  }else if(action==='password'){if(!currentEmail||guest)throw Error('Associez d’abord une adresse e-mail au compte invité.');const updated=await db.auth.admin.updateUserById(target,{password:newPassword});if(updated.error)throw updated.error;
   }else{if(!currentEmail)throw Error('Associez d’abord une adresse e-mail au compte invité.');const reset=await publicClient().auth.resetPasswordForEmail(currentEmail,{redirectTo:'https://casino-titles-cercle.sassyjay19.chatgpt.site/settings'});if(reset.error)throw reset.error;}
-  const result={ok:true,message:action==='email'?'Adresse e-mail modifiée.':'Lien de réinitialisation envoyé au joueur.'};const done=await db.rpc('ct_account_finish',{p_admin:actor,p_operation:operation,p_result:result});if(done.error)throw done.error;return reply(result);
+  const result={ok:true,message:action==='email'?'Adresse e-mail modifiée.':action==='password'?'Mot de passe du joueur modifié.':'Lien de réinitialisation envoyé au joueur.'};const done=await db.rpc('ct_account_finish',{p_admin:actor,p_operation:operation,p_result:result});if(done.error)throw done.error;return reply(result);
  }catch(error){const message=error instanceof Error?error.message:String((error as {message?:string})?.message??'Opération indisponible');const result={error:message,definitive:true};if(claimed&&actor&&operation)await db.rpc('ct_account_finish',{p_admin:actor,p_operation:operation,p_result:result});return reply(result,400);}
 });
