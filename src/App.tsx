@@ -1,3 +1,4 @@
+import {AppDownloads} from './components/AppDownloads';
 import {lazy,Suspense,useCallback,useEffect,useRef,useState,type CSSProperties} from 'react';
 import {HalloweenEvent} from './components/HalloweenEvent';
 import {MainNavigation,SettingsOrdersLink} from './components/MainNavigation';
@@ -42,6 +43,7 @@ const PublicProfile=lazy(()=>import('./features/Rankings').then(m=>({default:m.P
 const Admin=lazy(()=>import('./features/Admin').then(m=>({default:m.Admin})));
 
 
+const PoolPreview=import.meta.env.DEV?lazy(()=>import('./features/PoolPreview')):null;
 export default function App(){
  const queryClient=useQueryClient();const [session,setSession]=useState<Session|null>(null),[authReady,setAuthReady]=useState(false);
  const [notice,setNotice]=useState(''),[busy,setBusy]=useState(false),[pending,setPending]=useState<Pending|null>(null);
@@ -114,11 +116,13 @@ export default function App(){
      <section className="hero"><div className="hero-copy"><p className="eyebrow"><Sparkles size={14}/> PLUS QU’UNE VICTOIRE. UNE SIGNATURE.</p><h1>Jouez le moment.<br/>Collectionnez<br/><em>l’exceptionnel.</em></h1><p>Entrez dans le cercle. Découvrez des titres animés, ouvrez des coffres et faites de chaque partie une nouvelle histoire.</p><div className="hero-buttons"><Link to="/chests" className="btn primary">Explorer les coffres <ArrowUpRight size={17}/></Link><Link to="/collection" className="btn secondary">Voir la collection</Link></div><div className="hero-proof"><span><ShieldCheck size={14}/> 100 % virtuel</span><span><Crown size={14}/> {catalog.length} titres à découvrir</span></div></div>
       <div className="hero-art"><div className="orbital orbit-one"/><div className="orbital orbit-two"/><span className="hero-star star-one">✦</span><span className="hero-star star-two">✧</span><ChestArt rarity={8}/><div className="hero-award"><span className="rarity-label">COSMIQUE</span><TitleEffect title={{name:'Nomade du vide stellaire',rarity:8}}/><small>L’EXCEPTION N’ATTEND QUE VOUS.</small></div></div>
      </section>
-     <section className="stats-strip"><div><Box/><strong>{chests.length}</strong><span>Coffres uniques</span></div><div><Crown/><strong>{catalog.length}</strong><span>Titres à collectionner</span></div><div><Sparkles/><strong>8</strong><span>Niveaux de rareté</span></div><div><ShieldCheck/><strong>100 %</strong><span>Crédits virtuels</span></div></section>
+     <AppDownloads compact/><section className="stats-strip"><div><Box/><strong>{chests.length}</strong><span>Coffres uniques</span></div><div><Crown/><strong>{catalog.length}</strong><span>Titres à collectionner</span></div><div><Sparkles/><strong>8</strong><span>Niveaux de rareté</span></div><div><ShieldCheck/><strong>100 %</strong><span>Crédits virtuels</span></div></section>
      <div className="section-title"><div><p className="eyebrow">UNE OUVERTURE, MILLE POSSIBILITÉS</p><h2>À chaque coffre, son univers.</h2></div><Link to="/chests">Tous les coffres <ArrowUpRight size={16}/></Link></div>
      <div className="featured-chests">{chests.filter(c=>[1,4,6,8].includes(c.id)).map(c=><button className="featured-chest panel" key={c.id} onClick={()=>setOdds(c)} style={{'--accent':colors[c.rarity-1]} as CSSProperties}><ChestArt rarity={c.rarity}/><div><small>{rarityNames[c.rarity-1]}</small><h3>{c.name}</h3><PriceTag compact base={c.base_price??c.price} current={c.current_price??c.price}/></div><ArrowUpRight size={18}/></button>)}</div>
      <section className="panel home-rewards-banner"><Gift size={30}/><div><p className="eyebrow">PLUSIEURS FAÇONS DE GAGNER</p><h2>Vos prochains crédits commencent ici.</h2><p>Clicker évolutif, cadeau gratuit, missions, événements et codes promo.</p></div><Link className="btn primary" to="/rewards">Gagner des crédits <ArrowUpRight size={16}/></Link></section><People compact/><div className="home-bottom"><section className="daily-panel panel"><div className="gift-icon"><Gift size={25}/></div><div><p className="eyebrow">VOTRE RENDEZ-VOUS QUOTIDIEN</p><h3>Un nouveau jour. 750 crédits.</h3><p className="muted">Revenez chaque jour, poursuivez votre collection.</p></div><button className="btn secondary" disabled={busy||state?.daily_claimed} onClick={()=>void command('ct_claim_daily')}>{state?.daily_claimed?<><Check size={16}/> Récupérée</>:<>Récupérer <ArrowUpRight size={16}/></>}</button></section><Link to="/collection" className="collection-tease panel"><Crown size={25}/><div><h3>Votre légende prend forme.</h3><p>{owned.size} / {catalog.length} titres découverts</p><div className="progress"><i style={{width:`${owned.size/Math.max(1,catalog.length)*100}%`}}/></div></div><ChevronRight size={18}/></Link></div>
     </>}/>
+    {PoolPreview&&<Route path="/__pool-preview" element={<PoolPreview/>}/>}
+    <Route path="/download" element={<AppDownloads/>}/>
     <Route path="/marketplace" element={gate(<PlayerMarketplace userId={uid??''} command={command} busy={busy}/>)}/>
     <Route path="/marketplace/shops/:seller" element={gate(<PlayerMarketShop userId={uid??''} command={command} busy={busy}/>)}/>
     <Route path="/invoices" element={gate(<Invoices userId={uid??''} command={command} busy={busy}/>)}/>

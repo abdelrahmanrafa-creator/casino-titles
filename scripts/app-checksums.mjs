@@ -1,0 +1,2 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';
+const {version}=JSON.parse(readFileSync('package.json'));const files=[`windows/Casino-Titles-Setup-${version}.exe`,'android/Casino-Titles-debug.apk'];writeFileSync('release/SHA256SUMS.txt',files.map(file=>createHash('sha256').update(readFileSync('release/'+file)).digest('hex')+'  '+file).join('\n')+'\n');console.log('Installer SHA-256 checksums updated.');

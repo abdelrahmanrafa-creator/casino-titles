@@ -1,3 +1,4 @@
+import {rollPoolBalls} from '../lib/poolRolling';
 import {memo,useLayoutEffect,useRef,useState,type ComponentProps,type Dispatch,type SetStateAction} from 'react';
 import {PoolTable} from './PoolTable';
 import {poolAnimationProgress} from '../lib/poolAim';
@@ -16,7 +17,7 @@ export const PoolBoard=memo(function PoolBoard({match,onAnimating,...table}:Prop
   const aiCue=match.ai&&shot.actor===1;setPlaying(true);setPreparing(aiCue);onAnimating(true);setPulse(null);setBalls(shot.before);
   const start=performance.now()+(aiCue?220:0),frames=[shot.before.map(b=>[b.x,b.y,b.out] as [number,number,boolean]),...shot.frames],duration=Math.max(650,Math.min(3200,frames.length*24));let lastEvent='';
   const tick=(time:number)=>{if(time>=start)setPreparing(false);const p=poolAnimationProgress(time,start,duration),pos=p*(frames.length-1),i=Math.floor(pos),a=frames[i],b=frames[Math.min(i+1,frames.length-1)],blend=pos-i;
-   setBalls(shot.before.map((ball,n)=>({...ball,x:a[n][0]+(b[n][0]-a[n][0])*blend,y:a[n][1]+(b[n][1]-a[n][1])*blend,out:a[n][2]})));
+   setBalls(previous=>rollPoolBalls(previous,shot.before.map((ball,n)=>({...ball,x:a[n][0]+(b[n][0]-a[n][0])*blend,y:a[n][1]+(b[n][1]-a[n][1])*blend,out:a[n][2]}))));
    const event=shot.events?.find(e=>e.step<=pos*8&&e.step>pos*8-12);if(event){const key=match.id+':'+match.shots+':'+event.step;if(lastEvent!==key){lastEvent=key;setPulse({x:event.x,y:event.y,key,kind:event.kind});}}
    if(p<1)frame.current=requestAnimationFrame(tick);else{setBalls(match.balls);setPlaying(false);onAnimating(false);}
   };frame.current=requestAnimationFrame(tick);

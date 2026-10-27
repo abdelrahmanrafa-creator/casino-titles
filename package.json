@@ -1,7 +1,7 @@
 {
   "name": "casino-and-titles",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5180",
@@ -19,7 +19,8 @@
     "app:doctor": "node scripts/native-build.mjs doctor",
     "app:icons": "node scripts/native-icons.mjs && capacitor-assets generate --assetPath resources --iconBackgroundColor \"#0d0b14\" --splashBackgroundColor \"#0d0b14\" --android --ios",
     "app:ios": "bash scripts/build-ios.sh",
-    "app:desktop": "npm run build:native && node node_modules/electron/install.js && electron desktop/main.cjs"
+    "app:desktop": "npm run build:native && node node_modules/electron/install.js && electron desktop/main.cjs",
+    "app:publish": "node scripts/publish-apps.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",
