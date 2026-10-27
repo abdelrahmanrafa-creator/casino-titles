@@ -1,4 +1,4 @@
-export type RollingBall={n:number;x:number;y:number;out:boolean;roll?:number;heading?:number};
+export type RollingBall={n:number;x:number;y:number;out:boolean;roll?:number;heading?:number;sink?:number;trailX?:number;trailY?:number};
 export function rollPoolBalls(previous:RollingBall[],next:RollingBall[]):RollingBall[]{const byId=new Map(previous.map(b=>[b.n,b]));return next.map(ball=>{const before=byId.get(ball.n);if(!before)return {...ball,roll:0,heading:0};const dx=ball.x-before.x,dy=ball.y-before.y,distance=Math.hypot(dx,dy);return {...ball,roll:(before.roll??0)+(before.out||ball.out?0:distance/11),heading:distance>.01?Math.atan2(dy,dx):before.heading??0};});}
 
 export const poolPreviewBalls:RollingBall[]=[{n:0,x:250,y:250,out:false},...Array.from({length:5},(_,row)=>Array.from({length:row+1},(_,col)=>({n:row*(row+1)/2+col+1,x:700+row*20,y:250+(col-row/2)*23,out:false}))).flat()];

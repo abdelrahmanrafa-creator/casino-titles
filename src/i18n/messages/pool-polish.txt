@@ -1,0 +1,5 @@
+Tapis de la table|Table cloth
+Émeraude|Emerald
+Bleu tournoi|Tournament blue
+Bordeaux|Burgundy
+Version 0.4.1 · Connexion Internet nécessaire.|Version 0.4.1 · Internet connection required.

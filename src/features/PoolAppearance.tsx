@@ -1,0 +1,4 @@
+import {useState} from 'react';
+export type PoolCloth='emerald'|'blue'|'wine';
+export function usePoolCloth(){const [cloth,setCloth]=useState<PoolCloth>(()=>{try{const saved=localStorage.getItem('ct:pool-cloth');if(saved==='blue'||saved==='wine')return saved;}catch{/* Storage is optional. */}return 'emerald';});return [cloth,(value:PoolCloth)=>{setCloth(value);try{localStorage.setItem('ct:pool-cloth',value);}catch{/* Keep the choice for this session. */}}] as const;}
+export function PoolAppearance({value,onChange}:{value:PoolCloth;onChange:(v:PoolCloth)=>void}){return <fieldset className="pool-appearance"><legend>Tapis de la table</legend>{(['emerald','blue','wine'] as const).map(cloth=><button key={cloth} type="button" className={'pool-cloth-swatch '+cloth} aria-pressed={value===cloth} onClick={()=>onChange(cloth)}>{cloth==='emerald'?'Émeraude':cloth==='blue'?'Bleu tournoi':'Bordeaux'}</button>)}</fieldset>;}
