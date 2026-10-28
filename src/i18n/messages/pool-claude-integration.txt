@@ -1,0 +1,17 @@
+✓ Annulé|✓ Cancelled
+Centré|Centered
+Contrôle des effets sur la bille blanche|Cue ball spin control
+Coulé + effet droit|Follow + right spin
+Coulé + effet gauche|Follow + left spin
+Rétro + effet droit|Draw + right spin
+Rétro + effet gauche|Draw + left spin
+Double-cliquez ou Début pour centrer|Double-click or press Home to center
+Effet droit|Right spin
+Effet gauche|Left spin
+Effet latéral (gauche à droite)|Sidespin (left to right)
+Effet rétro (-) ou coulé (+)|Backspin (-) or topspin (+)
+Glissez pour ajuster ou utilisez les flèches|Drag to adjust or use the arrow keys
+Haut: Coulé · Bas: Rétro · Côtés: Effet de bande|Top: follow · Bottom: draw · Sides: cushion spin
+Puissance de tir|Shot power
+Réglez la puissance du tir en tirant vers le bas|Pull down to set shot power
+Version 0.5.1 · Connexion Internet nécessaire.|Version 0.5.1 · Internet connection required.

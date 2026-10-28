@@ -1,5 +1,26 @@
 [
   {
+    "id": "0.5.1-18a426ac",
+    "version": "0.5.1",
+    "fingerprint": "18a426ac1a158f7e20113e61b666f2438cdbd3c3091f4c740bc6939b55e8d24e",
+    "implemented_at": "2026-10-28T02:57:36.466Z",
+    "recorded_at": "2026-10-28T03:03:18.342Z",
+    "notes": {
+      "fr": [
+        "Intégration de la refonte visuelle du billard : matériaux, éclairage, caméra perspective et effets de poche.",
+        "Guides de visée jusqu’à huit segments, barres de puissance et zones d’effet traduites.",
+        "Correction du tir en plein écran mobile, du cadrage de la table et du nettoyage des effets GPU.",
+        "Validation PowerShell bloquante et tests de non-régression."
+      ],
+      "en": [
+        "Integrated the billiards visual overhaul: materials, lighting, perspective camera and pocket effects.",
+        "Aim guides with up to eight segments, power bars and translated spin zones.",
+        "Fixed portrait fullscreen shooting, table framing and GPU effect cleanup.",
+        "Fail-fast PowerShell validation and regression tests."
+      ]
+    }
+  },
+  {
     "id": "0.5.0-fd2ca8c5",
     "version": "0.5.0",
     "fingerprint": "fd2ca8c575ac03fa86d0b4ddcb255501857c6dfe322fd3ff8723f9355806fcb6",
