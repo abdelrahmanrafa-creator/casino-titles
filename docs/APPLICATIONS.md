@@ -142,3 +142,13 @@ La page `/download` et le bloc de l’accueil utilisent les fichiers publics de 
 ## Activation des mises à jour automatiques
 
 Installer une dernière fois la version 0.4.0 par-dessus 0.2.0 ou 0.3.0 : ces anciennes versions ne contiennent pas encore le mécanisme de mise à jour. Ensuite, Windows vérifie au démarrage puis toutes les six heures, télécharge les versions stables supérieures et installe à la fermeture. Aucun redémarrage forcé pendant une partie. Le programme vérifie les empreintes SHA-512 fournies par electron-updater ; les releases viennent exclusivement de ce dépôt GitHub. Android vérifie au démarrage et au retour dans l’application (au plus une vérification automatique toutes les six heures), propose le nouvel APK, puis Android demande l’autorisation d’installation. Aucun installateur ne supprime les données utilisateur. Les invités doivent toujours convertir leur compte avant de changer d’appareil ou de désinstaller. Le panneau Paramètres > Application et mises à jour permet une vérification manuelle. Une future mise à jour réellement installée ne peut être testée qu’avec une version supérieure publiée ; aucune fausse release n’est créée pour le test.
+
+## Verrouillage npm et déploiement Vercel / npm lockfile and Vercel deployment
+
+Pour changer la version du jeu, utiliser `npm version <version> --no-git-tag-version`, puis modifier les métadonnées natives et les liens de téléchargement prévus. Ne jamais remplacer globalement une chaîne de version dans `package-lock.json` : les versions et URL des paquets tiers doivent rester celles du registre npm.
+
+Use `npm version <version> --no-git-tag-version` to update the application's structured version fields. Never globally replace version strings in the lockfile; third-party package versions and tarball URLs are independent of the application version.
+
+Vercel utilise `node scripts/install-web.mjs`, qui exécute `npm ci` et évite uniquement le téléchargement du binaire Electron, inutile au site statique. Les scripts d’installation nécessaires aux outils de compilation continuent de s’exécuter. La génération des applications natives garde son flux normal.
+
+Vercel runs the committed web-install script: frozen `npm ci`, with only the unused Electron executable download disabled. Build-tool installation hooks still run normally; native application builds retain their existing workflow.
