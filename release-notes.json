@@ -1,12 +1,10 @@
 {
   "fr": [
-    "Synchronisation en direct des crédits, diamants, titres, coffres, cartes, marchés et messages.",
-    "Notifications privées du serveur, regroupement des modifications et reprise après une coupure.",
-    "Actualisation automatique du panel administrateur et des catalogues, sans interrompre les animations de billard."
+    "Textes de jeu plus immersifs sur l’accueil, dans le menu, les jeux, les cartes et les marchés.",
+    "Libellés français et anglais simplifiés, avec une indication claire conservée sur les achats de démonstration et les avis simulés."
   ],
   "en": [
-    "Live synchronization of credits, diamonds, titles, chests, cards, markets and messages.",
-    "Private server notifications, batched changes and recovery after a connection interruption.",
-    "Automatic updates to the administrator panel and catalogs without interrupting billiards animations."
+    "More immersive game copy across the home page, navigation, games, cards and markets.",
+    "Simplified French and English labels, retaining clear disclosures for demonstration purchases and simulated reviews."
   ]
 }

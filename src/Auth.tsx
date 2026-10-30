@@ -33,6 +33,6 @@ export function Auth({authenticated,onComplete}:{authenticated:boolean;onComplet
   {!authenticated&&mode==='guest'&&<p className="legal">Votre progression est sauvegardée dans ce navigateur. Après déconnexion ou effacement de ses données, l’accès peut être perdu. Vous pouvez ajouter votre e-mail et un mot de passe dans Paramètres pour garder un accès durable.</p>}
   {message&&<p role="status" className="notice">{message}</p>}
   {authenticated&&<button className="text-btn" onClick={()=>{void supabase.auth.signOut();}}>Se déconnecter</button>}
-  <p className="legal">Crédits virtuels uniquement. Aucun achat, dépôt, retrait ou gain en argent réel.</p>
+  <p className="legal">Les crédits du jeu ne sont pas convertibles en argent.</p>
  </section>;
 }

@@ -1,5 +1,22 @@
 [
   {
+    "id": "0.5.3-5931b499",
+    "version": "0.5.3",
+    "fingerprint": "5931b4991e6ba6bb92ab1d558fc59138701694907c940286b8c6d4834be6e77b",
+    "implemented_at": "2026-10-30T01:55:13.711Z",
+    "recorded_at": "2026-10-30T01:57:51.045Z",
+    "notes": {
+      "fr": [
+        "Textes de jeu plus immersifs sur l’accueil, dans le menu, les jeux, les cartes et les marchés.",
+        "Libellés français et anglais simplifiés, avec une indication claire conservée sur les achats de démonstration et les avis simulés."
+      ],
+      "en": [
+        "More immersive game copy across the home page, navigation, games, cards and markets.",
+        "Simplified French and English labels, retaining clear disclosures for demonstration purchases and simulated reviews."
+      ]
+    }
+  },
+  {
     "id": "0.5.2-0e721330",
     "version": "0.5.2",
     "fingerprint": "0e721330844b0e33d71d836e3704b9ee2ef554683bbf9b6fa5559818331e96df",
