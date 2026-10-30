@@ -47,6 +47,7 @@ const PublicProfile=lazy(()=>import('./features/Rankings').then(m=>({default:m.P
 const Admin=lazy(()=>import('./features/Admin').then(m=>({default:m.Admin})));
 
 
+const TradePreview=import.meta.env.DEV?lazy(()=>import('./features/TradePreview')):null;
 const PoolPreview=import.meta.env.DEV?lazy(()=>import('./features/PoolPreview')):null;
 export default function App(){
  const queryClient=useQueryClient();const [session,setSession]=useState<Session|null>(null),[authReady,setAuthReady]=useState(false);
@@ -126,6 +127,7 @@ export default function App(){
      <div className="featured-chests">{chests.filter(c=>[1,4,6,8].includes(c.id)).map(c=><button className="featured-chest panel" key={c.id} onClick={()=>setOdds(c)} style={{'--accent':colors[c.rarity-1]} as CSSProperties}><ChestArt rarity={c.rarity}/><div><small>{rarityNames[c.rarity-1]}</small><h3>{c.name}</h3><PriceTag compact base={c.base_price??c.price} current={c.current_price??c.price}/></div><ArrowUpRight size={18}/></button>)}</div>
      <section className="panel home-rewards-banner"><Gift size={30}/><div><p className="eyebrow">PLUSIEURS FAÇONS DE GAGNER</p><h2>Vos prochains crédits commencent ici.</h2><p>Clicker évolutif, cadeau gratuit, missions, événements et codes promo.</p></div><Link className="btn primary" to="/rewards">Gagner des crédits <ArrowUpRight size={16}/></Link></section><People compact/><div className="home-bottom"><section className="daily-panel panel"><div className="gift-icon"><Gift size={25}/></div><div><p className="eyebrow">VOTRE RENDEZ-VOUS QUOTIDIEN</p><h3>Un nouveau jour. 750 crédits.</h3><p className="muted">Revenez chaque jour, poursuivez votre collection.</p></div><button className="btn secondary" disabled={busy||state?.daily_claimed} onClick={()=>void command('ct_claim_daily')}>{state?.daily_claimed?<><Check size={16}/> Récupérée</>:<>Récupérer <ArrowUpRight size={16}/></>}</button></section><Link to="/collection" className="collection-tease panel"><Crown size={25}/><div><h3>Votre légende prend forme.</h3><p>{owned.size} / {catalog.length} titres découverts</p><div className="progress"><i style={{width:`${owned.size/Math.max(1,catalog.length)*100}%`}}/></div></div><ChevronRight size={18}/></Link></div>
     </>}/>
+    {TradePreview&&<Route path="/__trade-preview" element={<TradePreview/>}/>}
     {PoolPreview&&<Route path="/__pool-preview" element={<PoolPreview/>}/>}
     <Route path="/download" element={<AppDownloads/>}/>
     <Route path="/marketplace" element={gate(<PlayerMarketplace userId={uid??''} command={command} busy={busy}/>)}/>

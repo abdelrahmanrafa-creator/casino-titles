@@ -1,5 +1,24 @@
 [
   {
+    "id": "0.6.0-00c5bb72",
+    "version": "0.6.0",
+    "fingerprint": "00c5bb7299d1c4608409e78d66072bbbd101665cbad8ab25484cf7216836f5ef",
+    "implemented_at": "2026-10-30T02:23:50.951Z",
+    "recorded_at": "2026-10-30T02:29:08.289Z",
+    "notes": {
+      "fr": [
+        "Nouveau salon d’échange à deux côtés avec sauvegarde automatique et mise à jour en direct.",
+        "Piles de coffres et de titres, sélection par quantité et bouton Tout : jusqu’à 1 000 objets par joueur.",
+        "Consultation permanente des caractéristiques des coffres de l’inventaire, y compris ceux réservés."
+      ],
+      "en": [
+        "New two-sided trade room with automatic saving and live updates.",
+        "Chest and title stacks, quantity controls and an All button: up to 1,000 items per player.",
+        "Inventory chest details remain accessible, including for reserved chests."
+      ]
+    }
+  },
+  {
     "id": "0.5.3-5931b499",
     "version": "0.5.3",
     "fingerprint": "5931b4991e6ba6bb92ab1d558fc59138701694907c940286b8c6d4834be6e77b",

@@ -1,0 +1,56 @@
+· Fin à|· Ends at
+Ajouter des objets|Add items
+Ajouter un exemplaire|Add one copy
+Aucun objet disponible pour ces filtres. Les objets déjà réservés ailleurs ne sont pas proposés.|No items match these filters. Items reserved elsewhere are not available.
+Carte active requise pour les deux joueurs|Both players need an active card
+Chaque modification annule les deux confirmations. Les objets sont réservés automatiquement.|Every change clears both confirmations. Items are reserved automatically.
+Choisissez vos coffres et vos titres.|Choose your chests and titles.
+Confirmé · en attente|Confirmed · waiting
+Confirmée|Confirmed
+Connexion interrompue. Réessayez pour synchroniser votre offre.|Connection interrupted. Retry to sync your offer.
+Diamants proposés|Diamonds offered
+ÉCHANGE PRIVÉ · EN DIRECT|PRIVATE TRADE · LIVE
+En préparation|Preparing
+Invitation envoyée. Le salon s’ouvrira dès que le joueur aura accepté.|Invitation sent. The room will open when the player accepts.
+La quantité demandée n’est plus disponible|The requested quantity is no longer available
+Le nombre de diamants dépasse votre solde disponible.|The diamond amount exceeds your available balance.
+Les deux joueurs doivent confirmer cette version.|Both players must confirm this version.
+Masquer l’inventaire|Hide inventory
+Mille objets maximum par offre|A maximum of 1,000 items per offer
+objet(s)|item(s)
+objets|items
+Offre à jour|Offer synced
+Quantité ·|Quantity ·
+Quantité d’échange invalide|Invalid trade quantity
+Rechercher dans l’inventaire|Search inventory
+Rechercher un objet…|Search for an item…
+Réessayer la synchronisation|Retry sync
+Retirer cette pile|Remove this stack
+Retirer un exemplaire|Remove one copy
+Sélection d’objets invalide|Invalid item selection
+Ses diamants|Their diamonds
+Ses objets apparaîtront ici en direct.|Their items will appear here live.
+Synchronisation…|Syncing…
+Tout ajouter|Add all
+Un exemplaire ou toute la pile.|One copy or the whole stack.
+Un groupe ne peut apparaître qu’une fois|A group can only appear once
+Vider ma proposition|Clear my offer
+Vos changements sont enregistrés automatiquement.|Your changes are saved automatically.
+Vos diamants|Your diamonds
+Votre dernière modification n’a pas été enregistrée. Vérifiez la notification puis réessayez.|Your last change was not saved. Check the notification, then retry.
+VOTRE INVENTAIRE|YOUR INVENTORY
+Votre salon d’échange.|Your trade room.
+Version 0.6.0 · Connexion Internet nécessaire.|Version 0.6.0 · Internet connection required.
+Arc-en-ciel|Rainbow
+Azb|Azb
+Nova|Nova
+Caractéristiques du coffre|Chest details
+exemplaire(s) dans cette pile|copy/copies in this stack
+Édition événement|Event edition
+Numéro d’édition|Edition number
+Ajouté le|Added on
+Prix enregistré|Recorded price
+Contenu enregistré|Stored contents
+titre(s) dans la sélection personnalisée|title(s) in the custom selection
+Ces probabilités sont celles enregistrées sur ce coffre. Elles restent consultables même si le coffre est réservé ou si la boutique change.|These are the probabilities stored on this chest. You can view them even when the chest is reserved or the shop changes.
+Identifiant de l’exemplaire|Copy ID
