@@ -1,14 +1,12 @@
 {
   "fr": [
-    "Intégration de la refonte visuelle du billard : matériaux, éclairage, caméra perspective et effets de poche.",
-    "Guides de visée jusqu’à huit segments, barres de puissance et zones d’effet traduites.",
-    "Correction du tir en plein écran mobile, du cadrage de la table et du nettoyage des effets GPU.",
-    "Validation PowerShell bloquante et tests de non-régression."
+    "Synchronisation en direct des crédits, diamants, titres, coffres, cartes, marchés et messages.",
+    "Notifications privées du serveur, regroupement des modifications et reprise après une coupure.",
+    "Actualisation automatique du panel administrateur et des catalogues, sans interrompre les animations de billard."
   ],
   "en": [
-    "Integrated the billiards visual overhaul: materials, lighting, perspective camera and pocket effects.",
-    "Aim guides with up to eight segments, power bars and translated spin zones.",
-    "Fixed portrait fullscreen shooting, table framing and GPU effect cleanup.",
-    "Fail-fast PowerShell validation and regression tests."
+    "Live synchronization of credits, diamonds, titles, chests, cards, markets and messages.",
+    "Private server notifications, batched changes and recovery after a connection interruption.",
+    "Automatic updates to the administrator panel and catalogs without interrupting billiards animations."
   ]
 }

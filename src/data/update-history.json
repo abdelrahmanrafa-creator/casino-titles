@@ -1,5 +1,24 @@
 [
   {
+    "id": "0.5.2-0e721330",
+    "version": "0.5.2",
+    "fingerprint": "0e721330844b0e33d71d836e3704b9ee2ef554683bbf9b6fa5559818331e96df",
+    "implemented_at": "2026-10-30T01:42:04.326Z",
+    "recorded_at": "2026-10-30T01:44:06.195Z",
+    "notes": {
+      "fr": [
+        "Synchronisation en direct des crédits, diamants, titres, coffres, cartes, marchés et messages.",
+        "Notifications privées du serveur, regroupement des modifications et reprise après une coupure.",
+        "Actualisation automatique du panel administrateur et des catalogues, sans interrompre les animations de billard."
+      ],
+      "en": [
+        "Live synchronization of credits, diamonds, titles, chests, cards, markets and messages.",
+        "Private server notifications, batched changes and recovery after a connection interruption.",
+        "Automatic updates to the administrator panel and catalogs without interrupting billiards animations."
+      ]
+    }
+  },
+  {
     "id": "0.5.1-18a426ac",
     "version": "0.5.1",
     "fingerprint": "18a426ac1a158f7e20113e61b666f2438cdbd3c3091f4c740bc6939b55e8d24e",

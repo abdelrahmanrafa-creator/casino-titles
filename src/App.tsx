@@ -1,4 +1,5 @@
 import {AppUpdateBanner,AppUpdateSettings} from './components/AppUpdates';
+import {useLiveSync} from './lib/useLiveSync';
 import {SettingsActions,PasswordSecurity} from './features/SettingsActions';
 import type {Command} from './features/Games';
 import {AppDownloads} from './components/AppDownloads';
@@ -59,6 +60,7 @@ export default function App(){
  }});
  const {data:diamonds}=useQuery({queryKey:['diamonds',uid],enabled:!!profile,queryFn:()=>rpc<{balance:number}>('ct_diamond_balance'),staleTime:60000,refetchInterval:120000});
  const {data:adminAccess}=useQuery({queryKey:['admin-access',uid],enabled:!!profile,queryFn:()=>rpc<{is_admin:boolean;unlocked:boolean;configured:boolean;bootstrap_available:boolean;expires_at:string|null}>('ct_admin_access'),refetchInterval:60000,staleTime:0});
+ useLiveSync(uid,adminAccess?.is_admin===true);
  const {data:catalog=[],error:catalogError}=useQuery({queryKey:['titles'],staleTime:300000,refetchOnWindowFocus:false,queryFn:async()=>{
   const {data,error}=await supabase.from('ct_titles').select('*').order('rarity').order('id');if(error)throw error;return data as Title[];
  }});
