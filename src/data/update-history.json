@@ -1,5 +1,24 @@
 [
   {
+    "id": "0.7.0-fbdde7f2",
+    "version": "0.7.0",
+    "fingerprint": "fbdde7f255adde3f7aaee866e3aa78fb0911df11d567243209e0c258250defc7",
+    "implemented_at": "2026-11-09T20:24:05.102Z",
+    "recorded_at": "2026-11-09T20:26:15.319Z",
+    "notes": {
+      "fr": [
+        "Nouvelle catégorie Crypto : 32 actifs, cours partagés simulés et graphiques sur 1 h, 24 h et 7 jours.",
+        "Achats et ventes atomiques en crédits, devis signés, portefeuille et historique personnels.",
+        "Panel admin Crypto : frais, plafonds, suspension des achats et ventes, statistiques et suivi."
+      ],
+      "en": [
+        "New Crypto category: 32 assets, shared simulated prices and 1-hour, 24-hour and 7-day charts.",
+        "Atomic credit-based trades, signed quotes, personal portfolio and transaction history.",
+        "Crypto admin panel: fees, limits, buy and sell pauses, statistics and monitoring."
+      ]
+    }
+  },
+  {
     "id": "0.6.0-00c5bb72",
     "version": "0.6.0",
     "fingerprint": "00c5bb7299d1c4608409e78d66072bbbd101665cbad8ab25484cf7216836f5ef",

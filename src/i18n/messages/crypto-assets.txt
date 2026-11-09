@@ -1,0 +1,62 @@
+AAVE|AAVE
+ADA|ADA
+APT|APT
+ARB|ARB
+ATOM|ATOM
+AVAX|AVAX
+Aave|Aave
+Aptos|Aptos
+Arbitrum|Arbitrum
+Artificial Superintelligence|Artificial Superintelligence
+Avalanche|Avalanche
+BCH|BCH
+BNB|BNB
+BONK|BONK
+BTC|BTC
+Bitcoin|Bitcoin
+Bitcoin Cash|Bitcoin Cash
+Bonk|Bonk
+Cardano|Cardano
+Chainlink|Chainlink
+Cosmos|Cosmos
+DOGE|DOGE
+DOT|DOT
+Dogecoin|Dogecoin
+ETH|ETH
+Ethereum|Ethereum
+FET|FET
+FIL|FIL
+Filecoin|Filecoin
+GRT|GRT
+ICP|ICP
+INJ|INJ
+Injective|Injective
+Internet Computer|Internet Computer
+LINK|LINK
+LTC|LTC
+Litecoin|Litecoin
+MKR|MKR
+Maker|Maker
+NEAR|NEAR
+NEAR Protocol|NEAR Protocol
+OP|OP
+Optimism|Optimism
+POL|POL
+Polkadot|Polkadot
+Polygon|Polygon
+RENDER|RENDER
+Render|Render
+SOL|SOL
+SUI|SUI
+Solana|Solana
+Sui|Sui
+TON|TON
+Tether|Tether
+The Graph|The Graph
+Toncoin|Toncoin
+UNI|UNI
+USD Coin|USD Coin
+USDC|USDC
+USDT|USDT
+Uniswap|Uniswap
+XRP|XRP

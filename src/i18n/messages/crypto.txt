@@ -1,0 +1,142 @@
+· Max.|· High
+/ crédits|/ credits
+24 h|24h
+32 actifs. Votre stratégie.|32 assets. Your strategy.
+7 jours|7 days
+Achat de crypto simulée|Simulated crypto purchase
+Achat effectué. Votre portefeuille est à jour.|Purchase completed. Your portfolio is up to date.
+Actifs disponibles|Available assets
+Action crypto invalide|Invalid crypto action
+Actualiser le prix|Refresh price
+Aucune crypto pour ces filtres.|No crypto assets match these filters.
+Aucune crypto réelle, aucun dépôt bancaire.|No real crypto, no bank deposits.
+Aucune transaction crypto pour le moment.|No crypto transactions yet.
+Autoriser les achats crypto|Allow crypto purchases
+Autoriser les ventes crypto|Allow crypto sales
+Budget crypto en crédits|Crypto budget in credits
+Budget crypto invalide|Invalid crypto budget
+Budget en crédits|Budget in credits
+Calcul du prix d’exécution…|Calculating execution price…
+Chaque mouvement, au même endroit.|Every trade, in one place.
+Chargement des cours simulés…|Loading simulated prices…
+Chargement du graphique…|Loading chart…
+Chargement du marché crypto…|Loading crypto market…
+Choisir|Select
+Choisissez une crypto dans le marché pour commencer.|Choose an asset from the market to get started.
+Communautaires|Community
+Comprendre le prix|Understanding the price
+Confirmer l’achat simulé|Confirm simulated purchase
+Confirmer la vente simulée|Confirm simulated sale
+Connectez-vous pour obtenir un devis.|Sign in to get a quote.
+Cours du|Prices as of
+Cours générés côté serveur|Server-generated prices
+COURS SIMULÉS|SIMULATED PRICES
+Coût d’acquisition|Acquisition cost
+Crédits à recevoir|Credits to receive
+Crédits disponibles|Available credits
+Crédits disponibles insuffisants|Insufficient available credits
+crédits du jeu|game credits
+crédits par transaction.|credits per transaction.
+Crypto|Crypto
+CRYPTO · SIMULATION|CRYPTO · SIMULATION
+Crypto introuvable|Crypto asset not found
+de faire|to grow
+Dernières 24 h|Last 24h
+Dernières transactions crypto|Recent crypto transactions
+Devis crypto invalide|Invalid crypto quote
+Devis expiré. Actualisez le prix.|Quote expired. Refresh the price.
+Disponibilité des actifs|Asset availability
+Échanger|Trade
+Enregistrer les réglages crypto|Save crypto settings
+Explorez les cryptos, composez votre portefeuille et suivez un marché qui évolue en continu.|Explore crypto assets, build your portfolio and follow an ever-changing market.
+Famille|Category
+Finance décentralisée|Decentralized finance
+Frais|Fees
+Frais :|Fees:
+Frais ·|Fees ·
+Frais cumulés|Total fees
+Frais par transaction · %|Fee per transaction · %
+grandir le jeu.|your game.
+Graphique des cours simulés|Simulated price chart
+Infrastructure|Infrastructure
+Intelligence artificielle|Artificial intelligence
+Joueurs actifs|Active players
+La transaction n’a pas été confirmée. Consultez la notification puis actualisez le prix.|The trade was not confirmed. Check the notification, then refresh the price.
+La valeur du portefeuille est estimée au cours simulé, avant les frais et l’écart de prix d’une vente. Les gains et pertes non réalisés évoluent avec le marché.|Portfolio value is estimated at the simulated market price, before selling fees and spread. Unrealized gains and losses change with the market.
+Le cours a changé. Demandez un nouveau devis.|The price has changed. Request a new quote.
+Le marché crypto simulé.|The simulated crypto market.
+LE MARCHÉ DU CERCLE|THE CIRCLE MARKET
+Le marché du cercle.|The Circle market.
+Le prix inclut l’écart achat/vente et l’effet de votre quantité sur la liquidité. Les frais sont détaillés séparément. Minimum 10 crédits, maximum|The price includes the bid/ask spread and your order’s liquidity impact. Fees are shown separately. Minimum 10 credits, maximum
+Le rythme du marché.|The rhythm of the market.
+Les achats réduisent la réserve et exercent une pression à la hausse. Les ventes l’augmentent. Cet effet s’atténue progressivement.|Purchases reduce the available supply and push prices upwards. Sales replenish it. This effect gradually fades.
+Les cours, les volumes et les scénarios sont simulés. Les achats et ventes utilisent uniquement les crédits du jeu.|Prices, volumes and scenarios are simulated. Purchases and sales use game credits only.
+Les débits d’achat et crédits de vente sont suivis dans le coffre-fort. Aucun dépôt ni retrait en argent réel.|Purchase debits and sale proceeds are tracked in the vault. No real-money deposits or withdrawals.
+Les tendances de plusieurs jours se combinent aux variations horaires et aux mouvements de chaque minute.|Multi-day trends combine with hourly fluctuations and minute-by-minute movements.
+MARCHÉ SIMULÉ|SIMULATED MARKET
+Max.|Max.
+Maximum par transaction · crédits|Maximum per transaction · credits
+Mes transactions|My transactions
+Min.|Low
+Mon portefeuille|My portfolio
+Montant brut|Gross amount
+Montant crypto hors limites|Crypto amount outside allowed limits
+Nom ou symbole…|Name or symbol…
+Paiements|Payments
+Période crypto invalide|Invalid crypto period
+Plus fortes baisses|Biggest losers
+Plus fortes hausses|Biggest gainers
+Portefeuille crypto|Crypto portfolio
+Prix d’exécution|Execution price
+Prix en crédits|Price in credits
+Prix valable encore|Price valid for
+Quantité à vendre|Quantity to sell
+Quantité crypto à vendre|Crypto quantity to sell
+Quantité crypto indisponible|Crypto quantity unavailable
+Quantité crypto invalide : six décimales maximum|Invalid crypto quantity: maximum six decimal places
+Quantité détenue|Quantity held
+Quantité détenue par les joueurs|Quantity held by players
+Quantité reçue|Quantity received
+Quantité vendue|Quantity sold
+Réactiver les achats|Resume purchases
+Rechercher une crypto|Search crypto assets
+Réglages crypto enregistrés et audités.|Crypto settings saved and audited.
+Réglages crypto modifiés. Relisez les valeurs.|Crypto settings have changed. Review the values.
+Réglages du marché crypto|Crypto market settings
+Repérez votre prochain mouvement.|Find your next move.
+Réseaux|Networks
+Réserve du marché|Available supply
+Résultat réalisé cumulé|Total realized profit/loss
+Rubriques crypto|Crypto sections
+Saisissez un montant pour obtenir votre devis.|Enter an amount to get your quote.
+Se connecter pour échanger|Sign in to trade
+Seconde couche|Layer 2
+Sens de transaction invalide|Invalid trade side
+Simulation en crédits du jeu. Les cryptos ne sont ni déposables ni retirables vers un portefeuille réel.|Simulation using game credits. Crypto assets cannot be deposited or withdrawn to a real wallet.
+Stables|Stablecoins
+Suspendre les achats|Pause purchases
+Suspendre un actif bloque ses nouveaux achats. Les ventes restent régies par le réglage global, afin que les joueurs puissent sortir de leurs positions.|Pausing an asset blocks new purchases. Sales follow the global setting, allowing players to exit their positions.
+Tous les actifs|All assets
+Tous les cours et actifs sont simulés. Les volumes ci-dessous concernent uniquement les transactions réellement effectuées dans le jeu, en crédits.|All prices and assets are simulated. The volumes below include only actual in-game transactions using credits.
+Tous les joueurs voient les mêmes cours. Les frais, la liquidité et le prix d’exécution sont précisés avant chaque confirmation.|All players see the same prices. Fees, liquidity and execution price are shown before every confirmation.
+TOUT LE MARCHÉ|THE ENTIRE MARKET
+Transaction en cours…|Trade in progress…
+Transactions|Transactions
+Transactions crypto temporairement suspendues|Crypto trading temporarily paused
+Trier par|Sort by
+Un portefeuille qui vous ressemble.|A portfolio of your own.
+Une autre façon|Another way
+Une simulation partagée.|One shared simulation.
+Variation non réalisée|Unrealized profit/loss
+Vente de crypto simulée|Simulated crypto sale
+Vente effectuée. Vos crédits ont été ajoutés.|Sale completed. Your credits have been added.
+Voir et échanger|View and trade
+Volume échangé|Trading volume
+Volume simulé|Simulated volume
+Volume simulé sur 24 h|Simulated 24h volume
+Vos échanges comptent.|Your trades matter.
+VOTRE ACTIVITÉ|YOUR ACTIVITY
+VOTRE ALLOCATION|YOUR ALLOCATION
+Votre premier actif vous attend.|Your first asset awaits.
+VOTRE PROCHAIN MOUVEMENT|YOUR NEXT MOVE
+Version 0.7.0 · Connexion Internet nécessaire.|Version 0.7.0 · Internet connection required.

@@ -5,7 +5,7 @@ import ts from 'typescript';
 import {QueryClient,QueryObserver} from '@tanstack/react-query';
 import {createTitlesDatabase,asPlayer,uid} from './helpers/titlesDatabase.mjs';
 const migration='20261030013517_live_data_sync.sql';
-const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&!f.includes('010000_titles_identity')&&!f.includes('020000_titles_economy')&&f!==migration).sort();
+const files=(await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&!f.includes('010000_titles_identity')&&!f.includes('020000_titles_economy')&&f<migration).sort();
 const db=await createTitlesDatabase(undefined,files);after(()=>db.close());
 await db.exec(`CREATE SCHEMA realtime;
  CREATE TABLE realtime.messages(id bigint GENERATED ALWAYS AS IDENTITY,payload jsonb,event text,topic text,private boolean,extension text DEFAULT 'broadcast');
@@ -14,6 +14,7 @@ await db.exec(`CREATE SCHEMA realtime;
  CREATE FUNCTION realtime.send(jsonb,text,text,boolean) RETURNS void LANGUAGE sql AS $$INSERT INTO realtime.messages(payload,event,topic,private) VALUES($1||jsonb_build_object('id',gen_random_uuid()),$2,$3,$4)$$;
  GRANT USAGE ON SCHEMA realtime TO authenticated; GRANT SELECT ON realtime.messages TO authenticated;`);
 await db.exec(await readFile('supabase/migrations/'+migration,'utf8'));
+for(const file of (await readdir('supabase/migrations')).filter(f=>f.endsWith('.sql')&&f>migration).sort())await db.exec(await readFile('supabase/migrations/'+file,'utf8'));
 const messages=async()=> (await db.query('SELECT payload,event,topic,private FROM realtime.messages ORDER BY id')).rows;
 const clear=()=>db.exec('TRUNCATE realtime.messages');
 
@@ -59,7 +60,7 @@ test('a mounted player balance updates from another session signal, catches in-f
  const originals=Object.fromEntries(['window','document','navigator','__liveTest'].map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
  const fakeSupabase={channel(topic){const c={topic,on(_type,_filter,fn){c.receive=fn;return c;},subscribe(fn){c.status=fn;return c;}};channels.push(c);return c;},async removeChannel(c){c.removed=true;}};
  Object.defineProperty(globalThis,'window',{value:win,configurable:true});Object.defineProperty(globalThis,'document',{value:doc,configurable:true});Object.defineProperty(globalThis,'navigator',{value:{onLine:true},configurable:true});
- globalThis.__liveTest={client,supabase:fakeSupabase,useEffect:fn=>{cleanup=fn();},liveQueryMatches,createLiveBatch,liveScopes:['account','catalog','market','community','news','admin','support']};
+ globalThis.__liveTest={client,supabase:fakeSupabase,useEffect:fn=>{cleanup=fn();},liveQueryMatches,createLiveBatch,liveScopes:['account','catalog','market','community','news','admin','support','crypto']};
  const hookSource=(await readFile('src/lib/useLiveSync.ts','utf8')).replace(/^import .*;\r?\n/gm,'');
  const hookJs=ts.transpileModule('const {client,supabase,useEffect,liveQueryMatches,createLiveBatch,liveScopes}=globalThis.__liveTest;const useQueryClient=()=>client;\n'+hookSource,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
  let balance=100,calls=0,hold;const observer=new QueryObserver(client,{queryKey:['player',uid(1)],queryFn:async()=>{calls++;const captured=balance;if(hold)await hold;return {balance:captured};}});const stop=observer.subscribe(()=>{});
