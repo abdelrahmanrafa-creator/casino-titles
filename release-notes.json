@@ -1,12 +1,12 @@
 {
   "fr": [
-    "Nouvelle catégorie Crypto : 32 actifs, cours partagés simulés et graphiques sur 1 h, 24 h et 7 jours.",
-    "Achats et ventes atomiques en crédits, devis signés, portefeuille et historique personnels.",
-    "Panel admin Crypto : frais, plafonds, suspension des achats et ventes, statistiques et suivi."
+    "Paiement en cryptos simulées dans le marché des joueurs et le marché noir, pour les titres, coffres et lots de crédits.",
+    "Le vendeur choisit les cryptos acceptées ; l’acheteur ouvre une fenêtre dédiée avec devis, conversion et frais exacts.",
+    "Transferts atomiques, reçus crypto, notifications et comptabilité des frais du serveur."
   ],
   "en": [
-    "New Crypto category: 32 assets, shared simulated prices and 1-hour, 24-hour and 7-day charts.",
-    "Atomic credit-based trades, signed quotes, personal portfolio and transaction history.",
-    "Crypto admin panel: fees, limits, buy and sell pauses, statistics and monitoring."
+    "Simulated crypto payments in the player marketplace and Black Market, for titles, chests and credit bundles.",
+    "Sellers choose accepted crypto assets; buyers use a dedicated checkout with a quote, conversion rate and exact fees.",
+    "Atomic transfers, crypto receipts, inbox notifications and server fee accounting."
   ]
 }

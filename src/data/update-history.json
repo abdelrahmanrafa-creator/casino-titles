@@ -1,5 +1,24 @@
 [
   {
+    "id": "0.8.0-6abdbcd3",
+    "version": "0.8.0",
+    "fingerprint": "6abdbcd39acc647912b896ffb74a879a0f915bc779cefe88b6907d892368da6e",
+    "implemented_at": "2026-11-09T20:55:17.055Z",
+    "recorded_at": "2026-11-09T20:58:51.524Z",
+    "notes": {
+      "fr": [
+        "Paiement en cryptos simulées dans le marché des joueurs et le marché noir, pour les titres, coffres et lots de crédits.",
+        "Le vendeur choisit les cryptos acceptées ; l’acheteur ouvre une fenêtre dédiée avec devis, conversion et frais exacts.",
+        "Transferts atomiques, reçus crypto, notifications et comptabilité des frais du serveur."
+      ],
+      "en": [
+        "Simulated crypto payments in the player marketplace and Black Market, for titles, chests and credit bundles.",
+        "Sellers choose accepted crypto assets; buyers use a dedicated checkout with a quote, conversion rate and exact fees.",
+        "Atomic transfers, crypto receipts, inbox notifications and server fee accounting."
+      ]
+    }
+  },
+  {
     "id": "0.7.0-fbdde7f2",
     "version": "0.7.0",
     "fingerprint": "fbdde7f255adde3f7aaee866e3aa78fb0911df11d567243209e0c258250defc7",

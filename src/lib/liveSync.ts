@@ -1,14 +1,14 @@
 // Notifications only invalidate cached reads. Never trust broadcast payloads as game data.
 export type LiveScope='account'|'catalog'|'market'|'community'|'news'|'admin'|'support'|'crypto';
 const groups:Record<LiveScope,Set<string>>={
- account:new Set(['crypto-portfolio','player','profile','diamonds','admin-access','sealed-inventory','pending-chest-rewards','circle-access','conversion-access','diamond-store','player-market-inventory','arcade','quests','achievements','events-claimed','orders','order','inbox','inbox-summary','inbox-letter','trade-room','trade-inbox','guest-conversion','chest-passport','chest-serials','games']),
+ account:new Set(['crypto-payment-quote','crypto-portfolio','player','profile','diamonds','admin-access','sealed-inventory','pending-chest-rewards','circle-access','conversion-access','diamond-store','player-market-inventory','arcade','quests','achievements','events-claimed','orders','order','inbox','inbox-summary','inbox-letter','trade-room','trade-inbox','guest-conversion','chest-passport','chest-serials','games']),
  catalog:new Set(['titles','rarities','chests','quests','events','blackjack-rules','game-controls','diamond-store','circle-access','conversion-access','player-market-shop']),
- market:new Set(['market','credit-market','wholesale','market-chest-groups','market-chest-quote','market-browser','market-featured','market-promotion-options','market-campaign-quote','circle-offers','circle-offer-detail','market-payment','player-market','player-market-quote','player-market-shop','seller-demo-reviews']),
+ market:new Set(['crypto-payment-options','crypto-payment-quote','market','credit-market','wholesale','market-chest-groups','market-chest-quote','market-browser','market-featured','market-promotion-options','market-campaign-quote','circle-offers','circle-offer-detail','market-payment','player-market','player-market-quote','player-market-shop','seller-demo-reviews']),
  community:new Set(['rankings','people','title-statistics','public-collection','public-profile-details']),
  news:new Set(['market-news','circle-offers','circle-offer-detail','market-featured','inbox','inbox-summary']),
  admin:new Set(['admin-data','admin-access','admin-code-claims','owner-bot-jobs','title-distribution-audience','title-distributions']),
  support:new Set(['support','support-thread','admin-data']),
- crypto:new Set(['crypto-market','crypto-chart','crypto-quote','crypto-portfolio']),
+ crypto:new Set(['crypto-payment-quote','crypto-market','crypto-chart','crypto-quote','crypto-portfolio']),
 };
 export function liveQueryMatches(key:readonly unknown[],scopes:ReadonlySet<LiveScope>){
  const root=String(key[0]);
